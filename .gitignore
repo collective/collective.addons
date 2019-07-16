@@ -38,3 +38,4 @@ reports/
 !.gitkeep
 !.travis.yml
 !src/collective
+.directory/
