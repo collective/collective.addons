@@ -2,6 +2,7 @@
     xmlns="http://namespaces.zope.org/zope"
     xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
     xmlns:i18n="http://namespaces.zope.org/i18n"
+    xmlns:browser="http://namespaces.zope.org/browser"
     xmlns:plone="http://namespaces.plone.org/plone"
     i18n_domain="collective.addons">
 
@@ -43,5 +44,17 @@
       />
 
   <!-- -*- extra stuff goes here -*- -->
+
+  <browser:resourceDirectory
+      name="collective.addons"
+      directory="resources" />
+
+  <browser:page
+      name="view"
+      for="collective.addons.addoncenter.IAddonCenter"
+      class="collective.addons.addoncenter.AddonCenterView"
+      template="addoncenter_templates/view.pt"
+      permission="zope2.View"
+      />
 
 </configure>
