@@ -79,6 +79,13 @@ class IAddonCenter(model.Schema):
         default=_(u'png|gif|jpg'),
         )
 
+    allowed_docfileextensions = schema.TextLine(
+        title=_(u'Allowed Documentation File Extension'),
+        description=_(u'Fill in the allowed documentation file extensions, '
+                      u'seperated by a pipe \'|\'.'),
+        default=_(u'odt|pdf'),
+    )
+
     model.fieldset('instructions',
                    label=u'Instructions',
                    fields=['install_instructions', 'reporting_bugs', ])
