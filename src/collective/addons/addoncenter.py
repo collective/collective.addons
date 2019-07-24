@@ -1,6 +1,10 @@
 # -*- coding: utf-8 -*-
 from collective.addons import _
 from plone.supermodel import model
+from zope import schema
+from plone.supermodel.directives import primary
+from plone.app.textfield import RichText
+from Products.Five import BrowserView
 
 
 
@@ -61,7 +65,7 @@ class IAddonCenter(model.Schema):
         required=False
     )
 
-    odel.fieldset('disclaimer',
+    model.fieldset('disclaimer',
                   label=u'Legal Disclaimer',
                   fields=['title_legaldisclaimer', 'legal_disclaimer',
                           'title_legaldownloaddisclaimer',
