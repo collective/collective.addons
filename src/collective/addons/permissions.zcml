@@ -6,6 +6,16 @@
   <configure zcml:condition="installed AccessControl.security">
   <!-- -*- extra stuff goes here -*- -->
 
+    <permission
+        id="collective.addons.AddAddonCenter"
+        title="collective.addons: Add AddonCenter"
+        />
+
+    <permission
+        id="collective.addons.AddAddonProject"
+        title="collective.addons: Add AddonProject"
+        />
+
 
   </configure>
 

@@ -2,6 +2,19 @@
 <rolemap>
   <permissions>
   <!-- -*- extra stuff goes here -*- -->
-
+    <permission name="collective.addons: Add AddonCenter" acquire="True">
+      <role name="Owner" />
+      <role name="Manager" />
+    </permission>
+    <permission name="collective.addons: Add AddonProject" acquire="True">
+      <role name="Owner" />
+      <role name="Manager" />
+      <role name="Site Administrator" />
+      <role name="Contributor" />
+      <role name="Reader" />
+      <role name="Editor" />
+      <role name="TemplateProjectReviewer" />
+      <role name="Member" />
+    </permission>
   </permissions>
 </rolemap>
