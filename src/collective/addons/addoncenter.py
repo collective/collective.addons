@@ -5,7 +5,20 @@ from zope import schema
 from plone.supermodel.directives import primary
 from plone.app.textfield import RichText
 from Products.Five import BrowserView
+from plone.app.multilingual.dx import directives
 
+import re
+import six
+
+
+checkEmail = re.compile(
+    r'[a-zA-Z0-9._%-]+@([a-zA-Z0-9-]+\.)+[a-zA-Z]{2,4}').match
+
+
+def validateEmail(value):
+    if not checkEmail(value):
+        raise Invalid(_(u'Invalid email address'))
+    return True
 
 
 class IAddonCenter(model.Schema):
@@ -47,6 +60,24 @@ class IAddonCenter(model.Schema):
                                                'BSD',
                                                'UNIX (other)'],
                                       value_type=schema.TextLine())
+
+    model.fieldset('Allowed File Extensions',
+                   label=u'Allowed File Extensions',
+                   fields=['allowed_fileextension', 'allowed_imageextension'])
+
+    allowed_fileextension = schema.TextLine(
+        title=_(u'Allowed File Extensions'),
+        description=_(u'Fill in the allowed file extensions, seperated by '
+                    u'a pipe \'|\'.'),
+        default=_(u'oxt'),
+        )
+
+    allowed_imageextension = schema.TextLine(
+        title=_(u'Allowed Image File Extension'),
+        description=_(u'Fill in the allowed image file extensions, seperated '
+                     u'by a pipe \'|\'.'),
+        default=_(u'png|gif|jpg'),
+        )
 
     model.fieldset('instructions',
                    label=u'Instructions',
@@ -104,6 +135,36 @@ class IAddonCenter(model.Schema):
         default=_(u"Fill in the text for the legal download disclaimer."),
         required=False
     )
+
+    primary('information_oldversions')
+    information_oldversions = RichText(
+        title=_(u'Information About Search For Old Product Versions'),
+        description=_(u'Enter an information about the search for older '
+                      u'versions of the product, if they are not on the '
+                      u'versions list (compatibility) anymore.'),
+        required=False,
+    )
+
+    model.fieldset('contactadresses',
+                   label=u'Special Email Adresses',
+                   fields=['contactForCenter'])
+
+    contactForCenter = schema.ASCIILine(
+        title=_(
+            u'EMail address for communication with the template center '
+            u'manager and reviewer'),
+        description=_(
+            u'Enter an email address for the communication with template '
+            u'center manager and reviewer'),
+        default='projects@foo.org',
+        constraint=validateEmail,
+    )
+
+
+directives.languageindependent('available_category')
+directives.languageindependent('available_licenses')
+directives.languageindependent('available_versions')
+directives.languageindependent('available_platforms')
 
 
 class AddonCenterView(BrowserView):
