@@ -1,0 +1,61 @@
+<html tal:omit-tag=""
+      xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      i18n:domain="collective.addons">
+
+
+
+<div id="ownProjects">
+<h2 i18n:translate="">Your Own Projects</h2>
+        <p i18n:translate="">These are your projects on this site:</p>
+
+<div class="" id="ownprojects"
+        tal:define="results view/get_results;
+                    Batch python:modules['Products.CMFPlone'].Batch;
+                    b_size python:10;b_start python:0;b_start request/b_start | b_start;">
+  <p tal:condition="not: results">
+                                 <strong i18n:translate="">You currently have no projects on this site.</strong>
+                             </p>
+
+    <tal:results condition="results" define="batch python:Batch(results, b_size, int(b_start), orphan=1);">
+
+                    <ul class="userprojects">
+                        <li tal:repeat="result batch">
+                          <tal:entry define="project result/getObject;
+                                             url result/getURL;
+                                             projectURL project/absolute_url;
+                                             result_type result/portal_type;
+                                             zoomid   python:project.id.replace('.', '_');
+                                             screenshot   project/getScreenshot | nothing">
+                            <h3 style="border-top: none">
+                              <a href="" tal:attributes="href projectURL;" tal:content="project/pretty_title_or_id">
+								                <tal:comment replace="nothing">Add-on One</tal:comment>
+                              </a>
+                            </h3>
+                          </tal:entry>
+                        </li>
+                    </ul>
+
+    </tal:results>
+
+
+</div>
+
+
+<h3><span i18n:translate="">Submit new</span> <span tal:replace="context/product_title">Template</span></h3>
+        <p><span i18n:translate="">If you already created a new</span>
+            <span tal:replace="context/product_title">Template</span>,
+            <span i18n:translate="">please submit your new</span> <br />
+          <a class="pointer"  tal:attributes="href string:${context/absolute_url}/++add++collective.templates.tlproject">
+            <img src="++resource++collective.templates/yellowarrow.png" alt="" />
+            <span tal:content="context/product_title | string:template_project" /> Project
+          </a>
+        </p>
+
+
+</div>
+
+</html>
