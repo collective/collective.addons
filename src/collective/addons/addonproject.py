@@ -16,6 +16,8 @@ from zope.schema.interfaces import IContextAwareDefaultFactory
 from plone.namedfile.field import NamedBlobFile
 from plone.namedfile.field import NamedBlobImage
 from Products.Five import BrowserView
+from zope.interface import Invalid
+
 
 import re
 import six
@@ -65,12 +67,12 @@ def validateemail(value):
 
 @provider(IContextAwareDefaultFactory)
 def allowedapdocfileextensions(context):
-    return context.allowed_docfileextensions.replace("|", ", ")
+    return context.allowed_apdocfileextensions.replace("|", ", ")
 
 
 @provider(IContextAwareDefaultFactory)
 def allowedapimagefileextensions(context):
-    return context.allowed_imageextension.replace("|", ", ")
+    return context.allowed_apimageextension.replace("|", ", ")
 
 
 
