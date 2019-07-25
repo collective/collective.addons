@@ -65,21 +65,21 @@ class IAddonCenter(model.Schema):
                    label=u'Allowed File Extensions',
                    fields=['allowed_fileextension', 'allowed_imageextension'])
 
-    allowed_fileextension = schema.TextLine(
+    allowed_addonfileextension = schema.TextLine(
         title=_(u'Allowed File Extensions'),
         description=_(u'Fill in the allowed file extensions, seperated by '
                     u'a pipe \'|\'.'),
         default=_(u'oxt'),
         )
 
-    allowed_imageextension = schema.TextLine(
+    allowed_apimageextension = schema.TextLine(
         title=_(u'Allowed Image File Extension'),
         description=_(u'Fill in the allowed image file extensions, seperated '
                      u'by a pipe \'|\'.'),
         default=_(u'png|gif|jpg'),
         )
 
-    allowed_docfileextensions = schema.TextLine(
+    allowed_apdocfileextensions = schema.TextLine(
         title=_(u'Allowed Documentation File Extension'),
         description=_(u'Fill in the allowed documentation file extensions, '
                       u'seperated by a pipe \'|\'.'),
