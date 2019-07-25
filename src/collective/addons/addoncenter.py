@@ -63,7 +63,9 @@ class IAddonCenter(model.Schema):
 
     model.fieldset('Allowed File Extensions',
                    label=u'Allowed File Extensions',
-                   fields=['allowed_fileextension', 'allowed_imageextension'])
+                   fields=['allowed_addonfileextension',
+                           'allowed_apimageextension',
+                           'allowed_apdocfileextensions'])
 
     allowed_addonfileextension = schema.TextLine(
         title=_(u'Allowed File Extensions'),
