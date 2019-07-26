@@ -19,17 +19,21 @@ src/*
 dist/*
 test.plone_addon/
 var/
+.idea/
 # files
 .installed.cfg
 .mr.developer.cfg
+Gruntfile.js
 lib64
 log.html
 output.xml
+package.json
 pip-selfcheck.json
 report.html
 .vscode/
 .tox/
 reports/
+.directory
 # excludes
 !.coveragerc
 !.editorconfig
