@@ -17,7 +17,9 @@ from plone.namedfile.field import NamedBlobFile
 from plone.namedfile.field import NamedBlobImage
 from Products.Five import BrowserView
 from zope.interface import Invalid
-
+from plone import api
+from collective.addons import quote_chars
+from z3c.form import validator
 
 import re
 import six
@@ -79,7 +81,7 @@ def allowedapimagefileextensions(context):
 def validatedocfileextension(value):
     catalog = api.portal.get_tool(name='portal_catalog')
     result=catalog.uniqueValuesFor('allowedapdocextensions')
-    pattern = r'^.*\.{0}'.format(result)
+    pattern = r'^.*\.{0}'.format(result[0])
     matches = re.compile(pattern, re.IGNORECASE).match
     if not matches(value.filename):
         raise Invalid(
@@ -92,7 +94,7 @@ def validatedocfileextension(value):
 def validateimagefileextension(value):
     catalog = api.portal.get_tool(name='portal_catalog')
     result=catalog.uniqueValuesFor('allowedapimageextensions')
-    pattern = r'^.*\.{0}'.format(result)
+    pattern = r'^.*\.{0}'.format(result[0])
     matches = re.compile(pattern, re.IGNORECASE).match
     if not matches(value.filename):
         raise Invalid(
@@ -195,7 +197,7 @@ class IAddonProject(model.Schema):
         description=_(u"If you have a Documentation in the file format 'PDF' "
                       u"or 'ODT' you could add it here."),
         required=False,
-        constraint=validatedocfileextension
+        constraint=validatedocfileextension,
     )
 
     directives.mode(eupimageextension='display')
@@ -227,9 +229,56 @@ class IAddonProject(model.Schema):
                       u"could provide an image of the file format 'png', "
                       u"'gif' or 'jpg'."),
         required=False,
-        constraint=validateimagefileextension
+        constraint=validateimagefileextension,
     )
 
 
+class ValidateAddonProjectUniqueness(validator.SimpleFieldValidator):
+    # Validate site-wide uniqueness of project titles.
+
+    def validate(self, value):
+        # Perform the standard validation first
+
+        super(ValidateAddonProjectUniqueness, self).validate(value)
+        if value is not None:
+            catalog = api.portal.get_tool(name='portal_catalog')
+            results = catalog({'Title': quote_chars(value),
+                               'object_provides':
+                                   IAddonProject.__identifier__})
+            contextUUID = api.content.get_uuid(self.context)
+            for result in results:
+                if result.UID != contextUUID:
+                    raise Invalid(_(u'The project title is already in use.'))
+
+
+validator.WidgetValidatorDiscriminators(
+    ValidateAddonProjectUniqueness,
+    field=IAddonProject['title'],
+)
+
 class AddonProjectView(BrowserView):
-    pass
+
+    def canPublishContent(self):
+        return api.user.has_permission('cmf.ModifyPortalContent', self.context)
+
+    def releaseLicense(self):
+        catalog = api.portal.get_tool(name='portal_catalog')
+        path = '/'.join(self.context.getPhysicalPath())
+        idx_data = catalog.getIndexDataForUID(path)
+        licenses = idx_data.get('releaseLicense')
+        return (r for r in licenses)
+
+    def projectCategory(self):
+        catalog = api.portal.get_tool(name='portal_catalog')
+        path = '/'.join(self.context.getPhysicalPath())
+        idx_data = catalog.getIndexDataForUID(path)
+        category = idx_data.get('getCategories')
+        return (r for r in category)
+
+    def releaseCompatibility(self):
+        catalog = api.portal.get_tool(name='portal_catalog')
+        path = '/'.join(self.context.getPhysicalPath())
+        idx_data = catalog.getIndexDataForUID(path)
+        compatibility = idx_data.get('getCompatibility')
+        return (r for r in compatibility)
+
