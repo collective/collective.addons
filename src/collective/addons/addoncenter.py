@@ -6,10 +6,16 @@ from plone.supermodel.directives import primary
 from plone.app.textfield import RichText
 from Products.Five import BrowserView
 from plone.app.multilingual.dx import directives
+from Products.CMFPlone.browser.search import quote_chars
+from plone import api
+from Products.ZCTextIndex.ParseTree import ParseError
 
 import re
 import six
 
+
+MULTISPACE = u'\u3000'.encode('utf-8')
+BAD_CHARS = ('?', '-', '+', '*', MULTISPACE)
 
 checkEmail = re.compile(
     r'[a-zA-Z0-9._%-]+@([a-zA-Z0-9-]+\.)+[a-zA-Z]{2,4}').match
@@ -177,4 +183,86 @@ directives.languageindependent('available_platforms')
 
 
 class AddonCenterView(BrowserView):
-    pass
+
+    def get_most_popular_products(self):
+        catalog = api.portal.get_tool(name='portal_catalog')
+        sort_on = 'positive_ratings'
+        contentFilter = {
+            'sort_on': sort_on,
+            'sort_order': 'reverse',
+            'review_state': 'published',
+            'portal_type': 'collective.addons.addonproject'}
+        return catalog(**contentFilter)
+
+    def category_name(self):
+        category = list(self.context.available_category)
+        return category
+
+    def get_latest_program_release(self):
+        versions = list(self.context.available_versions)
+        versions.sort(reverse=True)
+        return versions[0]
+
+    def get_newest_products(self):
+        self.catalog = api.portal.get_tool(name='portal_catalog')
+        sort_on = 'created'
+        contentFilter = {
+            'sort_on': sort_on,
+            'sort_order': 'reverse',
+            'review_state': 'published',
+            'portal_type': 'collective.addons.addonproject',
+        }
+        results = self.catalog(**contentFilter)
+        return results
+
+    def addonproject_count(self):
+        """Return number of projects
+        """
+        catalog = api.portal.get_tool(name='portal_catalog')
+
+        return len(catalog(portal_type='collective.addons.addonproject',
+                           review_state='published'))
+
+
+    def get_products(self, category, version, sort_on, SearchableText=None):
+        self.catalog = api.portal.get_tool(name='portal_catalog')
+        # sort_on = 'positive_ratings'
+        if SearchableText:
+            SearchableText = self.munge_search_term(SearchableText)
+            contentFilter = {
+                'sort_on': sort_on,
+                'SearchableText': SearchableText,
+                'sort_order': 'reverse',
+                'portal_type': 'collective.addons.addonproject',
+            }
+
+        else:
+            contentFilter = {
+                'sort_on': sort_on,
+                'sort_order': 'reverse',
+                'portal_type': 'collective.templates.tlproject',
+            }
+
+        if version != 'any':
+            contentFilter['getCompatibility'] = version
+
+        if category:
+            contentFilter['getCategories'] = category
+
+        try:
+            return self.catalog(**contentFilter)
+        except ParseError:
+            return []
+
+
+    def munge_search_term(self, q):
+        for char in BAD_CHARS:
+            char = str(char)
+            q = q.replace(char, ' ')
+        r = q.split()
+        r = ' AND '.join(r)
+        r = quote_chars(r) + '*'
+        return r
+
+    def show_search_form(self):
+        return 'getCategories' in self.request.environ['QUERY_STRING']
