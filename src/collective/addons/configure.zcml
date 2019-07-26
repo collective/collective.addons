@@ -57,4 +57,8 @@
       permission="zope2.View"
       />
 
+  <adapter
+    factory="collective.addons.addonproject.ValidateAddonProjectUniqueness"
+    />
+
 </configure>
