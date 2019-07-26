@@ -20,15 +20,265 @@
 </head>
 <body>
 <metal:main fill-slot="main">
-  <tal:main-macro metal:define-macro="main">
+  <tal:main-macro metal:define-macro="main"
+              tal:define="catalog nocall:context/portal_catalog;
+                          toLocalizedTime nocall:context/@@plone/toLocalizedTime;
+                          currentCategory request/getCategories |string:;
+                          currentVersion request/getCompatibility |view/get_latest_program_release;
+                          SearchableText request/SearchableText | string:;
+                          sort_on   request/sort_on | string:positive_ratings;
+                          isAnon context/@@plone_portal_state/anonymous;
+                          herePath python:'/'.join(context.getPhysicalPath());
+                          getCategoryName nocall:view/category_name;
+                          show_search_form view/show_search_form">
     <span tal:replace="structure context/@@authenticator/authenticator"/>
       <div class="row">
         <div class="col-xs-12 col-sm-8">
+            <div tal:condition="not: show_search_form">
+                <div class="" id="mostpopular">
+                <h2 i18n:translate="">Most Popular <span tal:content="context/product_title" i18n:name="product_title" /></h2>
+                     <div tal:define="results python:view.get_most_popular_products();
+                                     Batch python:modules['Products.CMFPlone'].Batch;
+				                             b_size python:10;b_start python:0;b_start request/b_start | b_start;
+				                             ">
+
+                         <tal:results condition="results"
+                                     define="batch python:Batch(results, b_size, int(b_start), orphan=1);">
+                             <ul class="popularproducts">
+                                 <li tal:repeat="result batch">
+                                      <tal:entry
+						                                 define="project result/getObject;
+						                                         url result/getURL;
+							                                       projectURL project/absolute_url;
+							                                       result_type result/portal_type;
+							                                       zoomid   python:project.id.replace('.', '_');
+							                                       screenshot   project/screenshot | nothing">
+
+                                          <h3 style="border-top: none">
+                                              <a href="" tal:attributes="href projectURL;" 	tal:content="project/pretty_title_or_id">
+                                                  <tal:comment replace="nothing">Template One</tal:comment></a>
+                                          </h3>
+                                          <div tal:content="structure project/@@rate-if-you-dare" />
+                                           <div class="project-thumb thumbzoom"
+                                                        tal:condition="screenshot">
+                                                    <a tal:attributes="href projectURL">
+                                                        <img tal:condition="screenshot"
+                                                                tal:replace="structure project/@@images/screenshot/thumb" />
+                                                    </a>
+                                                </div>
+                                                <span class="project-thumb"
+						                                          tal:condition="python: not screenshot and project.project_logo">
+                                                    <img tal:define="scales project/@@images;
+                                                                     projectlogo project/@@images/project_logo;
+                                                                     scale python:scales.scale('project_logo', 'tile')"
+                                                         tal:replace="structure python:scale and scale.tag(css_class='tlcenterprojectlogo') or None" />
+                                                </span>
 
 
+                                                <div class="product-details">
+                                                    <span class="product-leadin">
+
+
+                                                        <span i18n:translate="">in</span>
+                                                        <span tal:replace="python:', '.join(result.getObject().category_choice)"></span>
+                                                    </span>
+                                                    <p class="product-description"
+                                                            tal:content="structure project/description">
+                                                        <tal:comment replace="nothing">Project Description.</tal:comment>
+                                                    </p>
+                                                </div>
+                                            </tal:entry>
+                                       </li>
+                                   </ul>
+
+                         </tal:results>
+                     </div>
+                </div>
+            </div>
+
+        <div tal:condition="show_search_form">
+          <div class="panetl">
+                         <h2 tal:condition="context/product_title" i18n:translate="">Search
+                             <span tal:content="context/product_title" i18n:name="product_title" />
+                         </h2>
+               <div tal:condition="context/information_oldversions">
+                             <span tal:content="structure context/information_oldversions/output" />
+                         </div>
+              <div id="sort-by">
+                             <form id="product_select" style="margin-bottom: 1em" tal:attributes="action string:${context/absolute_url}">
+                                 <label class="hiddenStructure" i18n:translate="">Show</label>
+                                 <select name="getCategories" onchange="this.form.submit()">
+                                     <option value="" i18n:translate="">All categories</option>
+                                     <tal:block tal:repeat="category context/available_category">
+                                       <option tal:content="category" tal:attributes="value category; selected python: 'selected' if currentCategory==category else ''" />
+                                     </tal:block>
+                                 </select>
+                                 <select class="sortby-compatibility" name="getCompatibility" onchange="this.form.submit()">
+                                     <tal:block tal:repeat="version context/available_versions">
+                                         <option tal:content="version"
+                                                 tal:attributes="value version; selected python: 'selected' if currentVersion==version else ''" />
+                                     </tal:block>
+                                     <option value="any" tal:attributes="selected python: 'selected' if currentVersion in ['', 'any'] else ''"
+                                             i18n:translate=""> Any version</option>
+                                 </select>
+                                 <label for="project-sort" i18n:translate="">Sort On</label>
+                                 <select name="sort_on" id="project-sort" onchange="this.form.submit()">
+                                     <tal:comment replace="nothing">Featured items are sorted by rating</tal:comment>
+                                     <option value="positive_ratings"  tal:attributes="selected python:sort_on =='positive_ratings' and 'selected'" i18n:translate="">Highest Rated</option>
+                                     <option value="created" tal:attributes="selected    python:sort_on == 'created' and 'selected' or ''" i18n:translate="">Newest</option>
+                                 </select>
+                                 <input type="hidden" name="path" tal:attributes="value python:'/'.join(context.getPhysicalPath())" /> &nbsp;
+                                 <input type="hidden" name="portal_type" value="collective.templates.tlproject" />
+                                 <div class="input-group">
+                                    <input class="searchPage form-control" name="SearchableText" type="text" size="25" title="Search Site" value=""
+                                           tal:attributes="value SearchableText" />
+                                    <span class="input-group-btn">
+                                      <input class="searchPage allowMultiSubmit btn btn-primary" type="submit" value="Search" i18n:attributes="value" />
+                                    </span>
+                                  </div>
+                             </form>
+              </div>
+              <div class="" id="categories"
+                            tal:define="results python:view.get_products(currentCategory, currentVersion, sort_on, SearchableText);
+                                        Batch python:modules['Products.CMFPlone'].Batch;
+				                        b_size python:10;b_start python:0;b_start request/b_start | b_start;
+				                        ">
+                  <p tal:condition="not: results">
+                                 <strong i18n:translate="">No results were found.</strong>
+                             </p>
+                  <p id="numreleases">
+                                 <span tal:replace="python:len(results)">234</span> <span i18n:translate="">projects matching your criteria.</span>
+                             </p>
+                   <tal:results condition="results"
+                                          define="batch python:Batch(results, b_size, int(b_start), orphan=1);">
+                       <ul class="downloads">
+                                     <li tal:repeat="result batch">
+                                         <tal:entry
+                                                 define="project result/getObject;
+                                                         url result/getURL;
+							                             projectURL project/absolute_url;
+							                             result_type result/portal_type;
+							                             zoomid   python:project.id.replace('.', '_');
+							                             screenshot   project/screenshot">
+
+                                         <h3 style="border-top: none">
+                                                 <a href=""
+                                                         tal:attributes="href projectURL;"
+                                                         tal:content="project/pretty_title_or_id">
+                                                     <tal:comment replace="nothing">Product One</tal:comment>
+                                                 </a>
+                                             </h3>
+                                         <div tal:content="structure project/@@rate-if-you-dare" />
+                                         <div class="project-thumb thumbzoom" tal:condition="screenshot">
+                                                 <a tal:attributes="href projectURL">
+                                                     <img tal:condition="screenshot"
+                                                             tal:replace="structure project/@@images/screenshot/thumb" />
+                                                 </a>
+                                             </div>
+                                         <span class="project-thumb" tal:condition="python: not screenshot and project.project_logo">
+                                                 <img tal:define="scales project/@@images;
+                                                                  projectlogo project/@@images/project_logo;
+                                                                  scale python:scales.scale('project_logo', 'tile')"
+                                                      tal:replace="structure python:scale and scale.tag(css_class='addoncenterprojectlogo') or None" />
+                                             </span>
+                                         <div class="product-details">
+                                                 <span class="product-leadin">
+
+                                                     <span i18n:translate="">in</span>
+                                                     <span tal:replace="python:', '.join(result.getObject().category_choice)"></span>
+                                           </span>
+                                                 <p class="product-description"
+                                                         tal:content="structure project/description">
+                                                     <tal:comment replace="nothing">Project Description.</tal:comment>
+                                                 </p>
+                                           </div>
+                                             <div class="visualClear" ></div>
+                                             </tal:entry>
+                                     </li>
+                       </ul>
+                       <div metal:use-macro="here/batch_macros/macros/navigation" />
+                   </tal:results>
+              </div>
+          </div>
         </div>
-      </div>
+            </div>
+<div class="col-xs-12 col-sm-4">
+                <div class="splash pullout" id="sidebar-downloads">
+                        	<h1 tal:condition="context/product_title" i18n:translate="">
+                                <span tal:content="context/product_title" i18n:name="product_title" />
+                            </h1>
+                    <h1 tal:condition="not:context/product_title" i18n:translate="">Add-ons</h1>
+                    <span tal:content="structure context/product_description | nothing"/>
+                    <p class="current-projects"><span i18n:translate="">Currently there are</span>
+                         <span tal:content="view/addonproject_count" /> <span i18n:translate="">project(s) available.</span>
+                    </p>
+                    <p>
+                    <a class="pointer" tal:attributes="href string:${context/absolute_url}/++add++collective.addons.addonproject">
+                        <img src="++resource++collective.addons/yellowarrow.png"  alt=""/> <span i18n:translate="">Submit your</span>
+                        <span tal:content="context/product_title | string:addon_project" /> Project
+                    </a>
+                    </p>
+                </div>
+    <div tal:condition="not: isAnon" tal:replace="structure provider:plone.abovecontenttitle" />
+    <div id="mostrecent">
+                    <h2><span i18n:translate="">Most recent</span> <span tal:content="context/product_title" /></h2>
+                    <div class=""
+                            tal:define="results python:view.get_newest_products();
+                                        Batch python:modules['Products.CMFPlone'].Batch;
+				                        b_size python:5;b_start python:0;b_start request/b_start | b_start;
+				                        ">
+                        <tal:results condition="results"
+                                     define="batch python:Batch(results, b_size, int(b_start), orphan=1);">
+                            <ul class="newestproducts">
+                                <li tal:repeat="result batch">
+                                    <tal:entry define="project result/getObject;
+                                                       url result/getURL;
+							                                         projectURL project/absolute_url;
+							                                         result_type result/portal_type;
+							                                         zoomid   python:project.id.replace('.', '_');
+							                                         screenshot   project/screenshot | nothing">
+                                        <span style="border-top: none">
+                                            <a href="" tal:attributes="href projectURL;" 	tal:content="project/pretty_title_or_id">
+                                                <tal:comment replace="nothing">Template One</tal:comment></a>
+                                        </span>
+                                    </tal:entry>
+                                </li>
+                            </ul>
+                        </tal:results>
+                    </div>
+        </div>
+    <div id="by-category">
+                    <h2 tal:condition="here/product_title">
+                        <span i18n:translate="">Browse</span>
+                        <span tal:content="context/product_title" /> <span i18n:translate="">by Category</span>
+                    </h2>
+                    <h2 tal:condition="not:context/product_title"><span i18n:translate="">Browse Templates by Category</span></h2>
+                    <ol id="add-on-categories">
+                        <tal:categories repeat="category context/available_category">
+                            <li><a href=""
+                                    tal:attributes="href string:${context/absolute_url}?getCategories=${category}&getCompatibility=any"
+                                    tal:content="category">
+                                <tal:comment replace="nothing">Template projects</tal:comment>
+                            </a>
+                            </li>
+                        </tal:categories>
+                    </ol>
 
+                </div>
+    <div class="installinstructions" tal:condition="context/install_instructions">
+                    <h3 i18n:translate="">Install Instructions</h3>
+                    <p tal:replace="structure context/install_instructions/output" />
+                </div>
+                <div class="bugreporting" tal:condition="context/reporting_bugs">
+                    <h3 i18n:translate="">Reporting Template-Bugs</h3>
+                    <p tal:replace="structure context/reporting_bugs/output" />
+                </div>
+                <div class="aboutproduct" tal:condition="context/product_description">
+                    <h3 i18n:translate="">About</h3>
+                    <p tal:content="structure context/product_description" />
+                </div>
+    </div>
+      </div>
   </tal:main-macro>
 
 </metal:main>
