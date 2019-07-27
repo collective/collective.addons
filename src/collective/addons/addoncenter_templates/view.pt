@@ -11,7 +11,7 @@
     <metal:block fill-slot="top_slot">
       <link rel="stylesheet" type="text/css"
             tal:define="navroot context/@@plone_portal_state/navigation_root_url"
-            tal:attributes="href string:${navroot}/++resource++collective.addons/addons.css"
+            tal:attributes="href string:${navroot}/++resource++collective.addons/addoncenter.css"
             />
         <tal:noborder condition="python:not user.has_permission('Modify portal content', context)">
             <tal:noborderset tal:define="dummy python:request.set('disable_border', 1)" />
