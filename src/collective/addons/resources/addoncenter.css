@@ -1,0 +1,88 @@
+#sidebar-downloads {
+    height: 14em;
+}
+
+
+div.pullout {
+    background-color: #007bb1;
+    margin-left: -1em;
+    padding-left: 2.5em;
+}
+
+
+div.splash {
+
+    border-radius: 0.5em;
+    color: #FFFFFF;
+    font-family: "Helvetica Neue",Arial,FreeSans,sans-serif;
+    margin-bottom: 1em;
+    padding: 0.5em 1.5em 1em;
+}
+
+
+#content div.splash h1 {
+    color: #FFFFFF;
+    font-family: "HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",sans-serif;
+    font-size: 1.75em;
+    font-weight: 400;
+    letter-spacing: 0;
+    margin-bottom: 0.5em;
+}
+
+
+#content div.splash a.pointer {
+    background: no-repeat scroll 0 -115px rgba(0, 0, 0, 0);
+    font-size: 115%;
+    padding-left: 16px;
+}
+
+#content div.splash a {
+    border: medium none;
+    color: #FFFFFF !important;
+    font-weight: bold;
+}
+
+
+
+#ownprojects h3,
+#mostrecent h3
+{
+    font-size: 1.5em;
+    line-height: 0.5em;
+}
+
+#ownProjects h4 {
+    margin-top: 1.5em;
+    margin-left: -0.5em;
+    background-color: #C0C0C0;
+    border-radius: 0.3em;
+    padding-top:0.3em;
+    padding-bottom: 0.3em;
+    padding-left: 0.3em;
+}
+
+#ownProjects h2,
+#mostrecent h2,
+#by-category h2 {
+    font-size: 1.75em;
+    background-color:#C0C0C0;
+    border-radius: 0.3em;
+    padding-left: 0.3em;
+    padding-bottom: 0.3em;
+    padding-top: 0.3em;
+    margin-left: -0.5em;
+}
+#ownProjects h3,
+div.aboutproduct h3 {
+    font-size: 1.5em;
+    background-color: #e6e4e4;
+    border-radius: 0.3em;
+    padding-left: 0.3em;
+    padding-bottom: 0.3em;
+    padding-top: 0.3em;
+    margin-left: -0.5em;
+}
+
+div.tlcenterprojectscreenshot img {
+    width: 250px
+}
