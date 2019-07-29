@@ -1,0 +1,110 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="context/main_template/macros/master"
+      i18n:domain="collective.addons">
+
+
+<head>
+    <metal:block fill-slot="top_slot">
+      <link rel="stylesheet" type="text/css"
+            tal:define="navroot context/@@plone_portal_state/navigation_root_url"
+            tal:attributes="href string:${navroot}/++resource++collective.addons/addoncenter.css"
+            />
+
+        <tal:noborder condition="python:not user.has_permission('Modify portal content', context)">
+            <tal:noborderset tal:define="dummy python:request.set('disable_border', 1)" />
+        </tal:noborder>
+    </metal:block>
+    <metal:block fill-slot="column_one_slot" />
+</head>
+
+
+<body>
+<metal:main fill-slot="main">
+     <tal:main-macro metal:define-macro="main" tal:define="toLocalizedTime nocall:context/@@plone/toLocalizedTime;
+                                                          is_editable context/@@plone_context_state/is_editable;
+                                                          wf_tool here/portal_workflow;
+                                                          license view/releaseLicense;
+                                                          compatibility view/releaseCompatibility;
+                                                          categories view/projectCategory;
+                                                          review_state python:wf_tool.getInfoFor( here, 'review_state', '');">
+
+        <span tal:replace="structure context/@@authenticator/authenticator"/>
+
+
+
+        <div class="addoncenterinfomessage" tal:condition="python: is_editable and review_state == 'private' ">
+        <p  i18n:translate="">
+           Please make sure the relevant project information has been entered and a release has been added to your project.
+           Once you have finished that you could submit your project for approval (publication).
+        </p>
+        <p tal:condition="python: is_editable and len(context.getFolderContents()) is 0">Your next step: add a first release to your project please.</p>
+        <div tal:condition="python: is_editable">
+            <p >Please submit:</p>
+            <p>
+        <a class="pointer" tal:attributes="href string:${context/absolute_url}/++add++collective.addons.addonrelease">
+            <img src="++resource++collective.addons/yellowarrow.png"  alt=""/>
+            <span i18n:translate="">a Release to your</span> <span tal:content="context/product_title | string:addon_project" />
+            <span i18n:translate>Project</span></a><p i18n:translate=""></p><p>or:</p>
+            <p>
+        <a class="pointer" tal:attributes="href string:${context/absolute_url}/++add++collective.addons.addonreleaselink">
+            <img src="++resource++collective.addons/yellowarrow.png"  alt=""/>
+            <span i18n:translate="">a linked Release</span> <span i18n:translate="">to your</span>
+            <span tal:content="context/product_title | string:addon_project" /> <span i18n:translate>Project</span></a></p>
+            <p>If you want to host your release files on an external ressource (e.g. an external webpage or an external repository) create
+            a new 'linked release' (second option). In the oposite you had to go with adding a 'release' (first option).</p>
+
+        </div>
+        </div>
+        <div class="addoncenterinfomessage" tal:condition="python: is_editable and review_state == 'pending' ">
+        <p  i18n:translate="">
+           Your project has been submitted for publication and will be reviewed now. You will get an email, once the
+            status of your project changed again.
+        </p>
+        <p tal:condition="python: is_editable and len(context.getFolderContents()) is 0">You have not added a first
+            release to your project. Please do this next step, because this helps for a review of your project.</p>
+        <div tal:condition="python: is_editable">
+        <p >Please submit:</p>
+        <a class="pointer" tal:attributes="href string:${context/absolute_url}/++add++collective.addons.addonrelease">
+            <img src="++resource++collective.addons/yellowarrow.png"  alt=""/>
+            <span i18n:translate="">a Release to your</span> <span tal:content="context/product_title | string:addon_project" />
+            <span i18n:translate="">Project</span></a><p i18n:translate="">or:</p>
+        <a class="pointer" tal:attributes="href string:${context/absolute_url}/++add++collective.addons.addonreleaselink">
+            <img src="++resource++collective.addons/yellowarrow.png"  alt=""/>
+            <span i18n:translate="">a linked Release</span> <span i18n:translate="">to your</span>
+            <span tal:content="context/product_title | string:extension_project" /> <span i18n:translate="">Project</span></a>
+            </div>
+        </div>
+
+            <div class="row">
+             <div class="col-xs-12 col-sm-8">
+                 <div class="paneaddonproject">
+                     <h1 class="documentFirstHeading"><span tal:content="context/title" /></h1>
+                     <div tal:content="structure context/@@rate-if-you-dare" />
+                     <p class="documentDescription"><span tal:content="context/description" /></p>
+                     <h2 tal:condition="context/details" class="documentSecondHeading">Project Description</h2>
+                     <p class="documentDescription" tal:content="structure context/details/output" />
+                     <h3 i18n:translate="">Category/Categories</h3>
+                     <p>
+                         <tal:loop repeat="releasecategories categories">
+                             <span tal:content="releasecategories" />,
+                         </tal:loop>
+                     </p>
+                     <h3 tal:condition="context/homepage">Homepage of the Project</h3>
+                     <div tal:content="context/homepage" />
+                 </div>
+             </div>
+            </div>
+
+
+
+
+
+    </tal:main-macro>
+
+</metal:main>
+</body>
+</html>
