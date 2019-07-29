@@ -57,6 +57,14 @@
       permission="zope2.View"
       />
 
+   <browser:page
+      name="view"
+      for="collective.addons.addonproject.IAddonProject"
+      class="collective.addons.addonproject.AddonProjectView"
+      template="addonproject_templates/view.pt"
+      permission="zope2.View"
+      />
+
   <adapter
     factory="collective.addons.addonproject.ValidateAddonProjectUniqueness"
     />
