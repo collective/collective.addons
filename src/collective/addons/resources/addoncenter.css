@@ -86,3 +86,11 @@ div.aboutproduct h3 {
 div.tlcenterprojectscreenshot img {
     width: 250px
 }
+
+div.addoncenterinfomessage{
+    background-color: #aad6ea;
+    border: 1px solid #9acee6;
+    border-radius: 10px 10px 10px 10px;
+    color: rgba(0, 0, 0, 0.5);
+    padding: 15px 15px 15px 15px;
+}
