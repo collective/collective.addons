@@ -43,7 +43,7 @@ def legal_declaration_text(context):
     return context.legal_disclaimer
 
 @provider(IContextAwareDefaultFactory)
-def allowedaddonfileextensions(context):
+def allowedaddonlinkedfileextensions(context):
     context = context.aq_inner.aq_parent
     return context.allowed_addonfileextension.replace("|", ", ")
 
@@ -244,7 +244,7 @@ class IAddonLinkedRelease(model.Schema):
         title=_(u'The following file extensions are allowed for linked '
                 u'files (upper case and lower case and mix of '
                 u'both):'),
-        defaultFactory=allowedaddonfileextensions,
+        defaultFactory=allowedaddonlinkedfileextensions,
     )
 
 
@@ -282,6 +282,201 @@ class IAddonLinkedRelease(model.Schema):
             u"fields to link this files on the next registers, e.g. "
             u"'Second linked file' for this Release'."),
         required=False
+    )
+
+    model.fieldset('fieldset1',
+                   label=_(u"Second linked file"),
+                   fields=['addonlinkedfileextension1',
+                           'link_to_file1',
+                           'external_file_size1',
+                           'platform_choice1']
+                   )
+
+    model.fieldset('fieldset2',
+                   label=_(u"Third linked file"),
+                   fields=['addonlinkedfileextension2',
+                           'link_to_file2',
+                           'external_file_size2',
+                           'platform_choice2']
+                   )
+
+    model.fieldset('fieldset3',
+                   label=_(u"Fourth linked file"),
+                   fields=['addonlinkedfileextension3',
+                           'link_to_file3',
+                           'external_file_size3',
+                           'platform_choice3']
+                   )
+
+    model.fieldset('fieldset4',
+                   label=_(u"Fifth linked file"),
+                   fields=['addonlinkedfileextension4',
+                           'link_to_file4',
+                           'external_file_size4',
+                           'platform_choice4']
+                   )
+
+    model.fieldset('fieldset5',
+                   label=_(u"Sixth linked file"),
+                   fields=['addonlinkedfileextension5',
+                           'link_to_file5',
+                           'external_file_size5',
+                           'platform_choice5']
+                   )
+
+    directives.mode(addonlinkedfileextension1='display')
+    addonlinkedfileextension1 = schema.TextLine(
+        title=_(u'The following file extensions are allowed for linked '
+                u'files (upper case and lower case and mix of '
+                u'both):'),
+        defaultFactory=allowedaddonlinkedfileextensions,
+    )
+
+    link_to_file1 = schema.URI(
+        title=_(u"The Link to the file of the release"),
+        description=_(u"Please insert a link to your extension file."),
+        required=False,
+        constraint=validatelinkedaddonfileextension,
+    )
+
+    external_file_size1 = schema.Float(
+        title=_(u"The size of the external hosted file"),
+        description=_(u"Please fill in the size in kilobyte of the external "
+                      u"hosted file (e.g. 633, if the size is 633 kb)"),
+        required=False
+    )
+
+    directives.widget(platform_choice1=CheckBoxFieldWidget)
+    platform_choice1 = schema.List(
+        title=_(u"Second linked file is compatible with the Platform(s)"),
+        description=_(u"Please mark one or more platforms with which the "
+                      u"linked file is compatible."),
+        value_type=schema.Choice(source=vocabAvailPlatforms),
+        required=True,
+    )
+
+    directives.mode(addonlinkedfileextension2='display')
+    addonlinkedfileextension2 = schema.TextLine(
+        title=_(u'The following file extensions are allowed for linked '
+                u'files (upper case and lower case and mix of '
+                u'both):'),
+        defaultFactory=allowedaddonlinkedfileextensions,
+    )
+
+    link_to_file2 = schema.URI(
+        title=_(u"The Link to the file of the release"),
+        description=_(u"Please insert a link to your extension file."),
+        required=False,
+        constraint=validatelinkedaddonfileextension,
+    )
+
+    external_file_size2 = schema.Float(
+        title=_(u"The size of the external hosted file"),
+        description=_(u"Please fill in the size in kilobyte of the external "
+                      u"hosted file (e.g. 633, if the size is 633 kb)"),
+        required=False
+    )
+
+    directives.widget(platform_choice2=CheckBoxFieldWidget)
+    platform_choice2 = schema.List(
+        title=_(u"Third linked file is compatible with the Platform(s)"),
+        description=_(u"Please mark one or more platforms with which the "
+                      u"linked file is compatible."),
+        value_type=schema.Choice(source=vocabAvailPlatforms),
+        required=True
+    )
+
+    directives.mode(addonlinkedfileextension3='display')
+    addonlinkedfileextension3 = schema.TextLine(
+        title=_(u'The following file extensions are allowed for linked '
+                u'files (upper case and lower case and mix of '
+                u'both):'),
+        defaultFactory=allowedaddonlinkedfileextensions,
+    )
+
+    link_to_file3 = schema.URI(
+        title=_(u"The Link to the file of the release"),
+        description=_(u"Please insert a link to your extension file."),
+        required=False,
+        constraint=validatelinkedaddonfileextension,
+    )
+
+    external_file_size3 = schema.Float(
+        title=_(u"The size of the external hosted file"),
+        description=_(u"Please fill in the size in kilobyte of the external "
+                      u"hosted file (e.g. 633, if the size is 633 kb)"),
+        required=False
+    )
+
+    directives.widget(platform_choice3=CheckBoxFieldWidget)
+    platform_choice3 = schema.List(
+        title=_(u"Fourth linked file is compatible with the Platform(s)"),
+        description=_(u"Please mark one or more platforms with which the "
+                      u"linked file is compatible."),
+        value_type=schema.Choice(source=vocabAvailPlatforms),
+        required=True,
+    )
+
+    directives.mode(addonlinkedfileextension4='display')
+    addonlinkedfileextension4 = schema.TextLine(
+        title=_(u'The following file extensions are allowed for linked '
+                u'files (upper case and lower case and mix of '
+                u'both):'),
+        defaultFactory=allowedaddonlinkedfileextensions,
+    )
+
+    link_to_file4 = schema.URI(
+        title=_(u"The Link to the file of the release"),
+        description=_(u"Please insert a link to your extension file."),
+        required=False,
+        constraint=validatelinkedaddonfileextension,
+    )
+
+    external_file_size4 = schema.Float(
+        title=_(u"The size of the external hosted file"),
+        description=_(u"Please fill in the size in kilobyte of the external "
+                      u"hosted file (e.g. 633, if the size is 633 kb)"),
+        required=False
+    )
+
+    directives.widget(platform_choice4=CheckBoxFieldWidget)
+    platform_choice4 = schema.List(
+        title=_(u"Fifth linked file is compatible with the Platform(s)"),
+        description=_(u"Please mark one or more platforms with which the "
+                      u"linked file is compatible."),
+        value_type=schema.Choice(source=vocabAvailPlatforms),
+        required=True,
+    )
+
+    directives.mode(addonlinkedfileextension5='display')
+    addonlinkedfileextension5 = schema.TextLine(
+        title=_(u'The following file extensions are allowed for linked '
+                u'files (upper case and lower case and mix of '
+                u'both):'),
+        defaultFactory=allowedaddonlinkedfileextensions,
+    )
+
+    link_to_file5 = schema.URI(
+        title=_(u"The Link to the file of the release"),
+        description=_(u"Please insert a link to your extension file."),
+        required=False,
+        constraint=validatelinkedaddonfileextension
+    )
+
+    external_file_size5 = schema.Float(
+        title=_(u"The size of the external hosted file"),
+        description=_(u"Please fill in the size in kilobyte of the external "
+                      u"hosted file (e.g. 633, if the size is 633 kb)"),
+        required=False
+    )
+
+    directives.widget(platform_choice5=CheckBoxFieldWidget)
+    platform_choice5 = schema.List(
+        title=_(u"Sixth linked file is compatible with the Platform(s)"),
+        description=_(u"Please mark one or more platforms with which the "
+                      u"linked file is compatible."),
+        value_type=schema.Choice(source=vocabAvailPlatforms),
+        required=True,
     )
 
 
