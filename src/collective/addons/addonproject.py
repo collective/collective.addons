@@ -25,7 +25,6 @@ import re
 import six
 
 
-
 def vocabcategories(context):
     # For add forms
 
@@ -46,8 +45,8 @@ def vocabcategories(context):
 
     return SimpleVocabulary(terms)
 
-directlyProvides(vocabcategories, IContextSourceBinder)
 
+directlyProvides(vocabcategories, IContextSourceBinder)
 
 
 def isNotEmptyCategory(value):
@@ -77,10 +76,9 @@ def allowedapimagefileextensions(context):
     return context.allowed_apimageextension.replace("|", ", ")
 
 
-
 def validatedocfileextension(value):
     catalog = api.portal.get_tool(name='portal_catalog')
-    result=catalog.uniqueValuesFor('allowedapdocextensions')
+    result = catalog.uniqueValuesFor('allowedapdocextensions')
     pattern = r'^.*\.{0}'.format(result[0])
     matches = re.compile(pattern, re.IGNORECASE).match
     if not matches(value.filename):
@@ -93,7 +91,7 @@ def validatedocfileextension(value):
 
 def validateimagefileextension(value):
     catalog = api.portal.get_tool(name='portal_catalog')
-    result=catalog.uniqueValuesFor('allowedapimageextensions')
+    result = catalog.uniqueValuesFor('allowedapimageextensions')
     pattern = r'^.*\.{0}'.format(result[0])
     matches = re.compile(pattern, re.IGNORECASE).match
     if not matches(value.filename):
@@ -102,7 +100,6 @@ def validateimagefileextension(value):
             u'Please try again to upload a file with the correct file'
             u'extension.')
     return True
-
 
 
 class IAddonProject(model.Schema):
@@ -255,6 +252,7 @@ validator.WidgetValidatorDiscriminators(
     ValidateAddonProjectUniqueness,
     field=IAddonProject['title'],
 )
+
 
 class AddonProjectView(BrowserView):
 

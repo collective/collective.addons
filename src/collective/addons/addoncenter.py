@@ -50,12 +50,12 @@ class IAddonCenter(model.Schema):
     )
 
     available_category = schema.List(title=_(u"Available Categories"),
-                                     default=['Product one',],
+                                     default=['Product one', ],
                                      value_type=schema.TextLine())
 
     available_versions = schema.List(title=_(u"Available Versions"),
                                      default=['Product 1.0',
-                                             ],
+                                              ],
                                      value_type=schema.TextLine())
     available_platforms = schema.List(title=_(u"Available Platforms"),
                                       default=['All platforms',
@@ -76,13 +76,13 @@ class IAddonCenter(model.Schema):
     allowed_addonfileextension = schema.TextLine(
         title=_(u'Allowed File Extensions'),
         description=_(u'Fill in the allowed file extensions, seperated by '
-                    u'a pipe \'|\'.'),
+                      u'a pipe \'|\'.'),
         )
 
     allowed_apimageextension = schema.TextLine(
         title=_(u'Allowed Image File Extension'),
         description=_(u'Fill in the allowed image file extensions, seperated '
-                     u'by a pipe \'|\'.'),
+                      u'by a pipe \'|\'.'),
         )
 
     allowed_apdocfileextensions = schema.TextLine(
@@ -109,10 +109,10 @@ class IAddonCenter(model.Schema):
     )
 
     model.fieldset('disclaimer',
-                  label=u'Legal Disclaimer',
-                  fields=['title_legaldisclaimer', 'legal_disclaimer',
-                          'title_legaldownloaddisclaimer',
-                          'legal_downloaddisclaimer'])
+                   label=u'Legal Disclaimer',
+                   fields=['title_legaldisclaimer', 'legal_disclaimer',
+                           'title_legaldownloaddisclaimer',
+                           'legal_downloaddisclaimer'])
 
     title_legaldisclaimer = schema.TextLine(
         title=_(u"Title for Legal Disclaimer and Limitations"),
@@ -220,7 +220,6 @@ class AddonCenterView(BrowserView):
         return len(catalog(portal_type='collective.addons.addonproject',
                            review_state='published'))
 
-
     def get_products(self, category, version, sort_on, SearchableText=None):
         self.catalog = api.portal.get_tool(name='portal_catalog')
         # sort_on = 'positive_ratings'
@@ -250,7 +249,6 @@ class AddonCenterView(BrowserView):
             return self.catalog(**contentFilter)
         except ParseError:
             return []
-
 
     def munge_search_term(self, q):
         for char in BAD_CHARS:
