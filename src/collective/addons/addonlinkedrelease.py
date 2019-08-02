@@ -501,5 +501,22 @@ class IAddonLinkedRelease(model.Schema):
                                            u"and your linked File"))
 
 
+    @invariant
+    def testingvalue(data):
+        if data.source_code_inside is not 1 and data.link_to_source is None:
+            raise Invalid(_(u"You answered the question, whether the source "
+                            u"code is inside your add-on with no "
+                            u"(default answer). If this is the correct "
+                            u"answer, please fill in the Link (URL) "
+                            u"to the Source Code."))
+
+    @invariant
+    def noOSChosen(data):
+        if data.link_to_file is not None and data.platform_choice == []:
+            raise Invalid(_(u"Please choose a compatible platform for the "
+                            u"linked file."))
+
+
+
 class TAddonLinkedReleaseView(BrowserView):
     pass
