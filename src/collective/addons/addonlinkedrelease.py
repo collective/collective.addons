@@ -16,6 +16,7 @@ from plone import api
 from zope.interface import invariant, Invalid
 from Products.Five import BrowserView
 from collective.addons.common import yesnochoice
+from plone.indexer.decorator import indexer
 
 import re
 import six
@@ -510,6 +511,10 @@ class IAddonLinkedRelease(model.Schema):
             raise Invalid(_(u"Please choose a compatible platform for the "
                             u"linked file."))
 
+
+@indexer(IAddonLinkedRelease)
+def addon_release_number(context, **kw):
+    return context.releasenumber
 
 
 class TAddonLinkedReleaseView(BrowserView):
