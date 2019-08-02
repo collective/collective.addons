@@ -13,7 +13,7 @@ from zope.interface import directlyProvides
 from Acquisition import aq_inner, aq_parent
 from zope.schema.interfaces import IContextSourceBinder
 from plone import api
-from zope.interface import Invalid
+from zope.interface import invariant, Invalid
 from Products.Five import BrowserView
 
 import re
@@ -107,6 +107,8 @@ def validatelinkedaddonfileextension(value):
     return True
 
 
+class AcceptLegalDeclaration(Invalid):
+    __doc__ = _(u"It is necessary that you accept the Legal Declaration")
 
 
 class IAddonLinkedRelease(model.Schema):
@@ -479,6 +481,24 @@ class IAddonLinkedRelease(model.Schema):
         required=True,
     )
 
+
+    @invariant
+    def licensenotchoosen(value):
+        if not value.licenses_choice:
+            raise Invalid(_(u"Please choose a license for your release."))
+
+    @invariant
+    def compatibilitynotchoosen(data):
+        if not data.compatibility_choice:
+            raise Invalid(_(u"Please choose one or more compatible product "
+                            u"versions for your release."))
+
+    @invariant
+    def legaldeclarationaccepted(data):
+        if data.accept_legal_declaration is not True:
+            raise AcceptLegalDeclaration(_(u"Please accept the Legal "
+                                           u"Declaration about your Release "
+                                           u"and your linked File"))
 
 
 class TAddonLinkedReleaseView(BrowserView):
