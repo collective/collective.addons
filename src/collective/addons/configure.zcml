@@ -74,4 +74,8 @@
     factory=".addonlinkedrelease.addon_release_number"
     />
 
+  <adapter
+    factory=".addonlinkedrelease.ValidateAddonLinkedReleaseUniqueness"
+    />
+
 </configure>
