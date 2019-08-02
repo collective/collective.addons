@@ -69,4 +69,9 @@
     factory="collective.addons.addonproject.ValidateAddonProjectUniqueness"
     />
 
+  <adapter
+    name="addon_release_number"
+    factory=".addonlinkedrelease.addon_release_number"
+    />
+
 </configure>
