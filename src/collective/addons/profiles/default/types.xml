@@ -11,4 +11,5 @@
   <object name="collective.addons.addoncenter" meta_type="Dexterity FTI" />
   <object name="collective.addons.addonproject" meta_type="Dexterity FTI" />
   <object name="collective.addons.addonrelease" meta_type="Dexterity FTI" />
+  <object name="collective.addons.addonlinkedrelease" meta_type="Dexterity FTI" />
 </object>
