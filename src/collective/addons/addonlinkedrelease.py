@@ -15,6 +15,7 @@ from zope.schema.interfaces import IContextSourceBinder
 from plone import api
 from zope.interface import invariant, Invalid
 from Products.Five import BrowserView
+from collective.addons.common import yesnochoice
 
 import re
 import six
@@ -85,13 +86,6 @@ def vocabAvailPlatforms(context):
     return SimpleVocabulary(terms)
 
 directlyProvides(vocabAvailPlatforms, IContextSourceBinder)
-
-
-
-yesnochoice = SimpleVocabulary(
-    [SimpleTerm(value=0, title=_(u'No')),
-     SimpleTerm(value=1, title=_(u'Yes')), ]
-)
 
 
 def validatelinkedaddonfileextension(value):
