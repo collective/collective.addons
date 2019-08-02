@@ -15,7 +15,8 @@ from zope.interface import directlyProvides
 from Acquisition import aq_inner, aq_parent
 from plone.namedfile.field import NamedBlobFile
 from plone import api
-from zope.interface import Invalid
+from zope.interface import invariant, Invalid
+from collective.addons.common import yesnochoice
 
 import re
 import six
@@ -86,11 +87,6 @@ def vocabAvailPlatforms(context):
 
 
 directlyProvides(vocabAvailPlatforms, IContextSourceBinder)
-
-yesnochoice = SimpleVocabulary(
-    [SimpleTerm(value=0, title=_(u'No')),
-     SimpleTerm(value=1, title=_(u'Yes')), ]
-)
 
 
 def validateaddonfileextension(value):
@@ -437,6 +433,17 @@ class IAddonRelease(model.Schema):
         value_type=schema.Choice(source=vocabAvailPlatforms),
         required=False,
     )
+
+
+    @invariant
+    def testingvalue(data):
+        if data.source_code_inside is not 1 and data.link_to_source is None:
+            raise Invalid(_(u"You answered the question, whether the source "
+                            u"code is inside your add-on with no "
+                            u"(default answer). If this is the correct "
+                            u"answer, please fill in the Link (URL) "
+                            u"to the Source Code."))
+
 
 
 
