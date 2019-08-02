@@ -25,4 +25,5 @@
     <index name="allowedaddonfileextensions" meta_type="FieldIndex">
         <indexed_attr value="allowed_addonfileextension" />
     </index>
+    <column value="addon_release_number"/>
 </object>
