@@ -106,6 +106,9 @@ def validateaddonfileextension(value):
 
 
 
+class AcceptLegalDeclaration(Invalid):
+    __doc__ = _(u"It is necessary that you accept the Legal Declaration")
+
 
 
 class IAddonRelease(model.Schema):
@@ -446,6 +449,26 @@ class IAddonRelease(model.Schema):
                             u"(default answer). If this is the correct "
                             u"answer, please fill in the Link (URL) "
                             u"to the Source Code."))
+
+    @invariant
+    def licensenotchoosen(value):
+        if not value.licenses_choice:
+            raise Invalid(_(u"Please choose a license for your release."))
+
+    @invariant
+    def compatibilitynotchoosen(data):
+        if not data.compatibility_choice:
+            raise Invalid(_(u"Please choose one or more compatible product "
+                            u"versions for your release."))
+
+    @invariant
+    def legaldeclarationaccepted(data):
+        if data.accept_legal_declaration is not True:
+            raise AcceptLegalDeclaration(_(u"Please accept the Legal "
+                                           u"Declaration about your Release "
+                                           u"and your linked File"))
+
+
 
 
 
