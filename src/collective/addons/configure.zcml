@@ -68,7 +68,7 @@
 
   <browser:page
       name="view"
-      for="collective.addons.addonrelease.IAddonReleaes"
+      for="collective.addons.addonrelease.IAddonRelease"
       class="collective.addons.addonrelease.AddonReleaseView"
       template="addonrelease_templates/view.pt"
       permission="zope2.View"
