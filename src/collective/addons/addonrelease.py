@@ -17,6 +17,9 @@ from plone.namedfile.field import NamedBlobFile
 from plone import api
 from zope.interface import invariant, Invalid
 from collective.addons.common import yesnochoice
+from plone.indexer.decorator import indexer
+from z3c.form import validator
+
 
 import re
 import six
@@ -445,6 +448,50 @@ class IAddonRelease(model.Schema):
                             u"to the Source Code."))
 
 
+
+@indexer(IAddonRelease)
+def addon_release_number(context, **kw):
+    return context.releasenumber
+
+
+class ValidateAddonReleaseUniqueness(validator.SimpleFieldValidator):
+    # Validate site-wide uniqueness of release titles.
+
+    def validate(self, value):
+        # Perform the standard validation first
+        super(ValidateAddonReleaseUniqueness, self).validate(value)
+
+        if value is not None:
+            if IAddonRelease.providedBy(self.context):
+                # The release number is the same as the previous value stored
+                # in the object
+                if self.context.releasenumber == value:
+                    return None
+
+            catalog = api.portal.get_tool(name='portal_catalog')
+            # Differentiate between possible contexts (on creation or editing)
+            # on creation the context is the container
+            # on editing the context is already the object
+            if IAddonRelease.providedBy(self.context):
+                query = '/'.join(self.context.aq_parent.getPhysicalPath())
+            else:
+                query = '/'.join(self.context.getPhysicalPath())
+
+            result = catalog({
+                'path': {'query': query, 'depth': 1},
+                'portal_type': ['collective.addons.addonrelease',
+                                'collective.addons.addonlinkedrelease'],
+                'addon_release_number': value})
+
+            if len(result) > 0:
+                raise Invalid(_(u"The release number is already in use. "
+                                u"Please choose another one."))
+
+
+validator.WidgetValidatorDiscriminators(
+    ValidateAddonReleaseUniqueness,
+    field=IAddonRelease['releasenumber'],
+)
 
 
 

@@ -71,6 +71,15 @@
 
   <adapter
     name="addon_release_number"
+    factory=".addonrelease.addon_release_number"
+    />
+
+  <adapter
+    factory=".addonrelease.ValidateAddonReleaseUniqueness"
+    />
+
+  <adapter
+    name="addon_release_number"
     factory=".addonlinkedrelease.addon_release_number"
     />
 
