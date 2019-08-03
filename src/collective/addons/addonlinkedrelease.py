@@ -559,5 +559,5 @@ validator.WidgetValidatorDiscriminators(
 
 
 
-class TAddonLinkedReleaseView(BrowserView):
+class AddonLinkedReleaseView(BrowserView):
     pass
