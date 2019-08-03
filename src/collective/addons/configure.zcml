@@ -57,11 +57,29 @@
       permission="zope2.View"
       />
 
-   <browser:page
+  <browser:page
       name="view"
       for="collective.addons.addonproject.IAddonProject"
       class="collective.addons.addonproject.AddonProjectView"
       template="addonproject_templates/view.pt"
+      permission="zope2.View"
+      />
+
+
+  <browser:page
+      name="view"
+      for="collective.addons.addonrelease.IAddonReleaes"
+      class="collective.addons.addonrelease.AddonReleaseView"
+      template="addonrelease_templates/view.pt"
+      permission="zope2.View"
+      />
+
+
+  <browser:page
+      name="view"
+      for="collective.addons.addonlinkedrelease.IAddonLinkedRelease"
+      class="collective.addons.addonlinkedrelease.AddonLinkedReleaseView"
+      template="addonlinkedrelease_templates/view.pt"
       permission="zope2.View"
       />
 
