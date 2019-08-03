@@ -18,6 +18,7 @@ from Products.Five import BrowserView
 from collective.addons.common import yesnochoice
 from plone.indexer.decorator import indexer
 from z3c.form import validator
+from zope.security import checkPermission
 
 import re
 import six
@@ -560,4 +561,20 @@ validator.WidgetValidatorDiscriminators(
 
 
 class AddonLinkedReleaseView(BrowserView):
-    pass
+
+    def canPublishContent(self):
+        return checkPermission('cmf.ModifyPortalContent', self.context)
+
+    def releaseLicense(self):
+        catalog = api.portal.get_tool(name='portal_catalog')
+        path = "/".join(self.context.getPhysicalPath())
+        idx_data = catalog.getIndexDataForUID(path)
+        licenses = idx_data.get('releaseLicense')
+        return (r for r in licenses)
+
+    def linkedreleaseCompatibility(self):
+        catalog = api.portal.get_tool(name='portal_catalog')
+        path = "/".join(self.context.getPhysicalPath())
+        idx_data = catalog.getIndexDataForUID(path)
+        compatibility = idx_data.get('getCompatibility')
+        return (r for r in compatibility)
