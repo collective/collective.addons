@@ -541,9 +541,3 @@ class AddonReleaseView(DefaultView):
         compatibility = idx_data.get('getCompatibility')
         return (r for r in compatibility)
 
-    def platformchoice(self):
-        catalog = api.portal.get_tool(name='portal_catalog')
-        path = "/".join(self.context.getPhysicalPath())
-        idx_data = catalog.getIndexDataForUID(path)
-        platform = idx_data.get('getCompatibility')
-        return (r for r in platform)
