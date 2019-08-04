@@ -105,4 +105,11 @@
     factory=".addonlinkedrelease.ValidateAddonLinkedReleaseUniqueness"
     />
 
+
+  <adapter for="collective.addons.addonrelease.IAddonRelease"
+      factory="collective.addons.releasecustomurl.NameForReleaseURL"
+      provides="collective.addons.releasecustomurl.INameForReleaseURL"
+      />
+
+
 </configure>
