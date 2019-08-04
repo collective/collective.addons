@@ -1,0 +1,54 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="context/main_template/macros/master"
+      i18n:domain="collective.addons">
+
+
+<head>
+    <metal:block fill-slot="top_slot">
+      <link rel="stylesheet" type="text/css"
+            tal:define="navroot context/@@plone_portal_state/navigation_root_url"
+            tal:attributes="href string:${navroot}/++resource++collective.addons/addoncenter.css"
+            />
+
+        <tal:noborder condition="python:not user.has_permission('Modify portal content', context)">
+            <tal:noborderset tal:define="dummy python:request.set('disable_border', 1)" />
+        </tal:noborder>
+    </metal:block>
+    <metal:block fill-slot="column_one_slot" />
+</head>
+<body>
+<metal:main fill-slot="main">
+    <tal:main-macro metal:define-macro="main" tal:define="toLocalizedTime nocall:context/@@plone/toLocalizedTime;
+                                                          license view/releaseLicense;
+                                                          compatibility view/linkedreleaseCompatibility">
+         <span tal:replace="structure context/@@authenticator/authenticator"/>
+
+         <dl class="portalinfomessage"
+            tal:define="is_editable context/@@plone_context_state/is_editable;
+                        wf_tool here/portal_workflow;
+                        review_state python:wf_tool.getInfoFor( here, 'review_state', '')"
+            tal:condition="python: is_editable and review_state == 'pre-release' ">
+            <dt i18n:translate="">Info</dt>
+            <dd>
+                <span i18n:translate="">Remember to publish your release once all files have been added.
+                    You can do that on the left side within the menubar. Click on the entry 'State: Unreleased'.
+                <br /></span>
+                <span>
+                    Or
+                <a tal:attributes="href string:${context/absolute_url}/content_status_history" i18n:translate="">
+                    you could do this following this link.</a>
+                </span>
+            </dd>
+        </dl>
+
+
+
+    </tal:main-macro>
+</metal:main>
+</body>
+
+</html>
