@@ -111,5 +111,10 @@
       provides="collective.addons.releasecustomurl.INameForReleaseURL"
       />
 
+  <adapter for="collective.addons.addonlinkedrelease.IAddonLinkedRelease"
+      factory="collective.addons.releasecustomurl.NameForReleaseURL"
+      provides="collective.addons.releasecustomurl.INameForReleaseURL"
+      />
+
 
 </configure>
