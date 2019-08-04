@@ -46,6 +46,151 @@
         </dl>
 
 
+        <div tal:replace="structure provider:plone.abovecontenttitle" />
+       <div class="row">
+            <div class="col-xs-12 col-sm-8">
+                <div class="paneaddonrelease">
+                    <h1 class="documentFirstHeading"><span tal:content="context/title" /></h1>
+                    <div class="documentDescription"><span tal:content="context/description" /></div>
+                    <div tal:condition="context/details">
+                        <h4 class="addoncenter" i18n:translate="">Release Details</h4>
+                        <p class="documentDescription" tal:content="structure view/w/context/details/render" />
+                    </div>
+                    <h4 class="addoncenterlicense" i18n:translate="">License(s)</h4>
+                    <p> <tal:loop repeat="releaselicense license">
+                        <span tal:content="releaselicense" />,
+                    </tal:loop></p>
+                    <h4 class="addoncentercompatibility" i18n:translate="">Compatibility</h4>
+                    <p>
+                        <tal:loop repeat="releaseCompatibility compatibility">
+                            <span tal:content="releaseCompatibility" />,
+                        </tal:loop>
+                    </p>
+                    <div tal:condition="context/changelog">
+                        <h4 tal:condition="context/changelog" class="documentSecondheading" i18n:translate="">Changelog</h4>
+                        <div class="eupcenterchangelog" tal:content="structure view/w/changelog/render" />
+                    </div>
+                    <h2 class="addoncenter" i18n:translate="">Available Downloads</h2>
+                    <div  class="addoncenterfile">
+                        <p tal:condition="context/link_to_file">
+                            <a tal:attributes=" href context/link_to_file">
+                                <span i18n:translate="">The linked Add-on file</span>
+                            </a>
+                            <span class="addoncenterplatform" tal:content="structure view/w/platform_choice/render" />
+              <span tal:condition="context/external_file_size"><br />
+                  <span i18n:translate="">File size:</span>
+                  <span tal:content="structure context/external_file_size" /> kb
+          </span>
+          </p>
+
+          <p tal:condition="context/link_to_file1">
+              <a tal:attributes=" href context/link_to_file1">
+              <span i18n:translate="">The linked Add-on file</span>
+              </a>
+              <span tal:condition="context/platform_choice1">
+                  <span class="addoncenterplatform" tal:content="structure view/w/platform_choice1/render" />
+              </span>
+              <span tal:condition="context/external_file_size1"><br />
+                  <span i18n:translate="">File size:</span>
+                  <span tal:content="structure context/external_file_size1" /> kb
+              </span>
+          </p>
+          <p tal:condition="context/link_to_file2">
+              <a tal:attributes=" href context/link_to_file2">
+                  <span i18n:translate="">The linked Add-on file</span>
+              </a>
+              <span tal:condition="context/platform_choice2">
+                  <span class="addoncenterplatform" tal:content="structure view/w/platform_choice2/render" />
+              </span>
+              <span tal:condition="context/external_file_size2"><br />
+                  <span i18n:translate="">File size:</span>
+                  <span tal:content="structure context/external_file_size2" /> kb
+              </span>
+          </p>
+          <p tal:condition="context/link_to_file3">
+              <a tal:attributes=" href context/link_to_file3">
+              <span i18n:translate="">The linked Add-on file</span>
+              </a>
+              <span tal:condition="context/platform_choice3">
+                  <span class="addoncenterplatform" tal:content="structure view/w/platform_choice3/render" />
+              </span>
+              <span tal:condition="context/external_file_size3"><br />
+                  <span i18n:translate="">File size:</span>
+                  <span tal:content="structure context/external_file_size3" /> kb
+              </span>
+          </p>
+
+          <p tal:condition="context/link_to_file4"> <a tal:attributes=" href context/link_to_file4">
+              <span i18n:translate="">The linked Add-on file</span></a>
+              <span tal:condition="context/platform_choice4">
+              <span class="addoncenterplatform" tal:content="structure view/w/platform_choice4/render" />
+              </span>
+          <span tal:condition="context/external_file_size4"><br />
+              <span i18n:translate="">File size:</span>
+              <span tal:content="structure context/external_file_size4" /> kb
+          </span>
+          </p>
+
+          <p tal:condition="context/link_to_file5"> <a tal:attributes=" href context/link_to_file5">
+              <span i18n:translate="">The linked Add-on file</span></a>
+              <span tal:condition="context/platform_choice5">
+              <span class="addoncenterplatform" tal:content="structure view/w/platform_choice5/render" />
+              </span>
+          <span tal:condition="context/external_file_size5"><br />
+              <span i18n:translate="">File size:</span>
+              <span tal:content="structure context/external_file_size5" /> kb
+          </span>
+          </p>
+                    </div>
+                                   <h4 class="addoncenterlegaldownload" tal:content="structure context/title_legaldownloaddisclaimer" />
+                    <div class="addoncenterlegaldownload" tal:content="structure context/legal_downloaddisclaimer/output" />
+                </div>
+            </div>
+           <div class="col-xs-12 col-sm-4">
+               <div class="sidebar">
+                   <div id="projectresources">
+                       <h2 i18n:translate="">Project Resources</h2>
+                       <ul>
+                           <li tal:condition="context/documentation_link">
+                               <a href="" tal:attributes="href context/documentation_link">
+                                   External Documentation
+                               </a>
+                           </li>
+                           <li tal:condition="context/homepage">
+                               <a href="" tal:attributes="href context/homepage">
+                                   External Project Page
+                               </a>
+                           </li>
+                       </ul>
+                       <div tal:condition="context/screenshot">
+                           <h4 i18n:translate="">Screenshot</h4>
+                           <div class="addonsprojectscreenshot" width="250px" tal:define="screenshot nocall:context/screenshot"
+                                    tal:condition="nocall:screenshot">
+                               <img tal:define="scales context/@@images"
+                                        tal:replace="structure python: scales.tag('screenshot',
+                                               width=250, height=200, direction='down')" />
+                           </div>
+                       </div>
+                   </div>
+                   <div tal:condition="context/link_to_source">
+                       <h4 class="addoncenter" i18n:translate="">Link to Source Code</h4>
+                       <p tal:content="context/link_to_source">The Link to the Source Code</p>
+                   </div>
+                   <div class="addonreleaseinstallinstructions" tal:condition="context/install_instructions">
+                       <h3 i18n:translate="">Install Instructions</h3>
+                       <span tal:content="structure context/install_instructions/output" />
+                   </div>
+                   <div class="eupcenterreleasereportingbugs" tal:condition="context/reporting_bugs">
+                       <h3>Reporting Extension-Bugs</h3>
+                       <span tal:content="structure context/reporting_bugs/output" />
+                   </div>
+               </div>
+           </div>
+       </div>
+
+
+
+
 
     </tal:main-macro>
 </metal:main>
