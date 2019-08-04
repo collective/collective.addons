@@ -1,0 +1,182 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="context/main_template/macros/master"
+      i18n:domain="collective.addons">
+
+
+<head>
+    <metal:block fill-slot="top_slot">
+      <link rel="stylesheet" type="text/css"
+            tal:define="navroot context/@@plone_portal_state/navigation_root_url"
+            tal:attributes="href string:${navroot}/++resource++collective.addons/addoncenter.css"
+            />
+
+        <tal:noborder condition="python:not user.has_permission('Modify portal content', context)">
+            <tal:noborderset tal:define="dummy python:request.set('disable_border', 1)" />
+        </tal:noborder>
+    </metal:block>
+    <metal:block fill-slot="column_one_slot" />
+</head>
+<body>
+<metal:main fill-slot="main">
+    <tal:main-macro metal:define-macro="main" tal:define="toLocalizedTime nocall:context/@@plone/toLocalizedTime;
+                                                          license view/releaseLicense;
+                                                          compatibility view/releaseCompatibility">
+         <span tal:replace="structure context/@@authenticator/authenticator"/>
+
+         <dl class="portalinfomessage"
+            tal:define="is_editable context/@@plone_context_state/is_editable;
+                        wf_tool here/portal_workflow;
+                        review_state python:wf_tool.getInfoFor( here, 'review_state', '');"
+            tal:condition="python: is_editable and review_state == 'pre-release' ">
+            <dt i18n:translate="">Info</dt>
+            <dd>
+                <span i18n:translate="">Remember to publish your release once all files have been added.
+                    You can do that on the left side within the menubar. Click on the entry 'State: Unreleased'.
+                <br /></span>
+                <span i18n:translate="">
+                    Or</span>
+                <span>
+                <a tal:attributes="href string:${context/absolute_url}/content_status_history" i18n:translate="">
+                    you could do this following this link.</a>
+                </span>
+            </dd>
+        </dl>
+
+        <div tal:replace="structure provider:plone.abovecontenttitle" />
+       <div class="row">
+            <div class="col-xs-12 col-sm-8">
+                <div class="paneaddonrelease">
+                    <h1 class="documentFirstHeading"><span tal:content="context/title" /></h1>
+                    <div class="documentDescription"><span tal:content="context/description" /></div>
+                    <div tal:condition="context/details">
+                        <h4 class="addoncenter" i18n:translate="">Release Details</h4>
+                        <p class="documentDescription" tal:content="structure view/w/context/details/render" />
+                    </div>
+                    <h4 class="addoncenterlicense" i18n:translate="">License(s)</h4>
+                    <p> <tal:loop repeat="releaselicense license">
+                        <span tal:content="releaselicense" />,
+                    </tal:loop></p>
+                    <h4 class="addoncentercompatibility" i18n:translate="">Compatibility</h4>
+                    <p>
+                        <tal:loop repeat="releaseCompatibility compatibility">
+                            <span tal:content="releaseCompatibility" />,
+                        </tal:loop>
+                    </p>
+                    <div tal:condition="context/changelog">
+                        <h4 tal:condition="context/changelog" class="documentSecondheading" i18n:translate="">Changelog</h4>
+                        <div class="eupcenterchangelog" tal:content="structure view/w/changelog/render" />
+                    </div>
+                    <h2 class="addoncenter" i18n:translate="">Available Downloads</h2>
+                    <div  class="addoncenterfile">
+                        <p tal:condition="context/file">
+                            <a tal:attributes="href string:${context/absolute_url}/@@download/file/${context/file/filename}">
+                                <img src="++resource++collective.addons/download_icon.gif" />
+                            </a>
+                            <a tal:attributes="href string:${context/absolute_url}/@@download/file/${context/file/filename}">
+                                <span tal:content="context/file/filename">The Add-on file name</span>
+                            </a>
+                            <span class="addoncenterplatform" tal:content="structure view/w/platform_choice/render" /><br />
+                            <span i18n:translate="">File size:</span> <span tal:content="python:context.file.size /1024" /> kb
+                        </p>
+                        <p tal:condition="context/file1">
+                            <a tal:attributes="href string:${context/absolute_url}/@@download/file/${context/file1/filename}">
+                                <img src="++resource++collective.addons/download_icon.gif" />
+                            </a>
+                            <a tal:attributes="href string:${context/absolute_url}/@@download/file/${context/file1/filename}">
+                                <span tal:content="context/file1/filename">The Add-on file name</span>
+                            </a>
+                            <span class="addoncenterplatform" tal:content="structure view/w/platform_choice1/render" /><br />
+                            <span i18n:translate="">File size:</span> <span tal:content="python:context.file1.size /1024" /> kb
+                        </p>
+                        <p tal:condition="context/file2">
+                            <a tal:attributes="href string:${context/absolute_url}/@@download/file/${context/file2/filename}">
+                                <img src="++resource++collective.addons/download_icon.gif" />
+                            </a>
+                            <a tal:attributes="href string:${context/absolute_url}/@@download/file/${context/file2/filename}">
+                                <span tal:content="context/file2/filename">The Add-on file name</span>
+                            </a><span class="addoncenterplatform" tal:content="structure view/w/platform_choice2/render" /><br />
+                            <span i18n:translate="">File size:</span> <span tal:content="python:context.file2.size /1024" /> kb
+                        </p>
+                        <p tal:condition="context/file3">
+                            <a tal:attributes="href string:${context/absolute_url}/@@download/file/${context/file3/filename}">
+                                <img src="++resource++collective.addons/download_icon.gif" /></a>
+                            <a tal:attributes="href string:${context/absolute_url}/@@download/file/${context/file3/filename}">
+                                <span tal:content="context/file3/filename">The Add-on file name</span></a>
+                            <span class="addoncenterplatform" tal:content="structure view/w/platform_choice3/render" /><br />
+                            <span i18n:translate="">File size:</span> <span tal:content="python:context.file3.size /1024" /> kb
+                        </p>
+                        <p tal:condition="context/file4">
+                            <a tal:attributes="href string:${context/absolute_url}/@@download/file/${context/file4/filename}">
+                                <img src="++resource++collective.addons/download_icon.gif" />
+                            </a>
+                            <a tal:attributes="href string:${context/absolute_url}/@@download/file/${context/file4/filename}">
+                                <span tal:content="context/file4/filename">The Add-on file name</span>
+                            </a>
+                            <span class="addoncenterplatform" tal:content="structure view/w/platform_choice4/render" /><br />
+                            <span i18n:translate="">File size:</span> <span tal:content="python:context.file4.size /1024" /> kb
+                        </p>
+                        <p tal:condition="context/file5">
+                            <a tal:attributes="href string:${context/absolute_url}/@@download/file/${context/file5/filename}">
+                                <img src="++resource++collective.addons/download_icon.gif" />
+                            </a>
+                            <a tal:attributes="href string:${context/absolute_url}/@@download/file/${context/file5/filename}">
+                                <span tal:content="context/file5/filename">The Add-on file name</span>
+                            </a>
+                            <span class="addoncenterplatform" tal:content="structure view/w/platform_choice5/render" /><br />
+                            <span i18n:translate="">File size:</span> <span tal:content="python:context.file5.size /1024" /> kb
+                        </p>
+                    </div>
+                    <h4 class="addoncenterlegaldownload" tal:content="structure context/title_legaldownloaddisclaimer" />
+                    <div class="addoncenterlegaldownload" tal:content="structure context/legal_downloaddisclaimer/output" />
+                </div>
+            </div>
+           <div class="col-xs-12 col-sm-4">
+               <div class="sidebar">
+                   <div id="projectresources">
+                       <h2 i18n:translate="">Project Resources</h2>
+                       <ul>
+                           <li tal:condition="context/documentation_link">
+                               <a href="" tal:attributes="href context/documentation_link">
+                                   External Documentation
+                               </a>
+                           </li>
+                           <li tal:condition="context/homepage">
+                               <a href="" tal:attributes="href context/homepage">
+                                   External Project Page
+                               </a>
+                           </li>
+                       </ul>
+                       <div tal:condition="context/screenshot">
+                           <h4 i18n:translate="">Screenshot</h4>
+                           <div class="addonsprojectscreenshot" width="250px" tal:define="screenshot nocall:context/screenshot"
+                                    tal:condition="nocall:screenshot">
+                               <img tal:define="scales context/@@images"
+                                        tal:replace="structure python: scales.tag('screenshot',
+                                               width=250, height=200, direction='down')" />
+                           </div>
+                       </div>
+                   </div>
+                   <div tal:condition="context/link_to_source">
+                       <h4 class="addoncenter" i18n:translate="">Link to Source Code</h4>
+                       <p tal:content="context/link_to_source">The Link to the Source Code</p>
+                   </div>
+                   <div class="addonreleaseinstallinstructions" tal:condition="context/install_instructions">
+                       <h3 i18n:translate="">Install Instructions</h3>
+                       <span tal:content="structure context/install_instructions/output" />
+                   </div>
+                   <div class="eupcenterreleasereportingbugs" tal:condition="context/reporting_bugs">
+                       <h3>Reporting Extension-Bugs</h3>
+                       <span tal:content="structure context/reporting_bugs/output" />
+                   </div>
+               </div>
+           </div>
+       </div>
+    </tal:main-macro>
+</metal:main>
+</body>
+
+</html>
