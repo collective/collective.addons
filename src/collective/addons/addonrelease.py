@@ -20,6 +20,7 @@ from collective.addons.common import yesnochoice
 from plone.indexer.decorator import indexer
 from z3c.form import validator
 from zope.security import checkPermission
+from plone.dexterity.browser.view import DefaultView
 
 
 import re
@@ -521,7 +522,7 @@ validator.WidgetValidatorDiscriminators(
 
 
 
-class AddonReleaseView(BrowserView):
+class AddonReleaseView(DefaultView):
 
     def canPublishContent(self):
         return checkPermission('cmf.ModifyPortalContent', self.context)
@@ -539,3 +540,10 @@ class AddonReleaseView(BrowserView):
         idx_data = catalog.getIndexDataForUID(path)
         compatibility = idx_data.get('getCompatibility')
         return (r for r in compatibility)
+
+    def platformchoice(self):
+        catalog = api.portal.get_tool(name='portal_catalog')
+        path = "/".join(self.context.getPhysicalPath())
+        idx_data = catalog.getIndexDataForUID(path)
+        platform = idx_data.get('getCompatibility')
+        return (r for r in platform)
