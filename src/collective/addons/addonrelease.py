@@ -251,7 +251,7 @@ class IAddonRelease(model.Schema):
     )
 
     file = NamedBlobFile(
-        title=_(u"The irst file you want to upload."),
+        title=_(u"The first file you want to upload."),
         description=_(u"Please upload your file."),
         required=True,
         constraint=validateaddonfileextension
