@@ -14,11 +14,11 @@ from Acquisition import aq_inner, aq_parent
 from zope.schema.interfaces import IContextSourceBinder
 from plone import api
 from zope.interface import invariant, Invalid
-from Products.Five import BrowserView
 from collective.addons.common import yesnochoice
 from plone.indexer.decorator import indexer
 from z3c.form import validator
 from zope.security import checkPermission
+from plone.dexterity.browser.view import DefaultView
 
 import re
 import six
@@ -560,7 +560,7 @@ validator.WidgetValidatorDiscriminators(
 
 
 
-class AddonLinkedReleaseView(BrowserView):
+class AddonLinkedReleaseView(DefaultView):
 
     def canPublishContent(self):
         return checkPermission('cmf.ModifyPortalContent', self.context)

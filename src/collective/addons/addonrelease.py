@@ -7,7 +7,6 @@ from plone.supermodel.directives import primary
 from plone.app.textfield import RichText
 from zope.interface import provider
 from zope.schema.interfaces import IContextAwareDefaultFactory
-from Products.Five import BrowserView
 from z3c.form.browser.checkbox import CheckBoxFieldWidget
 from zope.schema.interfaces import IContextSourceBinder
 from zope.schema.vocabulary import SimpleVocabulary, SimpleTerm
