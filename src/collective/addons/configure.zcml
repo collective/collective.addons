@@ -116,5 +116,9 @@
       provides="collective.addons.releasecustomurl.INameForReleaseURL"
       />
 
+  <adapter name="releases_compat_versions" factory=".adapter.releases_compat_versions"/>
+
+  <adapter factory=".adapter.ReleasesCompatVersions" />
+
 
 </configure>
