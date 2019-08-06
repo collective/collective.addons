@@ -121,4 +121,17 @@
   <adapter factory=".adapter.ReleasesCompatVersions" />
 
 
+  <subscriber
+    for="collective.addons.addonrelease.IAddonRelease
+         zope.lifecycleevent.interfaces.IObjectAddedEvent"
+    handler="collective.addons.addonrelease.update_project_releases_compat_versions_on_creation"
+    />
+
+  <subscriber
+    for="collective.addons.addonrelease.IAddonRelease
+         zope.lifecycleevent.interfaces.IObjectModifiedEvent"
+    handler="collective.addons.addonrelease.update_project_releases_compat_versions"
+    />
+
+
 </configure>
