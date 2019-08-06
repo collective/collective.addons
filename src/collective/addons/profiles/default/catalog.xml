@@ -26,4 +26,6 @@
         <indexed_attr value="allowed_addonfileextension" />
     </index>
     <column value="addon_release_number"/>
+    <column value="releases_compat_versions"/>
+    <column value="compatibility_choice" />
 </object>
