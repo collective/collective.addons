@@ -134,4 +134,18 @@
     />
 
 
+  <subscriber
+    for="collective.addons.addonlinkedrelease.IAddonLinkedRelease
+         zope.lifecycleevent.interfaces.IObjectAddedEvent"
+    handler="collective.addons.addonlinkedrelease.update_project_releases_compat_versions_on_creation"
+    />
+
+  <subscriber
+    for="collective.addons.addonlinkedrelease.IAddonLinkedRelease
+         zope.lifecycleevent.interfaces.IObjectModifiedEvent"
+    handler="collective.addons.addonlinkedrelease.update_project_releases_compat_versions"
+    />
+
+
+
 </configure>
