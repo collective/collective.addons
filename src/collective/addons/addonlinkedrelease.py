@@ -19,6 +19,7 @@ from plone.indexer.decorator import indexer
 from z3c.form import validator
 from zope.security import checkPermission
 from plone.dexterity.browser.view import DefaultView
+from collective.addons.adapter import IReleasesCompatVersions
 
 import re
 import six
@@ -517,6 +518,32 @@ class IAddonLinkedRelease(model.Schema):
 @indexer(IAddonLinkedRelease)
 def addon_release_number(context, **kw):
     return context.releasenumber
+
+
+
+def update_project_releases_compat_versions_on_creation(addonlinkedrelease, event):
+    IReleasesCompatVersions(
+        addonlinkedrelease.aq_parent).update(addonlinkedrelease.compatibility_choice)
+
+
+def update_project_releases_compat_versions(addonlinkedrelease, event):
+    pc = api.portal.get_tool(name='portal_catalog')
+    query = '/'.join(addonlinkedrelease.aq_parent.getPhysicalPath())
+    brains = pc.searchResults({
+        'path': {'query': query, 'depth': 1},
+        'portal_type': ['collective.addons.addonrelease',
+                        'collective.addons.addonlinkedrelease']
+    })
+
+    result = []
+    for brain in brains:
+        if isinstance(brain.compatibility_choice, list):
+            result = result + brain.compatibility_choice
+
+    IReleasesCompatVersions(
+        addonlinkedrelease.aq_parent).set(list(set(result)))
+
+
 
 
 class ValidateAddonLinkedReleaseUniqueness(validator.SimpleFieldValidator):
