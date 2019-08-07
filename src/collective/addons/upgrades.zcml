@@ -3,14 +3,31 @@
   xmlns:genericsetup="http://namespaces.zope.org/genericsetup">
 
   <!-- -*- extra stuff goes here -*- -->
-  <!--<genericsetup:upgradeStep
+  <genericsetup:upgradeStep
     source="*"
     destination="1001"
     title="Reload GS profiles"
     description=""
     profile="collective.addons:default"
     handler=".upgrades.reload_gs_profile"
-    />-->
+    />
+
+    <genericsetup:upgradeStep
+      title="Apply new indexes"
+      handler=".setuphandlers.post_install"
+      />
+
+    <genericsetup:upgradeDepends
+      title="Apply catalog.xml"
+      import_steps="catalog"
+      />
+
+    <genericsetup:upgradeStep
+      title="Apply new indexes"
+      handler=".upgrades.populat_release_compat_version_index"
+      />
+
+  </genericsetup:upgradeSteps>
 
 
 </configure>
