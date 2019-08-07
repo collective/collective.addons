@@ -3,14 +3,20 @@
   xmlns:genericsetup="http://namespaces.zope.org/genericsetup">
 
   <!-- -*- extra stuff goes here -*- -->
-  <genericsetup:upgradeStep
+  <!--<genericsetup:upgradeStep
     source="*"
     destination="1001"
     title="Reload GS profiles"
     description=""
     profile="collective.addons:default"
     handler=".upgrades.reload_gs_profile"
-    />
+    />-->
+
+  <genericsetup:upgradeSteps
+    source="1"
+    destination="2"
+    profile="collective.addons:default">
+
 
     <genericsetup:upgradeStep
       title="Apply new indexes"
