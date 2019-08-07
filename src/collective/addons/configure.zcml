@@ -120,6 +120,21 @@
 
   <adapter factory=".adapter.ReleasesCompatVersions" />
 
+  <adapter factory=".mailtoauthor.MailToAuthorAdapter"/>
+
+  <browser:page
+        for="Products.CMFCore.interfaces.ISiteRoot"
+        name="mail-to-addonauthor"
+        class=".mailtoauthor.MailToAuthorForm"
+        permission="zope2.View"
+        />
+
+  <adapter
+      factory=".mailtoauthor.ReCaptcha"
+      for="Products.CMFPlone.interfaces.siteroot.IPloneSiteRoot"
+      provides=".mailtoauthor.IReCaptchaForm"
+   />
+
 
   <subscriber
     for="collective.addons.addonrelease.IAddonRelease
