@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from plone.app.upgrade.utils import loadMigrationProfile
 from plone import api
-from tdf.extensionuploadcenter.adapter import IReleasesCompatVersions
+from collective.addons.adapter import IReleasesCompatVersions
 
 import logging
 
