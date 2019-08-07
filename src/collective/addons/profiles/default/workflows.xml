@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<object name="portal_workflow">
+
+    <object name="collective_addons_release_workflow" meta_type="Workflow" />
+    <bindings>
+
+        <type type_id="collective.addons.addonrelease">
+            <bound-workflow workflow_id="collective_addons_release_workflow" />
+        </type>
+    </bindings>
+
+    <object name="collective_addons_linked_release_workflow" meta_type="Workflow" />
+    <bindings>
+        <type type_id="collective.addons.addonlinkedrelease">
+            <bound-workflow workflow_id="collective_addons_linked_release_workflow" />
+        </type>
+    </bindings>
+    <object name="collective_addons_project_workflow" meta_type="Workflow" />
+    <bindings>
+        <type type_id="collective.addons.addonproject">
+            <bound-workflow workflow_id="collective_addons_project_workflow" />
+        </type>
+    </bindings>
+</object>
