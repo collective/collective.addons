@@ -18,6 +18,8 @@ from Acquisition import aq_inner
 from zope.component import getMultiAdapter
 from zope.interface import implementer
 
+from Products.CMFPlone.utils import safe_unicode
+
 
 checkemail = re.compile(
     r"[a-zA-Z0-9._%-]+@([a-zA-Z0-9-]+\.)+[a-zA-Z]{2,4}").match
@@ -25,7 +27,7 @@ checkemail = re.compile(
 
 def validateemail(value):
     if not checkemail(value):
-        raise Invalid(_(u"Invalid email address"))
+        raise Invalid(_(safe_unicode("Invalid email address")))
     return True
 
 def validateprojectname(value):
@@ -37,7 +39,7 @@ def validateprojectname(value):
 
     for brain in project[:1]:
         if brain.Title is None:
-            raise Invalid(_(u"Not a valid project name. Please retry."))
+            raise Invalid(_(safe_unicode("Not a valid project name. Please retry.")))
         return True
 
 
@@ -47,14 +49,14 @@ logger = logging.getLogger(__name__)
 class IReCaptchaForm(interface.Interface):
 
     captcha = schema.TextLine(
-        title=u"ReCaptcha",
-        description=u"",
+        title=safe_unicode("ReCaptcha"),
+        description=safe_unicode(""),
         required=False
     )
 
 
 class ReCaptcha(object):
-    captcha = u""
+    captcha = safe_unicode("")
 
     def __init__(self, context):
         self.context = context
@@ -63,32 +65,32 @@ class ReCaptcha(object):
 class MailToAuthorSchema(interface.Interface):
 
     inquirerfirstname = schema.TextLine(
-        title=_(u"Your First Name"),
-        description=_(u"Please fill in your first name(s)")
+        title=_(safe_unicode("Your First Name")),
+        description=_(safe_unicode("Please fill in your first name(s)"))
     )
 
     inquirerfamilyname = schema.TextLine(
-        title=_(u"Your Family Name"),
-        description=_(u"Please fill in your familiy name")
+        title=_(safe_unicode("Your Family Name")),
+        description=_(safe_unicode("Please fill in your familiy name"))
     )
 
     inquireremailaddress = schema.TextLine(
-        title=_(u"Your Email Address"),
-        description=_(u"Please fill in your email address."),
+        title=_(safe_unicode("Your Email Address")),
+        description=_(safe_unicode("Please fill in your email address.")),
         constraint=validateemail
     )
 
     projectname = schema.TextLine(
-        title=_(u"Project Name"),
-        description=_(u"The name of the project, to which author you want "
-                      u"to send feedback."),
+        title=_(safe_unicode("Project Name")),
+        description=_(safe_unicode("The name of the project, to which author "
+                                   "you want to send feedback.")),
         constraint= validateprojectname
     )
 
     inquiry = schema.Text(
-        title=_(u"Your Message To The Author"),
-        description=_(u"What is your message to the author of the project? "
-                      u"Your message is limited to 1000 characters."),
+        title=_(safe_unicode("Your Message To The Author")),
+        description=_(safe_unicode("What is your message to the author of the project? "
+                                   "Your message is limited to 1000 characters.")),
         max_length=1000
     )
 
@@ -109,8 +111,8 @@ class MailToAuthorForm(AutoExtensibleForm, form.Form):
     schema = MailToAuthorSchema
     form_name = 'authormail_form'
 
-    label = _(u"Mail To The Project Author")
-    description = _(u"Contact the project author and send your feedback")
+    label = _(safe_unicode("Mail To The Project Author"))
+    description = _(safe_unicode("Contact the project author and send your feedback"))
 
     fields = field.Fields(MailToAuthorSchema, IReCaptchaForm)
     fields['captcha'].widgetFactory = ReCaptchaFieldWidget
@@ -141,8 +143,8 @@ class MailToAuthorForm(AutoExtensibleForm, form.Form):
                 "Please validate the recaptcha field before sending the form."
             )
             IStatusMessage(self.request).addStatusMessage(
-                _(u"Please validate the recaptcha field before sending "
-                  u"the form."), "error"
+                _(safe_unicode("Please validate the recaptcha field before sending "
+                               "the form.")), "error"
             )
             return
 
@@ -159,14 +161,14 @@ class MailToAuthorForm(AutoExtensibleForm, form.Form):
             else:
                 projectemail = 'projects.foo.org'
 
-        mailrecipient=(u"{}").format(projectemail)
+        mailrecipient=(safe_unicode("{}")).format(projectemail)
         api.portal.send_email(
             recipient=mailrecipient,
-            sender=(u"{} {} <{}>").format(data['inquirerfirstname'],
+            sender=(safe_unicode("{} {} <{}>")).format(data['inquirerfirstname'],
                                             data['inquirerfamilyname'],
                                             data['inquireremailaddress']),
-            subject=(u"Your Project: {}").format(data['projectname']),
-            body=(u"{}").format(data['inquiry'])
+            subject=(safe_unicode("Your Project: {}")).format(data['projectname']),
+            body=(safe_unicode("{}")).format(data['inquiry'])
 
 
         )
@@ -174,8 +176,8 @@ class MailToAuthorForm(AutoExtensibleForm, form.Form):
         # Redirect back to the front page with a status message
 
         IStatusMessage(self.request).addStatusMessage(
-                _(u"We send your message to the author of the project. It's "
-                  u"on his choice, if he'll get back to you."),
+                _(safe_unicode("We send your message to the author of the project. It's "
+                               "on his choice, if he'll get back to you.")),
                 "info"
             )
 
