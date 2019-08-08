@@ -75,7 +75,7 @@
         <a class="pointer" tal:attributes="href string:${context/absolute_url}/++add++collective.addons.addonreleaselink">
             <img src="++resource++collective.addons/yellowarrow.png"  alt=""/>
             <span i18n:translate="">a linked Release</span> <span i18n:translate="">to your</span>
-            <span tal:content="context/product_title | string:extension_project" /> <span i18n:translate="">Project</span></a>
+            <span tal:content="context/product_title | string:addon_project" /> <span i18n:translate="">Project</span></a>
             </div>
         </div>
 
@@ -85,16 +85,32 @@
                      <h1 class="documentFirstHeading"><span tal:content="context/title" /></h1>
                      <div tal:content="structure context/@@rate-if-you-dare" />
                      <p class="documentDescription"><span tal:content="context/description" /></p>
-                     <h2 tal:condition="context/details" class="documentSecondHeading">Project Description</h2>
-                     <p class="documentDescription" tal:content="structure context/details/output" />
+                     <div tal:condition="context/details">
+                         <h2 class="documentSecondHeading">Project Description</h2>
+                         <p class="documentDescription" tal:content="structure context/details/output" />
+                     </div>
                      <h3 i18n:translate="">Category/Categories</h3>
                      <p>
                          <tal:loop repeat="releasecategories categories">
                              <span tal:content="releasecategories" />,
                          </tal:loop>
                      </p>
-                     <h3 tal:condition="context/homepage">Homepage of the Project</h3>
-                     <div tal:content="context/homepage" />
+                     <div tal:condition="context/homepage">
+                         <h3 >Homepage of the Project</h3>
+                         <span tal:content="context/homepage" />
+                     </div>
+                     <tal:have_logo tal:condition="context/project_logo">
+                         <h4>Logo</h4>
+                         <img src="" alt=""
+                                  tal:define="scales context/@@images;
+                                         scale python:scales.scale(
+                                                 'project_logo', 'mini')"
+                                  tal:replace="structure python:scale and
+                                         scale.tag(
+                                                 css_class='addonprojectlogo')or None" />
+                     </tal:have_logo>
+                     <div class="visualClear"></div>
+
                  </div>
              </div>
             </div>
