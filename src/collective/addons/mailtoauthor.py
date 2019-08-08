@@ -30,6 +30,7 @@ def validateemail(value):
         raise Invalid(_(safe_unicode("Invalid email address")))
     return True
 
+
 def validateprojectname(value):
     catalog = api.portal.get_tool('portal_catalog')
     project = catalog(
@@ -39,7 +40,8 @@ def validateprojectname(value):
 
     for brain in project[:1]:
         if brain.Title is None:
-            raise Invalid(_(safe_unicode("Not a valid project name. Please retry.")))
+            raise Invalid(_(safe_unicode("Not a valid project name. Please "
+                                         "retry.")))
         return True
 
 
@@ -84,19 +86,21 @@ class MailToAuthorSchema(interface.Interface):
         title=_(safe_unicode("Project Name")),
         description=_(safe_unicode("The name of the project, to which author "
                                    "you want to send feedback.")),
-        constraint= validateprojectname
+        constraint=validateprojectname
     )
 
     inquiry = schema.Text(
         title=_(safe_unicode("Your Message To The Author")),
-        description=_(safe_unicode("What is your message to the author of the project? "
-                                   "Your message is limited to 1000 characters.")),
+        description=_(safe_unicode("What is your message to the author of "
+                                   "the project? Your message is limited to "
+                                   "1000 characters.")),
         max_length=1000
     )
 
+
 @implementer(MailToAuthorSchema)
 class MailToAuthorAdapter(object):
-   # interface.implements(MailToAuthorSchema)
+    # interface.implements(MailToAuthorSchema)
     component.adapts(interface.Interface)
 
     def __init__(self, context):
@@ -112,7 +116,8 @@ class MailToAuthorForm(AutoExtensibleForm, form.Form):
     form_name = 'authormail_form'
 
     label = _(safe_unicode("Mail To The Project Author"))
-    description = _(safe_unicode("Contact the project author and send your feedback"))
+    description = _(safe_unicode("Contact the project author and send "
+                                 "your feedback"))
 
     fields = field.Fields(MailToAuthorSchema, IReCaptchaForm)
     fields['captcha'].widgetFactory = ReCaptchaFieldWidget
@@ -143,8 +148,8 @@ class MailToAuthorForm(AutoExtensibleForm, form.Form):
                 "Please validate the recaptcha field before sending the form."
             )
             IStatusMessage(self.request).addStatusMessage(
-                _(safe_unicode("Please validate the recaptcha field before sending "
-                               "the form.")), "error"
+                _(safe_unicode("Please validate the recaptcha field before "
+                               "sending the form.")), "error"
             )
             return
 
@@ -161,13 +166,15 @@ class MailToAuthorForm(AutoExtensibleForm, form.Form):
             else:
                 projectemail = 'projects.foo.org'
 
-        mailrecipient=(safe_unicode("{}")).format(projectemail)
+        mailrecipient = (safe_unicode("{}")).format(projectemail)
         api.portal.send_email(
             recipient=mailrecipient,
-            sender=(safe_unicode("{} {} <{}>")).format(data['inquirerfirstname'],
+            sender=(safe_unicode("{} {} <{}>")).format(
+                                            data['inquirerfirstname'],
                                             data['inquirerfamilyname'],
                                             data['inquireremailaddress']),
-            subject=(safe_unicode("Your Project: {}")).format(data['projectname']),
+            subject=(safe_unicode("Your Project: {}")).format(
+                                            data['projectname']),
             body=(safe_unicode("{}")).format(data['inquiry'])
 
 
@@ -176,8 +183,9 @@ class MailToAuthorForm(AutoExtensibleForm, form.Form):
         # Redirect back to the front page with a status message
 
         IStatusMessage(self.request).addStatusMessage(
-                _(safe_unicode("We send your message to the author of the project. It's "
-                               "on his choice, if he'll get back to you.")),
+                _(safe_unicode("We send your message to the author of the "
+                               "project. It's on his choice, if he'll "
+                               "get back to you.")),
                 "info"
             )
 
