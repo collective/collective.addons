@@ -142,7 +142,6 @@
                                  </tal:compatibility>
                                  <dl>
                                      <span tal:condition="not:python:latestunstablerelease.portal_type == 'collective.addons.addonlinkedrelease'">
-                                         <span>HERE</span>
                                          <span tal:condition="latestunstablerelease/file">
                                              <a tal:attributes="href string:${latestunstablerelease/absolute_url}/@@download/file/${latestunstablerelease/file/filename}">
                                                  <img src="++resource++collective.addons/download_icon.gif" />
