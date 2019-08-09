@@ -121,6 +121,114 @@
                          <tal:noreleases tal:condition="python:latestRelease is None">
                              <tal:nounstable tal:condition="nocall:latestunstablerelease">
                                  <h2 i18n:translate="">Latest Not Stable Release</h2>
+                                 <h3>
+                                     <a href="#" title="Current unstable release for the project"
+                                              i18n:attributes="title"
+                                              tal:attributes="href latestunstablerelease/absolute_url">
+                                         <span tal:content="latestunstablerelease/Title" />
+                                     </a>
+                                 </h3>
+                                 <p class="discreet">
+                                     <tal:compatibility condition="latestunstablerelease/compatibility_choice">
+                                         &mdash; <span i18n:translate="">tested with:</span>
+                                     </tal:compatibility>
+                                 </p>
+                                 <tal:compatibility condition="latestunstablerelease/compatibility_choice">
+                                     <p class="latestunstablereleasecompatibility">
+                                         <tal:loop repeat="compatibility_choice latestunstablerelease/compatibility_choice">
+                                             <span tal:content="compatibility_choice" />,
+                                         </tal:loop>
+                                     </p>
+                                 </tal:compatibility>
+                                 <dl>
+                                     <span tal:condition="not:python:latestunstablerelease.portal_type == 'collective.addons.addonlinkedrelease'">
+                                         <span>HERE</span>
+                                         <span tal:condition="latestunstablerelease/file">
+                                             <a tal:attributes="href string:${latestunstablerelease/absolute_url}/@@download/file/${latestunstablerelease/file/filename}">
+                                                 <img src="++resource++collective.addons/download_icon.gif" />
+                                                 <span tal:content="latestunstablerelease/file/filename" />
+                                             </a>
+                                              <tal:loop repeat="platform_choice latestunstablerelease/platform_choice">
+                                                  <dl><div tal:content="platform_choice" /></dl>
+                                              </tal:loop>
+                                              <div class="addonfilesize">
+                                                  <span i18n:translate="">File size: </span>
+                                                  <span tal:content="python:latestunstablerelease.file.size / 1024" />
+                                                  <span> kb</span>
+                                              </div>
+                                         </span>
+                                         <span tal:condition="latestunstablerelease/file1">
+                                             <a tal:attributes="href string:${latestunstablerelease/absolute_url}/@@download/file1/${latestunstablerelease/file1/filename}">
+                                                 <img src="++resource++collective.addons/download_icon.gif" />
+                                                 <span tal:content="latestunstablerelease/file1/filename" />
+                                             </a>
+                                             <tal:loop repeat="platform_choice latestunstablerelease/platform_choice">
+                                                 <dl><div tal:content="platform_choice" /></dl>
+                                             </tal:loop>
+                                             <div class="addonfilesize">
+                                                 <span i18n:translate="">File size: </span>
+                                                 <span tal:content="python:latestunstablerelease.file1.size / 1024" />
+                                                 <span> kb</span>
+                                             </div>
+                                         </span>
+                                         <span tal:condition="latestunstablerelease/file2">
+                                             <a tal:attributes="href string:${latestunstablerelease/absolute_url}/@@download/file2/${latestunstablerelease/file2/filename}">
+                                                 <img src="++resource++collective.addons/download_icon.gif" />
+                                                 <span tal:content="latestunstablerelease/file2/filename" />
+                                             </a>
+                                             <tal:loop repeat="platform_choice latestunstablerelease/platform_choice">
+                                                 <dl><div tal:content="platform_choice" /></dl>
+                                             </tal:loop>
+                                             <div class="addonfilesize">
+                                                 <span i18n:translate="">File size: </span>
+                                                 <span tal:content="python:latestunstablerelease.file2.size / 1024" />
+                                                 <span> kb</span>
+                                             </div>
+                                         </span>
+                                         <span tal:condition="latestunstablerelease/file3">
+                                             <a tal:attributes="href string:${latestunstablerelease/absolute_url}/@@download/file3/${latestunstablerelease/file3/filename}">
+                                                 <img src="++resource++collective.addons/download_icon.gif" />
+                                                 <span tal:content="latestunstablerelease/file3/filename" />
+                                             </a>
+                                             <tal:loop repeat="platform_choice latestunstablerelease/platform_choice">
+                                                 <dl><div tal:content="platform_choice" /></dl>
+                                             </tal:loop>
+                                             <div class="addonfilesize">
+                                                 <span i18n:translate="">File size: </span>
+                                                 <span tal:content="python:latestunstablerelease.file3.size / 1024" />
+                                                 <span> kb</span>
+                                             </div>
+                                         </span>
+                                         <span tal:condition="latestunstablerelease/file4">
+                                             <a tal:attributes="href string:${latestunstablerelease/absolute_url}/@@download/file4/${latestunstablerelease/file4/filename}">
+                                                 <img src="++resource++tdf.extensionuploadcenter/download_icon.gif" />
+                                                 <span tal:content="latestunstablerelease/file4/filename" />
+                                             </a>
+                                             <tal:loop repeat="platform_choice latestunstablerelease/platform_choice">
+                                                 <dl><div tal:content="platform_choice" /></dl>
+                                             </tal:loop>
+                                             <div class="addonfilesize">
+                                                 <span i18n:translate="">File size: </span>
+                                                 <span tal:content="python:latestunstablerelease.file4.size / 1024" />
+                                                 <span> kb</span>
+                                             </div>
+                                         </span>
+                                         <span tal:condition="latestunstablerelease/file5">
+                                             <a tal:attributes="href string:${latestunstablerelease/absolute_url}/@@download/file5/${latestunstablerelease/file5/filename}">
+                                                 <img src="++resource++collective.addons/download_icon.gif" />
+                                                 <span tal:content="latestunstablerelease/file5/filename" />
+                                             </a>
+                                             <tal:loop repeat="platform_choice latestunstablerelease/platform_choice">
+                                                 <dl><div tal:content="platform_choice" /></dl>
+                                             </tal:loop>
+                                             <div class="addonfilesize">
+                                                 <span i18n:translate="">File size: </span>
+                                                 <span tal:content="python:latestunstablerelease.file5.size / 1024" />
+                                                 <span> kb</span>
+                                             </div>
+                                         </span>
+                                     </span>
+                                 </dl>
                              </tal:nounstable>
                          </tal:noreleases>
 
