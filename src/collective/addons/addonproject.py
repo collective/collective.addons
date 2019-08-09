@@ -280,3 +280,75 @@ class AddonProjectView(BrowserView):
         compatibility = idx_data.get('getCompatibility')
         return (r for r in compatibility)
 
+    def all_releases(self):
+        """Get a list of all releases, ordered by version, starting with
+           the latest.
+        """
+
+        catalog = api.portal.get_tool(name='portal_catalog')
+        current_path = "/".join(self.context.getPhysicalPath())
+        res = catalog.searchResults(
+            portal_type=('collective.addons.addonrelease',
+                         'collective.addons.addonlinkedrelease'),
+            path=current_path,
+            sort_on='Date',
+            sort_order='reverse')
+        return [r.getObject() for r in res]
+
+
+
+    def latest_release(self):
+        """Get the most recent final release or None if none can be found.
+        """
+
+        context = self.context
+        res = None
+        catalog = api.portal.get_tool('portal_catalog')
+
+        res = catalog.searchResults(
+            portal_type=('collective.addons.addonrelease',
+                         'collective.addons.addonlinkedrelease'),
+            path='/'.join(context.getPhysicalPath()),
+            review_state='final',
+            sort_on='effective',
+            sort_order='reverse')
+
+        if not res:
+            return None
+        else:
+            return res[0].getObject()
+
+
+    def latest_release_date(self):
+        """Get the date of the latest release
+        """
+
+        latest_release = self.latest_release()
+        if latest_release:
+            return self.context.toLocalizedTime(latest_release.effective())
+        else:
+            return None
+
+
+
+    def latest_unstable_release(self):
+
+        context = self.context
+        res = None
+        catalog = api.portal.get_tool('portal_catalog')
+
+        res = catalog.searchResults(
+            portal_type=('collective.addons.addonrelease',
+                         'collective.addons.addonlinkedrelease'),
+            path='/'.join(context.getPhysicalPath()),
+            review_state=('alpha', 'beta', 'release-candidate'),
+            sort_on='effective',
+            sort_order='reverse')
+
+        if not res:
+            return None
+        else:
+            return res[0].getObject()
+
+
+
