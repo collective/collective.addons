@@ -5,10 +5,9 @@ from zope import interface
 from zope import schema
 from zope import component
 from z3c.form import form, button
-import re
+
 from zope.interface import Invalid
 from plone import api
-from Products.statusmessages.interfaces import IStatusMessage
 
 import logging
 from z3c.form import field
@@ -20,6 +19,8 @@ from zope.interface import implementer
 from zope.component import adapter
 
 from Products.CMFPlone.utils import safe_unicode
+
+import re
 
 
 checkemail = re.compile(
@@ -36,7 +37,7 @@ def validateprojectname(value):
     catalog = api.portal.get_tool('portal_catalog')
     project = catalog(
         portal_type='collective.addons.addonproject',
-        Title=value
+        Title=value,
     )
 
     for brain in project[:1]:
@@ -102,8 +103,6 @@ class MailToAuthorSchema(interface.Interface):
 @implementer(MailToAuthorSchema)
 @adapter(interface.Interface)
 class MailToAuthorAdapter(object):
-    # interface.implements(MailToAuthorSchema)
-    component.adapts(interface.Interface)
 
     def __init__(self, context):
         self.inquirerfirstname = None
@@ -136,7 +135,7 @@ class MailToAuthorForm(AutoExtensibleForm, form.Form):
         data, errors = self.extractData()
         captcha = getMultiAdapter(
             (aq_inner(self.context), self.request),
-            name='recaptcha'
+            name='recaptcha',
         )
 
         if errors:
@@ -149,11 +148,16 @@ class MailToAuthorForm(AutoExtensibleForm, form.Form):
             logger.info(
                 "Please validate the recaptcha field before sending the form."
             )
-            IStatusMessage(self.request).addStatusMessage(
-                _(safe_unicode("Please validate the recaptcha field before "
-                               "sending the form.")), "error"
-            )
+            api.portal.show_message(
+                message=_(
+                    safe_unicode('Please validate the recaptcha field before '
+                                 'sending the form.')),
+                request=self.request,
+                type='error')
             return
+
+        if api.portal.get_registry_record('plone.email_from_address') is not None:
+            contactaddress = api.portal.get_registry_record('plone.email_from_address')
 
         catalog = api.portal.get_tool('portal_catalog')
         project = catalog(
@@ -166,7 +170,7 @@ class MailToAuthorForm(AutoExtensibleForm, form.Form):
                 projectemail = brain.getObject().contactAddress
 
             else:
-                projectemail = 'projects.foo.org'
+                projectemail = contactaddress
 
         mailrecipient = (safe_unicode("{}")).format(projectemail)
         api.portal.send_email(
@@ -184,17 +188,17 @@ class MailToAuthorForm(AutoExtensibleForm, form.Form):
 
         # Redirect back to the front page with a status message
 
-        IStatusMessage(self.request).addStatusMessage(
-                _(safe_unicode("We send your message to the author of the "
-                               "project. It's on his choice, if he'll "
-                               "get back to you.")),
-                "info"
-            )
+        api.portal.show_message(
+            message=_(safe_unicode('We send your message to the author '
+                                   'of the project. It\'s on his choice, '
+                                   'if he\'ll get back to you.')),
+            request=self.request,
+            type='info')
 
         contextURL = self.context.absolute_url()
         self.request.response.redirect(contextURL)
 
-    @button.buttonAndHandler(_(u"Cancel"))
+    @button.buttonAndHandler(_(safe_unicode("Cancel")))
     def handleCancel(self, action):
         """User cancelled. Redirect back to the front page.
             """
