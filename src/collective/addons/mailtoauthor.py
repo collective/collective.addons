@@ -17,6 +17,7 @@ from plone.formwidget.recaptcha.widget import ReCaptchaFieldWidget
 from Acquisition import aq_inner
 from zope.component import getMultiAdapter
 from zope.interface import implementer
+from zope.component import adapter
 
 from Products.CMFPlone.utils import safe_unicode
 
@@ -99,6 +100,7 @@ class MailToAuthorSchema(interface.Interface):
 
 
 @implementer(MailToAuthorSchema)
+@adapter(interface.Interface)
 class MailToAuthorAdapter(object):
     # interface.implements(MailToAuthorSchema)
     component.adapts(interface.Interface)
