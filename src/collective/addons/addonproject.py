@@ -16,7 +16,7 @@ from zope.schema.interfaces import IContextAwareDefaultFactory
 from plone.namedfile.field import NamedBlobFile
 from plone.namedfile.field import NamedBlobImage
 from Products.Five import BrowserView
-from zope.interface import Invalid
+from zope.interface import Invalid, invariant
 from plone import api
 from collective.addons import quote_chars
 from z3c.form import validator
@@ -100,6 +100,12 @@ def validateimagefileextension(value):
             u'Please try again to upload a file with the correct file'
             u'extension.')
     return True
+
+
+class ProvideScreenshotLogo(Invalid):
+    __doc__ = _(u"Please add a screenshot or a logo to your project. You find "
+                u"the appropriate fields below on this page.")
+
 
 
 class IAddonProject(model.Schema):
@@ -228,6 +234,14 @@ class IAddonProject(model.Schema):
         required=False,
         constraint=validateimagefileextension,
     )
+
+    @invariant
+    def missingScreenshotOrLogo(data):
+        if not data.screenshot and not data.project_logo:
+            raise ProvideScreenshotLogo(_(u'Please add a screenshot or a logo '
+                                          u'to your project page. You will '
+                                          u'find the appropriate fields below '
+                                          u'on this page.'))
 
 
 class ValidateAddonProjectUniqueness(validator.SimpleFieldValidator):
