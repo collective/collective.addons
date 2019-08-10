@@ -162,5 +162,13 @@
     />
 
 
+  <subscriber
+    for="collective.addons.addonproject.IAddonProject
+               Products.CMFCore.interfaces.IActionSucceededEvent"
+    handler="collective.addons.addonproject.notifyProjectManager"
+    />
+
+
+
 
 </configure>

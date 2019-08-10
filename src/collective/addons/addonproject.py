@@ -244,6 +244,21 @@ class IAddonProject(model.Schema):
                                           u'on this page.'))
 
 
+def notifyProjectManager(self, event):
+    state = api.content.get_state(self)
+    if (self.__parent__.contactForCenter) is not None:
+        mailsender = str(self.__parent__.contactForCenter)
+    else:
+        mailsender = api.portal.get_registry_record('plone.email_from_address')
+    api.portal.send_email(
+        recipient=("{}").format(self.contactAddress),
+        sender=(u"{} <{}>").format('Admin of the Website', mailsender),
+        subject=(u"Your Project {}").format(self.title),
+        body=(u"The status of your changed. "
+              u"The new status is {}").format(state)
+    )
+
+
 class ValidateAddonProjectUniqueness(validator.SimpleFieldValidator):
     # Validate site-wide uniqueness of project titles.
 
