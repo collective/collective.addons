@@ -273,7 +273,7 @@ def notifyProjectManagerReleaseAdd(self, event):
     )
 
 
-def notifyProjectManagerReleaseLinkedAdd(self, event):
+def notifyProjectManagerLinkedReleaseAdd(self, event):
     if (self.__parent__.contactForCenter) is not None:
         mailrecipient = str(self.__parent__.contactForCenter)
     else:
