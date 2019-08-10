@@ -168,6 +168,32 @@
     handler="collective.addons.addonproject.notifyProjectManager"
     />
 
+  <subscriber
+    for="collective.addons.addonrelease.IAddonRelease
+              zope.lifecycleevent.interfaces.IObjectAddedEvent"
+    handler="collective.addons.addonproject.notifyProjectManagerReleaseAdd"
+    />
+
+  <subscriber
+    for="collective.addons.addonlinkedrelease.IAddonLinkedRelease
+             zope.lifecycleevent.interfaces.IObjectAddedEvent"
+    handler="collective.addons.addonproject.notifyProjectManagerLinkedReleaseAdd"
+    />
+
+  <subscriber
+    for="collective.addons.addonproject.IAddonProject
+               Products.CMFCore.interfaces.IActionSucceededEvent"
+    handler="collective.addons.addonproject.notifyAboutNewReviewlistentry"
+    />
+
+
+  <subscriber
+    for="collective.addons.addonproject.IAddonProject
+         zope.lifecycleevent.interfaces.IObjectModifiedEvent"
+    handler="collective.addons.addonproject.textmodified_project"
+    />
+
+
 
 
 
