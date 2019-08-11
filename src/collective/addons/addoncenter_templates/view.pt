@@ -252,7 +252,7 @@
                         <span i18n:translate="">Browse</span>
                         <span tal:content="context/product_title" /> <span i18n:translate="">by Category</span>
                     </h2>
-                    <h2 tal:condition="not:context/product_title"><span i18n:translate="">Browse Templates by Category</span></h2>
+                    <h2 tal:condition="not:context/product_title"><span i18n:translate="">Browse Add-ons by Category</span></h2>
                     <ol id="add-on-categories">
                         <tal:categories repeat="category context/available_category">
                             <li><a href=""
