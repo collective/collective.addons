@@ -25,6 +25,7 @@ from collective.addons.adapter import IReleasesCompatVersions
 
 import re
 import six
+import itertools
 
 
 @provider(IContextAwareDefaultFactory)
@@ -479,6 +480,70 @@ def addon_release_number(context, **kw):
     return context.releasenumber
 
 
+def update_project_releases_compat_versions_on_creation(addonrelease, event):
+    IReleasesCompatVersions(
+        addonrelease.aq_parent).update(addonrelease.compatibility_choice)
+
+
+def update_project_releases_compat_versions(addonrelease, event):
+    pc = api.portal.get_tool(name='portal_catalog')
+    query = '/'.join(addonrelease.aq_parent.getPhysicalPath())
+    brains = pc.searchResults({
+        'path': {'query': query, 'depth': 1},
+        'portal_type': ['collective.addons.addonrelease',
+                        'collective.addons.addonlinkedrelease']
+    })
+
+    result = []
+    for brain in brains:
+        if isinstance(brain.compatibility_choice, list):
+            result = result + brain.compatibility_choice
+
+    IReleasesCompatVersions(
+        addonrelease.aq_parent).set(list(set(result)))
+
+
+
+def notifyAddonHubReleaseAdd(self, event):
+    state = api.content.get_state(self)
+    releasemessagereceipient = self.releaseAllert
+
+    category = list(self.category_choice)
+    compatibility = list(self.compatibility_choice)
+    licenses = list(self.licenses_choice)
+    platform_fields = [
+        'platform_choice',
+        'platform_choice2',
+        'platform_choice3',
+        'platform_choice4',
+        'platform_choice5'
+    ]
+    pf_list = [field for field in platform_fields if getattr(self,
+                                                             field, False)]
+    pf_list = list(itertools.chain(*pf_list))
+    pf_set = set(pf_list)
+    platform = list(pf_set)
+    platform.sort()
+
+    if state == 'final' and releasemessagereceipient is not None:
+        api.portal.send_email(
+            recipient=releasemessagereceipient,
+            subject="New Release added",
+            body=("""A new release was added and published with\n
+                  title: {}\nURL: {}\nCompatibility:{}\n
+                  Categories: {}\nLicenses: {}\n
+                  Platforms: {}""").format(self.title,
+                                           self.absolute_url(),
+                                           compatibility, category,
+                                           licenses,
+                                           platform),
+        )
+
+    else:
+        return None
+
+
+
 class ValidateAddonReleaseUniqueness(validator.SimpleFieldValidator):
     # Validate site-wide uniqueness of release titles.
 
@@ -517,30 +582,6 @@ validator.WidgetValidatorDiscriminators(
     ValidateAddonReleaseUniqueness,
     field=IAddonRelease['releasenumber'],
 )
-
-
-
-def update_project_releases_compat_versions_on_creation(addonrelease, event):
-    IReleasesCompatVersions(
-        addonrelease.aq_parent).update(addonrelease.compatibility_choice)
-
-
-def update_project_releases_compat_versions(addonrelease, event):
-    pc = api.portal.get_tool(name='portal_catalog')
-    query = '/'.join(addonrelease.aq_parent.getPhysicalPath())
-    brains = pc.searchResults({
-        'path': {'query': query, 'depth': 1},
-        'portal_type': ['collective.addons.addonrelease',
-                        'collective.addons.addonlinkedrelease']
-    })
-
-    result = []
-    for brain in brains:
-        if isinstance(brain.compatibility_choice, list):
-            result = result + brain.compatibility_choice
-
-    IReleasesCompatVersions(
-        addonrelease.aq_parent).set(list(set(result)))
 
 
 

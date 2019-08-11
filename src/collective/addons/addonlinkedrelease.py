@@ -544,6 +544,43 @@ def update_project_releases_compat_versions(addonlinkedrelease, event):
         addonlinkedrelease.aq_parent).set(list(set(result)))
 
 
+def notifyAddonHubLinkedReleaseAdd(self, event):
+    state = api.content.get_state(self)
+    releasemessagereceipient = self.releaseAllert
+    catalog = api.portal.get_tool(name='portal_catalog')
+    results = catalog(Title=self.title)
+    for brain in results:
+        url = brain.getURL()
+
+        category = list(self.category_choice)
+        compatibility = list(self.compatibility_choice)
+        licenses = list(self.licenses_choice)
+        pf_list = \
+            list(self.platform_choice) + list(self.platform_choice1) + \
+            list(self.platform_choice2) + list(self.platform_choice3) + \
+            list(self.platform_choice4) + list(self.platform_choice5)
+        pf_set = set(pf_list)
+        platform = list(pf_set)
+        platform.sort()
+
+    if state == 'final' and releasemessagereceipient is not None:
+        api.portal.send_email(
+            recipient=releasemessagereceipient,
+            subject="New Release added",
+            body=("""A new linked release was added and published with\n
+                  title: {}\nURL: {}\nCompatibility:{}\n
+                  Categories: {}\nLicenses: {}\n
+                  Platforms: {}""").format(self.title,
+                                           url,
+                                           compatibility,
+                                           category,
+                                           licenses,
+                                           platform),
+        )
+
+    else:
+        return None
+
 
 
 class ValidateAddonLinkedReleaseUniqueness(validator.SimpleFieldValidator):

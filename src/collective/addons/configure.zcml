@@ -194,6 +194,20 @@
     />
 
 
+  <subscriber
+    for="collective.addons.addonrelease.IAddonRelease
+             Products.CMFCore.interfaces.IActionSucceededEvent"
+    handler="collective.addons.addonrelease.notifyAddonHubReleaseAdd"
+    />
+
+
+  <subscriber
+    for="collective.addons.addonlinkedrelease.IAddonLinkedRelease
+             Products.CMFCore.interfaces.IActionSucceededEvent"
+    handler="collective.addons.addonlinkedrelease.notifyAddonHubLinkedReleaseAdd"
+    />
+
+
 
 
 
