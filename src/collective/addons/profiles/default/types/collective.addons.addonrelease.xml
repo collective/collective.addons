@@ -3,8 +3,8 @@
         i18n:domain="collective.addons" xmlns:i18n="http://xml.zope.org/namespaces/i18n">
 
     <!-- Basic metadata -->
-    <property name="title" i18n:translate="">Addon Release</property>
-    <property name="description" i18n:translate="">An Addon Release</property>
+    <property name="title" i18n:translate="">Add-on Release</property>
+    <property name="description" i18n:translate="">An Add-on Release</property>
 
     <property name="allow_discussion">True</property>
     <property name="global_allow">False</property>
