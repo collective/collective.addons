@@ -46,7 +46,7 @@ class IAddonCenter(model.Schema):
     product_title = schema.TextLine(
         title=_(u'Add-on Product Name'),
         description=_(
-            u'Name of the Add-on product, e.g. only Extensions'),
+            u'Name of the Add-on product, e.g. only Add-ons'),
     )
 
     available_category = schema.List(title=_(u"Available Categories"),
@@ -122,7 +122,7 @@ class IAddonCenter(model.Schema):
 
     primary('install_instructions')
     install_instructions = RichText(
-        title=_(u"Extension Installation Instructions"),
+        title=_(u"Add-on Installation Instructions"),
         description=_(u"Please fill in the install instructions"),
         required=False
     )
