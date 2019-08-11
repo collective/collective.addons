@@ -226,7 +226,7 @@ class IAddonProject(model.Schema):
     )
 
     screenshot = NamedBlobImage(
-        title=_(u"Screenshot of the Extension"),
+        title=_(u"Screenshot of the Add-on"),
         description=_(u"Add a screenshot by clicking the 'Browse' button. You "
                       u"could provide an image of the file format 'png', "
                       u"'gif' or 'jpg'."),
