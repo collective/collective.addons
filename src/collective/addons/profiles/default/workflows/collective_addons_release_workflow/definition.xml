@@ -2,8 +2,8 @@
 <dc-workflow xmlns:i18n="http://xml.zope.org/namespaces/i18n"
              i18n:domain="collective.addons"
              workflow_id="addon_release_workflow"
-             title="Addon Release Publication Workflow"
-             description=" - A simple workflow for Addon Release objects."
+             title="Add-on Release Publication Workflow"
+             description=" - A simple workflow for Add-on Release objects."
              state_variable="review_state"
              initial_state="pre-release"
              manager_bypass="False">
