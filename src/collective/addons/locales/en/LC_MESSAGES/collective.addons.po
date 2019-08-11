@@ -1,0 +1,1198 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: DOMAIN\n"
+
+#: ./addoncenter_templates/view.pt:208
+msgid "${product_title}"
+msgstr ""
+
+#: ./profiles/default/workflows/collective_addons_project_workflow/definition.xml
+msgid "- A simple workflow for Addon Project objects."
+msgstr ""
+
+#: ./addonlinkedrelease.py:144
+#: ./addonrelease.py:147
+msgid "1.0"
+msgstr ""
+
+#: ./profiles/default/types/collective.addons.addoncenter.xml
+msgid "A center for add-ons"
+msgstr ""
+
+#: ./addonlinkedrelease.py:161
+#: ./addonrelease.py:164
+msgid "A detailed log of what has changed since the previous release."
+msgstr ""
+
+#: ./addoncenter_templates/view.pt:277
+msgid "About"
+msgstr ""
+
+#: ./addonlinkedrelease.py:209
+#: ./addonrelease.py:217
+msgid "Accept the above legal disclaimer"
+msgstr ""
+
+#: ./addonproject.py:214
+msgid "Add a logo for the project (or organization/company) by clicking the 'Browse' button. You could provide an image of the file format 'png', 'gif' or 'jpg'."
+msgstr ""
+
+#: ./addonproject.py:230
+msgid "Add a screenshot by clicking the 'Browse' button. You could provide an image of the file format 'png', 'gif' or 'jpg'."
+msgstr ""
+
+#: ./profiles/default/types/collective.addons.addoncenter.xml
+msgid "Add-on Center"
+msgstr ""
+
+#: ./addoncenter.py:125
+msgid "Add-on Installation Instructions"
+msgstr ""
+
+#: ./addoncenter.py:47
+msgid "Add-on Product Name"
+msgstr ""
+
+#: ./addoncenter_templates/view.pt:210
+msgid "Add-ons"
+msgstr ""
+
+#: ./profiles/default/types/collective.addons.addonlinkedrelease.xml
+msgid "Addon Linked Release"
+msgstr ""
+
+#: ./profiles/default/types/collective.addons.addonproject.xml
+msgid "Addon Project"
+msgstr ""
+
+#: ./profiles/default/workflows/collective_addons_project_workflow/definition.xml
+msgid "Addon Project Publication Workflow"
+msgstr ""
+
+#: ./profiles/default/types/collective.addons.addonrelease.xml
+msgid "Addon Release"
+msgstr ""
+
+#: ./addonproject_templates/view.pt:390
+msgid "All Releases"
+msgstr ""
+
+#: ./addoncenter_templates/view.pt:111
+msgid "All categories"
+msgstr ""
+
+#: ./addoncenter.py:114
+msgid "Allowed Documentation File Extension"
+msgstr ""
+
+#: ./addoncenter.py:102
+msgid "Allowed File Extensions"
+msgstr ""
+
+#: ./addoncenter.py:108
+msgid "Allowed Image File Extension"
+msgstr ""
+
+#: ./profiles/default/workflows/collective_addons_linked_release_workflow/definition.xml
+#: ./profiles/default/workflows/collective_addons_release_workflow/definition.xml
+msgid "Alpha Release"
+msgstr ""
+
+#: ./profiles/default/types/collective.addons.addonlinkedrelease.xml
+msgid "An Addon Linked Release"
+msgstr ""
+
+#: ./profiles/default/types/collective.addons.addonproject.xml
+msgid "An Addon Project"
+msgstr ""
+
+#: ./profiles/default/types/collective.addons.addonrelease.xml
+msgid "An Addon Release"
+msgstr ""
+
+#: ./addoncenter_templates/view.pt:121
+msgid "Any version"
+msgstr ""
+
+#: ./addoncenter.py:52
+msgid "Available Categories"
+msgstr ""
+
+#: ./addonlinkedrelease_templates/view.pt:73
+#: ./addonrelease_templates/view.pt:73
+msgid "Available Downloads"
+msgstr ""
+
+#: ./addoncenter.py:56
+msgid "Available Licenses"
+msgstr ""
+
+#: ./addoncenter.py:85
+msgid "Available Platforms"
+msgstr ""
+
+#: ./addoncenter.py:81
+msgid "Available Versions"
+msgstr ""
+
+#: ./profiles/default/workflows/collective_addons_linked_release_workflow/definition.xml
+#: ./profiles/default/workflows/collective_addons_release_workflow/definition.xml
+msgid "Beta Release"
+msgstr ""
+
+#: ./addoncenter_templates/view.pt:252
+msgid "Browse"
+msgstr ""
+
+#: ./addoncenter_templates/view.pt:255
+msgid "Browse Templates by Category"
+msgstr ""
+
+#: ./mailtoauthor.py:201
+msgid "Cancel"
+msgstr ""
+
+#: ./addonproject_templates/view.pt:95
+msgid "Category/Categories"
+msgstr ""
+
+#: ./profiles/default/workflows/collective_addons_linked_release_workflow/definition.xml
+#: ./profiles/default/workflows/collective_addons_release_workflow/definition.xml
+msgid "Change the release stage to 'Release alpha'"
+msgstr ""
+
+#: ./profiles/default/workflows/collective_addons_linked_release_workflow/definition.xml
+#: ./profiles/default/workflows/collective_addons_release_workflow/definition.xml
+msgid "Change the release stage to 'Release beta'"
+msgstr ""
+
+#: ./addonlinkedrelease.py:160
+#: ./addonlinkedrelease_templates/view.pt:70
+#: ./addonrelease.py:163
+msgid "Changelog"
+msgstr ""
+
+#: ./addonproject.py:161
+msgid "Choose your categories"
+msgstr ""
+
+#: ./addonlinkedrelease_templates/view.pt:63
+#: ./addonproject_templates/view.pt:399
+#: ./addonrelease_templates/view.pt:63
+msgid "Compatibility"
+msgstr ""
+
+#: ./addonrelease.py:192
+msgid "Compatible With Versions Of The Product"
+msgstr ""
+
+#: ./addonlinkedrelease.py:187
+msgid "Compatible with versions of LibreOffice"
+msgstr ""
+
+#: ./addonlinkedrelease.py:216
+#: ./addonproject.py:170
+#: ./addonrelease.py:224
+msgid "Contact email-address"
+msgstr ""
+
+#: ./addonlinkedrelease.py:217
+#: ./addonproject.py:171
+#: ./addonrelease.py:225
+msgid "Contact email-address for the project."
+msgstr ""
+
+#: ./mailtoauthor.py:120
+msgid "Contact the project author and send your feedback"
+msgstr ""
+
+#: ./addonproject_templates/view.pt:117
+msgid "Current Release"
+msgstr ""
+
+#: ./addonproject_templates/view.pt:244
+msgid "Current release for the project"
+msgstr ""
+
+#: ./addonproject_templates/view.pt:125
+msgid "Current unstable release for the project"
+msgstr ""
+
+#: ./addoncenter_templates/view.pt:212
+msgid "Currently there are"
+msgstr ""
+
+#: ./addonproject_templates/view.pt:400
+msgid "Description"
+msgstr ""
+
+#: ./addoncenter.py:43
+msgid "Description Of The Features of Add-ons"
+msgstr ""
+
+#: ./addoncenter.py:39
+msgid "Description of the Add-on Center"
+msgstr ""
+
+#: ./addonproject.py:198
+msgid "Dokumentation File"
+msgstr ""
+
+#: ./addonproject_templates/view.pt:461
+msgid "Dokumentation File:"
+msgstr ""
+
+#: ./addoncenter.py:190
+msgid "EMail address for communication with the template center manager and reviewer"
+msgstr ""
+
+#: ./addoncenter.py:193
+msgid "Enter an email address for the communication with template center manager and reviewer"
+msgstr ""
+
+#: ./addoncenter.py:179
+msgid "Enter an information about the search for older versions of the product, if they are not on the versions list (compatibility) anymore."
+msgstr ""
+
+#: ./addoncenter.py:169
+msgid "Enter any legal disclaimer and limitations for downloads that should appear on each page for dowloadable files."
+msgstr ""
+
+#: ./addoncenter.py:150
+msgid "Enter the text of the legal disclaimer and limitations that should be displayed to the project creator and should be accepted by the owner of the project."
+msgstr ""
+
+#: ./addonproject_templates/view.pt:457
+msgid "External Documentation"
+msgstr ""
+
+#: ./addonproject_templates/view.pt:465
+msgid "External Project Page"
+msgstr ""
+
+#: ./addonrelease.py:390
+msgid "Fifth Release File"
+msgstr ""
+
+#: ./addonlinkedrelease.py:312
+msgid "Fifth linked file"
+msgstr ""
+
+#: ./addonlinkedrelease.py:444
+msgid "Fifth linked file is compatible with the Platform(s)"
+msgstr ""
+
+#: ./addonrelease.py:410
+msgid "Fifth uploaded file is compatible with the Platform(s)"
+msgstr ""
+
+#: ./addonlinkedrelease_templates/view.pt:81
+#: ./addonproject_templates/view.pt:154
+#: ./addonrelease_templates/view.pt:83
+msgid "File size:"
+msgstr ""
+
+#: ./addoncenter.py:115
+msgid "Fill in the allowed documentation file extensions, seperated by a pipe '|'."
+msgstr ""
+
+#: ./addoncenter.py:103
+msgid "Fill in the allowed file extensions, seperated by a pipe '|'."
+msgstr ""
+
+#: ./addoncenter.py:109
+msgid "Fill in the allowed image file extensions, seperated by a pipe '|'."
+msgstr ""
+
+#: ./addoncenter.py:154
+msgid "Fill in the legal disclaimer, that had to be accepted by the project owner."
+msgstr ""
+
+#: ./addoncenter.py:172
+msgid "Fill in the text for the legal download disclaimer."
+msgstr ""
+
+#: ./profiles/default/workflows/collective_addons_linked_release_workflow/definition.xml
+#: ./profiles/default/workflows/collective_addons_release_workflow/definition.xml
+msgid "Final Release"
+msgstr ""
+
+#: ./profiles/default/workflows/collective_addons_linked_release_workflow/definition.xml
+#: ./profiles/default/workflows/collective_addons_release_workflow/definition.xml
+msgid "Final release"
+msgstr ""
+
+#: ./addonlinkedrelease.py:268
+msgid "First linked file is compatible with the Platform(s)"
+msgstr ""
+
+#: ./addonrelease.py:264
+msgid "First uploaded file is compatible with the Platform(s)"
+msgstr ""
+
+#: ./addonrelease.py:353
+msgid "Fourth Release File"
+msgstr ""
+
+#: ./addonlinkedrelease.py:304
+msgid "Fourth linked file"
+msgstr ""
+
+#: ./addonlinkedrelease.py:413
+msgid "Fourth linked file is compatible with the Platform(s)"
+msgstr ""
+
+#: ./addonrelease.py:373
+msgid "Fourth uploaded file is compatible with the Platform(s)"
+msgstr ""
+
+#: ./addonproject.py:137
+msgid "Full Project Description"
+msgstr ""
+
+#: ./addonlinkedrelease.py:154
+#: ./addonrelease.py:157
+msgid "Full Release Description"
+msgstr ""
+
+#: ./addonrelease.py:274
+msgid "Further File Uploads for this Release"
+msgstr ""
+
+#: ./addonlinkedrelease.py:278
+msgid "Further linked files for this Release"
+msgstr ""
+
+#: ./profiles/default/workflows/collective_addons_linked_release_workflow/definition.xml
+#: ./profiles/default/workflows/collective_addons_release_workflow/definition.xml
+msgid "Hidden"
+msgstr ""
+
+#: ./profiles/default/workflows/collective_addons_release_workflow/definition.xml
+msgid "Hidden add-on release"
+msgstr ""
+
+#: ./profiles/default/workflows/collective_addons_linked_release_workflow/definition.xml
+msgid "Hidden linked add-on release"
+msgstr ""
+
+#: ./profiles/default/workflows/collective_addons_linked_release_workflow/definition.xml
+#: ./profiles/default/workflows/collective_addons_release_workflow/definition.xml
+msgid "Hide"
+msgstr ""
+
+#: ./profiles/default/workflows/collective_addons_linked_release_workflow/definition.xml
+#: ./profiles/default/workflows/collective_addons_release_workflow/definition.xml
+msgid "Hide release"
+msgstr ""
+
+#: ./profiles/default/workflows/collective_addons_linked_release_workflow/definition.xml
+#: ./profiles/default/workflows/collective_addons_release_workflow/definition.xml
+msgid "Hide this release"
+msgstr ""
+
+#: ./addoncenter_templates/view.pt:127
+msgid "Highest Rated"
+msgstr ""
+
+#: ./addonproject.py:176
+msgid "Homepage"
+msgstr ""
+
+#: ./addonproject.py:177
+msgid "If the project has an external home page, enter its URL (example: 'http://www.mysite.org')."
+msgstr ""
+
+#: ./addonproject.py:184
+msgid "If the project has externally hosted documentation, enter its URL (example: 'http://www.mysite.org')."
+msgstr ""
+
+#: ./addoncenter_templates/own_projects.pt:49
+msgid "If you already created a new"
+msgstr ""
+
+#: ./addonproject.py:199
+msgid "If you have a Documentation in the file format 'PDF' or 'ODT' you could add it here."
+msgstr ""
+
+#: ./profiles/default/workflows/collective_addons_project_workflow/definition.xml
+msgid "If you submitted the item by mistake or want to perform additional edits, this will take it back."
+msgstr ""
+
+#: ./addonlinkedrelease.py:279
+msgid "If you want to link more files for this release, e.g. because there are files for other operating systems, you'll find the fields to link this files on the next registers, e.g. 'Second linked file' for this Release'."
+msgstr ""
+
+#: ./addonrelease.py:275
+msgid "If you want to upload more files for this release, e.g. because there are files for other operating systems, you'll find the upload fields on the register 'Further Uploads' and 'Further More Uploads'."
+msgstr ""
+
+#: ./addonlinkedrelease_templates/view.pt:35
+#: ./addonrelease_templates/view.pt:35
+msgid "Info"
+msgstr ""
+
+#: ./addonlinkedrelease.py:115
+#: ./addonproject.py:113
+#: ./addonrelease.py:120
+msgid "Information"
+msgstr ""
+
+#: ./addoncenter.py:178
+msgid "Information About Search For Old Product Versions"
+msgstr ""
+
+#: ./addoncenter_templates/view.pt:269
+#: ./addonlinkedrelease_templates/view.pt:180
+#: ./addonproject_templates/view.pt:481
+msgid "Install Instructions"
+msgstr ""
+
+#: ./configure.zcml:30
+msgid "Installs the collective.addons add-on."
+msgstr ""
+
+#: ./addoncenter.py:132
+msgid "Instruction how to report Bugs"
+msgstr ""
+
+#: ./addoncenter.py:26
+#: ./addonproject.py:65
+#: ./mailtoauthor.py:32
+msgid "Invalid email address"
+msgstr ""
+
+#: ./addonrelease.py:231
+msgid "Is The Source Code Inside The Addon?"
+msgstr ""
+
+#: ./addonlinkedrelease.py:223
+msgid "Is the source code inside the add-on?"
+msgstr ""
+
+#: ./addonlinkedrelease.py:109
+#: ./addonrelease.py:113
+msgid "It is necessary that you accept the Legal Declaration"
+msgstr ""
+
+#: ./addonproject_templates/view.pt:123
+msgid "Latest Not Stable Release"
+msgstr ""
+
+#: ./addoncenter.py:144
+msgid "Legal Disclaimer and Limitations"
+msgstr ""
+
+#: ./addoncenter.py:162
+msgid "Legal Disclaimer and Limitations for Downloads"
+msgstr ""
+
+#: ./addonlinkedrelease.py:178
+#: ./addonrelease.py:183
+msgid "License of the uploaded file"
+msgstr ""
+
+#: ./addonlinkedrelease_templates/view.pt:59
+#: ./addonproject_templates/view.pt:401
+#: ./addonrelease_templates/view.pt:59
+msgid "License(s)"
+msgstr ""
+
+#: ./addonlinkedrelease_templates/view.pt:176
+#: ./addonrelease_templates/view.pt:164
+msgid "Link to Source Code"
+msgstr ""
+
+#: ./addonproject.py:213
+msgid "Logo"
+msgstr ""
+
+#: ./mailtoauthor.py:119
+msgid "Mail To The Project Author"
+msgstr ""
+
+#: ./profiles/default/workflows/collective_addons_project_workflow/definition.xml
+msgid "Member retracts submission"
+msgstr ""
+
+#: ./profiles/default/workflows/collective_addons_project_workflow/definition.xml
+msgid "Member submits content for publication"
+msgstr ""
+
+#: ./addonproject_templates/view.pt:276
+msgid "More about this release&hellip;"
+msgstr ""
+
+#: ./addoncenter_templates/view.pt:39
+msgid "Most Popular ${product_title}"
+msgstr ""
+
+#: ./addoncenter_templates/view.pt:224
+msgid "Most recent"
+msgstr ""
+
+#: ./addoncenter.py:35
+msgid "Name Of The Add-on Center"
+msgstr ""
+
+#: ./addoncenter.py:48
+msgid "Name of the Add-on product, e.g. only Add-ons"
+msgstr ""
+
+#: ./addoncenter_templates/view.pt:128
+msgid "Newest"
+msgstr ""
+
+#: ./common.py:7
+msgid "No"
+msgstr ""
+
+#: ./addoncenter_templates/view.pt:147
+msgid "No results were found."
+msgstr ""
+
+#: ./addonproject_templates/view.pt:118
+msgid "No stable release available yet."
+msgstr ""
+
+#: ./mailtoauthor.py:45
+msgid "Not a valid project name. Please retry."
+msgstr ""
+
+#: ./addonrelease_templates/view.pt:40
+msgid "Or"
+msgstr ""
+
+#: ./profiles/default/workflows/collective_addons_project_workflow/definition.xml
+msgid "Pending"
+msgstr ""
+
+#: ./addonproject_templates/view.pt:398
+msgid "Platform(s)"
+msgstr ""
+
+#: ./addonlinkedrelease.py:497
+#: ./addonrelease.py:470
+msgid "Please accept the Legal Declaration about your Release and your linked File"
+msgstr ""
+
+#: ./addonproject.py:240
+msgid "Please add a screenshot or a logo to your project page. You will find the appropriate fields below on this page."
+msgstr ""
+
+#: ./addonproject.py:106
+msgid "Please add a screenshot or a logo to your project. You find the appropriate fields below on this page."
+msgstr ""
+
+#: ./addonlinkedrelease.py:514
+msgid "Please choose a compatible platform for the linked file."
+msgstr ""
+
+#: ./addonlinkedrelease.py:486
+#: ./addonrelease.py:459
+msgid "Please choose a license for your release."
+msgstr ""
+
+#: ./addonlinkedrelease.py:491
+#: ./addonrelease.py:464
+msgid "Please choose one or more compatible product versions for your release."
+msgstr ""
+
+#: ./addonrelease.py:218
+msgid "Please declare that you accept the above legal disclaimer"
+msgstr ""
+
+#: ./addonlinkedrelease.py:210
+msgid "Please declare that you accept the above legal disclaimer."
+msgstr ""
+
+#: ./addonrelease.py:237
+msgid "Please fill in the Link (URL) to the Source Code"
+msgstr ""
+
+#: ./addonlinkedrelease.py:229
+msgid "Please fill in the Link (URL) to the Source Code."
+msgstr ""
+
+#: ./addoncenter.py:126
+msgid "Please fill in the install instructions"
+msgstr ""
+
+#: ./addonlinkedrelease.py:260
+msgid "Please fill in the size in kilobyte of the external hosted file (e.g. 633, if the size is 633 kb)"
+msgstr ""
+
+#: ./mailtoauthor.py:83
+msgid "Please fill in your email address."
+msgstr ""
+
+#: ./mailtoauthor.py:78
+msgid "Please fill in your familiy name"
+msgstr ""
+
+#: ./mailtoauthor.py:73
+msgid "Please fill in your first name(s)"
+msgstr ""
+
+#: ./addonlinkedrelease.py:253
+msgid "Please insert a link to your add-on file."
+msgstr ""
+
+#: ./addonlinkedrelease.py:368
+msgid "Please insert a link to your extension file."
+msgstr ""
+
+#: ./addonproject_templates/view.pt:43
+msgid "Please make sure the relevant project information has been entered and a release has been added to your project. Once you have finished that you could submit your project for approval (publication)."
+msgstr ""
+
+#: ./addonlinkedrelease.py:179
+#: ./addonrelease.py:184
+msgid "Please mark one or more licenses you publish your release."
+msgstr ""
+
+#: ./addonlinkedrelease.py:352
+msgid "Please mark one or more platforms with which the linked file is compatible."
+msgstr ""
+
+#: ./addonlinkedrelease.py:269
+#: ./addonrelease.py:265
+msgid "Please mark one or more platforms with which the uploaded file is compatible."
+msgstr ""
+
+#: ./addonlinkedrelease.py:188
+#: ./addonrelease.py:193
+msgid "Please mark one or more program versions with which this release is compatible with."
+msgstr ""
+
+#: ./addonproject.py:162
+msgid "Please select the appropriate categories (one or more) for your project."
+msgstr ""
+
+#: ./addonrelease.py:257
+msgid "Please upload your file."
+msgstr ""
+
+#: ./mailtoauthor.py:152
+msgid "Please validate the recaptcha field before sending the form."
+msgstr ""
+
+#: ./profiles/default/workflows/collective_addons_project_workflow/definition.xml
+msgid "Private"
+msgstr ""
+
+#: ./addonproject_templates/view.pt:77
+msgid "Project"
+msgstr ""
+
+#: ./mailtoauthor.py:88
+msgid "Project Name"
+msgstr ""
+
+#: ./addonlinkedrelease_templates/view.pt:152
+#: ./addonproject_templates/view.pt:454
+#: ./addonrelease_templates/view.pt:140
+msgid "Project Resources"
+msgstr ""
+
+#: ./addonproject.py:131
+msgid "Project Summary"
+msgstr ""
+
+#: ./addonproject.py:124
+msgid "Project Title - minimum 5 and maximum 50 characters"
+msgstr ""
+
+#: ./profiles/default/workflows/collective_addons_project_workflow/definition.xml
+msgid "Publish"
+msgstr ""
+
+#: ./profiles/default/workflows/collective_addons_project_workflow/definition.xml
+msgid "Published"
+msgstr ""
+
+#: ./profiles/default/workflows/collective_addons_project_workflow/definition.xml
+msgid "Puts your item in a review queue, so it can be published on the site."
+msgstr ""
+
+#: ./profiles/default/workflows/collective_addons_linked_release_workflow/definition.xml
+#: ./profiles/default/workflows/collective_addons_release_workflow/definition.xml
+msgid "Re-Release"
+msgstr ""
+
+#: ./profiles/default/workflows/collective_addons_linked_release_workflow/definition.xml
+#: ./profiles/default/workflows/collective_addons_release_workflow/definition.xml
+msgid "Re-release"
+msgstr ""
+
+#: ./profiles/default/workflows/collective_addons_linked_release_workflow/definition.xml
+#: ./profiles/default/workflows/collective_addons_release_workflow/definition.xml
+msgid "Release Candidate"
+msgstr ""
+
+#: ./addonlinkedrelease_templates/view.pt:56
+#: ./addonrelease_templates/view.pt:56
+msgid "Release Details"
+msgstr ""
+
+#: ./addonlinkedrelease.py:142
+#: ./addonrelease.py:145
+msgid "Release Number"
+msgstr ""
+
+#: ./addonlinkedrelease.py:143
+#: ./addonrelease.py:146
+msgid "Release Number (up to twelf chars)"
+msgstr ""
+
+#: ./addonlinkedrelease.py:149
+#: ./addonrelease.py:152
+msgid "Release Summary"
+msgstr ""
+
+#: ./profiles/default/workflows/collective_addons_linked_release_workflow/definition.xml
+#: ./profiles/default/workflows/collective_addons_release_workflow/definition.xml
+msgid "Release alpha"
+msgstr ""
+
+#: ./profiles/default/workflows/collective_addons_linked_release_workflow/definition.xml
+#: ./profiles/default/workflows/collective_addons_release_workflow/definition.xml
+msgid "Release beta"
+msgstr ""
+
+#: ./profiles/default/workflows/collective_addons_linked_release_workflow/definition.xml
+#: ./profiles/default/workflows/collective_addons_release_workflow/definition.xml
+msgid "Release candidate"
+msgstr ""
+
+#: ./profiles/default/workflows/collective_addons_linked_release_workflow/definition.xml
+#: ./profiles/default/workflows/collective_addons_release_workflow/definition.xml
+msgid "Release-Candidate"
+msgstr ""
+
+#: ./addonproject_templates/view.pt:397
+msgid "Released"
+msgstr ""
+
+#: ./addonproject_templates/view.pt:254
+msgid "Released ${latest_release_date}"
+msgstr ""
+
+#: ./addonlinkedrelease_templates/view.pt:37
+#: ./addonrelease_templates/view.pt:37
+msgid "Remember to publish your release once all files have been added. You can do that on the left side within the menubar. Click on the entry 'State: Unreleased'. <br />"
+msgstr ""
+
+#: ./addoncenter_templates/view.pt:273
+msgid "Reporting Template-Bugs"
+msgstr ""
+
+#: ./profiles/default/workflows/collective_addons_linked_release_workflow/definition.xml
+#: ./profiles/default/workflows/collective_addons_project_workflow/definition.xml
+#: ./profiles/default/workflows/collective_addons_release_workflow/definition.xml
+msgid "Retract"
+msgstr ""
+
+#: ./profiles/default/workflows/collective_addons_linked_release_workflow/definition.xml
+#: ./profiles/default/workflows/collective_addons_release_workflow/definition.xml
+msgid "Retract release"
+msgstr ""
+
+#: ./profiles/default/workflows/collective_addons_project_workflow/definition.xml
+msgid "Reviewer publishes content"
+msgstr ""
+
+#: ./profiles/default/workflows/collective_addons_project_workflow/definition.xml
+msgid "Reviewer sends content back for re-drafting"
+msgstr ""
+
+#: ./addonlinkedrelease_templates/view.pt:166
+#: ./addonproject_templates/view.pt:470
+#: ./addonrelease_templates/view.pt:154
+msgid "Screenshot"
+msgstr ""
+
+#: ./addonproject.py:229
+msgid "Screenshot of the Add-on"
+msgstr ""
+
+#: ./addoncenter_templates/view.pt:136
+msgid "Search"
+msgstr ""
+
+#: ./addoncenter_templates/view.pt:102
+msgid "Search ${product_title}"
+msgstr ""
+
+#: ./addonrelease.py:295
+msgid "Second Release File"
+msgstr ""
+
+#: ./addonlinkedrelease.py:288
+msgid "Second linked file"
+msgstr ""
+
+#: ./addonlinkedrelease.py:351
+msgid "Second linked file is compatible with the Platform(s)"
+msgstr ""
+
+#: ./addonrelease.py:315
+msgid "Second uploaded file is compatible with the Platform(s)"
+msgstr ""
+
+#: ./mailtoauthor.py:133
+msgid "Send Email"
+msgstr ""
+
+#: ./profiles/default/workflows/collective_addons_project_workflow/definition.xml
+msgid "Send back"
+msgstr ""
+
+#: ./addoncenter_templates/view.pt:109
+msgid "Show"
+msgstr ""
+
+#: ./addonrelease.py:419
+msgid "Sixth Release File"
+msgstr ""
+
+#: ./addonlinkedrelease.py:320
+msgid "Sixth linked file"
+msgstr ""
+
+#: ./addonlinkedrelease.py:475
+msgid "Sixth linked file is compatible with the Platform(s)"
+msgstr ""
+
+#: ./addonrelease.py:439
+msgid "Sixth uploaded file is compatible with the Platform(s)"
+msgstr ""
+
+#: ./addoncenter_templates/view.pt:124
+msgid "Sort On"
+msgstr ""
+
+#: ./profiles/default/workflows/collective_addons_project_workflow/definition.xml
+msgid "Submit for publication"
+msgstr ""
+
+#: ./addoncenter_templates/own_projects.pt:48
+msgid "Submit new"
+msgstr ""
+
+#: ./addoncenter_templates/view.pt:217
+msgid "Submit your"
+msgstr ""
+
+#: ./addoncenter.py:149
+msgid "Text of the Legal Disclaimer and Limitations"
+msgstr ""
+
+#: ./addoncenter.py:168
+msgid "Text of the Legal Disclaimer and Limitations for Downlaods"
+msgstr ""
+
+#: ./addonlinkedrelease.py:133
+#: ./addonrelease.py:137
+msgid "The Computed Project Title"
+msgstr ""
+
+#: ./addonproject.py:114
+msgid "The Dialog to create a new project consists of different register. Please go through this register and fill in the appropriate data for your project. The register 'Documentation' and its fields are optional."
+msgstr ""
+
+#: ./addonlinkedrelease.py:252
+msgid "The Link to the file of the release"
+msgstr ""
+
+#: ./addonrelease.py:402
+msgid "The fifth file you want to upload (this is optional)"
+msgstr ""
+
+#: ./profiles/default/workflows/collective_addons_linked_release_workflow/definition.xml
+msgid "The final stage of a linked add-on release"
+msgstr ""
+
+#: ./profiles/default/workflows/collective_addons_release_workflow/definition.xml
+msgid "The final stage of an add-on release"
+msgstr ""
+
+#: ./addonrelease.py:256
+msgid "The first file you want to upload."
+msgstr ""
+
+#: ./profiles/default/workflows/collective_addons_linked_release_workflow/definition.xml
+msgid "The first stage of a linked add-on release"
+msgstr ""
+
+#: ./profiles/default/workflows/collective_addons_release_workflow/definition.xml
+msgid "The first stage of an add-on release"
+msgstr ""
+
+#: ./addonproject.py:192
+msgid "The following file extensions are allowed for documentation files (upper case and lower case and mix of both):"
+msgstr ""
+
+#: ./addonlinkedrelease.py:244
+msgid "The following file extensions are allowed for linked files (upper case and lower case and mix of both):"
+msgstr ""
+
+#: ./addonproject.py:207
+msgid "The following file extensions are allowed for project logo files (upper case and lower case and mix of both):"
+msgstr ""
+
+#: ./addonproject.py:223
+msgid "The following file extensions are allowed for screenshot files (upper case and lower case and mix of both):"
+msgstr ""
+
+#: ./addonrelease.py:249
+msgid "The following file extensions are allowed for uploaded files (upper case and lower case and mix of both):"
+msgstr ""
+
+#: ./addonrelease.py:365
+msgid "The fourth file you want to upload (this is optional)"
+msgstr ""
+
+#: ./addonlinkedrelease_templates/view.pt:77
+msgid "The linked Add-on file"
+msgstr ""
+
+#: ./addonlinkedrelease.py:134
+msgid "The linked release title will be computed from the parent project title"
+msgstr ""
+
+#: ./mailtoauthor.py:89
+msgid "The name of the project, to which author you want to send feedback."
+msgstr ""
+
+#: ./profiles/default/workflows/collective_addons_project_workflow/definition.xml
+msgid "The owner can edit the addon project"
+msgstr ""
+
+#: ./addonproject.py:368
+msgid "The project title is already in use."
+msgstr ""
+
+#: ./addonlinkedrelease.py:616
+#: ./addonrelease.py:577
+msgid "The release number is already in use. Please choose another one."
+msgstr ""
+
+#: ./addonrelease.py:138
+msgid "The release title will be computed from the parent project title"
+msgstr ""
+
+#: ./addonrelease.py:307
+msgid "The second file you want to upload (this is optional)"
+msgstr ""
+
+#: ./profiles/default/workflows/collective_addons_linked_release_workflow/definition.xml
+msgid "The second stage of a linked add-on release"
+msgstr ""
+
+#: ./profiles/default/workflows/collective_addons_release_workflow/definition.xml
+msgid "The second stage of an add-on release"
+msgstr ""
+
+#: ./addonrelease.py:431
+msgid "The sixth file you want to upload (this is optional)"
+msgstr ""
+
+#: ./addonlinkedrelease.py:259
+msgid "The size of the external hosted file"
+msgstr ""
+
+#: ./addonrelease.py:336
+msgid "The third file you want to upload (this is optional)"
+msgstr ""
+
+#: ./addoncenter_templates/own_projects.pt:13
+msgid "These are your projects on this site:"
+msgstr ""
+
+#: ./addonrelease.py:324
+msgid "Third Release File"
+msgstr ""
+
+#: ./addonlinkedrelease.py:296
+msgid "Third linked file"
+msgstr ""
+
+#: ./addonlinkedrelease.py:382
+msgid "Third linked file is compatible with the Platform(s)"
+msgstr ""
+
+#: ./addonrelease.py:344
+msgid "Third uploaded file is compatible with the Platform(s))"
+msgstr ""
+
+#: ./addonlinkedrelease.py:116
+msgid "This Dialog to create a new release consists of different register. Please go through this register and fill in the appropriate data for your linked release. This register 'Default' provide fields for general information of your linked release. The next register 'compatibility' is the place to submit information about the versions with which your linked release file(s) is / are compatible. The following register asks for some legal informations. The next register 'Linked File' provide a field to link your release file. The further register are optional. There is the opportunity to link further release files (for different platforms)."
+msgstr ""
+
+#: ./addonrelease.py:121
+msgid "This Dialog to create a new release consists of different register. Please go through this register and fill in the appropriate data for your release. This register 'Default' provide fields for general information of your release. The next register 'compatibility' is the place to submit information about the versions with which your release file(s) is / are compatible. The following register asks for some legal informations. The next register File Upload' provide a field to upload your release file. The further register are optional. There is the opportunity to upload further release files (for different platforms)."
+msgstr ""
+
+#: ./addonproject.py:123
+msgid "Title"
+msgstr ""
+
+#: ./addoncenter.py:143
+msgid "Title for Legal Disclaimer and Limitations"
+msgstr ""
+
+#: ./addoncenter.py:160
+msgid "Title of the Legal Disclaimer and Limitations for Downloads"
+msgstr ""
+
+#: ./addonproject.py:183
+msgid "URL of documentation repository "
+msgstr ""
+
+#: ./profiles/default/workflows/collective_addons_linked_release_workflow/definition.xml
+#: ./profiles/default/workflows/collective_addons_release_workflow/definition.xml
+msgid "Unhide"
+msgstr ""
+
+#: ./profiles/default/workflows/collective_addons_linked_release_workflow/definition.xml
+#: ./profiles/default/workflows/collective_addons_release_workflow/definition.xml
+msgid "Unhide release"
+msgstr ""
+
+#: ./profiles/default/workflows/collective_addons_linked_release_workflow/definition.xml
+#: ./profiles/default/workflows/collective_addons_release_workflow/definition.xml
+msgid "Unhide release project"
+msgstr ""
+
+#: ./configure.zcml:39
+msgid "Uninstalls the collective.addons add-on."
+msgstr ""
+
+#: ./profiles/default/workflows/collective_addons_linked_release_workflow/definition.xml
+#: ./profiles/default/workflows/collective_addons_release_workflow/definition.xml
+msgid "Unreleased"
+msgstr ""
+
+#: ./addonproject_templates/view.pt:396
+msgid "Version"
+msgstr ""
+
+#: ./profiles/default/workflows/collective_addons_project_workflow/definition.xml
+msgid "Visible to everyone, editable by the owner."
+msgstr ""
+
+#: ./mailtoauthor.py:192
+msgid "We send your message to the author of the project. It's on his choice, if he'll get back to you."
+msgstr ""
+
+#: ./mailtoauthor.py:96
+msgid "What is your message to the author of the project? Your message is limited to 1000 characters."
+msgstr ""
+
+#: ./common.py:8
+msgid "Yes"
+msgstr ""
+
+#: ./addonlinkedrelease.py:505
+#: ./addonrelease.py:450
+msgid "You answered the question, whether the source code is inside your add-on with no (default answer). If this is the correct answer, please fill in the Link (URL) to the Source Code."
+msgstr ""
+
+#: ./addoncenter_templates/own_projects.pt:20
+msgid "You currently have no projects on this site."
+msgstr ""
+
+#: ./mailtoauthor.py:82
+msgid "Your Email Address"
+msgstr ""
+
+#: ./mailtoauthor.py:77
+msgid "Your Family Name"
+msgstr ""
+
+#: ./mailtoauthor.py:72
+msgid "Your First Name"
+msgstr ""
+
+#: ./mailtoauthor.py:95
+msgid "Your Message To The Author"
+msgstr ""
+
+#: ./addoncenter_templates/own_projects.pt:12
+msgid "Your Own Projects"
+msgstr ""
+
+#: ./addonproject_templates/view.pt:66
+msgid "Your project has been submitted for publication and will be reviewed now. You will get an email, once the status of your project changed again."
+msgstr ""
+
+#: ./addonproject_templates/view.pt:53
+msgid "a Release to your"
+msgstr ""
+
+#: ./addonproject_templates/view.pt:58
+msgid "a linked Release"
+msgstr ""
+
+#: ./addoncenter_templates/view.pt:253
+msgid "by Category"
+msgstr ""
+
+#: ./configure.zcml:30
+msgid "collective.addons"
+msgstr ""
+
+#: ./configure.zcml:39
+msgid "collective.addons (uninstall)"
+msgstr ""
+
+#: ./addoncenter_templates/view.pt:82
+msgid "in"
+msgstr ""
+
+#: ./addonproject_templates/view.pt:77
+msgid "or:"
+msgstr ""
+
+#: ./addoncenter_templates/own_projects.pt:51
+msgid "please submit your new"
+msgstr ""
+
+#: ./addoncenter_templates/view.pt:213
+msgid "project(s) available."
+msgstr ""
+
+#: ./addoncenter_templates/view.pt:150
+msgid "projects matching your criteria."
+msgstr ""
+
+#: ./profiles/default/workflows/collective_addons_linked_release_workflow/definition.xml
+#: ./profiles/default/workflows/collective_addons_release_workflow/definition.xml
+msgid "re-release"
+msgstr ""
+
+#: ./addonproject_templates/view.pt:133
+msgid "tested with:"
+msgstr ""
+
+#: ./addonproject_templates/view.pt:58
+msgid "to your"
+msgstr ""
+
+#: ./addonlinkedrelease_templates/view.pt:42
+#: ./addonrelease_templates/view.pt:43
+msgid "you could do this following this link."
+msgstr ""
