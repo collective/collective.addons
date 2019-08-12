@@ -184,7 +184,7 @@ class IAddonLinkedRelease(model.Schema):
 
     directives.widget(compatibility_choice=CheckBoxFieldWidget)
     compatibility_choice = schema.List(
-        title=_(u"Compatible with versions of LibreOffice"),
+        title=_(u"Compatible With The Versions Of The Product"),
         description=_(u"Please mark one or more program versions with which "
                       u"this release is compatible with."),
         value_type=schema.Choice(source=vocabAvailVersions),

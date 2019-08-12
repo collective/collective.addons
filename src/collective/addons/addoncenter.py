@@ -188,10 +188,10 @@ class IAddonCenter(model.Schema):
 
     contactForCenter = schema.ASCIILine(
         title=_(
-            u'EMail address for communication with the template center '
+            u'EMail address for communication with the add-on center '
             u'manager and reviewer'),
         description=_(
-            u'Enter an email address for the communication with template '
+            u'Enter an email address for the communication with add-on '
             u'center manager and reviewer'),
         default='projects@foo.org',
         constraint=validateEmail,
