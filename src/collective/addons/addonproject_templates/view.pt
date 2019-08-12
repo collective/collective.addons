@@ -273,7 +273,7 @@
                  Main focus for this release is the following.
                 </span><br />
                 <a href="#"
-                   tal:attributes="href latestRelease/absolute_url"><span i18n:translate="">More about this release&hellip;</span></a>
+                   tal:attributes="href latestRelease/absolute_url"><span i18n:translate="">More about this release.</span></a>
                 </p>
             <dl>
                 <span tal:condition="not:python:latestRelease.portal_type == 'collective.addons.addonlinkedrelease'">

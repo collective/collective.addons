@@ -270,7 +270,7 @@
                     <p tal:replace="structure context/install_instructions/output" />
                 </div>
                 <div class="bugreporting" tal:condition="context/reporting_bugs">
-                    <h3 i18n:translate="">Reporting Template-Bugs</h3>
+                    <h3 i18n:translate="">Reporting Add-on Bugs</h3>
                     <p tal:replace="structure context/reporting_bugs/output" />
                 </div>
                 <div class="aboutproduct" tal:condition="context/product_description">
