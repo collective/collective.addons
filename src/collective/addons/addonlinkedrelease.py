@@ -365,7 +365,7 @@ class IAddonLinkedRelease(model.Schema):
 
     link_to_file2 = schema.URI(
         title=_(u"The Link to the file of the release"),
-        description=_(u"Please insert a link to your extension file."),
+        description=_(u"Please insert a link to your add-on file."),
         required=False,
         constraint=validatelinkedaddonfileextension,
     )
@@ -396,7 +396,7 @@ class IAddonLinkedRelease(model.Schema):
 
     link_to_file3 = schema.URI(
         title=_(u"The Link to the file of the release"),
-        description=_(u"Please insert a link to your extension file."),
+        description=_(u"Please insert a link to your add-on file."),
         required=False,
         constraint=validatelinkedaddonfileextension,
     )
@@ -427,7 +427,7 @@ class IAddonLinkedRelease(model.Schema):
 
     link_to_file4 = schema.URI(
         title=_(u"The Link to the file of the release"),
-        description=_(u"Please insert a link to your extension file."),
+        description=_(u"Please insert a link to your add-on file."),
         required=False,
         constraint=validatelinkedaddonfileextension,
     )
@@ -458,7 +458,7 @@ class IAddonLinkedRelease(model.Schema):
 
     link_to_file5 = schema.URI(
         title=_(u"The Link to the file of the release"),
-        description=_(u"Please insert a link to your extension file."),
+        description=_(u"Please insert a link to your add-on file."),
         required=False,
         constraint=validatelinkedaddonfileextension
     )
