@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2019-08-11 20:25+0000\n"
+"POT-Creation-Date: 2019-08-12 20:17+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -27,7 +27,7 @@ msgid "${product_title}"
 msgstr ""
 
 #: ./profiles/default/workflows/collective_addons_project_workflow/definition.xml
-msgid "- A simple workflow for Addon Project objects."
+msgid "- A simple workflow for Add-on Project objects."
 msgstr ""
 
 #: ./addonlinkedrelease.py:144
@@ -69,28 +69,28 @@ msgstr ""
 msgid "Add-on Installation Instructions"
 msgstr ""
 
+#: ./profiles/default/types/collective.addons.addonlinkedrelease.xml
+msgid "Add-on Linked Release"
+msgstr ""
+
 #: ./addoncenter.py:47
 msgid "Add-on Product Name"
 msgstr ""
 
-#: ./addoncenter_templates/view.pt:210
-msgid "Add-ons"
-msgstr ""
-
-#: ./profiles/default/types/collective.addons.addonlinkedrelease.xml
-msgid "Addon Linked Release"
-msgstr ""
-
 #: ./profiles/default/types/collective.addons.addonproject.xml
-msgid "Addon Project"
+msgid "Add-on Project"
 msgstr ""
 
 #: ./profiles/default/workflows/collective_addons_project_workflow/definition.xml
-msgid "Addon Project Publication Workflow"
+msgid "Add-on Project Publication Workflow"
 msgstr ""
 
 #: ./profiles/default/types/collective.addons.addonrelease.xml
-msgid "Addon Release"
+msgid "Add-on Release"
+msgstr ""
+
+#: ./addoncenter_templates/view.pt:210
+msgid "Add-ons"
 msgstr ""
 
 #: ./addonproject_templates/view.pt:390
@@ -119,15 +119,15 @@ msgid "Alpha Release"
 msgstr ""
 
 #: ./profiles/default/types/collective.addons.addonlinkedrelease.xml
-msgid "An Addon Linked Release"
+msgid "An Add-on Linked Release"
 msgstr ""
 
 #: ./profiles/default/types/collective.addons.addonproject.xml
-msgid "An Addon Project"
+msgid "An Add-on Project"
 msgstr ""
 
 #: ./profiles/default/types/collective.addons.addonrelease.xml
-msgid "An Addon Release"
+msgid "An Add-on Release"
 msgstr ""
 
 #: ./addoncenter_templates/view.pt:121
@@ -165,7 +165,7 @@ msgid "Browse"
 msgstr ""
 
 #: ./addoncenter_templates/view.pt:255
-msgid "Browse Templates by Category"
+msgid "Browse Add-ons by Category"
 msgstr ""
 
 #: ./mailtoauthor.py:201
@@ -202,12 +202,12 @@ msgstr ""
 msgid "Compatibility"
 msgstr ""
 
-#: ./addonrelease.py:192
-msgid "Compatible With Versions Of The Product"
+#: ./addonlinkedrelease.py:187
+msgid "Compatible With The Versions Of The Product"
 msgstr ""
 
-#: ./addonlinkedrelease.py:187
-msgid "Compatible with versions of LibreOffice"
+#: ./addonrelease.py:192
+msgid "Compatible With Versions Of The Product"
 msgstr ""
 
 #: ./addonlinkedrelease.py:216
@@ -263,11 +263,11 @@ msgid "Dokumentation File:"
 msgstr ""
 
 #: ./addoncenter.py:190
-msgid "EMail address for communication with the template center manager and reviewer"
+msgid "EMail address for communication with the add-on center manager and reviewer"
 msgstr ""
 
 #: ./addoncenter.py:193
-msgid "Enter an email address for the communication with template center manager and reviewer"
+msgid "Enter an email address for the communication with add-on center manager and reviewer"
 msgstr ""
 
 #: ./addoncenter.py:179
@@ -540,7 +540,7 @@ msgid "Member submits content for publication"
 msgstr ""
 
 #: ./addonproject_templates/view.pt:276
-msgid "More about this release&hellip;"
+msgid "More about this release."
 msgstr ""
 
 #: ./addoncenter_templates/view.pt:39
@@ -656,10 +656,6 @@ msgstr ""
 
 #: ./addonlinkedrelease.py:253
 msgid "Please insert a link to your add-on file."
-msgstr ""
-
-#: ./addonlinkedrelease.py:368
-msgid "Please insert a link to your extension file."
 msgstr ""
 
 #: ./addonproject_templates/view.pt:43
@@ -809,7 +805,7 @@ msgid "Remember to publish your release once all files have been added. You can 
 msgstr ""
 
 #: ./addoncenter_templates/view.pt:273
-msgid "Reporting Template-Bugs"
+msgid "Reporting Add-on Bugs"
 msgstr ""
 
 #: ./profiles/default/workflows/collective_addons_linked_release_workflow/definition.xml
