@@ -9,6 +9,7 @@ from plone.app.multilingual.dx import directives
 from Products.CMFPlone.browser.search import quote_chars
 from plone import api
 from Products.ZCTextIndex.ParseTree import ParseError
+from zope.interface import Invalid
 
 import re
 import six
