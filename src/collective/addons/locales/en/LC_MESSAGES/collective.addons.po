@@ -85,7 +85,7 @@ msgstr ""
 msgid "Add-ons"
 msgstr ""
 
-#: ./addonproject_templates/view.pt:390
+#: ./addonproject_templates/view.pt:406
 msgid "All Releases"
 msgstr ""
 
@@ -189,7 +189,7 @@ msgid "Choose your categories"
 msgstr ""
 
 #: ./addonlinkedrelease_templates/view.pt:63
-#: ./addonproject_templates/view.pt:399
+#: ./addonproject_templates/view.pt:413
 #: ./addonrelease_templates/view.pt:63
 msgid "Compatibility"
 msgstr ""
@@ -222,7 +222,7 @@ msgstr ""
 msgid "Current Release"
 msgstr ""
 
-#: ./addonproject_templates/view.pt:244
+#: ./addonproject_templates/view.pt:237
 msgid "Current release for the project"
 msgstr ""
 
@@ -234,7 +234,7 @@ msgstr ""
 msgid "Currently there are"
 msgstr ""
 
-#: ./addonproject_templates/view.pt:400
+#: ./addonproject_templates/view.pt:414
 msgid "Description"
 msgstr ""
 
@@ -250,7 +250,7 @@ msgstr ""
 msgid "Dokumentation File"
 msgstr ""
 
-#: ./addonproject_templates/view.pt:461
+#: ./addonproject_templates/view.pt:491
 msgid "Dokumentation File:"
 msgstr ""
 
@@ -274,11 +274,11 @@ msgstr ""
 msgid "Enter the text of the legal disclaimer and limitations that should be displayed to the project creator and should be accepted by the owner of the project."
 msgstr ""
 
-#: ./addonproject_templates/view.pt:457
+#: ./addonproject_templates/view.pt:486
 msgid "External Documentation"
 msgstr ""
 
-#: ./addonproject_templates/view.pt:465
+#: ./addonproject_templates/view.pt:496
 msgid "External Project Page"
 msgstr ""
 
@@ -456,7 +456,7 @@ msgstr ""
 
 #: ./addoncenter_templates/view.pt:269
 #: ./addonlinkedrelease_templates/view.pt:180
-#: ./addonproject_templates/view.pt:481
+#: ./addonproject_templates/view.pt:514
 msgid "Install Instructions"
 msgstr ""
 
@@ -505,7 +505,7 @@ msgid "License of the uploaded file"
 msgstr ""
 
 #: ./addonlinkedrelease_templates/view.pt:59
-#: ./addonproject_templates/view.pt:401
+#: ./addonproject_templates/view.pt:415
 #: ./addonrelease_templates/view.pt:59
 msgid "License(s)"
 msgstr ""
@@ -531,7 +531,7 @@ msgstr ""
 msgid "Member submits content for publication"
 msgstr ""
 
-#: ./addonproject_templates/view.pt:276
+#: ./addonproject_templates/view.pt:263
 msgid "More about this release."
 msgstr ""
 
@@ -579,7 +579,7 @@ msgstr ""
 msgid "Pending"
 msgstr ""
 
-#: ./addonproject_templates/view.pt:398
+#: ./addonproject_templates/view.pt:412
 msgid "Platform(s)"
 msgstr ""
 
@@ -698,7 +698,7 @@ msgid "Project Name"
 msgstr ""
 
 #: ./addonlinkedrelease_templates/view.pt:152
-#: ./addonproject_templates/view.pt:454
+#: ./addonproject_templates/view.pt:483
 #: ./addonrelease_templates/view.pt:140
 msgid "Project Resources"
 msgstr ""
@@ -778,11 +778,11 @@ msgstr ""
 msgid "Release-Candidate"
 msgstr ""
 
-#: ./addonproject_templates/view.pt:397
+#: ./addonproject_templates/view.pt:411
 msgid "Released"
 msgstr ""
 
-#: ./addonproject_templates/view.pt:254
+#: ./addonproject_templates/view.pt:245
 msgid "Released ${latest_release_date}"
 msgstr ""
 
@@ -815,7 +815,7 @@ msgid "Reviewer sends content back for re-drafting"
 msgstr ""
 
 #: ./addonlinkedrelease_templates/view.pt:166
-#: ./addonproject_templates/view.pt:470
+#: ./addonproject_templates/view.pt:502
 #: ./addonrelease_templates/view.pt:154
 msgid "Screenshot"
 msgstr ""
@@ -1082,7 +1082,7 @@ msgstr ""
 msgid "Unreleased"
 msgstr ""
 
-#: ./addonproject_templates/view.pt:396
+#: ./addonproject_templates/view.pt:410
 msgid "Version"
 msgstr ""
 
