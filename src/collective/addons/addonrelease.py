@@ -98,7 +98,7 @@ directlyProvides(vocabAvailPlatforms, IContextSourceBinder)
 def validateaddonfileextension(value):
     catalog = api.portal.get_tool(name='portal_catalog')
     result = catalog.uniqueValuesFor('allowedaddonfileextensions')
-    pattern = r'^.*\.{0}'.format(result[0])
+    pattern = r'^.*\.({0})'.format(result[0])
     matches = re.compile(pattern, re.IGNORECASE).match
     if not matches(value.filename):
         raise Invalid(

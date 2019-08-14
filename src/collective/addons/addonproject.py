@@ -79,7 +79,7 @@ def allowedapimagefileextensions(context):
 def validatedocfileextension(value):
     catalog = api.portal.get_tool(name='portal_catalog')
     result = catalog.uniqueValuesFor('allowedapdocextensions')
-    pattern = r'^.*\.{0}'.format(result[0])
+    pattern = r'^.*\.({0})'.format(result[0])
     matches = re.compile(pattern, re.IGNORECASE).match
     if not matches(value.filename):
         raise Invalid(
@@ -92,7 +92,7 @@ def validatedocfileextension(value):
 def validateimagefileextension(value):
     catalog = api.portal.get_tool(name='portal_catalog')
     result = catalog.uniqueValuesFor('allowedapimageextensions')
-    pattern = r'^.*\.{0}'.format(result[0])
+    pattern = r'^.*\.({0})'.format(result[0])
     matches = re.compile(pattern, re.IGNORECASE).match
     if not matches(value.filename):
         raise Invalid(
