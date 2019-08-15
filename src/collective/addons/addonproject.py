@@ -20,6 +20,7 @@ from zope.interface import Invalid, invariant
 from plone import api
 from collective.addons import quote_chars
 from z3c.form import validator
+from Products.validation import V_REQUIRED
 
 import re
 import six

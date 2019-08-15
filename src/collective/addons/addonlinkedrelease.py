@@ -20,6 +20,7 @@ from z3c.form import validator
 from zope.security import checkPermission
 from plone.dexterity.browser.view import DefaultView
 from collective.addons.adapter import IReleasesCompatVersions
+from Products.validation import V_REQUIRED
 
 import re
 import six
