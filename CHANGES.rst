@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.0a2 (unreleased)
+1.0a2 (2019-08-16)
 ------------------
 
 - Fix regular expressions for file extension validation [Andreas Mantke]
