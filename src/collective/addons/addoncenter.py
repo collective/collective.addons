@@ -33,7 +33,7 @@ class IAddonCenter(model.Schema):
     """
 
     title = schema.TextLine(
-        title=_(u'Name Of The Add-on Center'),
+        title=_(u'Name of the Add-on Center'),
     )
 
     description = schema.Text(
@@ -41,11 +41,11 @@ class IAddonCenter(model.Schema):
     )
 
     product_description = schema.Text(
-        title=_(u'Description Of The Features of Add-ons'),
+        title=_(u'Description of the features of Add-ons'),
     )
 
     product_title = schema.TextLine(
-        title=_(u'Add-on Product Name'),
+        title=_(u'Add-on product name'),
         description=_(
             u'Name of the Add-on product, e.g. only Add-ons'),
     )
@@ -94,25 +94,25 @@ class IAddonCenter(model.Schema):
                                       value_type=schema.TextLine())
 
     model.fieldset('Allowed File Extensions',
-                   label=u'Allowed File Extensions',
+                   label=u'Allowed file extensions',
                    fields=['allowed_addonfileextension',
                            'allowed_apimageextension',
                            'allowed_apdocfileextensions'])
 
     allowed_addonfileextension = schema.TextLine(
-        title=_(u'Allowed File Extensions'),
+        title=_(u'Allowed file extensions'),
         description=_(u'Fill in the allowed file extensions, seperated by '
                       u'a pipe \'|\'.'),
         )
 
     allowed_apimageextension = schema.TextLine(
-        title=_(u'Allowed Image File Extension'),
+        title=_(u'Allowed image file extension'),
         description=_(u'Fill in the allowed image file extensions, seperated '
                       u'by a pipe \'|\'.'),
         )
 
     allowed_apdocfileextensions = schema.TextLine(
-        title=_(u'Allowed Documentation File Extension'),
+        title=_(u'Allowed documentation file extension'),
         description=_(u'Fill in the allowed documentation file extensions, '
                       u'seperated by a pipe \'|\'.'),
     )
@@ -123,7 +123,7 @@ class IAddonCenter(model.Schema):
 
     primary('install_instructions')
     install_instructions = RichText(
-        title=_(u"Add-on Installation Instructions"),
+        title=_(u"Add-on installation instructions"),
         description=_(u"Please fill in the install instructions"),
         required=False
     )
@@ -176,7 +176,7 @@ class IAddonCenter(model.Schema):
 
     primary('information_oldversions')
     information_oldversions = RichText(
-        title=_(u'Information About Search For Old Product Versions'),
+        title=_(u'Information about search for old product versions'),
         description=_(u'Enter an information about the search for older '
                       u'versions of the product, if they are not on the '
                       u'versions list (compatibility) anymore.'),
@@ -184,7 +184,7 @@ class IAddonCenter(model.Schema):
     )
 
     model.fieldset('contactadresses',
-                   label=u'Special Email Adresses',
+                   label=u'Special email adresses',
                    fields=['contactForCenter'])
 
     contactForCenter = schema.ASCIILine(
