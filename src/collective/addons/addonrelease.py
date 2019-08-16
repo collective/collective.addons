@@ -135,7 +135,7 @@ class IAddonRelease(model.Schema):
 
     directives.mode(projecttitle='hidden')
     projecttitle = schema.TextLine(
-        title=_(u"The Computed Project Title"),
+        title=_(u"The computed project title"),
         description=_(
             u"The release title will be computed from the parent project "
             u"title"),
@@ -190,7 +190,7 @@ class IAddonRelease(model.Schema):
 
     directives.widget(compatibility_choice=CheckBoxFieldWidget)
     compatibility_choice = schema.List(
-        title=_(u"Compatible With Versions Of The Product"),
+        title=_(u"Compatible with versions of the product"),
         description=_(
             u"Please mark one or more program versions with which this "
             u"release is compatible with."),
@@ -229,7 +229,7 @@ class IAddonRelease(model.Schema):
     )
 
     source_code_inside = schema.Choice(
-        title=_(u"Is The Source Code Inside The Addon?"),
+        title=_(u"Is the source code inside the add-on?"),
         vocabulary=yesnochoice,
         required=True
     )
@@ -379,7 +379,7 @@ class IAddonRelease(model.Schema):
     )
 
     model.fieldset('fileset2',
-                   label=u"Further More File Uploads",
+                   label=u"Further more file uploads",
                    fields=['filetitlefield4', 'addonfileextension4',
                            'file4', 'platform_choice4',
                            'filetitlefield5', 'addonfileextension5',
