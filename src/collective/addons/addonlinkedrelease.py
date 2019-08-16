@@ -131,7 +131,7 @@ class IAddonLinkedRelease(model.Schema):
 
     directives.mode(projecttitle='hidden')
     projecttitle = schema.TextLine(
-        title=_(u"The Computed Project Title"),
+        title=_(u"The computed project title"),
         description=_(
             u"The linked release title will be computed from the parent project "
             u"title"),
@@ -185,7 +185,7 @@ class IAddonLinkedRelease(model.Schema):
 
     directives.widget(compatibility_choice=CheckBoxFieldWidget)
     compatibility_choice = schema.List(
-        title=_(u"Compatible With The Versions Of The Product"),
+        title=_(u"Compatible with the versions of the product"),
         description=_(u"Please mark one or more program versions with which "
                       u"this release is compatible with."),
         value_type=schema.Choice(source=vocabAvailVersions),
