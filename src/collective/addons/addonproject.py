@@ -146,13 +146,13 @@ class IAddonProject(model.Schema):
 
     model.fieldset('logo_screenshot',
                    label='Logo / Screenshot',
-                   fields=['eupimageextension', 'project_logo',
-                           'eupimageextension1', 'screenshot']
+                   fields=['addonimageextension', 'project_logo',
+                           'addonimageextension1', 'screenshot']
                    )
 
     model.fieldset('documentation',
                    label='Documentation',
-                   fields=['documentation_link', 'eupdocextension',
+                   fields=['documentation_link', 'addondocextension',
                            'documentation_file']
                    )
 
@@ -188,8 +188,8 @@ class IAddonProject(model.Schema):
         required=False
     )
 
-    directives.mode(eupdocextension='display')
-    eupdocextension = schema.TextLine(
+    directives.mode(addondocextension='display')
+    addondocextension = schema.TextLine(
         title=_(u'The following file extensions are allowed for documentation '
                 u'files (upper case and lower case and mix of both):'),
         defaultFactory=allowedapdocfileextensions,
@@ -203,8 +203,8 @@ class IAddonProject(model.Schema):
         constraint=validatedocfileextension,
     )
 
-    directives.mode(eupimageextension='display')
-    eupimageextension = schema.TextLine(
+    directives.mode(addonimageextension='display')
+    addonimageextension = schema.TextLine(
         title=_(u'The following file extensions are allowed for project logo '
                 u'files (upper case and lower case and mix of both):'),
         defaultFactory=allowedapimagefileextensions,
@@ -219,8 +219,8 @@ class IAddonProject(model.Schema):
         constraint=validateimagefileextension
     )
 
-    directives.mode(eupimageextension1='display')
-    eupimageextension1 = schema.TextLine(
+    directives.mode(addonimageextension1='display')
+    addonimageextension1 = schema.TextLine(
         title=_(u'The following file extensions are allowed for screenshot '
                 u'files (upper case and lower case and mix of both):'),
         defaultFactory=allowedapimagefileextensions,
