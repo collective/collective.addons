@@ -207,6 +207,12 @@
     handler="collective.addons.addonlinkedrelease.notifyAddonHubLinkedReleaseAdd"
     />
 
+  <subscriber
+    for="collective.addons.addoncenter.IAddonCenter
+               zope.lifecycleevent.interfaces.IObjectModifiedEvent"
+    handler="collective.addons.notifications.notifiyAboutNewVersion"
+    />
+
 
 
 
