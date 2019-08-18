@@ -185,7 +185,15 @@ class IAddonCenter(model.Schema):
 
     model.fieldset('contactadresses',
                    label=u'Special email adresses',
-                   fields=['contactForCenter'])
+                   fields=['releaseAllert', 'contactForCenter'])
+
+    releaseAllert = schema.ASCIILine(
+        title=_(u"EMail address for the messages about new releases"),
+        description=_(
+            u"Enter an email address to which information about a new "
+            u"release should be send."),
+        required=False
+    )
 
     contactForCenter = schema.ASCIILine(
         title=_(
