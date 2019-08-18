@@ -404,16 +404,17 @@
                      </tal:stable>
 
                      <h2 i18n:translate="">All Releases</h2>
-                     <table class="addonprojecttable">
+                     <div class="table-responsive">
+                     <table class="table">
                          <thead>
                          <tr>
-                             <td><h4 i18n:translate="">Version</h4></td>
-                             <td><h4 i18n:translate="">Released</h4></td>
-                             <td><h4 i18n:translate="">Platform(s)</h4></td>
-                             <td><h4 i18n:translate="">Compatibility</h4></td>
-                             <td><h4 i18n:translate="">Description</h4></td>
-                             <td><h4 i18n:translate="">License(s)</h4></td>
-                             <td><h4>Status</h4></td>
+                             <th scope="col"><h4 i18n:translate="">Version</h4></th>
+                             <th scope="col"><h4 i18n:translate="">Released</h4></th>
+                             <th scope="col"><h4 i18n:translate="">Platform(s)</h4></th>
+                             <th scope="col"><h4 i18n:translate="">Compatibility</h4></th>
+                             <th scope="col"><h4 i18n:translate="">Description</h4></th>
+                             <th scope="col"><h4 i18n:translate="">License(s)</h4></th>
+                             <th scope="col"><h4>Status</h4></th>
                          </tr>
                          </thead>
                          <tbody>
@@ -421,13 +422,13 @@
                              <tr tal:define="wtool release/portal_workflow;
                                      maturity python: wtool.getInfoFor(release, 'review_state');
                                              stable  python:maturity not in ['pre-release', 'alpha', 'beta'];">
-                                 <td>
+                                 <th scope="row">
                                      <h4>
                                          <a tal:attributes="href release/absolute_url">
                                              <span tal:content="release/releasenumber" /></a>
                                      </h4>
-                                 </td>
-                                 <td class="release-date">
+                                 </th>
+                                 <td>
                      <span tal:condition="python:stable and release.effective()">
                                     <span tal:replace="python:context.toLocalizedTime(release.effective())" />
                          </span>
@@ -466,11 +467,12 @@
                                          </tal:loop>
                                      </ul>
                                  </td>
-                                 <td class="maturity" tal:content="maturity" />
+                                 <td tal:content="maturity" />
                              </tr>
                          </tal:loop>
                          </tbody>
                      </table>
+                     </div>
 
                      <h4 class="addoncenterlegaldownload" tal:content="structure context/title_legaldownloaddisclaimer" />
                      <div class="addoncenterlegaldownload" tal:content="structure context/legal_downloaddisclaimer/output" />
