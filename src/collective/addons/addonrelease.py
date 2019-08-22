@@ -50,6 +50,7 @@ def legal_declaration_text(context):
     context = context.aq_inner.aq_parent
     return context.legal_disclaimer
 
+
 @provider(IContextAwareDefaultFactory)
 def allowedaddonfileextensions(context):
     context = context.aq_inner.aq_parent
@@ -66,6 +67,7 @@ def vocabAvailLicenses(context):
                                 title=value))
     return SimpleVocabulary(terms)
 
+
 directlyProvides(vocabAvailLicenses, IContextSourceBinder)
 
 
@@ -78,6 +80,7 @@ def vocabAvailVersions(context):
         terms.append(SimpleTerm(value, token=value.encode('unicode_escape'),
                                 title=value))
     return SimpleVocabulary(terms)
+
 
 directlyProvides(vocabAvailVersions, IContextSourceBinder)
 
@@ -109,10 +112,8 @@ def validateaddonfileextension(value):
     return True
 
 
-
 class AcceptLegalDeclaration(Invalid):
     __doc__ = _(u"It is necessary that you accept the Legal Declaration")
-
 
 
 class IAddonRelease(model.Schema):
@@ -167,7 +168,6 @@ class IAddonRelease(model.Schema):
         required=False,
     )
 
-
     model.fieldset('compatibility',
                    label=u"Compatibility",
                    fields=['compatibility_choice'])
@@ -177,7 +177,6 @@ class IAddonRelease(model.Schema):
                    fields=['licenses_choice', 'title_declaration_legal',
                            'declaration_legal', 'accept_legal_declaration',
                            'source_code_inside', 'link_to_source'])
-
 
     directives.widget(licenses_choice=CheckBoxFieldWidget)
     licenses_choice = schema.List(
@@ -238,7 +237,6 @@ class IAddonRelease(model.Schema):
         title=_(u"Please fill in the Link (URL) to the Source Code"),
         required=False
     )
-
 
     model.fieldset('fileupload',
                    label=u"Fileupload",
@@ -444,7 +442,6 @@ class IAddonRelease(model.Schema):
         required=False,
     )
 
-
     @invariant
     def testingvalue(data):
         if data.source_code_inside is not 1 and data.link_to_source is None:
@@ -473,9 +470,6 @@ class IAddonRelease(model.Schema):
                                            u"and your linked File"))
 
 
-
-
-
 @indexer(IAddonRelease)
 def addon_release_number(context, **kw):
     return context.releasenumber
@@ -502,7 +496,6 @@ def update_project_releases_compat_versions(addonrelease, event):
 
     IReleasesCompatVersions(
         addonrelease.aq_parent).set(list(set(result)))
-
 
 
 def notifyAddonHubReleaseAdd(self, event):
@@ -544,7 +537,6 @@ def notifyAddonHubReleaseAdd(self, event):
         return None
 
 
-
 class ValidateAddonReleaseUniqueness(validator.SimpleFieldValidator):
     # Validate site-wide uniqueness of release titles.
 
@@ -583,8 +575,6 @@ validator.WidgetValidatorDiscriminators(
     ValidateAddonReleaseUniqueness,
     field=IAddonRelease['releasenumber'],
 )
-
-
 
 
 class AddonReleaseView(DefaultView):
