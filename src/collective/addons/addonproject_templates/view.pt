@@ -503,7 +503,7 @@
                             <div tal:condition="context/screenshot">
                                 <h4 i18n:translate="">Screenshot</h4>
                                 <div class="addonprojectscreenshot"
-                                     width="250px" tal:define="screenshot nocall:context/screenshot"
+                                     tal:define="screenshot nocall:context/screenshot"
                                          tal:condition="nocall:screenshot">
                                     <a class="discreet" tal:attributes="href string:${context/absolute_url}/@@images/screenshot/large">
                                         <img tal:define="scales context/@@images"

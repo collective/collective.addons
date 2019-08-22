@@ -152,7 +152,7 @@
                        </ul>
                        <div tal:condition="context/screenshot">
                            <h4 i18n:translate="">Screenshot</h4>
-                           <div class="addonsprojectscreenshot" width="250px" tal:define="screenshot nocall:context/screenshot"
+                           <div class="addonprojectscreenshot" tal:define="screenshot nocall:context/screenshot"
                                     tal:condition="nocall:screenshot">
                                <img tal:define="scales context/@@images"
                                         tal:replace="structure python: scales.tag('screenshot',
