@@ -26,7 +26,6 @@ import re
 import six
 
 
-
 @provider(IContextAwareDefaultFactory)
 def getContainerTitle(self):
     return (self.aq_inner.title)
@@ -48,6 +47,7 @@ def legal_declaration_text(context):
     context = context.aq_inner.aq_parent
     return context.legal_disclaimer
 
+
 @provider(IContextAwareDefaultFactory)
 def allowedaddonlinkedfileextensions(context):
     context = context.aq_inner.aq_parent
@@ -64,6 +64,7 @@ def vocabAvailLicenses(context):
                                 title=value))
     return SimpleVocabulary(terms)
 
+
 directlyProvides(vocabAvailLicenses, IContextSourceBinder)
 
 
@@ -77,6 +78,7 @@ def vocabAvailVersions(context):
                                 title=value))
     return SimpleVocabulary(terms)
 
+
 directlyProvides(vocabAvailVersions, IContextSourceBinder)
 
 
@@ -89,6 +91,7 @@ def vocabAvailPlatforms(context):
         terms.append(SimpleTerm(value, token=value.encode('unicode_escape'),
                                 title=value))
     return SimpleVocabulary(terms)
+
 
 directlyProvides(vocabAvailPlatforms, IContextSourceBinder)
 
@@ -133,11 +136,10 @@ class IAddonLinkedRelease(model.Schema):
     projecttitle = schema.TextLine(
         title=_(u"The computed project title"),
         description=_(
-            u"The linked release title will be computed from the parent project "
-            u"title"),
+            u"The linked release title will be computed from the parent "
+            u"project title"),
         defaultFactory=getContainerTitle
     )
-
 
     releasenumber = schema.TextLine(
         title=_(u"Release Number"),
@@ -239,7 +241,6 @@ class IAddonLinkedRelease(model.Schema):
                            'platform_choice',
                            'information_further_file_uploads'])
 
-
     directives.mode(addonlinkedfileextension='display')
     addonlinkedfileextension = schema.TextLine(
         title=_(u'The following file extensions are allowed for linked '
@@ -247,7 +248,6 @@ class IAddonLinkedRelease(model.Schema):
                 u'both):'),
         defaultFactory=allowedaddonlinkedfileextensions,
     )
-
 
     link_to_file = schema.URI(
         title=_(u"The Link to the file of the release"),
@@ -480,7 +480,6 @@ class IAddonLinkedRelease(model.Schema):
         required=True,
     )
 
-
     @invariant
     def licensenotchoosen(value):
         if not value.licenses_choice:
@@ -498,7 +497,6 @@ class IAddonLinkedRelease(model.Schema):
             raise AcceptLegalDeclaration(_(u"Please accept the Legal "
                                            u"Declaration about your Release "
                                            u"and your linked File"))
-
 
     @invariant
     def testingvalue(data):
@@ -521,10 +519,11 @@ def addon_release_number(context, **kw):
     return context.releasenumber
 
 
-
-def update_project_releases_compat_versions_on_creation(addonlinkedrelease, event):
+def update_project_releases_compat_versions_on_creation(
+        addonlinkedrelease, event):
     IReleasesCompatVersions(
-        addonlinkedrelease.aq_parent).update(addonlinkedrelease.compatibility_choice)
+        addonlinkedrelease.aq_parent).update(
+        addonlinkedrelease.compatibility_choice)
 
 
 def update_project_releases_compat_versions(addonlinkedrelease, event):
@@ -583,7 +582,6 @@ def notifyAddonHubLinkedReleaseAdd(self, event):
         return None
 
 
-
 class ValidateAddonLinkedReleaseUniqueness(validator.SimpleFieldValidator):
     # Validate site-wide uniqueness of release titles.
 
@@ -622,7 +620,6 @@ validator.WidgetValidatorDiscriminators(
     ValidateAddonLinkedReleaseUniqueness,
     field=IAddonLinkedRelease['releasenumber'],
 )
-
 
 
 class AddonLinkedReleaseView(DefaultView):

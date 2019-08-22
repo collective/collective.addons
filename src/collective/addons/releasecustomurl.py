@@ -7,6 +7,7 @@ class INameForReleaseURL(INameFromTitle):
     def title():
         """Return a processed title"""
 
+
 @implementer(INameForReleaseURL)
 class NameForReleaseURL(object):
 

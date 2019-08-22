@@ -156,8 +156,10 @@ class MailToAuthorForm(AutoExtensibleForm, form.Form):
                 type='error')
             return
 
-        if api.portal.get_registry_record('plone.email_from_address') is not None:
-            contactaddress = api.portal.get_registry_record('plone.email_from_address')
+        if api.portal.get_registry_record('plone.email_from_address') \
+            is not None:
+            contactaddress = api.portal.get_registry_record(
+                'plone.email_from_address')
 
         catalog = api.portal.get_tool('portal_catalog')
         project = catalog(

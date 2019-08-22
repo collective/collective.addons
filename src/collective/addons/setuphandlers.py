@@ -36,7 +36,6 @@ def uninstall(context):
     # Do something at the end of the uninstallation of this package.
 
 
-
 def import_catalog_indexes(context, logger=None):
     """Method to add our wanted indexes to the portal_catalog.
 

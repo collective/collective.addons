@@ -8,7 +8,6 @@ import logging
 logger = logging.getLogger(__name__)
 
 
-
 def reload_gs_profile(context):
     loadMigrationProfile(
         context,
