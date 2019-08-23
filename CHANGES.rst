@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.0a3 (unreleased)
+1.0a3 (2019-08-23)
 ------------------
 
 - Pep8, isort and code-analysis fixes. [Andreas Mantke]
