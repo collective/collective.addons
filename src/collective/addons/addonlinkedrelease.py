@@ -503,7 +503,7 @@ class IAddonLinkedRelease(model.Schema):
 
     @invariant
     def testingvalue(data):
-        if data.source_code_inside is not 1 and data.link_to_source is None:
+        if data.source_code_inside != 1 and data.link_to_source is None:
             raise Invalid(_(u"You answered the question, whether the source "
                             u"code is inside your add-on with no "
                             u"(default answer). If this is the correct "
