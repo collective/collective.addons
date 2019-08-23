@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2019-08-16 12:06+0000\n"
+"POT-Creation-Date: 2019-08-23 18:30+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,8 +17,8 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: collective.addons\n"
 
-#: ./addonlinkedrelease.py:197
-#: ./addonrelease.py:204
+#: ./addonlinkedrelease.py:199
+#: ./addonrelease.py:203
 msgid ""
 msgstr ""
 
@@ -30,8 +30,8 @@ msgstr ""
 msgid "- A simple workflow for Add-on Project objects."
 msgstr ""
 
-#: ./addonlinkedrelease.py:145
-#: ./addonrelease.py:148
+#: ./addonlinkedrelease.py:147
+#: ./addonrelease.py:149
 msgid "1.0"
 msgstr ""
 
@@ -39,8 +39,8 @@ msgstr ""
 msgid "A center for add-ons"
 msgstr ""
 
-#: ./addonlinkedrelease.py:162
-#: ./addonrelease.py:165
+#: ./addonlinkedrelease.py:164
+#: ./addonrelease.py:166
 msgid "A detailed log of what has changed since the previous release."
 msgstr ""
 
@@ -48,8 +48,8 @@ msgstr ""
 msgid "About"
 msgstr ""
 
-#: ./addonlinkedrelease.py:210
-#: ./addonrelease.py:218
+#: ./addonlinkedrelease.py:212
+#: ./addonrelease.py:217
 msgid "Accept the above legal disclaimer"
 msgstr ""
 
@@ -168,7 +168,7 @@ msgstr ""
 msgid "Browse Add-ons by Category"
 msgstr ""
 
-#: ./mailtoauthor.py:201
+#: ./mailtoauthor.py:203
 msgid "Cancel"
 msgstr ""
 
@@ -186,9 +186,9 @@ msgstr ""
 msgid "Change the release stage to 'Release beta'"
 msgstr ""
 
-#: ./addonlinkedrelease.py:161
+#: ./addonlinkedrelease.py:163
 #: ./addonlinkedrelease_templates/view.pt:70
-#: ./addonrelease.py:164
+#: ./addonrelease.py:165
 msgid "Changelog"
 msgstr ""
 
@@ -197,28 +197,28 @@ msgid "Choose your categories"
 msgstr ""
 
 #: ./addonlinkedrelease_templates/view.pt:63
-#: ./addonproject_templates/view.pt:413
+#: ./addonproject_templates/view.pt:414
 #: ./addonrelease_templates/view.pt:63
 msgid "Compatibility"
 msgstr ""
 
-#: ./addonlinkedrelease.py:188
+#: ./addonlinkedrelease.py:190
 msgid "Compatible with the versions of the product"
 msgstr ""
 
-#: ./addonrelease.py:193
+#: ./addonrelease.py:192
 msgid "Compatible with versions of the product"
 msgstr ""
 
-#: ./addonlinkedrelease.py:217
+#: ./addonlinkedrelease.py:219
 #: ./addonproject.py:171
-#: ./addonrelease.py:225
+#: ./addonrelease.py:224
 msgid "Contact email-address"
 msgstr ""
 
-#: ./addonlinkedrelease.py:218
+#: ./addonlinkedrelease.py:220
 #: ./addonproject.py:172
-#: ./addonrelease.py:226
+#: ./addonrelease.py:225
 msgid "Contact email-address for the project."
 msgstr ""
 
@@ -242,7 +242,7 @@ msgstr ""
 msgid "Currently there are"
 msgstr ""
 
-#: ./addonproject_templates/view.pt:414
+#: ./addonproject_templates/view.pt:415
 msgid "Description"
 msgstr ""
 
@@ -258,16 +258,24 @@ msgstr ""
 msgid "Dokumentation File"
 msgstr ""
 
-#: ./addonproject_templates/view.pt:491
+#: ./addonproject_templates/view.pt:493
 msgid "Dokumentation File:"
 msgstr ""
 
-#: ./addoncenter.py:191
+#: ./addoncenter.py:199
 msgid "EMail address for communication with the add-on center manager and reviewer"
 msgstr ""
 
-#: ./addoncenter.py:194
+#: ./addoncenter.py:191
+msgid "EMail address for the messages about new releases"
+msgstr ""
+
+#: ./addoncenter.py:202
 msgid "Enter an email address for the communication with add-on center manager and reviewer"
+msgstr ""
+
+#: ./addoncenter.py:192
+msgid "Enter an email address to which information about a new release should be send."
 msgstr ""
 
 #: ./addoncenter.py:180
@@ -282,15 +290,15 @@ msgstr ""
 msgid "Enter the text of the legal disclaimer and limitations that should be displayed to the project creator and should be accepted by the owner of the project."
 msgstr ""
 
-#: ./addonproject_templates/view.pt:486
+#: ./addonproject_templates/view.pt:488
 msgid "External Documentation"
 msgstr ""
 
-#: ./addonproject_templates/view.pt:496
+#: ./addonproject_templates/view.pt:498
 msgid "External Project Page"
 msgstr ""
 
-#: ./addonrelease.py:391
+#: ./addonrelease.py:389
 msgid "Fifth Release File"
 msgstr ""
 
@@ -302,7 +310,7 @@ msgstr ""
 msgid "Fifth linked file is compatible with the Platform(s)"
 msgstr ""
 
-#: ./addonrelease.py:411
+#: ./addonrelease.py:409
 msgid "Fifth uploaded file is compatible with the Platform(s)"
 msgstr ""
 
@@ -346,11 +354,11 @@ msgstr ""
 msgid "First linked file is compatible with the Platform(s)"
 msgstr ""
 
-#: ./addonrelease.py:265
+#: ./addonrelease.py:263
 msgid "First uploaded file is compatible with the Platform(s)"
 msgstr ""
 
-#: ./addonrelease.py:354
+#: ./addonrelease.py:352
 msgid "Fourth Release File"
 msgstr ""
 
@@ -362,7 +370,7 @@ msgstr ""
 msgid "Fourth linked file is compatible with the Platform(s)"
 msgstr ""
 
-#: ./addonrelease.py:374
+#: ./addonrelease.py:372
 msgid "Fourth uploaded file is compatible with the Platform(s)"
 msgstr ""
 
@@ -370,12 +378,12 @@ msgstr ""
 msgid "Full Project Description"
 msgstr ""
 
-#: ./addonlinkedrelease.py:155
-#: ./addonrelease.py:158
+#: ./addonlinkedrelease.py:157
+#: ./addonrelease.py:159
 msgid "Full Release Description"
 msgstr ""
 
-#: ./addonrelease.py:275
+#: ./addonrelease.py:273
 msgid "Further File Uploads for this Release"
 msgstr ""
 
@@ -443,7 +451,7 @@ msgstr ""
 msgid "If you want to link more files for this release, e.g. because there are files for other operating systems, you'll find the fields to link this files on the next registers, e.g. 'Second linked file' for this Release'."
 msgstr ""
 
-#: ./addonrelease.py:276
+#: ./addonrelease.py:274
 msgid "If you want to upload more files for this release, e.g. because there are files for other operating systems, you'll find the upload fields on the register 'Further Uploads' and 'Further More Uploads'."
 msgstr ""
 
@@ -452,9 +460,9 @@ msgstr ""
 msgid "Info"
 msgstr ""
 
-#: ./addonlinkedrelease.py:116
+#: ./addonlinkedrelease.py:119
 #: ./addonproject.py:114
-#: ./addonrelease.py:121
+#: ./addonrelease.py:122
 msgid "Information"
 msgstr ""
 
@@ -464,7 +472,7 @@ msgstr ""
 
 #: ./addoncenter_templates/view.pt:269
 #: ./addonlinkedrelease_templates/view.pt:180
-#: ./addonproject_templates/view.pt:514
+#: ./addonproject_templates/view.pt:516
 msgid "Install Instructions"
 msgstr ""
 
@@ -482,13 +490,13 @@ msgstr ""
 msgid "Invalid email address"
 msgstr ""
 
-#: ./addonlinkedrelease.py:224
-#: ./addonrelease.py:232
+#: ./addonlinkedrelease.py:226
+#: ./addonrelease.py:231
 msgid "Is the source code inside the add-on?"
 msgstr ""
 
-#: ./addonlinkedrelease.py:110
-#: ./addonrelease.py:114
+#: ./addonlinkedrelease.py:113
+#: ./addonrelease.py:116
 msgid "It is necessary that you accept the Legal Declaration"
 msgstr ""
 
@@ -504,13 +512,13 @@ msgstr ""
 msgid "Legal Disclaimer and Limitations for Downloads"
 msgstr ""
 
-#: ./addonlinkedrelease.py:179
-#: ./addonrelease.py:184
+#: ./addonlinkedrelease.py:181
+#: ./addonrelease.py:183
 msgid "License of the uploaded file"
 msgstr ""
 
 #: ./addonlinkedrelease_templates/view.pt:59
-#: ./addonproject_templates/view.pt:415
+#: ./addonproject_templates/view.pt:416
 #: ./addonrelease_templates/view.pt:59
 msgid "License(s)"
 msgstr ""
@@ -584,12 +592,12 @@ msgstr ""
 msgid "Pending"
 msgstr ""
 
-#: ./addonproject_templates/view.pt:412
+#: ./addonproject_templates/view.pt:413
 msgid "Platform(s)"
 msgstr ""
 
-#: ./addonlinkedrelease.py:498
-#: ./addonrelease.py:471
+#: ./addonlinkedrelease.py:497
+#: ./addonrelease.py:468
 msgid "Please accept the Legal Declaration about your Release and your linked File"
 msgstr ""
 
@@ -601,33 +609,33 @@ msgstr ""
 msgid "Please add a screenshot or a logo to your project. You find the appropriate fields below on this page."
 msgstr ""
 
-#: ./addonlinkedrelease.py:515
+#: ./addonlinkedrelease.py:513
 msgid "Please choose a compatible platform for the linked file."
 msgstr ""
 
-#: ./addonlinkedrelease.py:487
-#: ./addonrelease.py:460
+#: ./addonlinkedrelease.py:486
+#: ./addonrelease.py:457
 msgid "Please choose a license for your release."
 msgstr ""
 
-#: ./addonlinkedrelease.py:492
-#: ./addonrelease.py:465
+#: ./addonlinkedrelease.py:491
+#: ./addonrelease.py:462
 msgid "Please choose one or more compatible product versions for your release."
 msgstr ""
 
-#: ./addonrelease.py:219
+#: ./addonrelease.py:218
 msgid "Please declare that you accept the above legal disclaimer"
 msgstr ""
 
-#: ./addonlinkedrelease.py:211
+#: ./addonlinkedrelease.py:213
 msgid "Please declare that you accept the above legal disclaimer."
 msgstr ""
 
-#: ./addonrelease.py:238
+#: ./addonrelease.py:237
 msgid "Please fill in the Link (URL) to the Source Code"
 msgstr ""
 
-#: ./addonlinkedrelease.py:230
+#: ./addonlinkedrelease.py:232
 msgid "Please fill in the Link (URL) to the Source Code."
 msgstr ""
 
@@ -659,8 +667,8 @@ msgstr ""
 msgid "Please make sure the relevant project information has been entered and a release has been added to your project. Once you have finished that you could submit your project for approval (publication)."
 msgstr ""
 
-#: ./addonlinkedrelease.py:180
-#: ./addonrelease.py:185
+#: ./addonlinkedrelease.py:182
+#: ./addonrelease.py:184
 msgid "Please mark one or more licenses you publish your release."
 msgstr ""
 
@@ -669,12 +677,12 @@ msgid "Please mark one or more platforms with which the linked file is compatibl
 msgstr ""
 
 #: ./addonlinkedrelease.py:270
-#: ./addonrelease.py:266
+#: ./addonrelease.py:264
 msgid "Please mark one or more platforms with which the uploaded file is compatible."
 msgstr ""
 
-#: ./addonlinkedrelease.py:189
-#: ./addonrelease.py:194
+#: ./addonlinkedrelease.py:191
+#: ./addonrelease.py:193
 msgid "Please mark one or more program versions with which this release is compatible with."
 msgstr ""
 
@@ -682,7 +690,7 @@ msgstr ""
 msgid "Please select the appropriate categories (one or more) for your project."
 msgstr ""
 
-#: ./addonrelease.py:258
+#: ./addonrelease.py:256
 msgid "Please upload your file."
 msgstr ""
 
@@ -703,7 +711,7 @@ msgid "Project Name"
 msgstr ""
 
 #: ./addonlinkedrelease_templates/view.pt:152
-#: ./addonproject_templates/view.pt:483
+#: ./addonproject_templates/view.pt:485
 #: ./addonrelease_templates/view.pt:140
 msgid "Project Resources"
 msgstr ""
@@ -753,18 +761,18 @@ msgstr ""
 msgid "Release Details"
 msgstr ""
 
-#: ./addonlinkedrelease.py:143
-#: ./addonrelease.py:146
+#: ./addonlinkedrelease.py:145
+#: ./addonrelease.py:147
 msgid "Release Number"
 msgstr ""
 
-#: ./addonlinkedrelease.py:144
-#: ./addonrelease.py:147
+#: ./addonlinkedrelease.py:146
+#: ./addonrelease.py:148
 msgid "Release Number (up to twelf chars)"
 msgstr ""
 
-#: ./addonlinkedrelease.py:150
-#: ./addonrelease.py:153
+#: ./addonlinkedrelease.py:152
+#: ./addonrelease.py:154
 msgid "Release Summary"
 msgstr ""
 
@@ -788,7 +796,7 @@ msgstr ""
 msgid "Release-Candidate"
 msgstr ""
 
-#: ./addonproject_templates/view.pt:411
+#: ./addonproject_templates/view.pt:412
 msgid "Released"
 msgstr ""
 
@@ -825,7 +833,7 @@ msgid "Reviewer sends content back for re-drafting"
 msgstr ""
 
 #: ./addonlinkedrelease_templates/view.pt:166
-#: ./addonproject_templates/view.pt:502
+#: ./addonproject_templates/view.pt:504
 #: ./addonrelease_templates/view.pt:154
 msgid "Screenshot"
 msgstr ""
@@ -842,7 +850,7 @@ msgstr ""
 msgid "Search ${product_title}"
 msgstr ""
 
-#: ./addonrelease.py:296
+#: ./addonrelease.py:294
 msgid "Second Release File"
 msgstr ""
 
@@ -854,7 +862,7 @@ msgstr ""
 msgid "Second linked file is compatible with the Platform(s)"
 msgstr ""
 
-#: ./addonrelease.py:316
+#: ./addonrelease.py:314
 msgid "Second uploaded file is compatible with the Platform(s)"
 msgstr ""
 
@@ -875,7 +883,7 @@ msgstr ""
 msgid "Show"
 msgstr ""
 
-#: ./addonrelease.py:420
+#: ./addonrelease.py:418
 msgid "Sixth Release File"
 msgstr ""
 
@@ -887,7 +895,7 @@ msgstr ""
 msgid "Sixth linked file is compatible with the Platform(s)"
 msgstr ""
 
-#: ./addonrelease.py:440
+#: ./addonrelease.py:438
 msgid "Sixth uploaded file is compatible with the Platform(s)"
 msgstr ""
 
@@ -923,12 +931,12 @@ msgstr ""
 msgid "The Link to the file of the release"
 msgstr ""
 
-#: ./addonlinkedrelease.py:134
-#: ./addonrelease.py:138
+#: ./addonlinkedrelease.py:137
+#: ./addonrelease.py:139
 msgid "The computed project title"
 msgstr ""
 
-#: ./addonrelease.py:403
+#: ./addonrelease.py:401
 msgid "The fifth file you want to upload (this is optional)"
 msgstr ""
 
@@ -940,7 +948,7 @@ msgstr ""
 msgid "The final stage of an add-on release"
 msgstr ""
 
-#: ./addonrelease.py:257
+#: ./addonrelease.py:255
 msgid "The first file you want to upload."
 msgstr ""
 
@@ -956,7 +964,7 @@ msgstr ""
 msgid "The following file extensions are allowed for documentation files (upper case and lower case and mix of both):"
 msgstr ""
 
-#: ./addonlinkedrelease.py:245
+#: ./addonlinkedrelease.py:246
 msgid "The following file extensions are allowed for linked files (upper case and lower case and mix of both):"
 msgstr ""
 
@@ -968,11 +976,11 @@ msgstr ""
 msgid "The following file extensions are allowed for screenshot files (upper case and lower case and mix of both):"
 msgstr ""
 
-#: ./addonrelease.py:250
+#: ./addonrelease.py:248
 msgid "The following file extensions are allowed for uploaded files (upper case and lower case and mix of both):"
 msgstr ""
 
-#: ./addonrelease.py:366
+#: ./addonrelease.py:364
 msgid "The fourth file you want to upload (this is optional)"
 msgstr ""
 
@@ -980,7 +988,7 @@ msgstr ""
 msgid "The linked Add-on file"
 msgstr ""
 
-#: ./addonlinkedrelease.py:135
+#: ./addonlinkedrelease.py:138
 msgid "The linked release title will be computed from the parent project title"
 msgstr ""
 
@@ -996,16 +1004,16 @@ msgstr ""
 msgid "The project title is already in use."
 msgstr ""
 
-#: ./addonlinkedrelease.py:617
-#: ./addonrelease.py:578
+#: ./addonlinkedrelease.py:615
+#: ./addonrelease.py:570
 msgid "The release number is already in use. Please choose another one."
 msgstr ""
 
-#: ./addonrelease.py:139
+#: ./addonrelease.py:140
 msgid "The release title will be computed from the parent project title"
 msgstr ""
 
-#: ./addonrelease.py:308
+#: ./addonrelease.py:306
 msgid "The second file you want to upload (this is optional)"
 msgstr ""
 
@@ -1017,7 +1025,7 @@ msgstr ""
 msgid "The second stage of an add-on release"
 msgstr ""
 
-#: ./addonrelease.py:432
+#: ./addonrelease.py:430
 msgid "The sixth file you want to upload (this is optional)"
 msgstr ""
 
@@ -1025,7 +1033,7 @@ msgstr ""
 msgid "The size of the external hosted file"
 msgstr ""
 
-#: ./addonrelease.py:337
+#: ./addonrelease.py:335
 msgid "The third file you want to upload (this is optional)"
 msgstr ""
 
@@ -1033,7 +1041,7 @@ msgstr ""
 msgid "These are your projects on this site:"
 msgstr ""
 
-#: ./addonrelease.py:325
+#: ./addonrelease.py:323
 msgid "Third Release File"
 msgstr ""
 
@@ -1045,15 +1053,15 @@ msgstr ""
 msgid "Third linked file is compatible with the Platform(s)"
 msgstr ""
 
-#: ./addonrelease.py:345
+#: ./addonrelease.py:343
 msgid "Third uploaded file is compatible with the Platform(s))"
 msgstr ""
 
-#: ./addonlinkedrelease.py:117
+#: ./addonlinkedrelease.py:120
 msgid "This Dialog to create a new release consists of different register. Please go through this register and fill in the appropriate data for your linked release. This register 'Default' provide fields for general information of your linked release. The next register 'compatibility' is the place to submit information about the versions with which your linked release file(s) is / are compatible. The following register asks for some legal informations. The next register 'Linked File' provide a field to link your release file. The further register are optional. There is the opportunity to link further release files (for different platforms)."
 msgstr ""
 
-#: ./addonrelease.py:122
+#: ./addonrelease.py:123
 msgid "This Dialog to create a new release consists of different register. Please go through this register and fill in the appropriate data for your release. This register 'Default' provide fields for general information of your release. The next register 'compatibility' is the place to submit information about the versions with which your release file(s) is / are compatible. The following register asks for some legal informations. The next register File Upload' provide a field to upload your release file. The further register are optional. There is the opportunity to upload further release files (for different platforms)."
 msgstr ""
 
@@ -1097,7 +1105,7 @@ msgstr ""
 msgid "Unreleased"
 msgstr ""
 
-#: ./addonproject_templates/view.pt:410
+#: ./addonproject_templates/view.pt:411
 msgid "Version"
 msgstr ""
 
@@ -1110,7 +1118,7 @@ msgid "Waiting for the Review, further editable by
                                            the owner (contributor)."
 msgstr ""
 
-#: ./mailtoauthor.py:192
+#: ./mailtoauthor.py:194
 msgid "We send your message to the author of the project. It's on his choice, if he'll get back to you."
 msgstr ""
 
@@ -1122,8 +1130,8 @@ msgstr ""
 msgid "Yes"
 msgstr ""
 
-#: ./addonlinkedrelease.py:506
-#: ./addonrelease.py:451
+#: ./addonlinkedrelease.py:504
+#: ./addonrelease.py:448
 msgid "You answered the question, whether the source code is inside your add-on with no (default answer). If this is the correct answer, please fill in the Link (URL) to the Source Code."
 msgstr ""
 
