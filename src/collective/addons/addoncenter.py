@@ -55,8 +55,7 @@ class IAddonCenter(model.Schema):
                                      value_type=schema.TextLine())
 
     available_licenses = schema.List(title=_(u'Available Licenses'),
-                                     default=
-                                     [
+                                     default=[
                                          'GNU-GPL-v2 (GNU General Public'
                                          'License Version 2)',
                                          'GNU-GPL-v3+ (General Public License'
@@ -76,8 +75,8 @@ class IAddonCenter(model.Schema):
                                          'Attribution-ShareAlike 4.0 '
                                          'International)',
                                          'AL-v2 (Apache License Version 2.0)',
-                                     ],
-                                     value_type=schema.TextLine())
+    ],
+        value_type=schema.TextLine())
 
     available_versions = schema.List(title=_(u"Available Versions"),
                                      default=['Product 1.0',
@@ -103,13 +102,13 @@ class IAddonCenter(model.Schema):
         title=_(u'Allowed file extensions'),
         description=_(u'Fill in the allowed file extensions, seperated by '
                       u'a pipe \'|\'.'),
-        )
+    )
 
     allowed_apimageextension = schema.TextLine(
         title=_(u'Allowed image file extension'),
         description=_(u'Fill in the allowed image file extensions, seperated '
                       u'by a pipe \'|\'.'),
-        )
+    )
 
     allowed_apdocfileextensions = schema.TextLine(
         title=_(u'Allowed documentation file extension'),

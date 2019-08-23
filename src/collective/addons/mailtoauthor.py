@@ -157,14 +157,14 @@ class MailToAuthorForm(AutoExtensibleForm, form.Form):
             return
 
         if api.portal.get_registry_record('plone.email_from_address') \
-            is not None:
+                is not None:
             contactaddress = api.portal.get_registry_record(
                 'plone.email_from_address')
 
         catalog = api.portal.get_tool('portal_catalog')
         project = catalog(
-                      portal_type='collective.addons.addonproject',
-                      Title=data['projectname']
+            portal_type='collective.addons.addonproject',
+            Title=data['projectname']
         )
 
         for brain in project[:1]:
@@ -178,11 +178,11 @@ class MailToAuthorForm(AutoExtensibleForm, form.Form):
         api.portal.send_email(
             recipient=mailrecipient,
             sender=(safe_unicode("{} {} <{}>")).format(
-                                            data['inquirerfirstname'],
-                                            data['inquirerfamilyname'],
-                                            data['inquireremailaddress']),
+                data['inquirerfirstname'],
+                data['inquirerfamilyname'],
+                data['inquireremailaddress']),
             subject=(safe_unicode("Your Project: {}")).format(
-                                            data['projectname']),
+                data['projectname']),
             body=(safe_unicode("{}")).format(data['inquiry'])
 
 

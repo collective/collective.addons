@@ -595,4 +595,3 @@ class AddonReleaseView(DefaultView):
         idx_data = catalog.getIndexDataForUID(path)
         compatibility = idx_data.get('getCompatibility')
         return (r for r in compatibility)
-

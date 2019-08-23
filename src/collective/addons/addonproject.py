@@ -465,6 +465,3 @@ class AddonProjectView(BrowserView):
             return None
         else:
             return res[0].getObject()
-
-
-
