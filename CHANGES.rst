@@ -2,10 +2,10 @@ Changelog
 =========
 
 
-1.0b2 (unreleased)
+1.0a3 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Pep8, isort and code-analysis fixes. [Andreas Mantke]
 
 
 
