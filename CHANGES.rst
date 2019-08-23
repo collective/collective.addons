@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.0b1 (unreleased)
+1.0b1 (2019-08-23)
 ------------------
 
 - Add notifications module [Andreas Mantke]
