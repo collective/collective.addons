@@ -2,10 +2,16 @@ Changelog
 =========
 
 
-1.0a3 (unreleased)
+1.0b1 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Add notifications module [Andreas Mantke]
+- Fix css-class names in addonrelease and addonlinkedrelease
+  view [Andreas Mantke]
+- Move a css inline style to the style sheet file [Andreas Mantke]
+- Pep8 fixes [Andreas Mantke]
+- Update localization template file and localization files,
+  update German translation. [Andreas Mantke
 
 
 
