@@ -1,14 +1,14 @@
 # -*- coding: utf-8 -*-
 from collective.addons import _
-from plone.supermodel import model
-from zope import schema
-from plone.supermodel.directives import primary
-from plone.app.textfield import RichText
-from Products.Five import BrowserView
-from plone.app.multilingual.dx import directives
-from Products.CMFPlone.browser.search import quote_chars
 from plone import api
+from plone.app.multilingual.dx import directives
+from plone.app.textfield import RichText
+from plone.supermodel import model
+from plone.supermodel.directives import primary
+from Products.CMFPlone.browser.search import quote_chars
+from Products.Five import BrowserView
 from Products.ZCTextIndex.ParseTree import ParseError
+from zope import schema
 from zope.interface import Invalid
 
 import re

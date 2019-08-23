@@ -1,10 +1,11 @@
 # -*- coding: utf-8 -*-
-from plone.indexer import indexer
 from collective.addons.addonproject import IAddonProject
+from plone.indexer import indexer
+from zope.annotation.interfaces import IAnnotations
 from zope.component import adapter
 from zope.interface import implementer
 from zope.interface import Interface
-from zope.annotation.interfaces import IAnnotations
+
 
 ANNO_KEY = 'collective.releasecompatversions'
 

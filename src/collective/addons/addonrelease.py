@@ -1,32 +1,34 @@
 # -*- coding: utf-8 -*-
+from Acquisition import aq_inner
+from Acquisition import aq_parent
 from collective.addons import _
-from zope import schema
-from plone.supermodel import model
-from plone.autoform import directives
-from plone.supermodel.directives import primary
+from collective.addons.adapter import IReleasesCompatVersions
+from collective.addons.common import yesnochoice
+from plone import api
 from plone.app.textfield import RichText
+from plone.autoform import directives
+from plone.dexterity.browser.view import DefaultView
+from plone.indexer.decorator import indexer
+from plone.namedfile.field import NamedBlobFile
+from plone.supermodel import model
+from plone.supermodel.directives import primary
+from Products.validation import V_REQUIRED
+from z3c.form import validator
+from z3c.form.browser.checkbox import CheckBoxFieldWidget
+from zope import schema
+from zope.interface import directlyProvides
+from zope.interface import Invalid
+from zope.interface import invariant
 from zope.interface import provider
 from zope.schema.interfaces import IContextAwareDefaultFactory
-from z3c.form.browser.checkbox import CheckBoxFieldWidget
 from zope.schema.interfaces import IContextSourceBinder
-from zope.schema.vocabulary import SimpleVocabulary, SimpleTerm
-from zope.interface import directlyProvides
-from Acquisition import aq_inner, aq_parent
-from plone.namedfile.field import NamedBlobFile
-from plone import api
-from zope.interface import invariant, Invalid
-from collective.addons.common import yesnochoice
-from plone.indexer.decorator import indexer
-from z3c.form import validator
+from zope.schema.vocabulary import SimpleTerm
+from zope.schema.vocabulary import SimpleVocabulary
 from zope.security import checkPermission
-from plone.dexterity.browser.view import DefaultView
-from collective.addons.adapter import IReleasesCompatVersions
-from Products.validation import V_REQUIRED
 
-
+import itertools
 import re
 import six
-import itertools
 
 
 @provider(IContextAwareDefaultFactory)

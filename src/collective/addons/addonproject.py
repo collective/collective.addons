@@ -1,26 +1,27 @@
 # -*- coding: utf-8 -*-
-from collective.addons import _
-from zope import schema
-from plone.supermodel import model
-from plone.supermodel.directives import primary
-from plone.autoform import directives
 from collective import dexteritytextindexer
+from collective.addons import _
+from collective.addons import quote_chars
+from plone import api
 from plone.app.textfield import RichText
-from z3c.form.browser.checkbox import CheckBoxFieldWidget
-from zope.schema.vocabulary import SimpleTerm
-from zope.schema.vocabulary import SimpleVocabulary
-from zope.schema.interfaces import IContextSourceBinder
-from zope.interface import directlyProvides
-from zope.interface import provider
-from zope.schema.interfaces import IContextAwareDefaultFactory
+from plone.autoform import directives
 from plone.namedfile.field import NamedBlobFile
 from plone.namedfile.field import NamedBlobImage
+from plone.supermodel import model
+from plone.supermodel.directives import primary
 from Products.Five import BrowserView
-from zope.interface import Invalid, invariant
-from plone import api
-from collective.addons import quote_chars
-from z3c.form import validator
 from Products.validation import V_REQUIRED
+from z3c.form import validator
+from z3c.form.browser.checkbox import CheckBoxFieldWidget
+from zope import schema
+from zope.interface import directlyProvides
+from zope.interface import Invalid
+from zope.interface import invariant
+from zope.interface import provider
+from zope.schema.interfaces import IContextAwareDefaultFactory
+from zope.schema.interfaces import IContextSourceBinder
+from zope.schema.vocabulary import SimpleTerm
+from zope.schema.vocabulary import SimpleVocabulary
 
 import re
 import six

@@ -1,25 +1,22 @@
 # -*- coding: utf-8 -*-
+from Acquisition import aq_inner
 from collective.addons import _
+from plone import api
 from plone.autoform.form import AutoExtensibleForm
+from plone.formwidget.recaptcha.widget import ReCaptchaFieldWidget
+from Products.CMFPlone.utils import safe_unicode
+from z3c.form import button
+from z3c.form import field
+from z3c.form import form
+from zope import component
 from zope import interface
 from zope import schema
-from zope import component
-from z3c.form import form, button
-
-from zope.interface import Invalid
-from plone import api
-
-import logging
-from z3c.form import field
-
-from plone.formwidget.recaptcha.widget import ReCaptchaFieldWidget
-from Acquisition import aq_inner
+from zope.component import adapter
 from zope.component import getMultiAdapter
 from zope.interface import implementer
-from zope.component import adapter
+from zope.interface import Invalid
 
-from Products.CMFPlone.utils import safe_unicode
-
+import logging
 import re
 
 

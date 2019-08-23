@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from collective.addons import _
-from zope.schema.vocabulary import SimpleVocabulary, SimpleTerm
+from zope.schema.vocabulary import SimpleTerm
+from zope.schema.vocabulary import SimpleVocabulary
 
 
 yesnochoice = SimpleVocabulary(

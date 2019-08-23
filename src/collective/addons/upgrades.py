@@ -1,9 +1,10 @@
 # -*- coding: utf-8 -*-
-from plone.app.upgrade.utils import loadMigrationProfile
-from plone import api
 from collective.addons.adapter import IReleasesCompatVersions
+from plone import api
+from plone.app.upgrade.utils import loadMigrationProfile
 
 import logging
+
 
 logger = logging.getLogger(__name__)
 
