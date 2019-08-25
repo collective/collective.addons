@@ -17,20 +17,19 @@ def reload_gs_profile(context):
 
 
 def populat_release_compat_version_index(context):
-    pc = api.portal.get_tool(name='portal_catalog')
 
     # Search for all projects:
-    projects = pc.searchResults({
-        'portal_type': 'collective.addons.addonproject'
+    projects = api.content.find({
+        'portal_type': 'collective.addons.addonproject',
     })
 
     for brain_project in projects:
         project = brain_project.getObject()
         query = '/'.join(project.getPhysicalPath())
-        brains = pc.searchResults({
+        brains = api.contentfind({
             'path': {'query': query, 'depth': 1},
             'portal_type': ['collective.addons.addonrelease',
-                            'collective.addons.addonlinkedrelease']
+                            'collective.addons.addonlinkedrelease'],
         })
 
         result = []
@@ -39,4 +38,4 @@ def populat_release_compat_version_index(context):
                 result = result + brain.compatibility_choice
 
         IReleasesCompatVersions(project).set(list(set(result)))
-        logger.info('Updated project {}'.format(project.id))
+        logger.info('Updated project {0}'.format(project.id))
