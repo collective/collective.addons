@@ -117,7 +117,7 @@ class IAddonProject(model.Schema):
                       u'different register. Please go through this register '
                       u'and fill in the appropriate data for your project. '
                       u"The register 'Documentation' and its fields are "
-                      u'optional.')
+                      u'optional.'),
     )
 
     dexteritytextindexer.searchable('title')
@@ -125,7 +125,7 @@ class IAddonProject(model.Schema):
         title=_(u'Title'),
         description=_(u'Project Title - minimum 5 and maximum 50 characters'),
         min_length=5,
-        max_length=50
+        max_length=50,
     )
 
     dexteritytextindexer.searchable('description')
@@ -137,24 +137,24 @@ class IAddonProject(model.Schema):
     primary('details')
     details = RichText(
         title=_(u'Full Project Description'),
-        required=False
+        required=False,
     )
 
     model.fieldset('Categories',
                    label='Category / Categories',
-                   fields=['category_choice']
+                   fields=['category_choice'],
                    )
 
     model.fieldset('logo_screenshot',
                    label='Logo / Screenshot',
                    fields=['addonimageextension', 'project_logo',
-                           'addonimageextension1', 'screenshot']
+                           'addonimageextension1', 'screenshot'],
                    )
 
     model.fieldset('documentation',
                    label='Documentation',
                    fields=['documentation_link', 'addondocextension',
-                           'documentation_file']
+                           'documentation_file'],
                    )
 
     dexteritytextindexer.searchable('category_choice')
@@ -165,20 +165,20 @@ class IAddonProject(model.Schema):
                       u'more) for your project.'),
         value_type=schema.Choice(source=vocabcategories),
         constraint=isNotEmptyCategory,
-        required=True
+        required=True,
     )
 
     contactAddress = schema.TextLine(
         title=_(u'Contact email-address'),
         description=_(u'Contact email-address for the project.'),
-        constraint=validateemail
+        constraint=validateemail,
     )
 
     homepage = schema.URI(
         title=_(u'Homepage'),
         description=_(u'If the project has an external home page, enter its '
                       u"URL (example: 'http://www.mysite.org')."),
-        required=False
+        required=False,
     )
 
     documentation_link = schema.URI(
@@ -186,7 +186,7 @@ class IAddonProject(model.Schema):
         description=_(u'If the project has externally hosted '
                       u'documentation, enter its URL '
                       u"(example: 'http://www.mysite.org')."),
-        required=False
+        required=False,
     )
 
     directives.mode(addondocextension='display')
@@ -217,7 +217,7 @@ class IAddonProject(model.Schema):
                       u"by clicking the 'Browse' button. You could provide "
                       u"an image of the file format 'png', 'gif' or 'jpg'."),
         required=False,
-        constraint=validateimagefileextension
+        constraint=validateimagefileextension,
     )
 
     directives.mode(addonimageextension1='display')
@@ -256,7 +256,7 @@ def notifyProjectManager(self, event):
         sender=(u'{} <{}>').format('Admin of the Website', mailsender),
         subject=(u'Your Project {}').format(self.title),
         body=(u'The status of your changed. '
-              u'The new status is {}').format(state)
+              u'The new status is {}').format(state),
     )
 
 
@@ -308,7 +308,7 @@ def notifyAboutNewReviewlistentry(self, event):
                  'project is ready for publication. \n'
                  '\n'
                  'Kind regards,\n'
-                 'The Admin of the Website'
+                 'The Admin of the Website',
         )
 
 
@@ -348,7 +348,7 @@ def notifyAboutNewProject(self, event):
     api.portal.send_email(
         recipient=mailrecipient,
         subject=(u'A Project with the title {} was added').format(self.title),
-        body='A member added a new project'
+        body='A member added a new project',
     )
 
 
