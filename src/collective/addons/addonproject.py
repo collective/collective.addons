@@ -70,12 +70,12 @@ def validateemail(value):
 
 @provider(IContextAwareDefaultFactory)
 def allowedapdocfileextensions(context):
-    return context.allowed_apdocfileextensions.replace("|", ", ")
+    return context.allowed_apdocfileextensions.replace('|', ', ')
 
 
 @provider(IContextAwareDefaultFactory)
 def allowedapimagefileextensions(context):
-    return context.allowed_apimageextension.replace("|", ", ")
+    return context.allowed_apimageextension.replace('|', ', ')
 
 
 def validatedocfileextension(value):
@@ -105,38 +105,38 @@ def validateimagefileextension(value):
 
 
 class ProvideScreenshotLogo(Invalid):
-    __doc__ = _(u"Please add a screenshot or a logo to your project. You find "
-                u"the appropriate fields below on this page.")
+    __doc__ = _(u'Please add a screenshot or a logo to your project. You find '
+                u'the appropriate fields below on this page.')
 
 
 class IAddonProject(model.Schema):
-    directives.mode(information="display")
+    directives.mode(information='display')
     information = schema.Text(
-        title=_(u"Information"),
-        description=_(u"The Dialog to create a new project consists of "
-                      u"different register. Please go through this register "
-                      u"and fill in the appropriate data for your project. "
+        title=_(u'Information'),
+        description=_(u'The Dialog to create a new project consists of '
+                      u'different register. Please go through this register '
+                      u'and fill in the appropriate data for your project. '
                       u"The register 'Documentation' and its fields are "
-                      u"optional.")
+                      u'optional.')
     )
 
     dexteritytextindexer.searchable('title')
     title = schema.TextLine(
-        title=_(u"Title"),
-        description=_(u"Project Title - minimum 5 and maximum 50 characters"),
+        title=_(u'Title'),
+        description=_(u'Project Title - minimum 5 and maximum 50 characters'),
         min_length=5,
         max_length=50
     )
 
     dexteritytextindexer.searchable('description')
     description = schema.Text(
-        title=_(u"Project Summary"),
+        title=_(u'Project Summary'),
     )
 
     dexteritytextindexer.searchable('details')
     primary('details')
     details = RichText(
-        title=_(u"Full Project Description"),
+        title=_(u'Full Project Description'),
         required=False
     )
 
@@ -160,31 +160,31 @@ class IAddonProject(model.Schema):
     dexteritytextindexer.searchable('category_choice')
     directives.widget(category_choice=CheckBoxFieldWidget)
     category_choice = schema.List(
-        title=_(u"Choose your categories"),
-        description=_(u"Please select the appropriate categories (one or "
-                      u"more) for your project."),
+        title=_(u'Choose your categories'),
+        description=_(u'Please select the appropriate categories (one or '
+                      u'more) for your project.'),
         value_type=schema.Choice(source=vocabcategories),
         constraint=isNotEmptyCategory,
         required=True
     )
 
     contactAddress = schema.TextLine(
-        title=_(u"Contact email-address"),
-        description=_(u"Contact email-address for the project."),
+        title=_(u'Contact email-address'),
+        description=_(u'Contact email-address for the project.'),
         constraint=validateemail
     )
 
     homepage = schema.URI(
-        title=_(u"Homepage"),
-        description=_(u"If the project has an external home page, enter its "
+        title=_(u'Homepage'),
+        description=_(u'If the project has an external home page, enter its '
                       u"URL (example: 'http://www.mysite.org')."),
         required=False
     )
 
     documentation_link = schema.URI(
-        title=_(u"URL of documentation repository "),
-        description=_(u"If the project has externally hosted "
-                      u"documentation, enter its URL "
+        title=_(u'URL of documentation repository '),
+        description=_(u'If the project has externally hosted '
+                      u'documentation, enter its URL '
                       u"(example: 'http://www.mysite.org')."),
         required=False
     )
@@ -197,7 +197,7 @@ class IAddonProject(model.Schema):
     )
 
     documentation_file = NamedBlobFile(
-        title=_(u"Dokumentation File"),
+        title=_(u'Dokumentation File'),
         description=_(u"If you have a Documentation in the file format 'PDF' "
                       u"or 'ODT' you could add it here."),
         required=False,
@@ -212,8 +212,8 @@ class IAddonProject(model.Schema):
     )
 
     project_logo = NamedBlobImage(
-        title=_(u"Logo"),
-        description=_(u"Add a logo for the project (or organization/company) "
+        title=_(u'Logo'),
+        description=_(u'Add a logo for the project (or organization/company) '
                       u"by clicking the 'Browse' button. You could provide "
                       u"an image of the file format 'png', 'gif' or 'jpg'."),
         required=False,
@@ -228,7 +228,7 @@ class IAddonProject(model.Schema):
     )
 
     screenshot = NamedBlobImage(
-        title=_(u"Screenshot of the Add-on"),
+        title=_(u'Screenshot of the Add-on'),
         description=_(u"Add a screenshot by clicking the 'Browse' button. You "
                       u"could provide an image of the file format 'png', "
                       u"'gif' or 'jpg'."),
@@ -252,11 +252,11 @@ def notifyProjectManager(self, event):
     else:
         mailsender = api.portal.get_registry_record('plone.email_from_address')
     api.portal.send_email(
-        recipient=("{}").format(self.contactAddress),
-        sender=(u"{} <{}>").format('Admin of the Website', mailsender),
-        subject=(u"Your Project {}").format(self.title),
-        body=(u"The status of your changed. "
-              u"The new status is {}").format(state)
+        recipient=('{}').format(self.contactAddress),
+        sender=(u'{} <{}>').format('Admin of the Website', mailsender),
+        subject=(u'Your Project {}').format(self.title),
+        body=(u'The status of your changed. '
+              u'The new status is {}').format(state)
     )
 
 
@@ -267,10 +267,10 @@ def notifyProjectManagerReleaseAdd(self, event):
         mailrecipient = api.portal.get_registry_record(
             'plone.email_from_address')
     api.portal.send_email(
-        recipient=("{}").format(self.contactAddress),
-        sender=(u"{} <{}>").format('Admin of the Website', mailrecipient),
-        subject=(u"Your Project [{}: new Release added").format(self.title),
-        body=(u"A new release was added to your project: "
+        recipient=('{}').format(self.contactAddress),
+        sender=(u'{} <{}>').format('Admin of the Website', mailrecipient),
+        subject=(u'Your Project [{}: new Release added').format(self.title),
+        body=(u'A new release was added to your project: '
               u"'{}'").format(self.title),
     )
 
@@ -282,11 +282,11 @@ def notifyProjectManagerLinkedReleaseAdd(self, event):
         mailrecipient = api.portal.get_registry_record(
             'plone.email_from_address')
     api.portal.send_email(
-        recipient=("{}").format(self.contactAddress),
-        sender=(u"{} <{}>").format('Admin of the Website', mailrecipient),
-        subject=(u"Your Project {}: new linked Release "
-                 u"added").format(self.title),
-        body=(u"A new linked release was added to your "
+        recipient=('{}').format(self.contactAddress),
+        sender=(u'{} <{}>').format('Admin of the Website', mailrecipient),
+        subject=(u'Your Project {}: new linked Release '
+                 u'added').format(self.title),
+        body=(u'A new linked release was added to your '
               u"project: '{}'").format(self.title),
     )
 
@@ -299,16 +299,16 @@ def notifyAboutNewReviewlistentry(self, event):
         mailrecipient = api.portal.get_registry_record(
             'plone.email_from_address')
 
-    if state == "pending":
+    if state == 'pending':
         api.portal.send_email(
             recipient=mailrecipient,
-            subject=(u"A Project with the title {} was added to the review "
-                     u"list").format(self.title),
-            body="Please have a look at the review list and check if the "
-                 "project is ready for publication. \n"
-                 "\n"
-                 "Kind regards,\n"
-                 "The Admin of the Website"
+            subject=(u'A Project with the title {} was added to the review '
+                     u'list').format(self.title),
+            body='Please have a look at the review list and check if the '
+                 'project is ready for publication. \n'
+                 '\n'
+                 'Kind regards,\n'
+                 'The Admin of the Website'
         )
 
 
@@ -319,7 +319,7 @@ def textmodified_project(self, event):
     else:
         mailrecipient = api.portal.get_registry_record(
             'plone.email_from_address')
-    if state == "published":
+    if state == 'published':
         if self.details is not None:
             detailed_description = self.details.output
         else:
@@ -327,11 +327,11 @@ def textmodified_project(self, event):
 
         api.portal.send_email(
             recipient=mailrecipient,
-            sender=(u"{} <{}>").format('Admin of the Website', mailrecipient),
-            subject=(u"The content of the project {} has "
-                     u"changed").format(self.title),
-            body=(u"The content of the project {} has changed. Here you get "
-                  u"the text of the description field of the "
+            sender=(u'{} <{}>').format('Admin of the Website', mailrecipient),
+            subject=(u'The content of the project {} has '
+                     u'changed').format(self.title),
+            body=(u'The content of the project {} has changed. Here you get '
+                  u'the text of the description field of the '
                   u"project: \n'{}\n\nand this is the text of the "
                   u"details field:\n{}'").format(self.title,
                                                  self.description,
@@ -347,8 +347,8 @@ def notifyAboutNewProject(self, event):
             'plone.email_from_address')
     api.portal.send_email(
         recipient=mailrecipient,
-        subject=(u"A Project with the title {} was added").format(self.title),
-        body="A member added a new project"
+        subject=(u'A Project with the title {} was added').format(self.title),
+        body='A member added a new project'
     )
 
 
@@ -408,7 +408,7 @@ class AddonProjectView(BrowserView):
         """
 
         catalog = api.portal.get_tool(name='portal_catalog')
-        current_path = "/".join(self.context.getPhysicalPath())
+        current_path = '/'.join(self.context.getPhysicalPath())
         res = catalog.searchResults(
             portal_type=('collective.addons.addonrelease',
                          'collective.addons.addonlinkedrelease'),
