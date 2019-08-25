@@ -219,7 +219,7 @@ class IAddonRelease(model.Schema):
         title=_(u'Accept the above legal disclaimer'),
         description=_(
             u'Please declare that you accept the above legal disclaimer'),
-        required=True
+        required=True,
     )
 
     contact_address2 = schema.TextLine(
@@ -488,7 +488,7 @@ def update_project_releases_compat_versions(addonrelease, event):
     brains = pc.searchResults({
         'path': {'query': query, 'depth': 1},
         'portal_type': ['collective.addons.addonrelease',
-                        'collective.addons.addonlinkedrelease']
+                        'collective.addons.addonlinkedrelease'],
     })
 
     result = []
@@ -512,7 +512,7 @@ def notifyAddonHubReleaseAdd(self, event):
         'platform_choice2',
         'platform_choice3',
         'platform_choice4',
-        'platform_choice5'
+        'platform_choice5',
     ]
     pf_list = [field for field in platform_fields if getattr(self,
                                                              field, False)]
@@ -525,10 +525,10 @@ def notifyAddonHubReleaseAdd(self, event):
         api.portal.send_email(
             recipient=releasemessagereceipient,
             subject='New Release added',
-            body=('''A new release was added and published with\n
-                  title: {}\nURL: {}\nCompatibility:{}\n
-                  Categories: {}\nLicenses: {}\n
-                  Platforms: {}''').format(self.title,
+            body=("""A new release was added and published with\n
+                  title: {0}\nURL: {1}\nCompatibility:{}\n
+                  Categories: {2}\nLicenses: {3}\n
+                  Platforms: {4}""").format(self.title,
                                            self.absolute_url(),
                                            compatibility, category,
                                            licenses,
