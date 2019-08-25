@@ -56,7 +56,7 @@ def legal_declaration_text(context):
 @provider(IContextAwareDefaultFactory)
 def allowedaddonfileextensions(context):
     context = context.aq_inner.aq_parent
-    return context.allowed_addonfileextension.replace("|", ", ")
+    return context.allowed_addonfileextension.replace('|', ', ')
 
 
 def vocabAvailLicenses(context):
@@ -115,67 +115,67 @@ def validateaddonfileextension(value):
 
 
 class AcceptLegalDeclaration(Invalid):
-    __doc__ = _(u"It is necessary that you accept the Legal Declaration")
+    __doc__ = _(u'It is necessary that you accept the Legal Declaration')
 
 
 class IAddonRelease(model.Schema):
-    directives.mode(information="display")
+    directives.mode(information='display')
     information = schema.Text(
-        title=_(u"Information"),
+        title=_(u'Information'),
         description=_(
-            u"This Dialog to create a new release consists of different "
-            u"register. Please go through this register and fill in the "
+            u'This Dialog to create a new release consists of different '
+            u'register. Please go through this register and fill in the '
             u"appropriate data for your release. This register 'Default' "
-            u"provide fields for general information of your release. The "
+            u'provide fields for general information of your release. The '
             u"next register 'compatibility' is the place to submit "
-            u"information about the versions with which your release file(s) "
-            u"is / are compatible. The following register asks for some "
-            u"legal informations. The next register File Upload' provide a "
-            u"field to upload your release file. The further register are "
-            u"optional. There is the opportunity to upload further release "
-            u"files (for different platforms).")
+            u'information about the versions with which your release file(s) '
+            u'is / are compatible. The following register asks for some '
+            u"legal informations. The next register 'File Upload' provide a "
+            u'field to upload your release file. The further register are '
+            u'optional. There is the opportunity to upload further release '
+            u'files (for different platforms).'),
     )
 
     directives.mode(projecttitle='hidden')
     projecttitle = schema.TextLine(
-        title=_(u"The computed project title"),
+        title=_(u'The computed project title'),
         description=_(
-            u"The release title will be computed from the parent project "
-            u"title"),
-        defaultFactory=getContainerTitle
+            u'The release title will be computed from the parent project '
+            u'title'),
+        defaultFactory=getContainerTitle,
     )
 
     releasenumber = schema.TextLine(
-        title=_(u"Release Number"),
-        description=_(u"Release Number (up to twelf chars)"),
-        default=_(u"1.0"),
-        max_length=12
+        title=_(u'Release Number'),
+        description=_(u'Release Number (up to twelf chars)'),
+        default=_(u'1.0'),
+        max_length=12,
     )
 
     description = schema.Text(
-        title=_(u"Release Summary"),
+        title=_(u'Release Summary'),
     )
 
     primary('details')
     details = RichText(
-        title=_(u"Full Release Description"),
-        required=False
+        title=_(u'Full Release Description'),
+        required=False,
     )
 
     primary('changelog')
     changelog = RichText(
-        title=_(u"Changelog"),
+        title=_(u'Changelog'),
         description=_(
-            u"A detailed log of what has changed since the previous release."),
+            u'A detailed log of what has changed since the previous release.'),
         required=False,
     )
 
     model.fieldset('compatibility',
-                   label=u"Compatibility",
+                   label=u'Compatibility',
                    fields=['compatibility_choice'])
 
     model.fieldset('legal',
-                   label=u"Legal",
+                   label=u'Legal',
                    fields=['licenses_choice', 'title_declaration_legal',
                            'declaration_legal', 'accept_legal_declaration',
                            'source_code_inside', 'link_to_source'])
@@ -184,64 +184,64 @@ class IAddonRelease(model.Schema):
     licenses_choice = schema.List(
         title=_(u'License of the uploaded file'),
         description=_(
-            u"Please mark one or more licenses you publish your release."),
+            u'Please mark one or more licenses you publish your release.'),
         value_type=schema.Choice(source=vocabAvailLicenses),
         required=True,
     )
 
     directives.widget(compatibility_choice=CheckBoxFieldWidget)
     compatibility_choice = schema.List(
-        title=_(u"Compatible with versions of the product"),
+        title=_(u'Compatible with versions of the product'),
         description=_(
-            u"Please mark one or more program versions with which this "
-            u"release is compatible with."),
+            u'Please mark one or more program versions with which this '
+            u'release is compatible with.'),
         value_type=schema.Choice(source=vocabAvailVersions),
         required=True,
-        default=[]
+        default=[],
     )
 
     directives.mode(title_declaration_legal='display')
     title_declaration_legal = schema.TextLine(
-        title=_(u""),
+        title=_(u''),
         required=False,
-        defaultFactory=legal_declaration_title
+        defaultFactory=legal_declaration_title,
     )
 
     directives.mode(declaration_legal='display')
     declaration_legal = schema.Text(
-        title=_(u""),
+        title=_(u''),
         required=False,
-        defaultFactory=legal_declaration_text
+        defaultFactory=legal_declaration_text,
 
     )
 
     accept_legal_declaration = schema.Bool(
-        title=_(u"Accept the above legal disclaimer"),
+        title=_(u'Accept the above legal disclaimer'),
         description=_(
-            u"Please declare that you accept the above legal disclaimer"),
+            u'Please declare that you accept the above legal disclaimer'),
         required=True
     )
 
     contact_address2 = schema.TextLine(
-        title=_(u"Contact email-address"),
-        description=_(u"Contact email-address for the project."),
+        title=_(u'Contact email-address'),
+        description=_(u'Contact email-address for the project.'),
         required=False,
-        defaultFactory=contactinfoDefault
+        defaultFactory=contactinfoDefault,
     )
 
     source_code_inside = schema.Choice(
-        title=_(u"Is the source code inside the add-on?"),
+        title=_(u'Is the source code inside the add-on?'),
         vocabulary=yesnochoice,
-        required=True
+        required=True,
     )
 
     link_to_source = schema.URI(
-        title=_(u"Please fill in the Link (URL) to the Source Code"),
-        required=False
+        title=_(u'Please fill in the Link (URL) to the Source Code'),
+        required=False,
     )
 
     model.fieldset('fileupload',
-                   label=u"Fileupload",
+                   label=u'Fileupload',
                    fields=['addonfileextension', 'file', 'platform_choice',
                            'information_further_file_uploads'])
 
@@ -254,17 +254,17 @@ class IAddonRelease(model.Schema):
     )
 
     file = NamedBlobFile(
-        title=_(u"The first file you want to upload."),
-        description=_(u"Please upload your file."),
+        title=_(u'The first file you want to upload.'),
+        description=_(u'Please upload your file.'),
         required=True,
-        constraint=validateaddonfileextension
+        constraint=validateaddonfileextension,
     )
 
     directives.widget(platform_choice=CheckBoxFieldWidget)
     platform_choice = schema.List(
-        title=_(u"First uploaded file is compatible with the Platform(s)"),
-        description=_(u"Please mark one or more platforms with which the "
-                      u"uploaded file is compatible."),
+        title=_(u'First uploaded file is compatible with the Platform(s)'),
+        description=_(u'Please mark one or more platforms with which the '
+                      u'uploaded file is compatible.'),
         value_type=schema.Choice(source=vocabAvailPlatforms),
         required=True,
     )
@@ -272,28 +272,28 @@ class IAddonRelease(model.Schema):
     directives.mode(information_further_file_uploads='display')
     primary('information_further_file_uploads')
     information_further_file_uploads = RichText(
-        title=_(u"Further File Uploads for this Release"),
-        description=_(u"If you want to upload more files for this release, "
-                      u"e.g. because there are files for other operating "
+        title=_(u'Further File Uploads for this Release'),
+        description=_(u'If you want to upload more files for this release, '
+                      u'e.g. because there are files for other operating '
                       u"systems, you'll find the upload fields on the "
                       u"register 'Further Uploads' and 'Further More "
                       u"Uploads'."),
-        required=False
+        required=False,
     )
 
     model.fieldset('fileset1',
-                   label=u"Further File Uploads",
+                   label=u'Further File Uploads',
                    fields=['filetitlefield1', 'addonfileextension1',
                            'file1', 'platform_choice1',
                            'filetitlefield2', 'addonfileextension2',
                            'file2', 'platform_choice2',
                            'filetitlefield3', 'addonfileextension3',
-                           'file3', 'platform_choice3']
+                           'file3', 'platform_choice3'],
                    )
 
     directives.mode(filetitlefield1='display')
     filetitlefield1 = schema.TextLine(
-        title=_(u"Second Release File"),
+        title=_(u'Second Release File'),
     )
 
     directives.mode(addonfileextension1='display')
@@ -305,24 +305,24 @@ class IAddonRelease(model.Schema):
     )
 
     file1 = NamedBlobFile(
-        title=_(u"The second file you want to upload (this is optional)"),
-        description=_(u"Please upload your file."),
+        title=_(u'The second file you want to upload (this is optional)'),
+        description=_(u'Please upload your file.'),
         required=False,
-        constraint=validateaddonfileextension
+        constraint=validateaddonfileextension,
     )
 
     directives.widget(platform_choice1=CheckBoxFieldWidget)
     platform_choice1 = schema.List(
-        title=_(u"Second uploaded file is compatible with the Platform(s)"),
-        description=_(u"Please mark one or more platforms with which the "
-                      u"uploaded file is compatible."),
+        title=_(u'Second uploaded file is compatible with the Platform(s)'),
+        description=_(u'Please mark one or more platforms with which the '
+                      u'uploaded file is compatible.'),
         value_type=schema.Choice(source=vocabAvailPlatforms),
         required=False,
     )
 
     directives.mode(filetitlefield2='display')
     filetitlefield2 = schema.TextLine(
-        title=_(u"Third Release File"),
+        title=_(u'Third Release File'),
     )
 
     directives.mode(addonfileextension2='display')
@@ -334,24 +334,24 @@ class IAddonRelease(model.Schema):
     )
 
     file2 = NamedBlobFile(
-        title=_(u"The third file you want to upload (this is optional)"),
-        description=_(u"Please upload your file."),
+        title=_(u'The third file you want to upload (this is optional)'),
+        description=_(u'Please upload your file.'),
         required=False,
-        constraint=validateaddonfileextension
+        constraint=validateaddonfileextension,
     )
 
     directives.widget(platform_choice2=CheckBoxFieldWidget)
     platform_choice2 = schema.List(
-        title=_(u"Third uploaded file is compatible with the Platform(s))"),
-        description=_(u"Please mark one or more platforms with which the "
-                      u"uploaded file is compatible."),
+        title=_(u'Third uploaded file is compatible with the Platform(s))'),
+        description=_(u'Please mark one or more platforms with which the '
+                      u'uploaded file is compatible.'),
         value_type=schema.Choice(source=vocabAvailPlatforms),
         required=False,
     )
 
     directives.mode(filetitlefield3='display')
     filetitlefield3 = schema.TextLine(
-        title=_(u"Fourth Release File"),
+        title=_(u'Fourth Release File'),
     )
 
     directives.mode(addonfileextension3='display')
@@ -363,32 +363,32 @@ class IAddonRelease(model.Schema):
     )
 
     file3 = NamedBlobFile(
-        title=_(u"The fourth file you want to upload (this is optional)"),
-        description=_(u"Please upload your file."),
+        title=_(u'The fourth file you want to upload (this is optional)'),
+        description=_(u'Please upload your file.'),
         required=False,
-        constraint=validateaddonfileextension
+        constraint=validateaddonfileextension,
     )
 
     directives.widget(platform_choice3=CheckBoxFieldWidget)
     platform_choice3 = schema.List(
-        title=_(u"Fourth uploaded file is compatible with the Platform(s)"),
-        description=_(u"Please mark one or more platforms with which the "
-                      u"uploaded file is compatible."),
+        title=_(u'Fourth uploaded file is compatible with the Platform(s)'),
+        description=_(u'Please mark one or more platforms with which the '
+                      u'uploaded file is compatible.'),
         value_type=schema.Choice(source=vocabAvailPlatforms),
         required=False,
     )
 
     model.fieldset('fileset2',
-                   label=u"Further more file uploads",
+                   label=u'Further more file uploads',
                    fields=['filetitlefield4', 'addonfileextension4',
                            'file4', 'platform_choice4',
                            'filetitlefield5', 'addonfileextension5',
-                           'file5', 'platform_choice5']
+                           'file5', 'platform_choice5'],
                    )
 
     directives.mode(filetitlefield4='display')
     filetitlefield4 = schema.TextLine(
-        title=_(u"Fifth Release File"),
+        title=_(u'Fifth Release File'),
     )
 
     directives.mode(addonfileextension4='display')
@@ -400,24 +400,24 @@ class IAddonRelease(model.Schema):
     )
 
     file4 = NamedBlobFile(
-        title=_(u"The fifth file you want to upload (this is optional)"),
-        description=_(u"Please upload your file."),
+        title=_(u'The fifth file you want to upload (this is optional)'),
+        description=_(u'Please upload your file.'),
         required=False,
-        constraint=validateaddonfileextension
+        constraint=validateaddonfileextension,
     )
 
     directives.widget(platform_choice4=CheckBoxFieldWidget)
     platform_choice4 = schema.List(
-        title=_(u"Fifth uploaded file is compatible with the Platform(s)"),
-        description=_(u"Please mark one or more platforms with which the "
-                      u"uploaded file is compatible."),
+        title=_(u'Fifth uploaded file is compatible with the Platform(s)'),
+        description=_(u'Please mark one or more platforms with which the '
+                      u'uploaded file is compatible.'),
         value_type=schema.Choice(source=vocabAvailPlatforms),
         required=False,
     )
 
     directives.mode(filetitlefield5='display')
     filetitlefield5 = schema.TextLine(
-        title=_(u"Sixth Release File"),
+        title=_(u'Sixth Release File'),
     )
 
     directives.mode(addonfileextension5='display')
@@ -429,17 +429,17 @@ class IAddonRelease(model.Schema):
     )
 
     file5 = NamedBlobFile(
-        title=_(u"The sixth file you want to upload (this is optional)"),
-        description=_(u"Please upload your file."),
+        title=_(u'The sixth file you want to upload (this is optional)'),
+        description=_(u'Please upload your file.'),
         required=False,
-        constraint=validateaddonfileextension
+        constraint=validateaddonfileextension,
     )
 
     directives.widget(platform_choice5=CheckBoxFieldWidget)
     platform_choice5 = schema.List(
-        title=_(u"Sixth uploaded file is compatible with the Platform(s)"),
-        description=_(u"Please mark one or more platforms with which the "
-                      u"uploaded file is compatible."),
+        title=_(u'Sixth uploaded file is compatible with the Platform(s)'),
+        description=_(u'Please mark one or more platforms with which the '
+                      u'uploaded file is compatible.'),
         value_type=schema.Choice(source=vocabAvailPlatforms),
         required=False,
     )
@@ -447,29 +447,29 @@ class IAddonRelease(model.Schema):
     @invariant
     def testingvalue(data):
         if data.source_code_inside != 1 and data.link_to_source is None:
-            raise Invalid(_(u"You answered the question, whether the source "
-                            u"code is inside your add-on with no "
-                            u"(default answer). If this is the correct "
-                            u"answer, please fill in the Link (URL) "
-                            u"to the Source Code."))
+            raise Invalid(_(u'You answered the question, whether the source '
+                            u'code is inside your add-on with no '
+                            u'(default answer). If this is the correct '
+                            u'answer, please fill in the Link (URL) '
+                            u'to the Source Code.'))
 
     @invariant
     def licensenotchoosen(value):
         if not value.licenses_choice:
-            raise Invalid(_(u"Please choose a license for your release."))
+            raise Invalid(_(u'Please choose a license for your release.'))
 
     @invariant
     def compatibilitynotchoosen(data):
         if not data.compatibility_choice:
-            raise Invalid(_(u"Please choose one or more compatible product "
-                            u"versions for your release."))
+            raise Invalid(_(u'Please choose one or more compatible product '
+                            u'versions for your release.'))
 
     @invariant
     def legaldeclarationaccepted(data):
         if data.accept_legal_declaration is not True:
-            raise AcceptLegalDeclaration(_(u"Please accept the Legal "
-                                           u"Declaration about your Release "
-                                           u"and your linked File"))
+            raise AcceptLegalDeclaration(_(u'Please accept the Legal '
+                                           u'Declaration about your Release '
+                                           u'and your linked File'))
 
 
 @indexer(IAddonRelease)
@@ -524,11 +524,11 @@ def notifyAddonHubReleaseAdd(self, event):
     if state == 'final' and releasemessagereceipient is not None:
         api.portal.send_email(
             recipient=releasemessagereceipient,
-            subject="New Release added",
-            body=("""A new release was added and published with\n
+            subject='New Release added',
+            body=('''A new release was added and published with\n
                   title: {}\nURL: {}\nCompatibility:{}\n
                   Categories: {}\nLicenses: {}\n
-                  Platforms: {}""").format(self.title,
+                  Platforms: {}''').format(self.title,
                                            self.absolute_url(),
                                            compatibility, category,
                                            licenses,
@@ -569,8 +569,8 @@ class ValidateAddonReleaseUniqueness(validator.SimpleFieldValidator):
                 'addon_release_number': value})
 
             if len(result) > 0:
-                raise Invalid(_(u"The release number is already in use. "
-                                u"Please choose another one."))
+                raise Invalid(_(u'The release number is already in use. '
+                                u'Please choose another one.'))
 
 
 validator.WidgetValidatorDiscriminators(
@@ -586,14 +586,14 @@ class AddonReleaseView(DefaultView):
 
     def releaseLicense(self):
         catalog = api.portal.get_tool(name='portal_catalog')
-        path = "/".join(self.context.getPhysicalPath())
+        path = '/'.join(self.context.getPhysicalPath())
         idx_data = catalog.getIndexDataForUID(path)
         licenses = idx_data.get('releaseLicense')
         return (r for r in licenses)
 
     def releaseCompatibility(self):
         catalog = api.portal.get_tool(name='portal_catalog')
-        path = "/".join(self.context.getPhysicalPath())
+        path = '/'.join(self.context.getPhysicalPath())
         idx_data = catalog.getIndexDataForUID(path)
         compatibility = idx_data.get('getCompatibility')
         return (r for r in compatibility)
