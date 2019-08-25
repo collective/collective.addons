@@ -302,7 +302,7 @@ def notifyAboutNewReviewlistentry(self, event):
     if state == 'pending':
         api.portal.send_email(
             recipient=mailrecipient,
-            subject=(u'A Project with the title {} was added to the review '
+            subject=(u'A Project with the title {0} was added to the review '
                      u'list').format(self.title),
             body='Please have a look at the review list and check if the '
                  'project is ready for publication. \n'
@@ -334,14 +334,14 @@ def textmodified_project(self, event):
                   u'the text of the description field of the '
                   u"project: \n'{1}\n\nand this is the text of the "
                   u"details field:\n{2}'").format(self.title,
-                                                 self.description,
-                                                 detailed_description),
+                                                  self.description,
+                                                  detailed_description),
         )
 
 
 def notifyAboutNewProject(self, event):
     if (self.__parent__.contactForCenter) is not None:
-        mailrecipient = str(self.__parent__.contactForCenter),
+        mailrecipient = str(self.__parent__.contactForCenter)
     else:
         mailrecipient = api.portal.get_registry_record(
             'plone.email_from_address')
@@ -407,9 +407,8 @@ class AddonProjectView(BrowserView):
            the latest.
         """
 
-        catalog = api.portal.get_tool(name='portal_catalog')
         current_path = '/'.join(self.context.getPhysicalPath())
-        res = catalog.searchResults(
+        res = api.content.find(
             portal_type=('collective.addons.addonrelease',
                          'collective.addons.addonlinkedrelease'),
             path=current_path,
@@ -423,9 +422,8 @@ class AddonProjectView(BrowserView):
 
         context = self.context
         res = None
-        catalog = api.portal.get_tool('portal_catalog')
 
-        res = catalog.searchResults(
+        res = api.content.find(
             portal_type=('collective.addons.addonrelease',
                          'collective.addons.addonlinkedrelease'),
             path='/'.join(context.getPhysicalPath()),
@@ -452,9 +450,8 @@ class AddonProjectView(BrowserView):
 
         context = self.context
         res = None
-        catalog = api.portal.get_tool('portal_catalog')
 
-        res = catalog.searchResults(
+        res = api.content.find(
             portal_type=('collective.addons.addonrelease',
                          'collective.addons.addonlinkedrelease'),
             path='/'.join(context.getPhysicalPath()),
