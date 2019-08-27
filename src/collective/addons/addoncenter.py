@@ -51,7 +51,7 @@ class IAddonCenter(model.Schema):
     )
 
     available_category = schema.List(title=_(u'Available Categories'),
-                                     default=['Product one', ],
+                                     default=['Product one'],
                                      value_type=schema.TextLine(),
                                      )
 
@@ -102,24 +102,24 @@ class IAddonCenter(model.Schema):
     allowed_addonfileextension = schema.TextLine(
         title=_(u'Allowed file extensions'),
         description=_(u'Fill in the allowed file extensions, seperated by '
-                      u'a pipe \'|\'.'),
+                      u"a pipe '|'."),
     )
 
     allowed_apimageextension = schema.TextLine(
         title=_(u'Allowed image file extension'),
         description=_(u'Fill in the allowed image file extensions, seperated '
-                      u'by a pipe \'|\'.'),
+                      u"by a pipe '|'."),
     )
 
     allowed_apdocfileextensions = schema.TextLine(
         title=_(u'Allowed documentation file extension'),
         description=_(u'Fill in the allowed documentation file extensions, '
-                      u'seperated by a pipe \'|\'.'),
+                      u"seperated by a pipe '|'."),
     )
 
     model.fieldset('instructions',
                    label=u'Instructions',
-                   fields=['install_instructions', 'reporting_bugs', ],
+                   fields=['install_instructions', 'reporting_bugs'],
                    )
 
     primary('install_instructions')
