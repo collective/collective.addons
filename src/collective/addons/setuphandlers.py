@@ -67,9 +67,9 @@ def import_catalog_indexes(context, logger=None):
         if name not in indexes:
             catalog.addIndex(name, meta_type)
             indexables.append(name)
-            logger.info("Added %s for field %s.", meta_type, name)
+            logger.info('Added %s for field %s.', meta_type, name)
 
     if len(indexables) > 0:
-        logger.info("Indexing new indexes %s.", ', '.join(indexables))
+        logger.info('Indexing new indexes %s.', ', '.join(indexables))
         # TODO: make this code work, now it raises error
         catalog.manage_reindexIndex(ids=indexables)
