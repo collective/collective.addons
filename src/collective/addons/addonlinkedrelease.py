@@ -571,14 +571,14 @@ def notifyAddonHubLinkedReleaseAdd(self, event):
             recipient=releasemessagereceipient,
             subject='New Release added',
             body=("""A new linked release was added and published with\n
-                  title: {}\nURL: {}\nCompatibility:{}\n
-                  Categories: {}\nLicenses: {}\n
-                  Platforms: {0}""").format(self.title,
-                                           url,
-                                           compatibility,
-                                           category,
-                                           licenses,
-                                           platform),
+                  title: {0}\nURL: {1}\nCompatibility:{2}\n
+                  Categories: {3}\nLicenses: {4}\n
+                  Platforms: {5}""").format(self.title,
+                                            url,
+                                            compatibility,
+                                            category,
+                                            licenses,
+                                            platform),
         )
 
     else:
