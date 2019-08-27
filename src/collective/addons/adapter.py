@@ -36,7 +36,7 @@ class ReleasesCompatVersions(object):
     def set(self, value):
         annotations = IAnnotations(self.context)
         annotations[ANNO_KEY] = value
-        self.context.reindexObject(idxs=["releases_compat_versions"])
+        self.context.reindexObject(idxs=['releases_compat_versions'])
 
     def update(self, value):
         self.set(list(set(self.versions + value)))

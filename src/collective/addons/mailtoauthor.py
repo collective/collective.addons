@@ -178,9 +178,7 @@ class MailToAuthorForm(AutoExtensibleForm, form.Form):
                 data['inquireremailaddress']),
             subject=(safe_unicode('Your Project: {0}')).format(
                 data['projectname']),
-            body=(safe_unicode('{0}')).format(data['inquiry'])
-
-
+            body=(safe_unicode('{0}')).format(data['inquiry']),
         )
 
         # Redirect back to the front page with a status message
