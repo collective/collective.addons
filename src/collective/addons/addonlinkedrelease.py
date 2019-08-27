@@ -628,7 +628,8 @@ validator.WidgetValidatorDiscriminators(
 class AddonLinkedReleaseView(DefaultView):
 
     def canPublishContent(self):
-        return checkPermission('cmf.ModifyPortalContent', self.context)
+        return api.user.has_permission(
+            'cmf.ModifyPortalContent', obj=self.context)
 
     def releaseLicense(self):
         catalog = api.portal.get_tool(name='portal_catalog')
