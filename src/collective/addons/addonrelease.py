@@ -526,13 +526,14 @@ def notifyAddonHubReleaseAdd(self, event):
             recipient=releasemessagereceipient,
             subject='New Release added',
             body=("""A new release was added and published with\n
-                  title: {0}\nURL: {1}\nCompatibility:{}\n
-                  Categories: {2}\nLicenses: {3}\n
-                  Platforms: {4}""").format(self.title,
-                                           self.absolute_url(),
-                                           compatibility, category,
-                                           licenses,
-                                           platform),
+                  title: {0}\nURL: {1}\nCompatibility:{2}\n
+                  Categories: {3}\nLicenses: {4}\n
+                  Platforms: {5}""").format(self.title,
+                                            self.absolute_url(),
+                                            compatibility,
+                                            category,
+                                            licenses,
+                                            platform),
         )
 
     else:

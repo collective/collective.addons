@@ -409,7 +409,7 @@ class IAddonLinkedRelease(model.Schema):
         title=_(u'The size of the external hosted file'),
         description=_(u'Please fill in the size in kilobyte of the external '
                       u'hosted file (e.g. 633, if the size is 633 kb)'),
-        required=False
+        required=False,
     )
 
     directives.widget(platform_choice3=CheckBoxFieldWidget)
@@ -440,7 +440,7 @@ class IAddonLinkedRelease(model.Schema):
         title=_(u'The size of the external hosted file'),
         description=_(u'Please fill in the size in kilobyte of the external '
                       u'hosted file (e.g. 633, if the size is 633 kb)'),
-        required=False
+        required=False,
     )
 
     directives.widget(platform_choice4=CheckBoxFieldWidget)
@@ -464,14 +464,14 @@ class IAddonLinkedRelease(model.Schema):
         title=_(u'The Link to the file of the release'),
         description=_(u'Please insert a link to your add-on file.'),
         required=False,
-        constraint=validatelinkedaddonfileextension
+        constraint=validatelinkedaddonfileextension,
     )
 
     external_file_size5 = schema.Float(
         title=_(u'The size of the external hosted file'),
         description=_(u'Please fill in the size in kilobyte of the external '
                       u'hosted file (e.g. 633, if the size is 633 kb)'),
-        required=False
+        required=False,
     )
 
     directives.widget(platform_choice5=CheckBoxFieldWidget)
@@ -535,7 +535,7 @@ def update_project_releases_compat_versions(addonlinkedrelease, event):
     brains = pc.searchResults({
         'path': {'query': query, 'depth': 1},
         'portal_type': ['collective.addons.addonrelease',
-                        'collective.addons.addonlinkedrelease']
+                        'collective.addons.addonlinkedrelease'],
     })
 
     result = []
@@ -573,7 +573,7 @@ def notifyAddonHubLinkedReleaseAdd(self, event):
             body=("""A new linked release was added and published with\n
                   title: {}\nURL: {}\nCompatibility:{}\n
                   Categories: {}\nLicenses: {}\n
-                  Platforms: {}""").format(self.title,
+                  Platforms: {0}""").format(self.title,
                                            url,
                                            compatibility,
                                            category,
