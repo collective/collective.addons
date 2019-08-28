@@ -4,10 +4,10 @@ from plone import api
 
 
 def notifiyAboutNewVersion(addonproject, event):
-    if getattr(event, 'descriptions') and event.descriptions:
+    if hasattr(event, 'descriptions') and event.descriptions:
         for d in event.descriptions:
-            if getattr(d, 'interface') and d.interface is IAddonCenter and \
-                    'available_versions' in d.attributes:
+            if hasattr(d, 'interface') and d.interface is IEUpCenter and \
+                'available_versions' in d.attributes:
                 users = api.user.get_users()
                 message = 'We added a new version of the product to the ' \
                           'list.\n Please add this version to your ' \
