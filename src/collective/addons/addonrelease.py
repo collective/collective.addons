@@ -24,7 +24,6 @@ from zope.schema.interfaces import IContextAwareDefaultFactory
 from zope.schema.interfaces import IContextSourceBinder
 from zope.schema.vocabulary import SimpleTerm
 from zope.schema.vocabulary import SimpleVocabulary
-from zope.security import checkPermission
 
 import itertools
 import re
