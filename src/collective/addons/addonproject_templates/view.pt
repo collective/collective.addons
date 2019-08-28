@@ -53,7 +53,7 @@
             <span i18n:translate="">a Release to your</span> <span tal:content="context/product_title | string:addon_project" />
             <span i18n:translate>Project</span></a><p i18n:translate=""></p><p>or:</p>
             <p>
-        <a class="pointer" tal:attributes="href string:${context/absolute_url}/++add++collective.addons.addonreleaselink">
+        <a class="pointer" tal:attributes="href string:${context/absolute_url}/++add++collective.addons.addonlinkedrelease">
             <img src="++resource++collective.addons/yellowarrow.png"  alt=""/>
             <span i18n:translate="">a linked Release</span> <span i18n:translate="">to your</span>
             <span tal:content="context/product_title | string:addon_project" /> <span i18n:translate>Project</span></a></p>
