@@ -238,7 +238,6 @@ class AddonCenterView(BrowserView):
         return versions[0]
 
     def get_newest_products(self):
-        self.catalog = api.portal.get_tool(name='portal_catalog')
         sort_on = 'created'
         contentFilter = {
             'sort_on': sort_on,
@@ -246,7 +245,7 @@ class AddonCenterView(BrowserView):
             'review_state': 'published',
             'portal_type': 'collective.addons.addonproject',
         }
-        results = self.catalog(**contentFilter)
+        results = api.content.find(**contentFilter)
         return results
 
     def addonproject_count(self):
@@ -273,11 +272,11 @@ class AddonCenterView(BrowserView):
             contentFilter = {
                 'sort_on': sort_on,
                 'sort_order': 'reverse',
-                'portal_type': 'collective.templates.tlproject',
+                'portal_type': 'collective.addons.addonproject',
             }
 
         if version != 'any':
-            contentFilter['getCompatibility'] = version
+            contentFilter['releases_compat_versions'] = version
 
         if category:
             contentFilter['getCategories'] = category
