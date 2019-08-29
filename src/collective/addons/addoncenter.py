@@ -299,7 +299,6 @@ class AddonCenterView(BrowserView):
         return 'getCategories' in self.request.environ['QUERY_STRING']
 
 
-
 class AddonCenterOwnProjectsViewlet(ViewletBase):
 
     def get_results(self):
