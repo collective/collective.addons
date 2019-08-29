@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from collective.addons import _
 from plone import api
+from plone.app.layout.viewlets import ViewletBase
 from plone.app.multilingual.dx import directives
 from plone.app.textfield import RichText
 from plone.supermodel import model
@@ -296,3 +297,16 @@ class AddonCenterView(BrowserView):
 
     def show_search_form(self):
         return 'getCategories' in self.request.environ['QUERY_STRING']
+
+
+
+class AddonCenterOwnProjectsViewlet(ViewletBase):
+
+    def get_results(self):
+        current_user = api.user.get_current()
+        pc = api.portal.get_tool('portal_catalog')
+        return pc.portal_catalog(
+            portal_type='collective.addons.addonproject',
+            sort_on='Date',
+            sort_order='reverse',
+            Creator=str(current_user))

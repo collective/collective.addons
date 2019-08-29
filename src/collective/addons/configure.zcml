@@ -213,6 +213,17 @@
     handler="collective.addons.notifications.notifiyAboutNewVersion"
     />
 
+  <browser:viewlet
+      name="ownprojects"
+      for="collective.addons.addoncenter.IAddonCenter"
+      view="plone.app.layout.globals.interfaces.IViewView"
+      manager="plone.app.layout.viewlets.interfaces.IAboveContentTitle"
+      class="collective.addons.addoncenter.AddonCenterOwnProjectsViewlet"
+      template="addoncenter_templates/own_projects.pt"
+      permission="zope2.View"
+      />
+
+
 
 
 
