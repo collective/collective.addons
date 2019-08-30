@@ -55,6 +55,9 @@ setup(
         'plone.restapi',
         'plone.app.dexterity',
         'cioppino.twothumbs',
+        'collective.dexteritytextindexer',
+        'Products.validation',
+        'plone.formwidget.recaptcha',
     ],
     extras_require={
         'test': [
