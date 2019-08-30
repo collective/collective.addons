@@ -54,6 +54,7 @@ setup(
         'plone.api>=1.8.4',
         'plone.restapi',
         'plone.app.dexterity',
+        'cioppino.twothumbs',
     ],
     extras_require={
         'test': [
