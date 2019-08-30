@@ -51,6 +51,14 @@ class IAddonCenter(model.Schema):
             u'Name of the Add-on product, e.g. only Add-ons'),
     )
 
+    model.fieldset('category',
+                   label='Categories et. all',
+                   fields=['available_category',
+                           'available_licenses',
+                           'available_versions',
+                           'available_platforms'],
+                   )
+
     available_category = schema.List(title=_(u'Available Categories'),
                                      default=['Product one'],
                                      value_type=schema.TextLine(),
