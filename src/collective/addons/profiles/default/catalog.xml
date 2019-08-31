@@ -13,7 +13,7 @@
     <index name="getCategories" meta_type="KeywordIndex">
         <indexed_attr value="category_choice" />
     </index>
-    <index name="projectcontact" meta_type="KeywordIndex">
+    <index name="addonprojectcontact" meta_type="KeywordIndex">
         <indexed_attr value="contactAddress" />
     </index>
     <index name="allowedapdocextensions" meta_type="FieldIndex">
@@ -24,6 +24,9 @@
     </index>
     <index name="allowedaddonfileextensions" meta_type="FieldIndex">
         <indexed_attr value="allowed_addonfileextension" />
+    </index>
+    <index name="addonprojectemail" meta_type="FieldIndex">
+        <indexed_attr value="contactAddress" />
     </index>
     <column value="addon_release_number"/>
     <column value="releases_compat_versions"/>
