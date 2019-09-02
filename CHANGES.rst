@@ -5,7 +5,15 @@ Changelog
 1.0a4 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Pep8 and other code fixes [Andreas Mantke]
+- Move from api.portal.get_tool to api.content.find for portal_catalog
+  searches [Andreas Mantke]
+- Move from checkpermission to api.user.has_permission [Andreas Mantke]
+- Fix the message to sender in the mailtoauthor form [Andreas Mantke]
+- Add further dependencies to the install_requirements section
+  of the setup.py script [Andreas Mantke]
+- Add include dependencies of the package to configure.zcml [Andreas Mantke]
+- Remove test for Plone 4.3 from travis.yml [Andreas Mantke]
 
 
 
