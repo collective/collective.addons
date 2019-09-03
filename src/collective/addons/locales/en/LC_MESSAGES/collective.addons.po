@@ -1096,7 +1096,7 @@ msgid "Visible to everyone, editable by the owner."
 msgstr ""
 
 #: ./mailtoauthor.py:187
-msgid "We send your message to the author of the project. It's on his choice, if she'll / he'll get back to you."
+msgid "We send your message to the author of the project. It's on her / his choice, if she'll / he'll get back to you."
 msgstr ""
 
 #: ./mailtoauthor.py:92

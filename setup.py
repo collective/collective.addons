@@ -58,7 +58,6 @@ setup(
         'collective.dexteritytextindexer',
         'Products.validation',
         'plone.formwidget.recaptcha',
-        'plone.app.robotframework',
     ],
     extras_require={
         'test': [
