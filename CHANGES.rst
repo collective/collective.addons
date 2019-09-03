@@ -14,7 +14,7 @@ Changelog
   of the setup.py script [Andreas Mantke]
 - Add include dependencies of the package to configure.zcml [Andreas Mantke]
 - Remove test for Plone 4.3 from travis.yml [Andreas Mantke]
-
+- Update localization files [Andreas Mantke]
 
 
 1.0a3 (2019-08-23)
