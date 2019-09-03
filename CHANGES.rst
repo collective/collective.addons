@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.0a4 (unreleased)
+1.0a4 (2019-09-03)
 ------------------
 
 - Pep8 and other code fixes [Andreas Mantke]
