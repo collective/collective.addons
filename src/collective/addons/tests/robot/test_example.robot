@@ -41,10 +41,6 @@ Scenario: As a member I want to be able to log into the website
    Then I am logged in
 
 
-*** Variables ***
-
-${BROWSER} =  Firefox
-
 
 *** Keywords *****************************************************************
 
