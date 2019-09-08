@@ -24,7 +24,6 @@ from zope.schema.vocabulary import SimpleTerm
 from zope.schema.vocabulary import SimpleVocabulary
 
 import re
-import six
 
 
 def vocabcategories(context):
@@ -327,7 +326,8 @@ def textmodified_project(self, event):
 
         api.portal.send_email(
             recipient=mailrecipient,
-            sender=(u'{0} <{1}>').format('Admin of the Website', mailrecipient),
+            sender=(u'{0} <{1}>').format(
+                'Admin of the Website', mailrecipient),
             subject=(u'The content of the project {0} has '
                      u'changed').format(self.title),
             body=(u'The content of the project {0} has changed. Here you get '

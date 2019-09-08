@@ -38,7 +38,8 @@ setup(
         'PyPI': 'https://pypi.python.org/pypi/collective.addons',
         'Source': 'https://github.com/collective/collective.addons',
         'Tracker': 'https://github.com/collective/collective.addons/issues',
-        # 'Documentation': 'https://collective.addons.readthedocs.io/en/latest/',
+        # 'Documentation':
+        # 'https://collective.addons.readthedocs.io/en/latest/',
     },
     license='GPL version 2',
     packages=find_packages('src', exclude=['ez_setup']),

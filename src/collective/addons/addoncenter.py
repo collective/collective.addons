@@ -13,7 +13,6 @@ from zope import schema
 from zope.interface import Invalid
 
 import re
-import six
 
 
 MULTISPACE = u'\u3000'.encode('utf-8')
