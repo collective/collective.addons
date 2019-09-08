@@ -19,10 +19,6 @@ matrix:
   sudo: true
   fast_finish: true
 before_install:
-  - mkdir webdriver;
-    wget https://chromedriver.storage.googleapis.com/2.40/chromedriver_linux64.zip;
-    unzip chromedriver_linux64.zip -d webdriver;
-    export PATH=$PATH:$(pwd)/webdriver;
   - virtualenv -p `which python` .
   - mkdir -p $HOME/buildout-cache/{eggs,downloads}
   - mkdir $HOME/.buildout
@@ -42,7 +38,8 @@ before_script:
 - 'export DISPLAY=:99.0'
 - Xvfb :99 -screen 0 1024x768x24 > /dev/null 2>&1 &
 - sleep 3
-- chromedriver -v
+- firefox -v
+- sleep 3
 
 script:
 # Run code-analysis, except on Python 3.6, which mysteriously fails to find zc.buildout.
