@@ -37,7 +37,7 @@ def getContainerTitle(self):
 
 @provider(IContextAwareDefaultFactory)
 def contactinfoDefault(context):
-    return context.contactAddress
+    return context.addoncontactAddress
 
 
 @provider(IContextAwareDefaultFactory)

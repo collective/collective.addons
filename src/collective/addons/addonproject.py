@@ -167,7 +167,7 @@ class IAddonProject(model.Schema):
         required=True,
     )
 
-    contactAddress = schema.TextLine(
+    addoncontactAddress = schema.TextLine(
         title=_(u'Contact email-address'),
         description=_(u'Contact email-address for the project.'),
         constraint=validateemail,

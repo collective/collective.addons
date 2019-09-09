@@ -26,7 +26,7 @@
         <indexed_attr value="allowed_addonfileextension" />
     </index>
     <index name="addonprojectemail" meta_type="FieldIndex">
-        <indexed_attr value="contactAddress" />
+        <indexed_attr value="addoncontactAddress" />
     </index>
     <column value="addon_release_number"/>
     <column value="releases_compat_versions"/>
