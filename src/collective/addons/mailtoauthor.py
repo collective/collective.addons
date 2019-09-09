@@ -163,8 +163,8 @@ class MailToAuthorForm(AutoExtensibleForm, form.Form):
         )
 
         for brain in project[:1]:
-            if brain.getObject().contactAddress is not None:
-                projectemail = brain.getObject().contactAddress
+            if brain.getObject().addoncontactAddress is not None:
+                projectemail = brain.getObject().addoncontactAddress
 
             else:
                 projectemail = contactaddress

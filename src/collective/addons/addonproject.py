@@ -251,7 +251,7 @@ def notifyProjectManager(self, event):
     else:
         mailsender = api.portal.get_registry_record('plone.email_from_address')
     api.portal.send_email(
-        recipient=('{0}').format(self.contactAddress),
+        recipient=('{0}').format(self.addoncontactAddress),
         sender=(u'{0} <{1}>').format('Admin of the Website', mailsender),
         subject=(u'Your Project {0}').format(self.title),
         body=(u'The status of your changed. '
@@ -266,7 +266,7 @@ def notifyProjectManagerReleaseAdd(self, event):
         mailrecipient = api.portal.get_registry_record(
             'plone.email_from_address')
     api.portal.send_email(
-        recipient=('{0}').format(self.contactAddress),
+        recipient=('{0}').format(self.addoncontactAddress),
         sender=(u'{0} <{1}>').format('Admin of the Website', mailrecipient),
         subject=(u'Your Project [{0}: new Release added').format(self.title),
         body=(u'A new release was added to your project: '
@@ -281,7 +281,7 @@ def notifyProjectManagerLinkedReleaseAdd(self, event):
         mailrecipient = api.portal.get_registry_record(
             'plone.email_from_address')
     api.portal.send_email(
-        recipient=('{0}').format(self.contactAddress),
+        recipient=('{0}').format(self.addoncontactAddress),
         sender=(u'{0} <{1}>').format('Admin of the Website', mailrecipient),
         subject=(u'Your Project {0}: new linked Release '
                  u'added').format(self.title),

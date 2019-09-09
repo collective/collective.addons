@@ -14,7 +14,7 @@
         <indexed_attr value="category_choice" />
     </index>
     <index name="addonprojectcontact" meta_type="KeywordIndex">
-        <indexed_attr value="contactAddress" />
+        <indexed_attr value="addoncontactAddress" />
     </index>
     <index name="allowedapdocextensions" meta_type="FieldIndex">
         <indexed_attr value="allowed_apdocfileextensions" />
