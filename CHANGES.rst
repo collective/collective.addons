@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.0a5 (unreleased)
+1.0b (unreleased)
 ------------------
 
 - Made additions to travis.yml to get the robot test running
