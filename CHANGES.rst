@@ -5,8 +5,12 @@ Changelog
 1.0a5 (unreleased)
 ------------------
 
-- Nothing changed yet.
-
+- Made additions to travis.yml to get the robot test running
+  successfully [Andreas Mantke]
+- Update the Readme and add more features of the add-on [Andreas Mantke]
+- Change the name of the field for the add-on project contact
+  address [Andreas Mantke]
+- Flake8 fixes [Andreas Mantke]
 
 
 1.0a4 (2019-09-03)
