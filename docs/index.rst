@@ -61,3 +61,14 @@ the documentation files. If there are different file extensions allowed for this
 this file extensions seperated by a pipe into the form fields, e.g.: 'pdf|odt' for documentation files.
 Once you are finished with adding values to the edit form, save the form. If you missed to edit a form field,
 you will get an error message and could fill in the necessary information into the appropriate form field.
+
+Once you finished with the edit form of the Add-on Center and saved your changes you need to publish the center.
+You could do this by a click on the entry 'State: Private' in the menubar on the left site. Choose the entry 'Publish'
+and you are done.
+
+The logged in users are not able to add projects to the Add-on Center yet. You could enable this by a mouse click
+on the entry 'Sharing' in menubar on the left site (see screenshot below). This shows the edit menu for sharing
+and you could tick the checkbox 'Can add' for 'logged-in-users' (see screenshot below) to enable the members of the Plone site to add their add-on projects to the center.
+
+.. image:: source/images/addon_center_sharing.png
+   :width: 600
