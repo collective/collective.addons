@@ -52,3 +52,12 @@ Add-on Center in your Plone site.
 
 .. image:: source/images/addon_center_form01.png
    :width: 600
+
+
+Fill in the fields in the edit form of the Add-on Center. All fields has a description of their expected values.
+Don't miss to go through the register of the edit form dialog. The fields on the register 'Allowed file extensions'
+need your input about the allowed file extensions for the add-ons, the image file extensions (logo, screenshot) and
+the documentation files. If there are different file extensions allowed for this file categories you could enter
+this file extensions seperated by a pipe into the form fields, e.g.: 'pdf|odt' for documentation files.
+Once you are finished with adding values to the edit form, save the form. If you missed to edit a form field,
+you will get an error message and could fill in the necessary information into the appropriate form field.
