@@ -71,5 +71,4 @@ def import_catalog_indexes(context, logger=None):
 
     if len(indexables) > 0:
         logger.info('Indexing new indexes %s.', ', '.join(indexables))
-        # TODO: make this code work, now it raises error
         catalog.manage_reindexIndex(ids=indexables)
