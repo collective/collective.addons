@@ -41,3 +41,25 @@ If there is already a homepage of the add-on project available on the internet, 
 submit within the correspondending form field. This homepage will be published inside the project
 ressources on the right side of the add-on project page. Thus the user of the project / add-on
 could reach the external project homepage very easily with only one mouse click.
+
+The Second Register 'Category / Categories'
+*******************************************
+
+The add-on projects were assigned to one or more categories. The creator of the add-on project
+could choose on this register one or more categories, the new add-on project matches. The list
+of categories on this register had been created by the Plone site administrator within the
+'Add-on Center'.
+
+.. image:: images/addon_project_form02.png
+   :width: 600
+
+
+The Third Register 'Logo / Screenshot'
+**************************************
+
+This is the place to submit a project logo or screenshot. It is mandatory to submit one of them.
+The allowed file extensions are displayed next to the button to call the file dialog. The Plone
+site administrator choose this allowed file extensions within the 'Add-on Center'.
+
+.. image:: images/addon_project_form03.png
+   :width: 600
