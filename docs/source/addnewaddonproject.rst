@@ -63,3 +63,15 @@ site administrator choose this allowed file extensions within the 'Add-on Center
 
 .. image:: images/addon_project_form03.png
    :width: 600
+
+
+The Fourth Register 'Documentation'
+***********************************
+
+This  register provide the opportunity to upload a documentation file. It will be linked from
+the project ressources in the project view. The allowed file extensions are displayed next to
+the button to call the file dialog.The Plone site administrator choose this allowed file
+extensions within the 'Add-on Center'.
+
+.. image:: images/addon_project_form04.png
+   :width: 600
