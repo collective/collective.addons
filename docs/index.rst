@@ -9,4 +9,5 @@ User documentation
 
    source/installation.rst
    source/addnewaddoncenter.rst
+   source/addnewaddonproject.rst
 
