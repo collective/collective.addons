@@ -2,7 +2,7 @@ Add A New Release To An Add-On Project
 ######################################
 
 A owner of an add-on project could add a release to the own project. There is
-a link at the top of a add-on project page whilst the owner is logged-in to the
+a link at the top of an add-on project page whilst the owner is logged-in to the
 Plone site. Once he clicked on this link he got an edit form to enter the
 content of the new release.
 
