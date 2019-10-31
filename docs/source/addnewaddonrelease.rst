@@ -10,7 +10,7 @@ content of the new release.
 
 The owner could make alternatively a mouse click on the menu entry 'Add new' in
 the menu bar on the left side and choose from the opening sub menu the entry
-'Add-On-Release' (see the small red arrow in the screenshot above).
+'Add-On Release' (see the small red arrow in the screenshot above).
 
 The form dialog consists of several register. The form fields in the first register
 asks for more general information about the release. It's possible to edit and change
@@ -69,7 +69,7 @@ disclaimer that has to be accepted by the add-on release owner. The text of
 the legal disclaimer will be set by the site admin inside the 'Add-on Center'.
 
 If the source code is not inside the add-on release (the drop down field is
-set to 'No', it is necessary to fill in the link to the source code in the form
+set to 'No'), it is necessary to fill in the link to the source code in the form
 field at the bottom of the register. If such a link will not be submitted the
 release owner gets an error message.
 
