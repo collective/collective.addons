@@ -11,4 +11,5 @@ User documentation
    source/addnewaddoncenter.rst
    source/addnewaddonproject.rst
    source/addnewaddonrelease.rst
+   source/addnewaddonlinkedrelease.rst
 
