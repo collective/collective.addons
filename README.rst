@@ -50,8 +50,7 @@ This add-on can be seen in action at the following sites:
 Documentation
 -------------
 
-Full documentation for end users isn't available yet, but will be available
-soon in the "docs" folder
+Full documentation for end users is available in the "docs" folder
 
 Translations
 ------------
