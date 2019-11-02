@@ -43,3 +43,6 @@ reports/
 !.travis.yml
 !src/collective
 .directory/
+docs/_build/
+docs/_static
+
