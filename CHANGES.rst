@@ -5,8 +5,8 @@ Changelog
 1.0b1 (unreleased)
 ------------------
 
-- Nothing changed yet.
-
+- Add user documentation [Andreas Mantke]
+- Add further directories to .gitignore [Andreas Mantke]
 
 
 1.0b0 (2019-09-11)
