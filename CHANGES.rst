@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.0b1 (2019-11-03)
+1.0b2 (unreleased)
 ------------------
 
 - Add user documentation [Andreas Mantke]
