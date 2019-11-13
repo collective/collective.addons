@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from Acquisition import aq_inner, aq_parent  #noqa
+from Acquisition import aq_inner, aq_parent  # noqa
 from collective.addons import _
 from collective.addons.adapter import IReleasesCompatVersions
 from collective.addons.common import yesnochoice

@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from Acquisition import aq_inner, aq_parent  #noqa
+from Acquisition import aq_inner, aq_parent  # noqa
 from collective.addons import _
 from collective.addons.adapter import IReleasesCompatVersions
 from collective.addons.common import yesnochoice
@@ -10,7 +10,7 @@ from plone.dexterity.browser.view import DefaultView
 from plone.indexer.decorator import indexer
 from plone.supermodel import model
 from plone.supermodel.directives import primary
-from Products.validation import V_REQUIRED  #noqa
+from Products.validation import V_REQUIRED  # noqa
 from z3c.form import validator
 from z3c.form.browser.checkbox import CheckBoxFieldWidget
 from zope import schema
