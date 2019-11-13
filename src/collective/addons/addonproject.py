@@ -10,7 +10,7 @@ from plone.namedfile.field import NamedBlobImage
 from plone.supermodel import model
 from plone.supermodel.directives import primary
 from Products.Five import BrowserView
-from Products.validation import V_REQUIRED
+from Products.validation import V_REQUIRED  #noqa
 from z3c.form import validator
 from z3c.form.browser.checkbox import CheckBoxFieldWidget
 from zope import schema
