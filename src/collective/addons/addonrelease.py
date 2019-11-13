@@ -27,7 +27,6 @@ from zope.schema.vocabulary import SimpleVocabulary
 
 import itertools
 import re
-import six
 
 
 @provider(IContextAwareDefaultFactory)
