@@ -12,7 +12,7 @@ from plone.indexer.decorator import indexer
 from plone.namedfile.field import NamedBlobFile
 from plone.supermodel import model
 from plone.supermodel.directives import primary
-from Products.validation import V_REQUIRED
+from Products.validation import V_REQUIRED  # noqa
 from z3c.form import validator
 from z3c.form.browser.checkbox import CheckBoxFieldWidget
 from zope import schema
