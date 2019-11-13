@@ -7,7 +7,7 @@ def notifiyAboutNewVersion(addonproject, event):
     if hasattr(event, 'descriptions') and event.descriptions:
         for d in event.descriptions:
             if hasattr(d, 'interface') and d.interface is IAddonCenter and \
-                'available_versions' in d.attributes:
+                    'available_versions' in d.attributes:
                 catalog = api.portal.get_tool(name='portal_catalog')
                 projectemail = catalog.uniqueValuesFor('addonprojectcontact')
                 message = 'We added a new version of the product to the ' \
