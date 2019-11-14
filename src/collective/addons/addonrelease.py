@@ -482,7 +482,7 @@ def update_project_releases_compat_versions_on_creation(addonrelease, event):
 def update_project_releases_compat_versions(addonrelease, event):
     pc = api.portal.get_tool(name='portal_catalog')
     query = '/'.join(addonrelease.aq_parent.getPhysicalPath())
-    brains = pc.searchResults({
+    brains = pc.searchResults({              # noqa
         'path': {'query': query, 'depth': 1},
         'portal_type': ['collective.addons.addonrelease',
                         'collective.addons.addonlinkedrelease'],
