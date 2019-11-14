@@ -9,8 +9,6 @@
 collective.addons
 =================
 
-Tell me what your product does
-
 Features
 --------
 
