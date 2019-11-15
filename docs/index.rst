@@ -13,4 +13,6 @@ User documentation
    source/addnewaddonrelease.rst
    source/addnewaddonlinkedrelease.rst
    source/publishaddonrelease.rst
+   source/publishaddonproject.rst
+   source/messaging.rst
 
