@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Messaging &#8212; collective.addons 1.0b1 documentation</title>
+    <title>Release An Add-on Release Or A Linked Add-on Release &#8212; collective.addons 1.0b1 documentation</title>
     <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
@@ -15,6 +15,8 @@
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Publish An Add-on Project" href="publishaddonproject.html" />
+    <link rel="prev" title="Add A New Linked Release To An Add-On Project" href="addnewaddonlinkedrelease.html" />
    
   <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
   
@@ -29,48 +31,38 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="messaging">
-<h1>Messaging<a class="headerlink" href="#messaging" title="Permalink to this headline">¶</a></h1>
-<p>The collective.addons Plone add-on use some of the Plone messaging
-implementations to create messages to the site admin, reviewers and the
-owner / creator of add-ons.</p>
-<div class="section" id="messages-to-the-site-admininstrator-administrator">
-<h2>Messages To The Site-Admininstrator / Administrator<a class="headerlink" href="#messages-to-the-site-admininstrator-administrator" title="Permalink to this headline">¶</a></h2>
+  <div class="section" id="release-an-add-on-release-or-a-linked-add-on-release">
+<h1>Release An Add-on Release Or A Linked Add-on Release<a class="headerlink" href="#release-an-add-on-release-or-a-linked-add-on-release" title="Permalink to this headline">¶</a></h1>
+<p>Once you have filled in all required data into the form
+of a new add-on release or linked add-on release and saved
+the form, you have to decide if and with which state you
+want to publish the add-on release.</p>
+<p>The release is in the default state at that time. This
+means its workflow state is ‘Unreleased’. You could
+choose another state from the listing in the menubar on
+the left side (see screenshot below). Click on the
+appropriate entry in this menubar and you get a
+listing with the available further workflow state (drop
+down menu):</p>
 <ul class="simple">
-<li>The site-administrator / admiinstrator get an e-mail once a new add-on
-project have been added to the add-on center.</li>
-<li>If the project owner submit her / his project for publication, the
-site-administrator / administrator get an e-mail about this event.</li>
-<li>Once the text of a published project change the site-administrator /
-administrator will get an e-mail with the complete text of the project
-summary and its description. Thus he get an information, if the text
-of the project changes into a direction that has not been reviewed.</li>
+<li>Release alpha –&gt; Alpha Release</li>
+<li>Release beta  –&gt; Beta Release</li>
+<li>Release candidate</li>
+<li>Final Release.</li>
 </ul>
-<p>If the form field ‘contactForCenter’ in the add-on center contains an
-e-mail address the above messages will be send to this address. Otherwise
-the e-mail goes to the e-mail address of the Plone site.</p>
-</div>
-<div class="section" id="messages-to-the-project-owner">
-<h2>Messages To The Project Owner<a class="headerlink" href="#messages-to-the-project-owner" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li>Once a workflow status of his project(s) change the project owner will get an
-message (e-mail) which inform her / him about this new status.</li>
-<li>The project owner will get an e-mail once an add-on release or a linked
-add-on release have been added to her / his project(s).</li>
-<li>Once the site-administrator / administrator of the Plone site adds a new
-product version to the form field ‘Available Versions’ the owner of a
-project will get an e-mail to inform her / him about this event. The message
-ask the owner to update the versions list of the (linked) releases of his
-project(s).</li>
-</ul>
-</div>
-<div class="section" id="messages-to-a-possible-information-hub-of-add-on-releases">
-<h2>Messages To A Possible Information Hub Of Add-on Releases<a class="headerlink" href="#messages-to-a-possible-information-hub-of-add-on-releases" title="Permalink to this headline">¶</a></h2>
-<p>It is possible to create a hub outside of the Plone site, that drives the
-add-ons center, which could get an e-mail for every new published add-on
-(linked) release. This e-mail could be parsed and used to inform the user
-of the product about new (linked) releases from inside the product.</p>
-</div>
+<a class="reference internal image-reference" href="../_images/addon_release_publish1.png"><img alt="../_images/addon_release_publish1.png" src="../_images/addon_release_publish1.png" style="width: 297px;" /></a>
+<p>If an add-on release or linked add-on release should not
+be public available anymore, it could be hidden.
+Therefor you choose ‘Hide release’ from the entries
+in the listing in the menu entry (drop down menu).</p>
+<p>In case a release got the state ‘hidden’ the owner
+could later decide to ‘unhide’ it. Therefor she / he
+make a mouse click on the entry ‘Hidden’ in the menubar
+on the left side and choose the entry ‘Unhide release’.
+The (linked) add-on release will get the state
+‘Unreleased’ again and it is possible to publish it
+in one of the workflow states again, which are listed
+above.</p>
 </div>
 
 
@@ -89,13 +81,13 @@ of the product about new (linked) releases from inside the product.</p>
 
 
 <h3>Navigation</h3>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="addnewaddoncenter.html">Add A New Add-on Center To Your Plone Site</a></li>
 <li class="toctree-l1"><a class="reference internal" href="addnewaddonproject.html">Add A New Add-on Project To The Add-on Center</a></li>
 <li class="toctree-l1"><a class="reference internal" href="addnewaddonrelease.html">Add A New Release To An Add-On Project</a></li>
 <li class="toctree-l1"><a class="reference internal" href="addnewaddonlinkedrelease.html">Add A New Linked Release To An Add-On Project</a></li>
-<li class="toctree-l1"><a class="reference internal" href="publishaddonrelease.html">Release An Add-on Release Or A Linked Add-on Release</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Release An Add-on Release Or A Linked Add-on Release</a></li>
 <li class="toctree-l1"><a class="reference internal" href="publishaddonproject.html">Publish An Add-on Project</a></li>
 </ul>
 
@@ -103,6 +95,8 @@ of the product about new (linked) releases from inside the product.</p>
 <h3>Related Topics</h3>
 <ul>
   <li><a href="../index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="addnewaddonlinkedrelease.html" title="previous chapter">Add A New Linked Release To An Add-On Project</a></li>
+      <li>Next: <a href="publishaddonproject.html" title="next chapter">Publish An Add-on Project</a></li>
   </ul></li>
 </ul>
 </div>
@@ -130,7 +124,7 @@ of the product about new (linked) releases from inside the product.</p>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
       
       |
-      <a href="../_sources/source/messaging.rst.txt"
+      <a href="../_sources/source/publishaddonrelease.rst.txt"
           rel="nofollow">Page source</a>
     </div>
 
