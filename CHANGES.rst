@@ -7,6 +7,8 @@ Changelog
 
 - Complete user documentation [Andreas Mantke]
 - Flake8 fixes [Andreas Mantke]
+- Add a custom.css for creating documentation in HTML file
+  format [Andresa Mantke]
 
 
 1.0b2 (2019-11-03)
