@@ -2,10 +2,11 @@ Changelog
 =========
 
 
-1.0b3 (unreleased)
+1.0 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Complete user documentation [Andreas Mantke]
+- Flake8 fixes [Andreas Mantke]
 
 
 1.0b2 (2019-11-03)
