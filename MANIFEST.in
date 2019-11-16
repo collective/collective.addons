@@ -1,4 +1,19 @@
+include *.GPL
+include *.txt
+include *.yml
+include tox.ini
+
 graft src/collective
-graft docs
+graft docs/html docs/source docs/source/images
 include *.rst
 global-exclude *.pyc
+recursive-exclude docs _build/* Makefile html/.directory make.bat
+recursive-include docs *.css
+recursive-include docs *.gif
+recursive-include docs *.gitkeep
+recursive-include docs *.html
+recursive-include docs *.js
+recursive-include docs *.pdf
+recursive-include docs *.png
+recursive-include docs *.py
+recursive-include docs *.rst

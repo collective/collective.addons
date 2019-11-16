@@ -43,6 +43,7 @@ reports/
 !.travis.yml
 !src/collective
 .directory/
-docs/_build/
-docs/_static
+docs/_build/*
+docs/Makefile
+docs/make.bat
 
