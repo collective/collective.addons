@@ -43,7 +43,7 @@ The field for the email address will be initialized with the email address
 from the add-on project the linked release was added to.
 
 The Second Register 'Compatibility'
-**********************************
+***********************************
 
 This register contains a form field to choose the versions of the program the
 linked release is compatible with. The list of program versions will be
@@ -80,7 +80,7 @@ in the form field at the bottom of the register. If such a link will not be
 submitted the linked release owner gets an error message.
 
 The Fourth Register 'Linked File'
-********************************
+*********************************
 
 This register is the place to link to the add-on linked release file and
 declare which platform it is compatible with.
