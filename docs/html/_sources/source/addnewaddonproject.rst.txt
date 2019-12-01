@@ -6,7 +6,7 @@ to the 'Add-on Center' once he called the appropriate form for new such
 projects and fill in the necessary data.
 
 He has to click with the mouse first on the link in the box on the right
-side (see screenshot below.
+side (see screenshot below).
 
 .. image:: images/create_addon_project.png
    :width: 600

@@ -40,7 +40,7 @@ The field for the email address will be initialized with the email address from
 the add-on project the release was added to.
 
 The Second Register 'Compatibility'
-**********************************
+***********************************
 
 This register contains a form field to choose the versions of the program the
 release is compatible with. The list of program versions will be created by
