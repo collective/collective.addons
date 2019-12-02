@@ -4,7 +4,10 @@ Changelog
 1.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Fix formating and text issues in the users docomentation and
+  update documentation in HTML and PDF file format. [Andreas Mantke]
+- Include documentation txt-files into the the
+  MANIFEST.in [Andreas Mantke]
 
 
 
