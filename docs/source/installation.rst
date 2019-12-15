@@ -2,9 +2,30 @@ Installation
 ############
 
 
-You first need to install and activate the Plone add-on. Therefor you had to go to the
-Plone 'Site Setup' adminstration area. If you got administration permissions you find a
-link to it in the menu entry with your name (or 'admin'). You could reach it directly by
+You can install the Plone add-on collective.addons using zc.buildout
+and the plone.recipe.zope2instance. Thus you could add it to the list of
+eggs to install, e.g.:
+
+.. code-block:: Python
+
+    [buildout]
+        ...
+        eggs =
+            ...
+            collective.addons
+
+Once you have added the add-on re-run buildout, e.g. with:
+
+.. code-block:: Bash
+
+    $ ./bin/buildout
+
+
+Once your buildout finished you had to create a new Plone site and then
+install and activate the Plone add-on inside this new Plone site.
+Therefor you had to go to the Plone 'Site Setup' adminstration area. If
+you got administration permissions you find a link to it in the menu
+entry with your name (or 'admin'). You could reach it directly by
 adding '/@@overview-controlpanel' to the URL of your Plone site.
 
 In the 'Site Setup' page click on 'Add-ons' and you get a list of the Plone add-ons which
