@@ -13,7 +13,6 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="../_static/language_data.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Add A New Add-on Center To Your Plone Site" href="addnewaddoncenter.html" />
@@ -30,15 +29,29 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          
-
           <div class="body" role="main">
             
   <div class="section" id="installation">
 <h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
-<p>You first need to install and activate the Plone add-on. Therefor you had to go to the
-Plone ‘Site Setup’ adminstration area. If you got administration permissions you find a
-link to it in the menu entry with your name (or ‘admin’). You could reach it directly by
+<p>You can install the Plone add-on collective.addons using zc.buildout
+and the plone.recipe.zope2instance. Thus you could add it to the list of
+eggs to install, e.g.:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">buildout</span><span class="p">]</span>
+    <span class="o">...</span>
+    <span class="n">eggs</span> <span class="o">=</span>
+        <span class="o">...</span>
+        <span class="n">collective</span><span class="o">.</span><span class="n">addons</span>
+</pre></div>
+</div>
+<p>Once you have added the add-on re-run buildout, e.g. with:</p>
+<div class="highlight-Bash notranslate"><div class="highlight"><pre><span></span>$ ./bin/buildout
+</pre></div>
+</div>
+<p>Once your buildout finished you had to create a new Plone site and then
+install and activate the Plone add-on inside this new Plone site.
+Therefor you had to go to the Plone ‘Site Setup’ adminstration area. If
+you got administration permissions you find a link to it in the menu
+entry with your name (or ‘admin’). You could reach it directly by
 adding ‘/&#64;&#64;overview-controlpanel’ to the URL of your Plone site.</p>
 <p>In the ‘Site Setup’ page click on ‘Add-ons’ and you get a list of the Plone add-ons which
 are available in your Plone site.</p>
@@ -58,7 +71,6 @@ create a new add-on center.</p>
 
 
           </div>
-          
         </div>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -108,14 +120,6 @@ create a new add-on center.</p>
     </div>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
-
-
-
-
-
-
-
-
         </div>
       </div>
       <div class="clearer"></div>
@@ -124,8 +128,8 @@ create a new add-on center.</p>
       &copy;Andreas Mantke (andreasma).
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.5</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.6</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
       
       |
       <a href="../_sources/source/installation.rst.txt"
