@@ -4,10 +4,12 @@ Changelog
 1.1 (unreleased)
 ------------------
 
-- Fix formating and text issues in the users docomentation and
-  update documentation in HTML and PDF file format. [Andreas Mantke]
+- Fix formating and text issues in the users docomentation, add
+  information about buildout entries and update documentation in
+  HTML and PDF file format. [Andreas Mantke]
 - Include documentation txt-files into the the
   MANIFEST.in [Andreas Mantke]
+- Add versions to test_plone52.cfg [Andreas Mantke]
 
 
 
