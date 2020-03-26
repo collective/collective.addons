@@ -73,6 +73,7 @@ setup(
             'Products.validation',
             'cioppino.twothumbs',
             'plone.formwidget.recaptcha',
+            'collective.recaptcha',
         ],
     },
     entry_points="""
