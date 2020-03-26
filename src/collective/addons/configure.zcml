@@ -151,6 +151,12 @@
    />
 
   <subscriber
+    for="collective.addons.addonproject.IAddonProject
+               zope.lifecycleevent.interfaces.IObjectAddedEvent"
+    handler="collective.addons.addonproject.notifyAboutNewProject"
+    />
+
+  <subscriber
     for="collective.addons.addonrelease.IAddonRelease
          zope.lifecycleevent.interfaces.IObjectAddedEvent"
     handler="collective.addons.addonrelease.update_project_releases_compat_versions_on_creation"
