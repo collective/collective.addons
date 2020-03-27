@@ -530,7 +530,7 @@
                             link and fill in your information into the
                             form:<br/>
                            <a class="pointer" tal:attributes="href
-                                   string:${context/absolute_url}/@@contact-template-project-owner">
+                                   string:${context/absolute_url}/@@contact-extension-project-owner">
                              Get in contact with the project owner
                            </a>
                         </p>

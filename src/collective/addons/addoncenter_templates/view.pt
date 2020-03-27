@@ -277,6 +277,20 @@
                     <h3 i18n:translate="">About</h3>
                     <p tal:content="structure context/product_description" />
                 </div>
+  <div class="aboutproduct">
+                  <h3 i18n:translate="">Contact a Project Author</h3>
+                  <p i18n:translate="">You can send a message to the author of
+                    the project and give him feedback by following the
+                    link and fill in your information into the form:<br />
+                    <a class="pointer" tal:attributes="href
+                            string:${context/portal_url}/@@mail-to-addonauthor">
+                        Get in contact with the project author
+                    </a>.<br />
+                    You could instead go to the page of the project and use
+                    the mail form linked from that page.
+                  </p>
+
+                </div>
     </div>
       </div>
   </tal:main-macro>
