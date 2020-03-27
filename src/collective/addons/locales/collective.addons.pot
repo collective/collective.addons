@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2019-11-14 20:15+0000\n"
+"POT-Creation-Date: 2020-03-27 19:24+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -169,6 +169,7 @@ msgid "Browse Add-ons by Category"
 msgstr ""
 
 #: ./mailtoauthor.py:196
+#: ./mailtoprojectowner.py:193
 msgid "Cancel"
 msgstr ""
 
@@ -210,6 +211,10 @@ msgstr ""
 msgid "Compatible with versions of the product"
 msgstr ""
 
+#: ./addoncenter_templates/view.pt:281
+msgid "Contact a Project Author"
+msgstr ""
+
 #: ./addonlinkedrelease.py:219
 #: ./addonproject.py:171
 #: ./addonrelease.py:223
@@ -224,6 +229,10 @@ msgstr ""
 
 #: ./mailtoauthor.py:116
 msgid "Contact the project author and send your feedback"
+msgstr ""
+
+#: ./mailtoprojectowner.py:110
+msgid "Contact the project owner and send your feedback"
 msgstr ""
 
 #: ./addonproject_templates/view.pt:117
@@ -536,6 +545,10 @@ msgstr ""
 msgid "Mail To The Project Author"
 msgstr ""
 
+#: ./mailtoprojectowner.py:109
+msgid "Mail To The Project Owner"
+msgstr ""
+
 #: ./profiles/default/workflows/collective_addons_project_workflow/definition.xml
 msgid "Member retracts submission"
 msgstr ""
@@ -648,14 +661,17 @@ msgid "Please fill in the size in kilobyte of the external hosted file (e.g. 633
 msgstr ""
 
 #: ./mailtoauthor.py:79
+#: ./mailtoprojectowner.py:73
 msgid "Please fill in your email address."
 msgstr ""
 
 #: ./mailtoauthor.py:74
+#: ./mailtoprojectowner.py:68
 msgid "Please fill in your familiy name"
 msgstr ""
 
 #: ./mailtoauthor.py:69
+#: ./mailtoprojectowner.py:63
 msgid "Please fill in your first name(s)"
 msgstr ""
 
@@ -695,6 +711,7 @@ msgid "Please upload your file."
 msgstr ""
 
 #: ./mailtoauthor.py:147
+#: ./mailtoprojectowner.py:142
 msgid "Please validate the recaptcha field before sending the form."
 msgstr ""
 
@@ -707,6 +724,7 @@ msgid "Project"
 msgstr ""
 
 #: ./mailtoauthor.py:84
+#: ./mailtoprojectowner.py:78
 msgid "Project Name"
 msgstr ""
 
@@ -867,6 +885,7 @@ msgid "Second uploaded file is compatible with the Platform(s)"
 msgstr ""
 
 #: ./mailtoauthor.py:129
+#: ./mailtoprojectowner.py:123
 msgid "Send Email"
 msgstr ""
 
@@ -993,6 +1012,7 @@ msgid "The linked release title will be computed from the parent project title"
 msgstr ""
 
 #: ./mailtoauthor.py:85
+#: ./mailtoprojectowner.py:79
 msgid "The name of the project, to which author you want to send feedback."
 msgstr ""
 
@@ -1119,10 +1139,12 @@ msgid "Waiting for the Review, further editable by
 msgstr ""
 
 #: ./mailtoauthor.py:187
+#: ./mailtoprojectowner.py:184
 msgid "We send your message to the author of the project. It's on her / his choice, if she'll / he'll get back to you."
 msgstr ""
 
 #: ./mailtoauthor.py:92
+#: ./mailtoprojectowner.py:86
 msgid "What is your message to the author of the project? Your message is limited to 1000 characters."
 msgstr ""
 
@@ -1135,23 +1157,31 @@ msgstr ""
 msgid "You answered the question, whether the source code is inside your add-on with no (default answer). If this is the correct answer, please fill in the Link (URL) to the Source Code."
 msgstr ""
 
+#: ./addoncenter_templates/view.pt:285
+msgid "You can send a message to the author of the project and give him feedback by following the link and fill in your information into the form:<br /> <a class=\"pointer\" href=\"${DYNAMIC_CONTENT}\"> Get in contact with the project author </a>.<br /> You could instead go to the page of the project and use the mail form linked from that page."
+msgstr ""
+
 #: ./addoncenter_templates/own_projects.pt:20
 msgid "You currently have no projects on this site."
 msgstr ""
 
 #: ./mailtoauthor.py:78
+#: ./mailtoprojectowner.py:72
 msgid "Your Email Address"
 msgstr ""
 
 #: ./mailtoauthor.py:73
+#: ./mailtoprojectowner.py:67
 msgid "Your Family Name"
 msgstr ""
 
 #: ./mailtoauthor.py:68
+#: ./mailtoprojectowner.py:62
 msgid "Your First Name"
 msgstr ""
 
 #: ./mailtoauthor.py:91
+#: ./mailtoprojectowner.py:85
 msgid "Your Message To The Author"
 msgstr ""
 
