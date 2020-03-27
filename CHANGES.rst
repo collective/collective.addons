@@ -10,6 +10,13 @@ Changelog
 - Include documentation txt-files into the the
   MANIFEST.in [Andreas Mantke]
 - Add versions to test_plone52.cfg [Andreas Mantke]
+- Fix travis.yml [Andreas Mantke]
+- Add a new module for a contact with the project owner, add a link to
+  the mail forms from addon project respective the addon center
+  view. [Andreas Mantke]
+- Fix two URLs in own_projects.pt [Andreas Mantke]
+- Add a subscriber for messaging about new project added [Andreas Mantke]
+- Update localization files [Andreas Mantke]
 
 
 
