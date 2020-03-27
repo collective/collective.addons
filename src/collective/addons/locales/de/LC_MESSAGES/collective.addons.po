@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI +ZONE\n"
-"PO-Revision-Date: 2019-11-14 21:19+0100\n"
+"PO-Revision-Date: 2020-03-27 20:28+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -158,7 +158,7 @@ msgstr "Suchen"
 msgid "Browse Add-ons by Category"
 msgstr "Suchen Sie Add-ons  nach Kategorien"
 
-#: mailtoauthor.py:196
+#: mailtoauthor.py:196 mailtoprojectowner.py:193
 msgid "Cancel"
 msgstr "Abbrechen"
 
@@ -198,6 +198,10 @@ msgstr "Kompatibel mit den Produkt-Versionen"
 msgid "Compatible with versions of the product"
 msgstr "Kompatibel mit den Produkt-Versionen"
 
+#: addoncenter_templates/view.pt:281
+msgid "Contact a Project Author"
+msgstr "Einen Projekt-Autor kontaktieren"
+
 #: addonlinkedrelease.py:219 addonproject.py:171 addonrelease.py:223
 msgid "Contact email-address"
 msgstr "Kontakt-Email-Adresse"
@@ -209,6 +213,10 @@ msgstr "Kontakt-Email-Adresse für das Projekt.."
 #: mailtoauthor.py:116
 msgid "Contact the project author and send your feedback"
 msgstr "Kontaktieren Sie den Projekt-Autoren und senden Sie Feedback"
+
+#: mailtoprojectowner.py:110
+msgid "Contact the project owner and send your feedback"
+msgstr "Kontaktieren des Projekt-Eigentümers und übermitteln Sie Ihr Feedback"
 
 #: addonproject_templates/view.pt:117
 msgid "Current Release"
@@ -507,6 +515,10 @@ msgstr "Logo"
 msgid "Mail To The Project Author"
 msgstr "E-Mail an den Projekt-Autor"
 
+#: mailtoprojectowner.py:109
+msgid "Mail To The Project Owner"
+msgstr "E-Mail an den Projekt-Eigentümer"
+
 #: profiles/default/workflows/collective_addons_project_workflow/definition.xml
 msgid "Member retracts submission"
 msgstr "Mitglied zieht Einreichung zurück"
@@ -615,15 +627,15 @@ msgstr "Bitte füllen Sie die Installationsanweisungen ein"
 msgid "Please fill in the size in kilobyte of the external hosted file (e.g. 633, if the size is 633 kb)"
 msgstr "Bitte füllen Sie die Größe der extern gehosteten Datei  in Kilobyte (z.B. 633, falls die Größe 633 KB ist) ein."
 
-#: mailtoauthor.py:79
+#: mailtoauthor.py:79 mailtoprojectowner.py:73
 msgid "Please fill in your email address."
 msgstr "Bitte tragen Sie Ihre E-Mail-Adresse ein."
 
-#: mailtoauthor.py:74
+#: mailtoauthor.py:74 mailtoprojectowner.py:68
 msgid "Please fill in your familiy name"
 msgstr "Bitte tragen Sie Ihren Familiennamen ein"
 
-#: mailtoauthor.py:69
+#: mailtoauthor.py:69 mailtoprojectowner.py:63
 msgid "Please fill in your first name(s)"
 msgstr "Bitte tragen Sie Ihre(n) Vornamen ein."
 
@@ -659,7 +671,7 @@ msgstr "Bitte wählen Sie eine passende Kategorie (eine oder mehrere) für ihre 
 msgid "Please upload your file."
 msgstr "Bitte laden Sie Ihre Datei hoch."
 
-#: mailtoauthor.py:147
+#: mailtoauthor.py:147 mailtoprojectowner.py:142
 msgid "Please validate the recaptcha field before sending the form."
 msgstr "Bitte validieren Sie das Recaptcha-Feld, bevor Sie das Formular absenden."
 
@@ -671,7 +683,7 @@ msgstr "Privat"
 msgid "Project"
 msgstr "Projekt"
 
-#: mailtoauthor.py:84
+#: mailtoauthor.py:84 mailtoprojectowner.py:78
 msgid "Project Name"
 msgstr "Projekt-Name"
 
@@ -819,7 +831,7 @@ msgstr "Die zweite verlinkte Datei ist kompatibel mit den Plattformen"
 msgid "Second uploaded file is compatible with the Platform(s)"
 msgstr "Die zweite hochgeladene Datei ist kompatibel mit den Plattformen"
 
-#: mailtoauthor.py:129
+#: mailtoauthor.py:129 mailtoprojectowner.py:123
 msgid "Send Email"
 msgstr "E-Mail senden"
 
@@ -939,7 +951,7 @@ msgstr "Eine verlinkte Add-on-Datei"
 msgid "The linked release title will be computed from the parent project title"
 msgstr "Der Release-Titel wird maschinell aus dem Projekt-Titel erstellt"
 
-#: mailtoauthor.py:85
+#: mailtoauthor.py:85 mailtoprojectowner.py:79
 msgid "The name of the project, to which author you want to send feedback."
 msgstr "Der Name des Projekts, dessen Autor Sie Feedback senden wollen."
 
@@ -1059,11 +1071,11 @@ msgstr "Version"
 msgid "Visible to everyone, editable by the owner."
 msgstr "Für Jedermann sichtbar, durch den Besitzer bearbeitbar."
 
-#: mailtoauthor.py:187
+#: mailtoauthor.py:187 mailtoprojectowner.py:184
 msgid "We send your message to the author of the project. It's on her / his choice, if she'll / he'll get back to you."
 msgstr "Wir senden Ihre Nachricht an den Projekt-Autor. Es ist ihre / seine Entscheidung, ob sie / er sich bei Ihnen meldet."
 
-#: mailtoauthor.py:92
+#: mailtoauthor.py:92 mailtoprojectowner.py:86
 msgid "What is your message to the author of the project? Your message is limited to 1000 characters."
 msgstr "Wie lautet Ihre Nachricht an den Projekt-Autor? Ihre Nachricht ist auf 1000 Zeichen begrenzt."
 
@@ -1075,23 +1087,27 @@ msgstr "Ja"
 msgid "You answered the question, whether the source code is inside your add-on with no (default answer). If this is the correct answer, please fill in the Link (URL) to the Source Code."
 msgstr "Sie haben die Frage, ob der Quelltext in Ihrem Add-ons ist, mit nein (Standardantwort) beantwortet. Falls dies zutreffend ist, schreiben Sie bitte den Link (URL) zum Quelltext unten in das entsprechende Feld."
 
+#: addoncenter_templates/view.pt:285
+msgid "You can send a message to the author of the project and give him feedback by following the link and fill in your information into the form:<br /> <a class=\"pointer\" href=\"${DYNAMIC_CONTENT}\"> Get in contact with the project author </a>.<br /> You could instead go to the page of the project and use the mail form linked from that page."
+msgstr "Sie können eine Nachricht an den Projekt-Autor senden und ihm Feedback geben, indem sie dem Link folgen und Ihre Informationen in das Formular eintragen::<br /> <a class=\"pointer\" href=\"${DYNAMIC_CONTENT}\"> Kommen Sie in Kontakt mit dem Projekt-Autor </a>.<br />Sie können stattdessen auch auf die Projekt-Seite gehen und das dort verlinkte E-Mail-Formular verwenden."
+
 #: addoncenter_templates/own_projects.pt:20
 msgid "You currently have no projects on this site."
 msgstr "Sie haben aktuell keine Projekte auf dieser Seite."
 
-#: mailtoauthor.py:78
+#: mailtoauthor.py:78 mailtoprojectowner.py:72
 msgid "Your Email Address"
 msgstr "Ihre E-Mail-Adresse"
 
-#: mailtoauthor.py:73
+#: mailtoauthor.py:73 mailtoprojectowner.py:67
 msgid "Your Family Name"
 msgstr "Ihr Familienname"
 
-#: mailtoauthor.py:68
+#: mailtoauthor.py:68 mailtoprojectowner.py:62
 msgid "Your First Name"
 msgstr "Ihr Vorname"
 
-#: mailtoauthor.py:91
+#: mailtoauthor.py:91 mailtoprojectowner.py:85
 msgid "Your Message To The Author"
 msgstr "Ihre Nachricht an den Autor"
 
