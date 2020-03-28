@@ -1,8 +1,8 @@
 Changelog
 =========
 
-1.1 (unreleased)
-------------------
+1.1 (2020-03-28)
+----------------
 
 - Fix formating and text issues in the users docomentation, add
   information about buildout entries and update documentation in
