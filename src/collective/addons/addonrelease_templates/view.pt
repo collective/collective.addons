@@ -54,7 +54,7 @@
                     <div class="documentDescription"><span tal:content="context/description" /></div>
                     <div tal:condition="context/details">
                         <h4 class="addoncenter" i18n:translate="">Release Details</h4>
-                        <p class="documentDescription" tal:content="structure view/w/context/details/render" />
+                        <p class="documentDescription" tal:content="structure view/w/details/render" />
                     </div>
                     <h4 class="addoncenterlicense" i18n:translate="">License(s)</h4>
                     <p> <tal:loop repeat="releaselicense license">
