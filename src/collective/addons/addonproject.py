@@ -182,7 +182,7 @@ class IAddonProject(model.Schema):
         required=True,
     )
 
-    display_user_name = schema.Choice(
+    display_addon_user_name = schema.Choice(
         title=_(u'Project Author Public?'),
         description=_(u'Please decide if your name '
                       u'should be displayed on the project website.'),

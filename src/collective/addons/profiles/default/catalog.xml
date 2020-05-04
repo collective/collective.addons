@@ -28,6 +28,12 @@
     <index name="addonprojectemail" meta_type="FieldIndex">
         <indexed_attr value="addoncontactAddress" />
     </index>
+    <index name="publicaddonemail" meta_type="FieldIndex">
+        <indexed_attr value="make_addon_contact_address_public" />
+    </index>
+    <index name="publicaddonname" meta_type="FieldIndex">
+        <indexed_attr value="display_addon_user_name" />
+    </index>
     <column value="addon_release_number"/>
     <column value="releases_compat_versions"/>
     <column value="compatibility_choice" />
