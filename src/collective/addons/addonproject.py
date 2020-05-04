@@ -2,6 +2,7 @@
 from collective import dexteritytextindexer
 from collective.addons import _
 from collective.addons import quote_chars
+from collective.addons.common import yesnochoice
 from plone import api
 from plone.app.textfield import RichText
 from plone.autoform import directives
@@ -172,6 +173,21 @@ class IAddonProject(model.Schema):
         description=_(u'Contact email-address for the project.'),
         constraint=validateemail,
     )
+
+    make_addon_contact_address_public = schema.Choice(
+        title=_(u'Email Public?'),
+        description=_(u'Please decide if your email address '
+                      u'should be displayed on the project website.'),
+        vocabulary=yesnochoice,
+        required=True,
+    )
+
+    display_user_name = schema.Choice(
+        title=_(u'Project Author Public?'),
+        description=_(u'Please decide if your name '
+                      u'should be displayed on the project website.'),
+        vocabulary=yesnochoice,
+        required=True,
 
     homepage = schema.URI(
         title=_(u'Homepage'),
