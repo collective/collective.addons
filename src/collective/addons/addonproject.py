@@ -188,6 +188,7 @@ class IAddonProject(model.Schema):
                       u'should be displayed on the project website.'),
         vocabulary=yesnochoice,
         required=True,
+    )
 
     homepage = schema.URI(
         title=_(u'Homepage'),
