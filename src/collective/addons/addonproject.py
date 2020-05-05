@@ -480,3 +480,18 @@ class AddonProjectView(BrowserView):
             return None
         else:
             return res[0].getObject()
+
+
+    def email_public(self):
+        catalog = api.portal.get_tool(name='portal_catalog')
+        path = '/'.join(self.context.getPhysicalPath())
+        idx_data = catalog.getIndexDataForUID(path)
+        public_email = idx_data.get('publicaddonemail')
+        return (public_email)
+
+    def name_public(self):
+        catalog = api.portal.get_tool(name='portal_catalog')
+        path = '/'.join(self.context.getPhysicalPath())
+        idx_data = catalog.getIndexDataForUID(path)
+        public_name = idx_data.get('publicaddonname')
+        return (public_name)
