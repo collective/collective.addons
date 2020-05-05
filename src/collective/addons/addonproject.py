@@ -481,7 +481,6 @@ class AddonProjectView(BrowserView):
         else:
             return res[0].getObject()
 
-
     def email_public(self):
         catalog = api.portal.get_tool(name='portal_catalog')
         path = '/'.join(self.context.getPhysicalPath())
