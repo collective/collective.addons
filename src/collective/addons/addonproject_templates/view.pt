@@ -33,6 +33,8 @@
                                                           license view/releaseLicense;
                                                           compatibility view/releaseCompatibility;
                                                           categories view/projectCategory;
+                                                          emailpublic view/email_public;
+                                                          namepublic view/name_public;
                                                           review_state python:wf_tool.getInfoFor( here, 'review_state', '');">
 
         <span tal:replace="structure context/@@authenticator/authenticator"/>
@@ -510,6 +512,25 @@
                                                  tal:replace="structure python: scales.tag('screenshot',
                                                         width=250, height=200, direction='down')" /></a>
                                 </div>
+                            </div>
+                            <div tal:condition="python: namepublic == 1 and emailpublic == 1">
+                            <h3 i18n:translate="">Project Owner And Contact</h3>
+                            </div>
+                            <div tal:condition="python: namepublic == 1 and emailpublic != 1">
+                            <h3 i18n:translate="">Project Owner</h3>
+                            </div>
+                            <div tal:condition="python: namepublic != 1 and emailpublic == 1">
+                            <h3 i18n:translate="">Project Contact</h3>
+                            </div>
+                            <div tal:condition="python: namepublic == 1">
+                            <p i18n:translate="">The project owner is the user:
+                            <span tal:content="python: context.getOwner()" />
+                            </p>
+                            </div>
+                            <div tal:condition="python: emailpublic == 1">
+                            <p i18n:translate="">The project e-mail address is:
+                            <span tal:content="context/addoncontactAddress" />
+                            </p>
                             </div>
                         </div>
                         <div class="addonprojectinstallinstructions" tal:condition="context/install_instructions">
