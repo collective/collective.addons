@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-03-27 19:24+0000\n"
+"POT-Creation-Date: 2020-05-06 15:09+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -53,11 +53,11 @@ msgstr ""
 msgid "Accept the above legal disclaimer"
 msgstr ""
 
-#: ./addonproject.py:215
+#: ./addonproject.py:232
 msgid "Add a logo for the project (or organization/company) by clicking the 'Browse' button. You could provide an image of the file format 'png', 'gif' or 'jpg'."
 msgstr ""
 
-#: ./addonproject.py:231
+#: ./addonproject.py:248
 msgid "Add a screenshot by clicking the 'Browse' button. You could provide an image of the file format 'png', 'gif' or 'jpg'."
 msgstr ""
 
@@ -93,7 +93,7 @@ msgstr ""
 msgid "Add-ons"
 msgstr ""
 
-#: ./addonproject_templates/view.pt:406
+#: ./addonproject_templates/view.pt:408
 msgid "All Releases"
 msgstr ""
 
@@ -173,7 +173,7 @@ msgstr ""
 msgid "Cancel"
 msgstr ""
 
-#: ./addonproject_templates/view.pt:95
+#: ./addonproject_templates/view.pt:97
 msgid "Category/Categories"
 msgstr ""
 
@@ -193,12 +193,12 @@ msgstr ""
 msgid "Changelog"
 msgstr ""
 
-#: ./addonproject.py:162
+#: ./addonproject.py:163
 msgid "Choose your categories"
 msgstr ""
 
 #: ./addonlinkedrelease_templates/view.pt:63
-#: ./addonproject_templates/view.pt:414
+#: ./addonproject_templates/view.pt:416
 #: ./addonrelease_templates/view.pt:63
 msgid "Compatibility"
 msgstr ""
@@ -216,13 +216,13 @@ msgid "Contact a Project Author"
 msgstr ""
 
 #: ./addonlinkedrelease.py:219
-#: ./addonproject.py:171
+#: ./addonproject.py:172
 #: ./addonrelease.py:223
 msgid "Contact email-address"
 msgstr ""
 
 #: ./addonlinkedrelease.py:220
-#: ./addonproject.py:172
+#: ./addonproject.py:173
 #: ./addonrelease.py:224
 msgid "Contact email-address for the project."
 msgstr ""
@@ -235,15 +235,15 @@ msgstr ""
 msgid "Contact the project owner and send your feedback"
 msgstr ""
 
-#: ./addonproject_templates/view.pt:117
+#: ./addonproject_templates/view.pt:119
 msgid "Current Release"
 msgstr ""
 
-#: ./addonproject_templates/view.pt:237
+#: ./addonproject_templates/view.pt:239
 msgid "Current release for the project"
 msgstr ""
 
-#: ./addonproject_templates/view.pt:125
+#: ./addonproject_templates/view.pt:127
 msgid "Current unstable release for the project"
 msgstr ""
 
@@ -251,7 +251,7 @@ msgstr ""
 msgid "Currently there are"
 msgstr ""
 
-#: ./addonproject_templates/view.pt:415
+#: ./addonproject_templates/view.pt:417
 msgid "Description"
 msgstr ""
 
@@ -263,11 +263,11 @@ msgstr ""
 msgid "Description of the features of Add-ons"
 msgstr ""
 
-#: ./addonproject.py:199
+#: ./addonproject.py:216
 msgid "Dokumentation File"
 msgstr ""
 
-#: ./addonproject_templates/view.pt:493
+#: ./addonproject_templates/view.pt:495
 msgid "Dokumentation File:"
 msgstr ""
 
@@ -277,6 +277,10 @@ msgstr ""
 
 #: ./addoncenter.py:202
 msgid "EMail address for the messages about new releases"
+msgstr ""
+
+#: ./addonproject.py:178
+msgid "Email Public?"
 msgstr ""
 
 #: ./addoncenter.py:213
@@ -299,11 +303,11 @@ msgstr ""
 msgid "Enter the text of the legal disclaimer and limitations that should be displayed to the project creator and should be accepted by the owner of the project."
 msgstr ""
 
-#: ./addonproject_templates/view.pt:488
+#: ./addonproject_templates/view.pt:490
 msgid "External Documentation"
 msgstr ""
 
-#: ./addonproject_templates/view.pt:498
+#: ./addonproject_templates/view.pt:500
 msgid "External Project Page"
 msgstr ""
 
@@ -324,7 +328,7 @@ msgid "Fifth uploaded file is compatible with the Platform(s)"
 msgstr ""
 
 #: ./addonlinkedrelease_templates/view.pt:81
-#: ./addonproject_templates/view.pt:154
+#: ./addonproject_templates/view.pt:156
 #: ./addonrelease_templates/view.pt:83
 msgid "File size:"
 msgstr ""
@@ -383,7 +387,7 @@ msgstr ""
 msgid "Fourth uploaded file is compatible with the Platform(s)"
 msgstr ""
 
-#: ./addonproject.py:138
+#: ./addonproject.py:139
 msgid "Full Project Description"
 msgstr ""
 
@@ -432,15 +436,15 @@ msgstr ""
 msgid "Highest Rated"
 msgstr ""
 
-#: ./addonproject.py:177
+#: ./addonproject.py:194
 msgid "Homepage"
 msgstr ""
 
-#: ./addonproject.py:178
+#: ./addonproject.py:195
 msgid "If the project has an external home page, enter its URL (example: 'http://www.mysite.org')."
 msgstr ""
 
-#: ./addonproject.py:185
+#: ./addonproject.py:202
 msgid "If the project has externally hosted documentation, enter its URL (example: 'http://www.mysite.org')."
 msgstr ""
 
@@ -448,7 +452,7 @@ msgstr ""
 msgid "If you already created a new"
 msgstr ""
 
-#: ./addonproject.py:200
+#: ./addonproject.py:217
 msgid "If you have a Documentation in the file format 'PDF' or 'ODT' you could add it here."
 msgstr ""
 
@@ -470,7 +474,7 @@ msgid "Info"
 msgstr ""
 
 #: ./addonlinkedrelease.py:119
-#: ./addonproject.py:114
+#: ./addonproject.py:115
 #: ./addonrelease.py:121
 msgid "Information"
 msgstr ""
@@ -481,7 +485,7 @@ msgstr ""
 
 #: ./addoncenter_templates/view.pt:269
 #: ./addonlinkedrelease_templates/view.pt:180
-#: ./addonproject_templates/view.pt:516
+#: ./addonproject_templates/view.pt:537
 msgid "Install Instructions"
 msgstr ""
 
@@ -494,7 +498,7 @@ msgid "Instruction how to report Bugs"
 msgstr ""
 
 #: ./addoncenter.py:27
-#: ./addonproject.py:66
+#: ./addonproject.py:67
 #: ./mailtoauthor.py:28
 msgid "Invalid email address"
 msgstr ""
@@ -509,7 +513,7 @@ msgstr ""
 msgid "It is necessary that you accept the Legal Declaration"
 msgstr ""
 
-#: ./addonproject_templates/view.pt:123
+#: ./addonproject_templates/view.pt:125
 msgid "Latest Not Stable Release"
 msgstr ""
 
@@ -527,7 +531,7 @@ msgid "License of the uploaded file"
 msgstr ""
 
 #: ./addonlinkedrelease_templates/view.pt:59
-#: ./addonproject_templates/view.pt:416
+#: ./addonproject_templates/view.pt:418
 #: ./addonrelease_templates/view.pt:59
 msgid "License(s)"
 msgstr ""
@@ -537,7 +541,7 @@ msgstr ""
 msgid "Link to Source Code"
 msgstr ""
 
-#: ./addonproject.py:214
+#: ./addonproject.py:231
 msgid "Logo"
 msgstr ""
 
@@ -557,7 +561,7 @@ msgstr ""
 msgid "Member submits content for publication"
 msgstr ""
 
-#: ./addonproject_templates/view.pt:263
+#: ./addonproject_templates/view.pt:265
 msgid "More about this release."
 msgstr ""
 
@@ -589,7 +593,7 @@ msgstr ""
 msgid "No results were found."
 msgstr ""
 
-#: ./addonproject_templates/view.pt:118
+#: ./addonproject_templates/view.pt:120
 msgid "No stable release available yet."
 msgstr ""
 
@@ -605,7 +609,7 @@ msgstr ""
 msgid "Pending"
 msgstr ""
 
-#: ./addonproject_templates/view.pt:413
+#: ./addonproject_templates/view.pt:415
 msgid "Platform(s)"
 msgstr ""
 
@@ -614,11 +618,11 @@ msgstr ""
 msgid "Please accept the Legal Declaration about your Release and your linked File"
 msgstr ""
 
-#: ./addonproject.py:241
+#: ./addonproject.py:258
 msgid "Please add a screenshot or a logo to your project page. You will find the appropriate fields below on this page."
 msgstr ""
 
-#: ./addonproject.py:107
+#: ./addonproject.py:108
 msgid "Please add a screenshot or a logo to your project. You find the appropriate fields below on this page."
 msgstr ""
 
@@ -634,6 +638,14 @@ msgstr ""
 #: ./addonlinkedrelease.py:491
 #: ./addonrelease.py:461
 msgid "Please choose one or more compatible product versions for your release."
+msgstr ""
+
+#: ./addonproject.py:179
+msgid "Please decide if your email address should be displayed on the project website."
+msgstr ""
+
+#: ./addonproject.py:187
+msgid "Please decide if your name should be displayed on the project website."
 msgstr ""
 
 #: ./addonrelease.py:217
@@ -679,7 +691,7 @@ msgstr ""
 msgid "Please insert a link to your add-on file."
 msgstr ""
 
-#: ./addonproject_templates/view.pt:43
+#: ./addonproject_templates/view.pt:45
 msgid "Please make sure the relevant project information has been entered and a release has been added to your project. Once you have finished that you could submit your project for approval (publication)."
 msgstr ""
 
@@ -702,7 +714,7 @@ msgstr ""
 msgid "Please mark one or more program versions with which this release is compatible with."
 msgstr ""
 
-#: ./addonproject.py:163
+#: ./addonproject.py:164
 msgid "Please select the appropriate categories (one or more) for your project."
 msgstr ""
 
@@ -719,8 +731,16 @@ msgstr ""
 msgid "Private"
 msgstr ""
 
-#: ./addonproject_templates/view.pt:77
+#: ./addonproject_templates/view.pt:79
 msgid "Project"
+msgstr ""
+
+#: ./addonproject.py:186
+msgid "Project Author Public?"
+msgstr ""
+
+#: ./addonproject_templates/view.pt:523
+msgid "Project Contact"
 msgstr ""
 
 #: ./mailtoauthor.py:84
@@ -728,17 +748,25 @@ msgstr ""
 msgid "Project Name"
 msgstr ""
 
+#: ./addonproject_templates/view.pt:520
+msgid "Project Owner"
+msgstr ""
+
+#: ./addonproject_templates/view.pt:517
+msgid "Project Owner And Contact"
+msgstr ""
+
 #: ./addonlinkedrelease_templates/view.pt:152
-#: ./addonproject_templates/view.pt:485
+#: ./addonproject_templates/view.pt:487
 #: ./addonrelease_templates/view.pt:140
 msgid "Project Resources"
 msgstr ""
 
-#: ./addonproject.py:132
+#: ./addonproject.py:133
 msgid "Project Summary"
 msgstr ""
 
-#: ./addonproject.py:125
+#: ./addonproject.py:126
 msgid "Project Title - minimum 5 and maximum 50 characters"
 msgstr ""
 
@@ -814,11 +842,11 @@ msgstr ""
 msgid "Release-Candidate"
 msgstr ""
 
-#: ./addonproject_templates/view.pt:412
+#: ./addonproject_templates/view.pt:414
 msgid "Released"
 msgstr ""
 
-#: ./addonproject_templates/view.pt:245
+#: ./addonproject_templates/view.pt:247
 msgid "Released ${latest_release_date}"
 msgstr ""
 
@@ -851,12 +879,12 @@ msgid "Reviewer sends content back for re-drafting"
 msgstr ""
 
 #: ./addonlinkedrelease_templates/view.pt:166
-#: ./addonproject_templates/view.pt:504
+#: ./addonproject_templates/view.pt:506
 #: ./addonrelease_templates/view.pt:154
 msgid "Screenshot"
 msgstr ""
 
-#: ./addonproject.py:230
+#: ./addonproject.py:247
 msgid "Screenshot of the Add-on"
 msgstr ""
 
@@ -942,7 +970,7 @@ msgstr ""
 msgid "Text of the Legal Disclaimer and Limitations for Downlaods"
 msgstr ""
 
-#: ./addonproject.py:115
+#: ./addonproject.py:116
 msgid "The Dialog to create a new project consists of different register. Please go through this register and fill in the appropriate data for your project. The register 'Documentation' and its fields are optional."
 msgstr ""
 
@@ -979,7 +1007,7 @@ msgstr ""
 msgid "The first stage of an add-on release"
 msgstr ""
 
-#: ./addonproject.py:193
+#: ./addonproject.py:210
 msgid "The following file extensions are allowed for documentation files (upper case and lower case and mix of both):"
 msgstr ""
 
@@ -987,11 +1015,11 @@ msgstr ""
 msgid "The following file extensions are allowed for linked files (upper case and lower case and mix of both):"
 msgstr ""
 
-#: ./addonproject.py:208
+#: ./addonproject.py:225
 msgid "The following file extensions are allowed for project logo files (upper case and lower case and mix of both):"
 msgstr ""
 
-#: ./addonproject.py:224
+#: ./addonproject.py:241
 msgid "The following file extensions are allowed for screenshot files (upper case and lower case and mix of both):"
 msgstr ""
 
@@ -1020,7 +1048,15 @@ msgstr ""
 msgid "The owner can edit the addon project"
 msgstr ""
 
-#: ./addonproject.py:370
+#: ./addonproject_templates/view.pt:532
+msgid "The project e-mail address is: <span>${DYNAMIC_CONTENT}</span>"
+msgstr ""
+
+#: ./addonproject_templates/view.pt:527
+msgid "The project owner is the user: <span>${DYNAMIC_CONTENT}</span>"
+msgstr ""
+
+#: ./addonproject.py:387
 msgid "The project title is already in use."
 msgstr ""
 
@@ -1085,7 +1121,7 @@ msgstr ""
 msgid "This Dialog to create a new release consists of different register. Please go through this register and fill in the appropriate data for your release. This register 'Default' provide fields for general information of your release. The next register 'compatibility' is the place to submit information about the versions with which your release file(s) is / are compatible. The following register asks for some legal informations. The next register 'File Upload' provide a field to upload your release file. The further register are optional. There is the opportunity to upload further release files (for different platforms)."
 msgstr ""
 
-#: ./addonproject.py:124
+#: ./addonproject.py:125
 msgid "Title"
 msgstr ""
 
@@ -1097,7 +1133,7 @@ msgstr ""
 msgid "Title of the Legal Disclaimer and Limitations for Downloads"
 msgstr ""
 
-#: ./addonproject.py:184
+#: ./addonproject.py:201
 msgid "URL of documentation repository "
 msgstr ""
 
@@ -1125,7 +1161,7 @@ msgstr ""
 msgid "Unreleased"
 msgstr ""
 
-#: ./addonproject_templates/view.pt:411
+#: ./addonproject_templates/view.pt:413
 msgid "Version"
 msgstr ""
 
@@ -1189,15 +1225,15 @@ msgstr ""
 msgid "Your Own Projects"
 msgstr ""
 
-#: ./addonproject_templates/view.pt:66
+#: ./addonproject_templates/view.pt:68
 msgid "Your project has been submitted for publication and will be reviewed now. You will get an email, once the status of your project changed again."
 msgstr ""
 
-#: ./addonproject_templates/view.pt:53
+#: ./addonproject_templates/view.pt:55
 msgid "a Release to your"
 msgstr ""
 
-#: ./addonproject_templates/view.pt:58
+#: ./addonproject_templates/view.pt:60
 msgid "a linked Release"
 msgstr ""
 
@@ -1217,7 +1253,7 @@ msgstr ""
 msgid "in"
 msgstr ""
 
-#: ./addonproject_templates/view.pt:77
+#: ./addonproject_templates/view.pt:79
 msgid "or:"
 msgstr ""
 
@@ -1238,11 +1274,11 @@ msgstr ""
 msgid "re-release"
 msgstr ""
 
-#: ./addonproject_templates/view.pt:133
+#: ./addonproject_templates/view.pt:135
 msgid "tested with:"
 msgstr ""
 
-#: ./addonproject_templates/view.pt:58
+#: ./addonproject_templates/view.pt:60
 msgid "to your"
 msgstr ""
 
