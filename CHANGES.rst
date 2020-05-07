@@ -1,7 +1,7 @@
 Changelog
 =========
 
-1.2 (unreleased)
+1.2 (2020-05-07)
 ----------------
 
 - Fix a tal expression on the addon release view. [Andreas Mantke]
