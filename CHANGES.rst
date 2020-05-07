@@ -4,7 +4,12 @@ Changelog
 1.2 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- Fix a tal expression on the addon release view. [Andreas Mantke]
+- Add new fields to choose, in username and /or e-mail address of a
+  project owner / contact should be published and save the choice
+  in the portal_catalog. [Andreas Mantke]
+- Update localization files and add German localization for new
+  strings [Andreas Mantke]
 
 
 1.1 (2020-03-28)
