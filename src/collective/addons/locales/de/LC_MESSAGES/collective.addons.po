@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI +ZONE\n"
-"PO-Revision-Date: 2020-03-27 20:28+0100\n"
+"PO-Revision-Date: 2020-05-07 19:34+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -44,11 +44,11 @@ msgstr "Über"
 msgid "Accept the above legal disclaimer"
 msgstr "Akzeptieren Sie den obigen Haftungsausschlluss"
 
-#: addonproject.py:215
+#: addonproject.py:232
 msgid "Add a logo for the project (or organization/company) by clicking the 'Browse' button. You could provide an image of the file format 'png', 'gif' or 'jpg'."
 msgstr "Bitte fügen Sie ein Logo für Ihr Projekt (oder Organisation/Unternehmen) durch Klicken auf die Schaltfläche \"Durchsuchen\"  hinzu. Sie können Grafiken der Dateiformate \"png\", \"gif\" oder \"jpg\"  verwenden."
 
-#: addonproject.py:231
+#: addonproject.py:248
 msgid "Add a screenshot by clicking the 'Browse' button. You could provide an image of the file format 'png', 'gif' or 'jpg'."
 msgstr "Fügen Sie ein Bildschirmfoto durch Klicken auf den Schalter \"Durchsuchen\" hinzu. Sie können Grafiken in den Dateiformaten \"png\", \"gif\" oder \"jpg\" verwenden."
 
@@ -84,7 +84,7 @@ msgstr "Add-on-Produktname"
 msgid "Add-ons"
 msgstr "Add-ons"
 
-#: addonproject_templates/view.pt:406
+#: addonproject_templates/view.pt:408
 msgid "All Releases"
 msgstr "Alle Releases"
 
@@ -162,7 +162,7 @@ msgstr "Suchen Sie Add-ons  nach Kategorien"
 msgid "Cancel"
 msgstr "Abbrechen"
 
-#: addonproject_templates/view.pt:95
+#: addonproject_templates/view.pt:97
 msgid "Category/Categories"
 msgstr "Kategorie/Kategorien"
 
@@ -181,11 +181,11 @@ msgstr "Ändere den Release-Status zu \"Release beta\""
 msgid "Changelog"
 msgstr "Änderungsprotokoll"
 
-#: addonproject.py:162
+#: addonproject.py:163
 msgid "Choose your categories"
 msgstr "Wählen Sie Ihre Kategorien"
 
-#: addonlinkedrelease_templates/view.pt:63 addonproject_templates/view.pt:414
+#: addonlinkedrelease_templates/view.pt:63 addonproject_templates/view.pt:416
 #: addonrelease_templates/view.pt:63
 msgid "Compatibility"
 msgstr "Kompatibilität"
@@ -202,11 +202,11 @@ msgstr "Kompatibel mit den Produkt-Versionen"
 msgid "Contact a Project Author"
 msgstr "Einen Projekt-Autor kontaktieren"
 
-#: addonlinkedrelease.py:219 addonproject.py:171 addonrelease.py:223
+#: addonlinkedrelease.py:219 addonproject.py:172 addonrelease.py:223
 msgid "Contact email-address"
 msgstr "Kontakt-Email-Adresse"
 
-#: addonlinkedrelease.py:220 addonproject.py:172 addonrelease.py:224
+#: addonlinkedrelease.py:220 addonproject.py:173 addonrelease.py:224
 msgid "Contact email-address for the project."
 msgstr "Kontakt-Email-Adresse für das Projekt.."
 
@@ -218,15 +218,15 @@ msgstr "Kontaktieren Sie den Projekt-Autoren und senden Sie Feedback"
 msgid "Contact the project owner and send your feedback"
 msgstr "Kontaktieren des Projekt-Eigentümers und übermitteln Sie Ihr Feedback"
 
-#: addonproject_templates/view.pt:117
+#: addonproject_templates/view.pt:119
 msgid "Current Release"
 msgstr "Aktuelles Release"
 
-#: addonproject_templates/view.pt:237
+#: addonproject_templates/view.pt:239
 msgid "Current release for the project"
 msgstr "Aktuelles Release dieses Projekts"
 
-#: addonproject_templates/view.pt:125
+#: addonproject_templates/view.pt:127
 msgid "Current unstable release for the project"
 msgstr "Aktuelles nicht stabiles Release für das Projekt"
 
@@ -234,7 +234,7 @@ msgstr "Aktuelles nicht stabiles Release für das Projekt"
 msgid "Currently there are"
 msgstr "Aktuell sind hier"
 
-#: addonproject_templates/view.pt:415
+#: addonproject_templates/view.pt:417
 msgid "Description"
 msgstr "Beschreibung"
 
@@ -246,11 +246,11 @@ msgstr "Beschreibung des Add-on-Center"
 msgid "Description of the features of Add-ons"
 msgstr "Beschreibung der Add-on-Funktionen"
 
-#: addonproject.py:199
+#: addonproject.py:216
 msgid "Dokumentation File"
 msgstr "Dokumentationsdatei"
 
-#: addonproject_templates/view.pt:493
+#: addonproject_templates/view.pt:495
 msgid "Dokumentation File:"
 msgstr "Dokumentationsdatei:"
 
@@ -261,6 +261,10 @@ msgstr "E-Mail-Adresse zur Kommunikation mit dem Add-on-Center-Manager und -Revi
 #: addoncenter.py:202
 msgid "EMail address for the messages about new releases"
 msgstr "Email-Adresse für Meldungen über neue Releases"
+
+#: addonproject.py:178
+msgid "Email Public?"
+msgstr "E-Mail veröffentlichen?"
 
 #: addoncenter.py:213
 msgid "Enter an email address for the communication with add-on center manager and reviewer"
@@ -282,11 +286,11 @@ msgstr "Fügen Sie den Text der  rechtlichen Hinweise und Einschränkungen für 
 msgid "Enter the text of the legal disclaimer and limitations that should be displayed to the project creator and should be accepted by the owner of the project."
 msgstr "Fügen Sie den Text der rechtlichen Hinweise und Einschränkungen ein, der dem Ersteller eines Projektes angezeigt und von dem Projekt-Eigentümer zu akzeptieren ist."
 
-#: addonproject_templates/view.pt:488
+#: addonproject_templates/view.pt:490
 msgid "External Documentation"
 msgstr "Externe Dokumentation"
 
-#: addonproject_templates/view.pt:498
+#: addonproject_templates/view.pt:500
 msgid "External Project Page"
 msgstr "Externe Projektseite"
 
@@ -306,7 +310,7 @@ msgstr "Die fünfte verlinkte Datei ist kompatibel mit den Plattformen"
 msgid "Fifth uploaded file is compatible with the Platform(s)"
 msgstr "Die fünfte hochgeladene Datei ist kompatibel mit den Plattformen"
 
-#: addonlinkedrelease_templates/view.pt:81 addonproject_templates/view.pt:154
+#: addonlinkedrelease_templates/view.pt:81 addonproject_templates/view.pt:156
 #: addonrelease_templates/view.pt:83
 msgid "File size:"
 msgstr "Dateigröße:"
@@ -365,7 +369,7 @@ msgstr "Die vierte verlinkte Datei ist kompatibel mit den Plattformen"
 msgid "Fourth uploaded file is compatible with the Platform(s)"
 msgstr "Die vierte hochgeladene Datei ist kompatibel mit den Plattformen"
 
-#: addonproject.py:138
+#: addonproject.py:139
 msgid "Full Project Description"
 msgstr "Komplette Projekt-Beschreibung"
 
@@ -413,15 +417,15 @@ msgstr "Verstecken Sie dieses Release"
 msgid "Highest Rated"
 msgstr "Am höchsten bewertet"
 
-#: addonproject.py:177
+#: addonproject.py:194
 msgid "Homepage"
 msgstr "Homepage"
 
-#: addonproject.py:178
+#: addonproject.py:195
 msgid "If the project has an external home page, enter its URL (example: 'http://www.mysite.org')."
 msgstr "Falls das Projekt eine externe Homepage hat, füllen Sie hier die URL (Beispiel: 'http://www.mysite.org') ein."
 
-#: addonproject.py:185
+#: addonproject.py:202
 msgid "If the project has externally hosted documentation, enter its URL (example: 'http://www.mysite.org')."
 msgstr "Falls Ihr Projekt eine extern verfügbare Dokumentation besitzt, fügen Sie hier die entsprechende URL (Beispiel: \"http://www.mysite.org\") ein."
 
@@ -429,7 +433,7 @@ msgstr "Falls Ihr Projekt eine extern verfügbare Dokumentation besitzt, fügen 
 msgid "If you already created a new"
 msgstr "Falls Sie bereits ein neues"
 
-#: addonproject.py:200
+#: addonproject.py:217
 msgid "If you have a Documentation in the file format 'PDF' or 'ODT' you could add it here."
 msgstr "Falls Sie eine Dokumentation im Dateiformat \"PDF\" oder \"ODT\" haben, können Sie sie hier hinzufügen."
 
@@ -449,7 +453,7 @@ msgstr "Falls Sie weitere Dateien für Ihr Release hochladen wollen, z.B. Dateie
 msgid "Info"
 msgstr "Info"
 
-#: addonlinkedrelease.py:119 addonproject.py:114 addonrelease.py:121
+#: addonlinkedrelease.py:119 addonproject.py:115 addonrelease.py:121
 msgid "Information"
 msgstr "Information"
 
@@ -458,7 +462,7 @@ msgid "Information about search for old product versions"
 msgstr "Information zur Suche nach älteren Produkt-Versionen"
 
 #: addoncenter_templates/view.pt:269 addonlinkedrelease_templates/view.pt:180
-#: addonproject_templates/view.pt:516
+#: addonproject_templates/view.pt:537
 msgid "Install Instructions"
 msgstr "Installationsanleitung"
 
@@ -470,7 +474,7 @@ msgstr "Installiert das collective.addons Add-on."
 msgid "Instruction how to report Bugs"
 msgstr "Anleitung, wie ein Fehler gemeldet wird"
 
-#: addoncenter.py:27 addonproject.py:66 mailtoauthor.py:28
+#: addoncenter.py:27 addonproject.py:67 mailtoauthor.py:28
 msgid "Invalid email address"
 msgstr "Ungültige Email-Adresse"
 
@@ -482,7 +486,7 @@ msgstr "Ist der Quellcode in dem Add-on enthalten?"
 msgid "It is necessary that you accept the Legal Declaration"
 msgstr "Es ist erforderlich, dass Sie den Haftungsausschluss akzeptieren"
 
-#: addonproject_templates/view.pt:123
+#: addonproject_templates/view.pt:125
 msgid "Latest Not Stable Release"
 msgstr "Letztes nicht stabiles Release"
 
@@ -498,7 +502,7 @@ msgstr "Rechtliche Hinweise und Einschränkungen für das Herunterladen"
 msgid "License of the uploaded file"
 msgstr "Lizenz der hochgeladenen Datei"
 
-#: addonlinkedrelease_templates/view.pt:59 addonproject_templates/view.pt:416
+#: addonlinkedrelease_templates/view.pt:59 addonproject_templates/view.pt:418
 #: addonrelease_templates/view.pt:59
 msgid "License(s)"
 msgstr "Lizenz(en)"
@@ -507,7 +511,7 @@ msgstr "Lizenz(en)"
 msgid "Link to Source Code"
 msgstr "Link zum Quellcode"
 
-#: addonproject.py:214
+#: addonproject.py:231
 msgid "Logo"
 msgstr "Logo"
 
@@ -527,7 +531,7 @@ msgstr "Mitglied zieht Einreichung zurück"
 msgid "Member submits content for publication"
 msgstr "Mitglied reicht Inhalt zur Veröffentlichung ein"
 
-#: addonproject_templates/view.pt:263
+#: addonproject_templates/view.pt:265
 msgid "More about this release."
 msgstr "Mehr über dieses Release."
 
@@ -559,7 +563,7 @@ msgstr "Keine"
 msgid "No results were found."
 msgstr "Keine Ergebnisse gefunden."
 
-#: addonproject_templates/view.pt:118
+#: addonproject_templates/view.pt:120
 msgid "No stable release available yet."
 msgstr "Aktuell kein stabiles Release verfügbar."
 
@@ -575,7 +579,7 @@ msgstr "Oder"
 msgid "Pending"
 msgstr "Schwebend"
 
-#: addonproject_templates/view.pt:413
+#: addonproject_templates/view.pt:415
 msgid "Platform(s)"
 msgstr "Plattform(en)"
 
@@ -583,11 +587,11 @@ msgstr "Plattform(en)"
 msgid "Please accept the Legal Declaration about your Release and your linked File"
 msgstr "Bitte akzeptieren Sie den Haftungsausschluss für Ihr Release und Ihre verlinkten Dateien"
 
-#: addonproject.py:241
+#: addonproject.py:258
 msgid "Please add a screenshot or a logo to your project page. You will find the appropriate fields below on this page."
 msgstr "Bitte fügen Sie ein Bildschirmfoto oder ein Logo Ihrer Projektseite hinzu. Sie finden die entsprechenden Felder unten auf dieser Seite."
 
-#: addonproject.py:107
+#: addonproject.py:108
 msgid "Please add a screenshot or a logo to your project. You find the appropriate fields below on this page."
 msgstr "Bitte fügen Sie ein Bildschirmfoto oder ein Logo Ihrem Projekt hinzu. Sie finden die entsprechenden Felder unten auf dieser Seite."
 
@@ -602,6 +606,14 @@ msgstr "Bitte wählen Sie eine Lizenz für Ihr Release."
 #: addonlinkedrelease.py:491 addonrelease.py:461
 msgid "Please choose one or more compatible product versions for your release."
 msgstr "Bitte wählen Sie eine oder mehrere kompatible Produkt-Versionen für Ihr Release."
+
+#: addonproject.py:179
+msgid "Please decide if your email address should be displayed on the project website."
+msgstr "Bitte entscheiden Sie, ob Ihre E-Mail-Adresse auf der Projekt-Webseite angezeigt werden soll."
+
+#: addonproject.py:187
+msgid "Please decide if your name should be displayed on the project website."
+msgstr "Bitte entscheiden Sie, ob Ihr Name auf der Projekt-Webseite angezeigt werden soll."
 
 #: addonrelease.py:217
 msgid "Please declare that you accept the above legal disclaimer"
@@ -643,7 +655,7 @@ msgstr "Bitte tragen Sie Ihre(n) Vornamen ein."
 msgid "Please insert a link to your add-on file."
 msgstr "Bitte fügen Sie einen Link zu Ihrer Add-on-Datei ein."
 
-#: addonproject_templates/view.pt:43
+#: addonproject_templates/view.pt:45
 msgid "Please make sure the relevant project information has been entered and a release has been added to your project. Once you have finished that you could submit your project for approval (publication)."
 msgstr "Bitte stellen Sie sicher, dass Sie alle relevanten Projekt-Informationen eingetragen und Ihrem Projekt ein Release hinzugefügt haben. Sobald Sie diese Arbeiten beendet haben, können Sie das Projekt zur Überprüfung (Veröffentlichung) übermitteln."
 
@@ -663,7 +675,7 @@ msgstr "Bitte markieren Sie eine oder mehrere Plattformen, mit denen die hochgel
 msgid "Please mark one or more program versions with which this release is compatible with."
 msgstr "Bitte markieren Sie eine oder mehrere Programm-Versionen, mit denen dieses Release kompatibel ist."
 
-#: addonproject.py:163
+#: addonproject.py:164
 msgid "Please select the appropriate categories (one or more) for your project."
 msgstr "Bitte wählen Sie eine passende Kategorie (eine oder mehrere) für ihre Projekt."
 
@@ -679,24 +691,40 @@ msgstr "Bitte validieren Sie das Recaptcha-Feld, bevor Sie das Formular absenden
 msgid "Private"
 msgstr "Privat"
 
-#: addonproject_templates/view.pt:77
+#: addonproject_templates/view.pt:79
 msgid "Project"
 msgstr "Projekt"
+
+#: addonproject.py:186
+msgid "Project Author Public?"
+msgstr "Projekt-Autor veröffentlichen?"
+
+#: addonproject_templates/view.pt:523
+msgid "Project Contact"
+msgstr "Projekt-Kontakt"
 
 #: mailtoauthor.py:84 mailtoprojectowner.py:78
 msgid "Project Name"
 msgstr "Projekt-Name"
 
-#: addonlinkedrelease_templates/view.pt:152 addonproject_templates/view.pt:485
+#: addonproject_templates/view.pt:520
+msgid "Project Owner"
+msgstr "Projekt-Eigentümer"
+
+#: addonproject_templates/view.pt:517
+msgid "Project Owner And Contact"
+msgstr "Projekt-Eigentümer und Kontakt"
+
+#: addonlinkedrelease_templates/view.pt:152 addonproject_templates/view.pt:487
 #: addonrelease_templates/view.pt:140
 msgid "Project Resources"
 msgstr "Projekt Ressourcen"
 
-#: addonproject.py:132
+#: addonproject.py:133
 msgid "Project Summary"
 msgstr "Projekt-Zusammenfassung"
 
-#: addonproject.py:125
+#: addonproject.py:126
 msgid "Project Title - minimum 5 and maximum 50 characters"
 msgstr "Projekt-Titel  - mindestens 5 und höchstens 50 Zeichen"
 
@@ -763,11 +791,11 @@ msgstr "Release-Kandidat"
 msgid "Release-Candidate"
 msgstr "Release-Kandidat"
 
-#: addonproject_templates/view.pt:412
+#: addonproject_templates/view.pt:414
 msgid "Released"
 msgstr "Veröffentlicht"
 
-#: addonproject_templates/view.pt:245
+#: addonproject_templates/view.pt:247
 msgid "Released ${latest_release_date}"
 msgstr "Veröffentlicht ${latest_release_date}"
 
@@ -798,12 +826,12 @@ msgstr "Reviewer veröffentlicht den Inhalt"
 msgid "Reviewer sends content back for re-drafting"
 msgstr "Reviewer sendet den Inhalt zurück zur Überarbeitung"
 
-#: addonlinkedrelease_templates/view.pt:166 addonproject_templates/view.pt:504
+#: addonlinkedrelease_templates/view.pt:166 addonproject_templates/view.pt:506
 #: addonrelease_templates/view.pt:154
 msgid "Screenshot"
 msgstr "Bildschirmfoto"
 
-#: addonproject.py:230
+#: addonproject.py:247
 msgid "Screenshot of the Add-on"
 msgstr "Bildschirmfoto des Add-ons"
 
@@ -883,7 +911,7 @@ msgstr "Text der rechtlichen Hinweise und Begrenzungen"
 msgid "Text of the Legal Disclaimer and Limitations for Downlaods"
 msgstr "Text der rechtlichen Hinweise und Begrenzungen für Downloads"
 
-#: addonproject.py:115
+#: addonproject.py:116
 msgid "The Dialog to create a new project consists of different register. Please go through this register and fill in the appropriate data for your project. The register 'Documentation' and its fields are optional."
 msgstr "Der Dialog zum Erstellen eines neuen Projektes besteht aus verschiedenen Registern. Bitte gehen Sie durch diese Register und geben Sie die passen Daten für Ihr Projekt ein. Das Register 'Documentation' und seine Felder sind optional."
 
@@ -919,7 +947,7 @@ msgstr "Die erste Stufe eines verlinkten Add-on-Release"
 msgid "The first stage of an add-on release"
 msgstr "Die erste Stufe eines Add-on-Release"
 
-#: addonproject.py:193
+#: addonproject.py:210
 msgid "The following file extensions are allowed for documentation files (upper case and lower case and mix of both):"
 msgstr "Die folgenden Dateierweiterungen sind für Dokumentations-Dateien erlaubt (Groß- und Kleinschreibung und ein Mix aus beiden):"
 
@@ -927,11 +955,11 @@ msgstr "Die folgenden Dateierweiterungen sind für Dokumentations-Dateien erlaub
 msgid "The following file extensions are allowed for linked files (upper case and lower case and mix of both):"
 msgstr "Die folgenden Dateierweiterungen sind für verlinkte Dateien erlaubt (Groß- und Kleinschreibung und ein Mix aus beiden):"
 
-#: addonproject.py:208
+#: addonproject.py:225
 msgid "The following file extensions are allowed for project logo files (upper case and lower case and mix of both):"
 msgstr "Die folgenden Dateierweiterungen sind für Projekt-Logo-Dateien erlaubt (Groß- und Kleinschreibung und ein Mix aus beiden):"
 
-#: addonproject.py:224
+#: addonproject.py:241
 msgid "The following file extensions are allowed for screenshot files (upper case and lower case and mix of both):"
 msgstr "Die folgenden Dateierweiterungen sind für Bildschirmfoto-Dateien erlaubt (Groß- und Kleinschreibung und ein Mix aus beiden):"
 
@@ -959,7 +987,15 @@ msgstr "Der Name des Projekts, dessen Autor Sie Feedback senden wollen."
 msgid "The owner can edit the addon project"
 msgstr "Der Besitzer kann das Add-on-Projekt bearbeiten"
 
-#: addonproject.py:370
+#: addonproject_templates/view.pt:532
+msgid "The project e-mail address is: <span>${DYNAMIC_CONTENT}</span>"
+msgstr "Die Projekt-E-Mail-Adresse ist: <span>${DYNAMIC_CONTENT}</span>"
+
+#: addonproject_templates/view.pt:527
+msgid "The project owner is the user: <span>${DYNAMIC_CONTENT}</span>"
+msgstr "Der Projekt-Eigentümer ist der Benutzer: <span>${DYNAMIC_CONTENT}</span>"
+
+#: addonproject.py:387
 msgid "The project title is already in use."
 msgstr "Der Projekt-Titel wird bereits verwendet."
 
@@ -1023,7 +1059,7 @@ msgstr "Dieser Dialog zum Erstellen neuer verlinkter Releases umfasst mehrere Re
 msgid "This Dialog to create a new release consists of different register. Please go through this register and fill in the appropriate data for your release. This register 'Default' provide fields for general information of your release. The next register 'compatibility' is the place to submit information about the versions with which your release file(s) is / are compatible. The following register asks for some legal informations. The next register 'File Upload' provide a field to upload your release file. The further register are optional. There is the opportunity to upload further release files (for different platforms)."
 msgstr "Dieser Dialog zum Erstellen eines neuen Release umfasst mehrere Register. Bitte gehen Sie durch alle Register und tragen Sie die für Ihr Release passenden Daten ein. Das Register 'Default' stellt die Felder für generelle Informationen für Ihr Release bereit. Das nächste Register 'Compatibility' ist der Ort, um Informationen zu Versionen einzutragen, mit denen Ihr(e) Release Datei(en) kompatibel ist/sind. Das folgende Register fragt einige rechtliche Informationen ab. Das nächste Register 'File Upload' ermöglicht das Hochladen Ihrer Release-Datei. Die weiteren Register sind optional. Dort besteht die Möglichkeit zum Hochladen von weiteren Release-Dateien (für andere Plattformen)."
 
-#: addonproject.py:124
+#: addonproject.py:125
 msgid "Title"
 msgstr "Titel"
 
@@ -1035,7 +1071,7 @@ msgstr "Titel für rechtliche Hinweise und Einschränkungen"
 msgid "Title of the Legal Disclaimer and Limitations for Downloads"
 msgstr "Titel für rechtliche Hinweise und Einschränkungen für Downloads"
 
-#: addonproject.py:184
+#: addonproject.py:201
 msgid "URL of documentation repository "
 msgstr "URL des Repository der Dokumentation "
 
@@ -1063,7 +1099,7 @@ msgstr "Deinstalliert das collective.addons Add-on."
 msgid "Unreleased"
 msgstr "Unveröffentlicht"
 
-#: addonproject_templates/view.pt:411
+#: addonproject_templates/view.pt:413
 msgid "Version"
 msgstr "Version"
 
@@ -1115,15 +1151,15 @@ msgstr "Ihre Nachricht an den Autor"
 msgid "Your Own Projects"
 msgstr "Ihre eigenen Projekte"
 
-#: addonproject_templates/view.pt:66
+#: addonproject_templates/view.pt:68
 msgid "Your project has been submitted for publication and will be reviewed now. You will get an email, once the status of your project changed again."
 msgstr "Ihr Projekt wurde zur Veröffentlichung übermittelt und wird nun geprüft. Sie bekommen eine Email, sobald sich der Status Ihres Projektes erneut ändert."
 
-#: addonproject_templates/view.pt:53
+#: addonproject_templates/view.pt:55
 msgid "a Release to your"
 msgstr "ein Release zu Ihrem"
 
-#: addonproject_templates/view.pt:58
+#: addonproject_templates/view.pt:60
 msgid "a linked Release"
 msgstr "ein verlinktes Release"
 
@@ -1143,7 +1179,7 @@ msgstr "collective.addons (deinstallierenl)"
 msgid "in"
 msgstr "in"
 
-#: addonproject_templates/view.pt:77
+#: addonproject_templates/view.pt:79
 msgid "or:"
 msgstr "oder:"
 
@@ -1164,11 +1200,11 @@ msgstr "Projekte entsprechen Ihren Kritierien."
 msgid "re-release"
 msgstr "Erneut veröffentlichen"
 
-#: addonproject_templates/view.pt:133
+#: addonproject_templates/view.pt:135
 msgid "tested with:"
 msgstr "getestet mit:"
 
-#: addonproject_templates/view.pt:58
+#: addonproject_templates/view.pt:60
 msgid "to your"
 msgstr "zu Ihrem"
 
