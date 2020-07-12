@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<object name="portal_controlpanel">
+  <configlet
+      title="Collective Addons Settings"
+      action_id="collectiveaddons-controlpanel"
+      appId="collectiveaddons-controlpanel"
+      category="Products"
+      condition_expr=""
+      icon_expr=""
+      url_expr="string:${portal_url}/@@collectivecaddons-controlpanel"
+      visible="True"
+      remove="True">
+    <permission>Manage portal</permission>
+  </configlet>
+</object>

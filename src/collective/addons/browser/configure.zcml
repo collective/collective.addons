@@ -18,4 +18,13 @@
       directory="static"
       />
 
+
+  <browser:page
+    name="collectiveaddons-controlpanel"
+    for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+    class=".controlpanel.CollectiveaddonsControlPanelView"
+    permission="cmf.ManagePortal"
+    />
+
+
 </configure>
