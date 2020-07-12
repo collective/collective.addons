@@ -8,7 +8,6 @@ from zope.interface import Interface
 
 
 class ICollectiveaddonsControlPanel(Interface):
-
     available_category = schema.Tuple(
         title=_(u'Available Categories'),
         value_type=schema.TextLine(),
@@ -19,6 +18,7 @@ class CollectiveaddonsControlPanelForm(RegistryEditForm):
     schema = ICollectiveaddonsControlPanel
     schema_prefix = 'collectiveaddons'
     label = u'Collective Addons Settings'
+
 
 CollectiveaddonsControlPanelView = layout.wrap_form(
     CollectiveaddonsControlPanelForm, ControlPanelFormWrapper)
