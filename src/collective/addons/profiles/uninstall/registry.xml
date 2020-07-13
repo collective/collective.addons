@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<registry>
+<!-- -*- extra stuff goes here -*- -->
+    <records remove="True" interface="collective.addons.browser.controlpanel.ICollectiveaddonsControlPanel"
+         prefix="collectiveaddons" />
+</registry>
