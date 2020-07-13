@@ -243,6 +243,10 @@
       permission="zope2.View"
       />
 
+    <utility
+        name="Categories"
+        component=".vocabularies.CategoriesVocabularyFactory" />
+
 
 
 
