@@ -10,6 +10,7 @@ from zope.interface import Interface
 class ICollectiveaddonsControlPanel(Interface):
     available_category = schema.Tuple(
         title=_(u'Available Categories'),
+        default=('Product one',),
         value_type=schema.TextLine(),
     )
 
