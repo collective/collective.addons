@@ -163,7 +163,7 @@ class IAddonProject(model.Schema):
         title=_(u'Choose your categories'),
         description=_(u'Please select the appropriate categories (one or '
                       u'more) for your project.'),
-        value_type=schema.Choice(source=vocabcategories),
+        value_type=schema.Choice(source='Categories'),
         constraint=isNotEmptyCategory,
         required=True,
     )
