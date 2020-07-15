@@ -9,3 +9,9 @@ from zope.schema.interfaces import IVocabularyFactory
 def CategoriesVocabularyFactory(context):
     values = api.portal.get_registry_record('collectiveaddons.available_category')
     return safe_simplevocabulary_from_values(values)
+
+
+@provider(IVocabularyFactory)
+def LicensesVocabularyFactory(context):
+    values = api.portal.get_registry_record('collectiveaddons.available_licenses')
+    return safe_simplevocabulary_from_values(values)

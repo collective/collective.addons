@@ -34,7 +34,7 @@ class ICollectiveaddonsControlPanel(Interface):
                                           'CC-BY-SA-v4 (Creative Commons'
                                           'Attribution-ShareAlike 4.0 '
                                           'International)',
-                                          'AL-v2 (Apache License Version 2.0)',),
+                                          'AL-v2 (Apache License Version 2.0)'),
                                       value_type=schema.TextLine(),
                                       )
 
