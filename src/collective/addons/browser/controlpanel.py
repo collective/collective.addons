@@ -34,28 +34,26 @@ class ICollectiveaddonsControlPanel(Interface):
                                           'CC-BY-SA-v4 (Creative Commons'
                                           'Attribution-ShareAlike 4.0 '
                                           'International)',
-                                          'AL-v2 (Apache License Version 2.0)',
-                                      ),
-                                      value_type=schema.TextLine()
+                                          'AL-v2 (Apache License Version 2.0)',),
+                                      value_type=schema.TextLine(),
                                       )
 
     available_versions = schema.Tuple(title=_(u'Available Versions'),
-                                     default=('Product 1.0',
-                                              ),
-                                     value_type=schema.TextLine()
+                                      default=('Product 1.0',
+                                               ),
+                                      value_type=schema.TextLine(),
                                       )
 
     available_platforms = schema.Tuple(title=_(u'Available Platforms'),
-                                      default=('All platforms',
-                                               'Linux',
-                                               'Linux-x64',
-                                               'Mac OS X',
-                                               'Windows',
-                                               'BSD',
-                                               'UNIX (other)'),
-                                      value_type=schema.TextLine()
+                                       default=('All platforms',
+                                                'Linux',
+                                                'Linux-x64',
+                                                'Mac OS X',
+                                                'Windows',
+                                                'BSD',
+                                                'UNIX (other)'),
+                                       value_type=schema.TextLine(),
                                        )
-
 
     allowed_addonfileextension = schema.TextLine(
         title=_(u'Allowed file extensions'),
