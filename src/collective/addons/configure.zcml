@@ -243,9 +243,21 @@
       permission="zope2.View"
       />
 
-    <utility
-        name="Categories"
-        component=".vocabularies.CategoriesVocabularyFactory" />
+  <utility
+      name="Categories"
+      component=".vocabularies.CategoriesVocabularyFactory" />
+
+  <utility
+      name="Licenses"
+      component=".vocabularies.LicensesVocabularyFactory" />
+
+  <utility
+      name="Versions"
+      component=".vocabularies.VersionsVocabularyFactory" />
+
+  <utility
+      name="Platforms"
+      component=".vocabularies.PlatformVocabularyFactory" />
 
 
 
