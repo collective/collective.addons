@@ -50,57 +50,6 @@ class IAddonCenter(model.Schema):
             u'Name of the Add-on product, e.g. only Add-ons'),
     )
 
-    model.fieldset('category',
-                   label='Categories et. all',
-                   fields=['available_category',
-                           'available_licenses',
-                           'available_versions',
-                           'available_platforms'],
-                   )
-
-    available_category = schema.List(title=_(u'Available Categories'),
-                                     default=['Product one'],
-                                     value_type=schema.TextLine(),
-                                     )
-
-    available_licenses = schema.List(title=_(u'Available Licenses'),
-                                     default=[
-                                         'GNU-GPL-v2 (GNU General Public'
-                                         'License Version 2)',
-                                         'GNU-GPL-v3+ (General Public License'
-                                         'Version 3 and later)',
-                                         'LGPL-v2.1 (GNU Lesser General'
-                                         'Public License Version 2.1)',
-                                         'LGPL-v3+ (GNU Lesser General Public'
-                                         'License Version 3 and later)',
-                                         'BSD (BSD License (revised))',
-                                         'MPL-v1.1 (Mozilla Public License'
-                                         'Version 1.1)',
-                                         'MPL-v2.0+ (Mozilla Public License'
-                                         'Version 2.0 or later)',
-                                         'CC-by-sa-v3 (Creative Commons'
-                                         'Attribution-ShareAlike 3.0)',
-                                         'CC-BY-SA-v4 (Creative Commons'
-                                         'Attribution-ShareAlike 4.0 '
-                                         'International)',
-                                         'AL-v2 (Apache License Version 2.0)',
-    ],
-        value_type=schema.TextLine())
-
-    available_versions = schema.List(title=_(u'Available Versions'),
-                                     default=['Product 1.0',
-                                              ],
-                                     value_type=schema.TextLine())
-    available_platforms = schema.List(title=_(u'Available Platforms'),
-                                      default=['All platforms',
-                                               'Linux',
-                                               'Linux-x64',
-                                               'Mac OS X',
-                                               'Windows',
-                                               'BSD',
-                                               'UNIX (other)'],
-                                      value_type=schema.TextLine())
-
     model.fieldset('Allowed File Extensions',
                    label=u'Allowed file extensions',
                    fields=['allowed_addonfileextension',
