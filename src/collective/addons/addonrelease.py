@@ -56,20 +56,6 @@ def allowedaddonfileextensions(context):
     return context.allowed_addonfileextension.replace('|', ', ')
 
 
-def vocabAvailPlatforms(context):
-    """ pick up the list of platforms from parent """
-
-    platforms_list = getattr(context.__parent__, 'available_platforms', [])
-    terms = []
-    for value in platforms_list:
-        terms.append(SimpleTerm(value, token=value.encode('unicode_escape'),
-                                title=value))
-    return SimpleVocabulary(terms)
-
-
-directlyProvides(vocabAvailPlatforms, IContextSourceBinder)
-
-
 def validateaddonfileextension(value):
     catalog = api.portal.get_tool(name='portal_catalog')
     result = catalog.uniqueValuesFor('allowedaddonfileextensions')
@@ -234,7 +220,7 @@ class IAddonRelease(model.Schema):
         title=_(u'First uploaded file is compatible with the Platform(s)'),
         description=_(u'Please mark one or more platforms with which the '
                       u'uploaded file is compatible.'),
-        value_type=schema.Choice(source=vocabAvailPlatforms),
+        value_type=schema.Choice(source='Platforms'),
         required=True,
     )
 
@@ -285,7 +271,7 @@ class IAddonRelease(model.Schema):
         title=_(u'Second uploaded file is compatible with the Platform(s)'),
         description=_(u'Please mark one or more platforms with which the '
                       u'uploaded file is compatible.'),
-        value_type=schema.Choice(source=vocabAvailPlatforms),
+        value_type=schema.Choice(source='Platforms'),
         required=False,
     )
 
@@ -314,7 +300,7 @@ class IAddonRelease(model.Schema):
         title=_(u'Third uploaded file is compatible with the Platform(s))'),
         description=_(u'Please mark one or more platforms with which the '
                       u'uploaded file is compatible.'),
-        value_type=schema.Choice(source=vocabAvailPlatforms),
+        value_type=schema.Choice(source='Platforms'),
         required=False,
     )
 
@@ -343,7 +329,7 @@ class IAddonRelease(model.Schema):
         title=_(u'Fourth uploaded file is compatible with the Platform(s)'),
         description=_(u'Please mark one or more platforms with which the '
                       u'uploaded file is compatible.'),
-        value_type=schema.Choice(source=vocabAvailPlatforms),
+        value_type=schema.Choice(source='Platforms'),
         required=False,
     )
 
@@ -380,7 +366,7 @@ class IAddonRelease(model.Schema):
         title=_(u'Fifth uploaded file is compatible with the Platform(s)'),
         description=_(u'Please mark one or more platforms with which the '
                       u'uploaded file is compatible.'),
-        value_type=schema.Choice(source=vocabAvailPlatforms),
+        value_type=schema.Choice(source='Platforms'),
         required=False,
     )
 
@@ -409,7 +395,7 @@ class IAddonRelease(model.Schema):
         title=_(u'Sixth uploaded file is compatible with the Platform(s)'),
         description=_(u'Please mark one or more platforms with which the '
                       u'uploaded file is compatible.'),
-        value_type=schema.Choice(source=vocabAvailPlatforms),
+        value_type=schema.Choice(source='Platforms'),
         required=False,
     )
 
