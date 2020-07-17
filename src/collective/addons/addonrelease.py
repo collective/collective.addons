@@ -182,7 +182,7 @@ class IAddonRelease(model.Schema):
         title=_(u'License of the uploaded file'),
         description=_(
             u'Please mark one or more licenses you publish your release.'),
-        value_type=schema.Choice(source=vocabAvailLicenses),
+        value_type=schema.Choice(source='Licenses'),
         required=True,
     )
 
@@ -192,7 +192,7 @@ class IAddonRelease(model.Schema):
         description=_(
             u'Please mark one or more program versions with which this '
             u'release is compatible with.'),
-        value_type=schema.Choice(source=vocabAvailVersions),
+        value_type=schema.Choice(source='Versions'),
         required=True,
         default=[],
     )
