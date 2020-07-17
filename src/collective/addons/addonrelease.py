@@ -20,7 +20,6 @@ from zope.interface import invariant
 from zope.interface import provider
 from zope.schema.interfaces import IContextAwareDefaultFactory
 
-
 import itertools
 import re
 
