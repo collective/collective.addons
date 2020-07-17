@@ -56,34 +56,6 @@ def allowedaddonfileextensions(context):
     return context.allowed_addonfileextension.replace('|', ', ')
 
 
-def vocabAvailLicenses(context):
-    """ pick up licenses list from parent """
-
-    license_list = getattr(context.__parent__, 'available_licenses', [])
-    terms = []
-    for value in license_list:
-        terms.append(SimpleTerm(value, token=value.encode('unicode_escape'),
-                                title=value))
-    return SimpleVocabulary(terms)
-
-
-directlyProvides(vocabAvailLicenses, IContextSourceBinder)
-
-
-def vocabAvailVersions(context):
-    """ pick up the program versions list from parent """
-
-    versions_list = getattr(context.__parent__, 'available_versions', [])
-    terms = []
-    for value in versions_list:
-        terms.append(SimpleTerm(value, token=value.encode('unicode_escape'),
-                                title=value))
-    return SimpleVocabulary(terms)
-
-
-directlyProvides(vocabAvailVersions, IContextSourceBinder)
-
-
 def vocabAvailPlatforms(context):
     """ pick up the list of platforms from parent """
 
@@ -482,7 +454,7 @@ def update_project_releases_compat_versions_on_creation(addonrelease, event):
 def update_project_releases_compat_versions(addonrelease, event):
     pc = api.portal.get_tool(name='portal_catalog')
     query = '/'.join(addonrelease.aq_parent.getPhysicalPath())
-    brains = pc.searchResults({              # noqa
+    brains = pc.searchResults({  # noqa
         'path': {'query': query, 'depth': 1},
         'portal_type': ['collective.addons.addonrelease',
                         'collective.addons.addonlinkedrelease'],
