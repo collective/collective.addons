@@ -15,40 +15,12 @@ from Products.validation import V_REQUIRED  # noqa
 from z3c.form import validator
 from z3c.form.browser.checkbox import CheckBoxFieldWidget
 from zope import schema
-from zope.interface import directlyProvides
 from zope.interface import Invalid
 from zope.interface import invariant
 from zope.interface import provider
 from zope.schema.interfaces import IContextAwareDefaultFactory
-from zope.schema.interfaces import IContextSourceBinder
-from zope.schema.vocabulary import SimpleTerm
-from zope.schema.vocabulary import SimpleVocabulary
 
 import re
-
-
-def vocabcategories(context):
-    # For add forms
-
-    # For other forms edited or displayed
-    from collective.addons.addoncenter import IAddonCenter
-    while context is not None and not IAddonCenter.providedBy(context):
-        # context = aq_parent(aq_inner(context))
-        context = context.__parent__
-
-    category_list = []
-    if context is not None and context.available_category:
-        category_list = context.available_category
-
-    terms = []
-    for value in category_list:
-        terms.append(SimpleTerm(value, token=value.encode('unicode_escape'),
-                                title=value))
-
-    return SimpleVocabulary(terms)
-
-
-directlyProvides(vocabcategories, IContextSourceBinder)
 
 
 def isNotEmptyCategory(value):
