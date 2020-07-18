@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 from collective.addons import _
+from collective.addons.common import validateemail
 from plone import api
 from plone.app.layout.viewlets import ViewletBase
 from plone.app.multilingual.dx import directives
@@ -10,22 +11,9 @@ from Products.CMFPlone.browser.search import quote_chars
 from Products.Five import BrowserView
 from Products.ZCTextIndex.ParseTree import ParseError
 from zope import schema
-from zope.interface import Invalid
-
-import re
-
 
 MULTISPACE = u'\u3000'.encode('utf-8')
 BAD_CHARS = ('?', '-', '+', '*', MULTISPACE)
-
-checkEmail = re.compile(
-    r'[a-zA-Z0-9._%-]+@([a-zA-Z0-9-]+\.)+[a-zA-Z]{2,4}').match
-
-
-def validateEmail(value):
-    if not checkEmail(value):
-        raise Invalid(_(u'Invalid email address'))
-    return True
 
 
 class IAddonCenter(model.Schema):
@@ -163,7 +151,7 @@ class IAddonCenter(model.Schema):
             u'Enter an email address for the communication with add-on '
             u'center manager and reviewer'),
         default='projects@foo.org',
-        constraint=validateEmail,
+        constraint=validateemail,
     )
 
 
