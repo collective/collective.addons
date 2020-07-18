@@ -73,7 +73,7 @@ class ICollectiveaddonsControlPanel(Interface):
         title=_(u'Allowed documentation file extension'),
         description=_(u'Fill in the allowed documentation file extensions, '
                       u"seperated by a pipe '|'."),
-        default='pdf|odt'
+        default='pdf|odt',
     )
 
 

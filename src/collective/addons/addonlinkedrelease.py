@@ -54,48 +54,6 @@ def allowedaddonlinkedfileextensions(context):
     return context.allowed_addonfileextension.replace('|', ', ')
 
 
-def vocabAvailLicenses(context):
-    """ pick up licenses list from parent """
-
-    license_list = getattr(context.__parent__, 'available_licenses', [])
-    terms = []
-    for value in license_list:
-        terms.append(SimpleTerm(value, token=value.encode('unicode_escape'),
-                                title=value))
-    return SimpleVocabulary(terms)
-
-
-directlyProvides(vocabAvailLicenses, IContextSourceBinder)
-
-
-def vocabAvailVersions(context):
-    """ pick up the program versions list from parent """
-
-    versions_list = getattr(context.__parent__, 'available_versions', [])
-    terms = []
-    for value in versions_list:
-        terms.append(SimpleTerm(value, token=value.encode('unicode_escape'),
-                                title=value))
-    return SimpleVocabulary(terms)
-
-
-directlyProvides(vocabAvailVersions, IContextSourceBinder)
-
-
-def vocabAvailPlatforms(context):
-    """ pick up the list of platforms from parent """
-
-    platforms_list = getattr(context.__parent__, 'available_platforms', [])
-    terms = []
-    for value in platforms_list:
-        terms.append(SimpleTerm(value, token=value.encode('unicode_escape'),
-                                title=value))
-    return SimpleVocabulary(terms)
-
-
-directlyProvides(vocabAvailPlatforms, IContextSourceBinder)
-
-
 def validatelinkedaddonfileextension(value):
     catalog = api.portal.get_tool(name='portal_catalog')
     result = catalog.uniqueValuesFor('allowedaddonfileextensions')
@@ -181,7 +139,7 @@ class IAddonLinkedRelease(model.Schema):
         title=_(u'License of the uploaded file'),
         description=_(u'Please mark one or more licenses you publish your '
                       u'release.'),
-        value_type=schema.Choice(source=vocabAvailLicenses),
+        value_type=schema.Choice(source='Licenses'),
         required=True,
     )
 
@@ -190,7 +148,7 @@ class IAddonLinkedRelease(model.Schema):
         title=_(u'Compatible with the versions of the product'),
         description=_(u'Please mark one or more program versions with which '
                       u'this release is compatible with.'),
-        value_type=schema.Choice(source=vocabAvailVersions),
+        value_type=schema.Choice(source='Versions'),
         required=True,
     )
 
@@ -269,7 +227,7 @@ class IAddonLinkedRelease(model.Schema):
         title=_(u'First linked file is compatible with the Platform(s)'),
         description=_(u'Please mark one or more platforms with which the '
                       u'uploaded file is compatible.'),
-        value_type=schema.Choice(source=vocabAvailPlatforms),
+        value_type=schema.Choice(source='Platforms'),
         required=True,
     )
 
@@ -352,7 +310,7 @@ class IAddonLinkedRelease(model.Schema):
         title=_(u'Second linked file is compatible with the Platform(s)'),
         description=_(u'Please mark one or more platforms with which the '
                       u'linked file is compatible.'),
-        value_type=schema.Choice(source=vocabAvailPlatforms),
+        value_type=schema.Choice(source='Platforms'),
         required=True,
     )
 
@@ -383,7 +341,7 @@ class IAddonLinkedRelease(model.Schema):
         title=_(u'Third linked file is compatible with the Platform(s)'),
         description=_(u'Please mark one or more platforms with which the '
                       u'linked file is compatible.'),
-        value_type=schema.Choice(source=vocabAvailPlatforms),
+        value_type=schema.Choice(source='Platforms'),
         required=True,
     )
 
@@ -414,7 +372,7 @@ class IAddonLinkedRelease(model.Schema):
         title=_(u'Fourth linked file is compatible with the Platform(s)'),
         description=_(u'Please mark one or more platforms with which the '
                       u'linked file is compatible.'),
-        value_type=schema.Choice(source=vocabAvailPlatforms),
+        value_type=schema.Choice(source='Platforms'),
         required=True,
     )
 
@@ -445,7 +403,7 @@ class IAddonLinkedRelease(model.Schema):
         title=_(u'Fifth linked file is compatible with the Platform(s)'),
         description=_(u'Please mark one or more platforms with which the '
                       u'linked file is compatible.'),
-        value_type=schema.Choice(source=vocabAvailPlatforms),
+        value_type=schema.Choice(source='Platforms'),
         required=True,
     )
 
@@ -476,7 +434,7 @@ class IAddonLinkedRelease(model.Schema):
         title=_(u'Sixth linked file is compatible with the Platform(s)'),
         description=_(u'Please mark one or more platforms with which the '
                       u'linked file is compatible.'),
-        value_type=schema.Choice(source=vocabAvailPlatforms),
+        value_type=schema.Choice(source='Platforms'),
         required=True,
     )
 
@@ -520,7 +478,7 @@ def addon_release_number(context, **kw):
 
 
 def update_project_releases_compat_versions_on_creation(
-        addonlinkedrelease, event):
+    addonlinkedrelease, event):
     IReleasesCompatVersions(
         addonlinkedrelease.aq_parent).update(
         addonlinkedrelease.compatibility_choice)
@@ -529,7 +487,7 @@ def update_project_releases_compat_versions_on_creation(
 def update_project_releases_compat_versions(addonlinkedrelease, event):
     pc = api.portal.get_tool(name='portal_catalog')
     query = '/'.join(addonlinkedrelease.aq_parent.getPhysicalPath())
-    brains = pc.searchResults({                # noqa
+    brains = pc.searchResults({  # noqa
         'path': {'query': query, 'depth': 1},
         'portal_type': ['collective.addons.addonrelease',
                         'collective.addons.addonlinkedrelease'],
