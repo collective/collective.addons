@@ -56,21 +56,24 @@ class ICollectiveaddonsControlPanel(Interface):
                                        )
 
     allowed_addonfileextension = schema.TextLine(
-        title=_(u'Allowed file extensions'),
-        description=_(u'Fill in the allowed file extensions, seperated by '
+        title=_(u'Allowed add-on file extensions'),
+        description=_(u'Fill in the allowed file extensions for add-ons, seperated by '
                       u"a pipe '|'."),
+        default='oxt',
     )
 
     allowed_apimageextension = schema.TextLine(
         title=_(u'Allowed image file extension'),
         description=_(u'Fill in the allowed image file extensions, seperated '
                       u"by a pipe '|'."),
+        default='jpg|jpeg|png|gif',
     )
 
     allowed_apdocfileextensions = schema.TextLine(
         title=_(u'Allowed documentation file extension'),
         description=_(u'Fill in the allowed documentation file extensions, '
                       u"seperated by a pipe '|'."),
+        default='pdf|odt'
     )
 
 
