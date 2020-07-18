@@ -473,11 +473,9 @@ def addon_release_number(context, **kw):
     return context.releasenumber
 
 
-def update_project_releases_compat_versions_on_creation(
-    addonlinkedrelease, event):
+def update_project_releases_compat_versions_on_creation(addonlinkedrelease, event):
     IReleasesCompatVersions(
-        addonlinkedrelease.aq_parent).update(
-        addonlinkedrelease.compatibility_choice)
+        addonlinkedrelease.aq_parent).update(addonlinkedrelease.compatibility_choice)
 
 
 def update_project_releases_compat_versions(addonlinkedrelease, event):
