@@ -3,6 +3,7 @@ from collective import dexteritytextindexer
 from collective.addons import _
 from collective.addons import quote_chars
 from collective.addons.common import yesnochoice
+from collective.addons.common import validateemail
 from plone import api
 from plone.app.textfield import RichText
 from plone.autoform import directives
@@ -27,16 +28,6 @@ def isNotEmptyCategory(value):
     if not value:
         raise Invalid(u'You have to choose at least one category for your '
                       u'project.')
-    return True
-
-
-checkemail = re.compile(
-    r'[a-zA-Z0-9._%-]+@([a-zA-Z0-9-]+\.)+[a-zA-Z]{2,4}').match
-
-
-def validateemail(value):
-    if not checkemail(value):
-        raise Invalid(_(u'Invalid email address'))
     return True
 
 
