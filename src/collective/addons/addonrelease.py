@@ -1,7 +1,9 @@
 # -*- coding: utf-8 -*-
-from Acquisition import aq_inner, aq_parent  # noqa
+from Acquisition import aq_inner  # noqa
+from Acquisition import aq_parent
 from collective.addons import _
 from collective.addons.adapter import IReleasesCompatVersions
+from collective.addons.common import allowedaddonfileextensions
 from collective.addons.common import yesnochoice
 from plone import api
 from plone.app.textfield import RichText
@@ -44,12 +46,6 @@ def legal_declaration_title(context):
 def legal_declaration_text(context):
     context = context.aq_inner.aq_parent
     return context.legal_disclaimer
-
-
-@provider(IContextAwareDefaultFactory)
-def allowedaddonfileextensions(context):
-    context = context.aq_inner.aq_parent
-    return context.allowed_addonfileextension.replace('|', ', ')
 
 
 def validateaddonfileextension(value):

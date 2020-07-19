@@ -27,9 +27,3 @@ def VersionsVocabularyFactory(context):
 def PlatformVocabularyFactory(context):
     values = api.portal.get_registry_record('collectiveaddons.available_platforms')
     return safe_simplevocabulary_from_values(values)
-
-
-@provider(IVocabularyFactory)
-def AddonFileExtensionVocabularyFactory(context):
-    values = api.portal.get_registry_record('collectiveaddons.allowed_addonfileextension').replace('|', ', ')
-    return safe_simplevocabulary_from_values(values)
