@@ -2,6 +2,7 @@
 from Acquisition import aq_inner, aq_parent  # noqa
 from collective.addons import _
 from collective.addons.adapter import IReleasesCompatVersions
+from collective.addons.common import allowedaddonfileextensions
 from collective.addons.common import yesnochoice
 from plone import api
 from plone.app.textfield import RichText
@@ -42,12 +43,6 @@ def legal_declaration_title(context):
 def legal_declaration_text(context):
     context = context.aq_inner.aq_parent
     return context.legal_disclaimer
-
-
-@provider(IContextAwareDefaultFactory)
-def allowedaddonlinkedfileextensions(context):
-    context = context.aq_inner.aq_parent
-    return context.allowed_addonfileextension.replace('|', ', ')
 
 
 def validatelinkedaddonfileextension(value):
@@ -200,7 +195,7 @@ class IAddonLinkedRelease(model.Schema):
         title=_(u'The following file extensions are allowed for linked '
                 u'files (upper case and lower case and mix of '
                 u'both):'),
-        defaultFactory=allowedaddonlinkedfileextensions,
+        defaultFactory=allowedaddonfileextensions,
     )
 
     link_to_file = schema.URI(
@@ -284,7 +279,7 @@ class IAddonLinkedRelease(model.Schema):
         title=_(u'The following file extensions are allowed for linked '
                 u'files (upper case and lower case and mix of '
                 u'both):'),
-        defaultFactory=allowedaddonlinkedfileextensions,
+        defaultFactory=allowedaddonfileextensions,
     )
 
     link_to_file1 = schema.URI(
@@ -315,7 +310,7 @@ class IAddonLinkedRelease(model.Schema):
         title=_(u'The following file extensions are allowed for linked '
                 u'files (upper case and lower case and mix of '
                 u'both):'),
-        defaultFactory=allowedaddonlinkedfileextensions,
+        defaultFactory=allowedaddonfileextensions,
     )
 
     link_to_file2 = schema.URI(
@@ -346,7 +341,7 @@ class IAddonLinkedRelease(model.Schema):
         title=_(u'The following file extensions are allowed for linked '
                 u'files (upper case and lower case and mix of '
                 u'both):'),
-        defaultFactory=allowedaddonlinkedfileextensions,
+        defaultFactory=allowedaddonfileextensions,
     )
 
     link_to_file3 = schema.URI(
@@ -377,7 +372,7 @@ class IAddonLinkedRelease(model.Schema):
         title=_(u'The following file extensions are allowed for linked '
                 u'files (upper case and lower case and mix of '
                 u'both):'),
-        defaultFactory=allowedaddonlinkedfileextensions,
+        defaultFactory=allowedaddonfileextensions,
     )
 
     link_to_file4 = schema.URI(
@@ -408,7 +403,7 @@ class IAddonLinkedRelease(model.Schema):
         title=_(u'The following file extensions are allowed for linked '
                 u'files (upper case and lower case and mix of '
                 u'both):'),
-        defaultFactory=allowedaddonlinkedfileextensions,
+        defaultFactory=allowedaddonfileextensions,
     )
 
     link_to_file5 = schema.URI(
