@@ -4,7 +4,9 @@ from collective.addons import _
 from collective.addons import quote_chars
 from collective.addons.common import alloweddocextensions
 from collective.addons.common import allowedimageextensions
+from collective.addons.common import validatedocextension
 from collective.addons.common import validateemail
+from collective.addons.common import validateimageextension
 from collective.addons.common import yesnochoice
 from plone import api
 from plone.app.textfield import RichText
@@ -20,8 +22,6 @@ from z3c.form.browser.checkbox import CheckBoxFieldWidget
 from zope import schema
 from zope.interface import Invalid
 from zope.interface import invariant
-from zope.interface import provider
-from zope.schema.interfaces import IContextAwareDefaultFactory
 
 import re
 
@@ -30,37 +30,6 @@ def isNotEmptyCategory(value):
     if not value:
         raise Invalid(u'You have to choose at least one category for your '
                       u'project.')
-    return True
-
-
-@provider(IContextAwareDefaultFactory)
-def allowedapdocfileextensions(context):
-    return context.allowed_apdocfileextensions.replace('|', ', ')
-
-
-def validatedocfileextension(value):
-    catalog = api.portal.get_tool(name='portal_catalog')
-    result = catalog.uniqueValuesFor('allowedapdocextensions')
-    pattern = r'^.*\.({0})'.format(result[0])
-    matches = re.compile(pattern, re.IGNORECASE).match
-    if not matches(value.filename):
-        raise Invalid(
-            u'You could only upload files with an allowed file extension. '
-            u'Please try again to upload a file with the correct file'
-            u'extension.')
-    return True
-
-
-def validateimagefileextension(value):
-    catalog = api.portal.get_tool(name='portal_catalog')
-    result = catalog.uniqueValuesFor('allowedapimageextensions')
-    pattern = r'^.*\.({0})'.format(result[0])
-    matches = re.compile(pattern, re.IGNORECASE).match
-    if not matches(value.filename):
-        raise Invalid(
-            u'You could only upload files with an allowed file extension. '
-            u'Please try again to upload a file with the correct file'
-            u'extension.')
     return True
 
 
@@ -177,7 +146,7 @@ class IAddonProject(model.Schema):
         description=_(u"If you have a Documentation in the file format 'PDF' "
                       u"or 'ODT' you could add it here."),
         required=False,
-        constraint=validatedocfileextension,
+        constraint=validatedocextension,
     )
 
     directives.mode(addonimageextension='display')
@@ -193,7 +162,7 @@ class IAddonProject(model.Schema):
                       u"by clicking the 'Browse' button. You could provide "
                       u"an image of the file format 'png', 'gif' or 'jpg'."),
         required=False,
-        constraint=validateimagefileextension,
+        constraint=validateimageextension,
     )
 
     directives.mode(addonimageextension1='display')
@@ -209,7 +178,7 @@ class IAddonProject(model.Schema):
                       u"could provide an image of the file format 'png', "
                       u"'gif' or 'jpg'."),
         required=False,
-        constraint=validateimagefileextension,
+        constraint=validateimageextension,
     )
 
     @invariant
