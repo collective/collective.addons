@@ -29,3 +29,6 @@ def allowedaddonfileextensions():
 
 def allowedimageextensions():
     return api.portal.get_registry_record('collectiveaddons.allowed_apimageextension').replace('|', ', ')
+
+def alloweddocextensions():
+    return api.portal.get_registry_record('collectiveaddons.allowed_apdocfileextensions').replace('|', ', ')

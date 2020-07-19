@@ -2,6 +2,7 @@
 from collective import dexteritytextindexer
 from collective.addons import _
 from collective.addons import quote_chars
+from collective.addons.common import alloweddocextensions
 from collective.addons.common import allowedimageextensions
 from collective.addons.common import validateemail
 from collective.addons.common import yesnochoice
@@ -168,7 +169,7 @@ class IAddonProject(model.Schema):
     addondocextension = schema.TextLine(
         title=_(u'The following file extensions are allowed for documentation '
                 u'files (upper case and lower case and mix of both):'),
-        defaultFactory=allowedapdocfileextensions,
+        defaultFactory=alloweddocextensions,
     )
 
     documentation_file = NamedBlobFile(
