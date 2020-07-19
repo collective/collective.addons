@@ -2,6 +2,7 @@
 from collective import dexteritytextindexer
 from collective.addons import _
 from collective.addons import quote_chars
+from collective.addons.common import allowedimageextensions
 from collective.addons.common import validateemail
 from collective.addons.common import yesnochoice
 from plone import api
@@ -34,11 +35,6 @@ def isNotEmptyCategory(value):
 @provider(IContextAwareDefaultFactory)
 def allowedapdocfileextensions(context):
     return context.allowed_apdocfileextensions.replace('|', ', ')
-
-
-@provider(IContextAwareDefaultFactory)
-def allowedapimagefileextensions(context):
-    return context.allowed_apimageextension.replace('|', ', ')
 
 
 def validatedocfileextension(value):
@@ -187,7 +183,7 @@ class IAddonProject(model.Schema):
     addonimageextension = schema.TextLine(
         title=_(u'The following file extensions are allowed for project logo '
                 u'files (upper case and lower case and mix of both):'),
-        defaultFactory=allowedapimagefileextensions,
+        defaultFactory=allowedimageextensions,
     )
 
     project_logo = NamedBlobImage(
@@ -203,7 +199,7 @@ class IAddonProject(model.Schema):
     addonimageextension1 = schema.TextLine(
         title=_(u'The following file extensions are allowed for screenshot '
                 u'files (upper case and lower case and mix of both):'),
-        defaultFactory=allowedapimagefileextensions,
+        defaultFactory=allowedimageextensions,
     )
 
     screenshot = NamedBlobImage(
