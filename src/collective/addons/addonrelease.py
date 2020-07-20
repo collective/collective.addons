@@ -3,6 +3,7 @@ from Acquisition import aq_inner  # noqa
 from collective.addons import _
 from collective.addons.adapter import IReleasesCompatVersions
 from collective.addons.common import allowedaddonfileextensions
+from collective.addons.common import validateaddonextension
 from collective.addons.common import yesnochoice
 from plone import api
 from plone.app.textfield import RichText
@@ -45,19 +46,6 @@ def legal_declaration_title(context):
 def legal_declaration_text(context):
     context = context.aq_inner.aq_parent
     return context.legal_disclaimer
-
-
-def validateaddonfileextension(value):
-    catalog = api.portal.get_tool(name='portal_catalog')
-    result = catalog.uniqueValuesFor('allowedaddonfileextensions')
-    pattern = r'^.*\.({0})'.format(result[0])
-    matches = re.compile(pattern, re.IGNORECASE).match
-    if not matches(value.filename):
-        raise Invalid(
-            u'You could only upload files with an allowed file '
-            u'extension. Please try again to upload a file with the '
-            u'correct file extension.')
-    return True
 
 
 class AcceptLegalDeclaration(Invalid):
@@ -203,7 +191,7 @@ class IAddonRelease(model.Schema):
         title=_(u'The first file you want to upload.'),
         description=_(u'Please upload your file.'),
         required=True,
-        constraint=validateaddonfileextension,
+        constraint=validateaddonextension,
     )
 
     directives.widget(platform_choice=CheckBoxFieldWidget)
@@ -254,7 +242,7 @@ class IAddonRelease(model.Schema):
         title=_(u'The second file you want to upload (this is optional)'),
         description=_(u'Please upload your file.'),
         required=False,
-        constraint=validateaddonfileextension,
+        constraint=validateaddonextension,
     )
 
     directives.widget(platform_choice1=CheckBoxFieldWidget)
@@ -283,7 +271,7 @@ class IAddonRelease(model.Schema):
         title=_(u'The third file you want to upload (this is optional)'),
         description=_(u'Please upload your file.'),
         required=False,
-        constraint=validateaddonfileextension,
+        constraint=validateaddonextension,
     )
 
     directives.widget(platform_choice2=CheckBoxFieldWidget)
@@ -312,7 +300,7 @@ class IAddonRelease(model.Schema):
         title=_(u'The fourth file you want to upload (this is optional)'),
         description=_(u'Please upload your file.'),
         required=False,
-        constraint=validateaddonfileextension,
+        constraint=validateaddonextension,
     )
 
     directives.widget(platform_choice3=CheckBoxFieldWidget)
@@ -349,7 +337,7 @@ class IAddonRelease(model.Schema):
         title=_(u'The fifth file you want to upload (this is optional)'),
         description=_(u'Please upload your file.'),
         required=False,
-        constraint=validateaddonfileextension,
+        constraint=validateaddonextension,
     )
 
     directives.widget(platform_choice4=CheckBoxFieldWidget)
@@ -378,7 +366,7 @@ class IAddonRelease(model.Schema):
         title=_(u'The sixth file you want to upload (this is optional)'),
         description=_(u'Please upload your file.'),
         required=False,
-        constraint=validateaddonfileextension,
+        constraint=validateaddonextension,
     )
 
     directives.widget(platform_choice5=CheckBoxFieldWidget)

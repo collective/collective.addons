@@ -3,6 +3,7 @@ from Acquisition import aq_inner, aq_parent  # noqa
 from collective.addons import _
 from collective.addons.adapter import IReleasesCompatVersions
 from collective.addons.common import allowedaddonfileextensions
+from collective.addons.common import validateaddonextension
 from collective.addons.common import yesnochoice
 from plone import api
 from plone.app.textfield import RichText
@@ -43,19 +44,6 @@ def legal_declaration_title(context):
 def legal_declaration_text(context):
     context = context.aq_inner.aq_parent
     return context.legal_disclaimer
-
-
-def validatelinkedaddonfileextension(value):
-    catalog = api.portal.get_tool(name='portal_catalog')
-    result = catalog.uniqueValuesFor('allowedaddonfileextensions')
-    pattern = r'^.*\.({0})'.format(result[0])
-    matches = re.compile(pattern, re.IGNORECASE).match
-    if not matches(value):
-        raise Invalid(
-            u'You could only upload files with an allowed file '
-            u'extension. Please try again to upload a file with the '
-            u'correct file extension.')
-    return True
 
 
 class AcceptLegalDeclaration(Invalid):
@@ -202,7 +190,7 @@ class IAddonLinkedRelease(model.Schema):
         title=_(u'The Link to the file of the release'),
         description=_(u'Please insert a link to your add-on file.'),
         required=True,
-        constraint=validatelinkedaddonfileextension,
+        constraint=validateaddonextension,
     )
 
     external_file_size = schema.Float(
@@ -286,7 +274,7 @@ class IAddonLinkedRelease(model.Schema):
         title=_(u'The Link to the file of the release'),
         description=_(u'Please insert a link to your add-on file.'),
         required=False,
-        constraint=validatelinkedaddonfileextension,
+        constraint=validateaddonextension,
     )
 
     external_file_size1 = schema.Float(
@@ -317,7 +305,7 @@ class IAddonLinkedRelease(model.Schema):
         title=_(u'The Link to the file of the release'),
         description=_(u'Please insert a link to your add-on file.'),
         required=False,
-        constraint=validatelinkedaddonfileextension,
+        constraint=validateaddonextension,
     )
 
     external_file_size2 = schema.Float(
@@ -348,7 +336,7 @@ class IAddonLinkedRelease(model.Schema):
         title=_(u'The Link to the file of the release'),
         description=_(u'Please insert a link to your add-on file.'),
         required=False,
-        constraint=validatelinkedaddonfileextension,
+        constraint=validateaddonextension,
     )
 
     external_file_size3 = schema.Float(
@@ -379,7 +367,7 @@ class IAddonLinkedRelease(model.Schema):
         title=_(u'The Link to the file of the release'),
         description=_(u'Please insert a link to your add-on file.'),
         required=False,
-        constraint=validatelinkedaddonfileextension,
+        constraint=validateaddonextension,
     )
 
     external_file_size4 = schema.Float(
@@ -410,7 +398,7 @@ class IAddonLinkedRelease(model.Schema):
         title=_(u'The Link to the file of the release'),
         description=_(u'Please insert a link to your add-on file.'),
         required=False,
-        constraint=validatelinkedaddonfileextension,
+        constraint=validateaddonextension,
     )
 
     external_file_size5 = schema.Float(

@@ -7,6 +7,7 @@ from zope.schema.vocabulary import SimpleVocabulary
 
 import re
 
+
 yesnochoice = SimpleVocabulary(
     [SimpleTerm(value=0, title=_(u'No')),
      SimpleTerm(value=1, title=_(u'Yes'))],
@@ -55,4 +56,16 @@ def validatedocextension(value):
             u'You could only upload files with an allowed file extension. '
             u'Please try again to upload a file with the correct file'
             u'extension.')
+    return True
+
+
+def validateaddonextension(value):
+    result = str(api.portal.get_registry_record('collectiveaddons.allowed_allowedaddonfileextensions'))
+    pattern = r'^.*\.({0})'.format(result[0])
+    matches = re.compile(pattern, re.IGNORECASE).match
+    if not matches(value.filename):
+        raise Invalid(
+            u'You could only upload files with an allowed file '
+            u'extension. Please try again to upload a file with the '
+            u'correct file extension.')
     return True
