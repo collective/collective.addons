@@ -23,8 +23,6 @@ from zope import schema
 from zope.interface import Invalid
 from zope.interface import invariant
 
-import re
-
 
 def isNotEmptyCategory(value):
     if not value:
