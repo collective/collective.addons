@@ -23,7 +23,6 @@ from zope.interface import provider
 from zope.schema.interfaces import IContextAwareDefaultFactory
 
 import itertools
-import re
 
 
 @provider(IContextAwareDefaultFactory)

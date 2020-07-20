@@ -29,7 +29,7 @@
                           sort_on   request/sort_on | string:positive_ratings;
                           isAnon context/@@plone_portal_state/anonymous;
                           herePath python:'/'.join(context.getPhysicalPath());
-                          getCategoryName nocall:view/category_name;
+                          getCategoryName nocall:view/category_names;
                           show_search_form view/show_search_form">
     <span tal:replace="structure context/@@authenticator/authenticator"/>
       <div class="row">
@@ -109,12 +109,12 @@
                                  <label class="hiddenStructure" i18n:translate="">Show</label>
                                  <select name="getCategories" onchange="this.form.submit()">
                                      <option value="" i18n:translate="">All categories</option>
-                                     <tal:block tal:repeat="category context/available_category">
+                                     <tal:block tal:repeat="category view/category_names">
                                        <option tal:content="category" tal:attributes="value category; selected python: 'selected' if currentCategory==category else ''" />
                                      </tal:block>
                                  </select>
                                  <select class="sortby-compatibility" name="getCompatibility" onchange="this.form.submit()">
-                                     <tal:block tal:repeat="version context/available_versions">
+                                     <tal:block tal:repeat="version view/version_names">
                                          <option tal:content="version"
                                                  tal:attributes="value version; selected python: 'selected' if currentVersion==version else ''" />
                                      </tal:block>
@@ -254,7 +254,7 @@
                     </h2>
                     <h2 tal:condition="not:context/product_title"><span i18n:translate="">Browse Add-ons by Category</span></h2>
                     <ol id="add-on-categories">
-                        <tal:categories repeat="category context/available_category">
+                        <tal:categories repeat="category view/category_names">
                             <li><a href=""
                                     tal:attributes="href string:${context/absolute_url}?getCategories=${category}&getCompatibility=any"
                                     tal:content="category">

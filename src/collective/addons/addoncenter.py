@@ -12,7 +12,6 @@ from Products.Five import BrowserView
 from Products.ZCTextIndex.ParseTree import ParseError
 from zope import schema
 
-
 MULTISPACE = u'\u3000'.encode('utf-8')
 BAD_CHARS = ('?', '-', '+', '*', MULTISPACE)
 
@@ -39,29 +38,6 @@ class IAddonCenter(model.Schema):
             u'Name of the Add-on product, e.g. only Add-ons'),
     )
 
-    model.fieldset('Allowed File Extensions',
-                   label=u'Allowed file extensions',
-                   fields=['allowed_addonfileextension',
-                           'allowed_apimageextension',
-                           'allowed_apdocfileextensions'])
-
-    allowed_addonfileextension = schema.TextLine(
-        title=_(u'Allowed file extensions'),
-        description=_(u'Fill in the allowed file extensions, seperated by '
-                      u"a pipe '|'."),
-    )
-
-    allowed_apimageextension = schema.TextLine(
-        title=_(u'Allowed image file extension'),
-        description=_(u'Fill in the allowed image file extensions, seperated '
-                      u"by a pipe '|'."),
-    )
-
-    allowed_apdocfileextensions = schema.TextLine(
-        title=_(u'Allowed documentation file extension'),
-        description=_(u'Fill in the allowed documentation file extensions, '
-                      u"seperated by a pipe '|'."),
-    )
 
     model.fieldset('instructions',
                    label=u'Instructions',
@@ -174,12 +150,14 @@ class AddonCenterView(BrowserView):
             'portal_type': 'collective.addons.addonproject'}
         return catalog(**contentFilter)
 
-    def category_name(self):
-        category = list(self.context.available_category)
-        return category
+    def category_names(self):
+        return list(api.portal.get_registry_record('collectiveaddons.available_category'))
+
+    def version_names(self):
+        return list(api.portal.get_registry_record('collectiveaddons.available_versions'))
 
     def get_latest_program_release(self):
-        versions = list(self.context.available_versions)
+        versions = list(api.portal.get_registry_record('collectiveaddons.available_versions'))
         versions.sort(reverse=True)
         return versions[0]
 
