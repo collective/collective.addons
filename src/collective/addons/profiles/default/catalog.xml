@@ -16,15 +16,6 @@
     <index name="addonprojectcontact" meta_type="KeywordIndex">
         <indexed_attr value="addoncontactAddress" />
     </index>
-    <index name="allowedapdocextensions" meta_type="FieldIndex">
-        <indexed_attr value="allowed_apdocfileextensions" />
-    </index>
-    <index name="allowedapimageextensions" meta_type="FieldIndex">
-        <indexed_attr value="allowed_apimageextension" />
-    </index>
-    <index name="allowedaddonfileextensions" meta_type="FieldIndex">
-        <indexed_attr value="allowed_addonfileextension" />
-    </index>
     <index name="addonprojectemail" meta_type="FieldIndex">
         <indexed_attr value="addoncontactAddress" />
     </index>
