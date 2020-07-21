@@ -421,3 +421,9 @@ class AddonProjectView(BrowserView):
         idx_data = catalog.getIndexDataForUID(path)
         public_name = idx_data.get('publicaddonname')
         return (public_name)
+
+    def downloaddisclaimertitle(self):
+        return api.portal.get_registry_record('collectiveaddons.title_legaldownloaddisclaimer')
+
+    def downloaddisclaimertext(self):
+        return api.portal.get_registry_record('collectiveaddons.legal_downloaddisclaimer')
