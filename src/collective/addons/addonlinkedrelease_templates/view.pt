@@ -142,8 +142,8 @@
           </span>
           </p>
                     </div>
-                                   <h4 class="addoncenterlegaldownload" tal:content="structure context/title_legaldownloaddisclaimer" />
-                    <div class="addoncenterlegaldownload" tal:content="structure context/legal_downloaddisclaimer/output" />
+                                   <h4 class="addoncenterlegaldownload" tal:content="structure view/downloaddisclaimertitle" />
+                    <div class="addoncenterlegaldownload" tal:content="structure view/downloaddisclaimertext" />
                 </div>
             </div>
            <div class="col-xs-12 col-sm-4">
