@@ -522,3 +522,9 @@ class AddonReleaseView(DefaultView):
         idx_data = catalog.getIndexDataForUID(path)
         compatibility = idx_data.get('getCompatibility')
         return (r for r in compatibility)
+
+    def downloaddisclaimertitle(self):
+        return api.portal.get_registry_record('collectiveaddons.title_legaldownloaddisclaimer')
+
+    def downloaddisclaimertext(self):
+        return api.portal.get_registry_record('collectiveaddons.legal_downloaddisclaimer')
