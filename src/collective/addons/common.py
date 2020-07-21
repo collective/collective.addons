@@ -69,3 +69,11 @@ def validateaddonextension(value):
             u'extension. Please try again to upload a file with the '
             u'correct file extension.')
     return True
+
+
+def legaldeclarationtitle():
+    return api.portal.get_registry_record('collectiveaddons.title_legaldisclaimer')
+
+
+def legaldeclarationtext():
+    return api.portal.get_registry_record('collectiveaddons.legal_disclaimer')

@@ -3,6 +3,8 @@ from Acquisition import aq_inner  # noqa
 from collective.addons import _
 from collective.addons.adapter import IReleasesCompatVersions
 from collective.addons.common import allowedaddonfileextensions
+from collective.addons.common import legaldeclarationtext
+from collective.addons.common import legaldeclarationtitle
 from collective.addons.common import validateaddonextension
 from collective.addons.common import yesnochoice
 from plone import api
@@ -33,18 +35,6 @@ def getContainerTitle(self):
 @provider(IContextAwareDefaultFactory)
 def contactinfoDefault(context):
     return context.addoncontactAddress
-
-
-@provider(IContextAwareDefaultFactory)
-def legal_declaration_title(context):
-    context = context.aq_inner.aq_parent
-    return context.title_legaldisclaimer
-
-
-@provider(IContextAwareDefaultFactory)
-def legal_declaration_text(context):
-    context = context.aq_inner.aq_parent
-    return context.legal_disclaimer
 
 
 class AcceptLegalDeclaration(Invalid):
@@ -137,14 +127,14 @@ class IAddonRelease(model.Schema):
     title_declaration_legal = schema.TextLine(
         title=_(u''),
         required=False,
-        defaultFactory=legal_declaration_title,
+        defaultFactory=legaldeclarationtitle,
     )
 
     directives.mode(declaration_legal='display')
     declaration_legal = schema.Text(
         title=_(u''),
         required=False,
-        defaultFactory=legal_declaration_text,
+        defaultFactory=legaldeclarationtext,
 
     )
 
