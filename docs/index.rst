@@ -8,6 +8,7 @@ User documentation
    :maxdepth: 2
 
    source/installation.rst
+   source/configuration.rst
    source/addnewaddoncenter.rst
    source/addnewaddonproject.rst
    source/addnewaddonrelease.rst
