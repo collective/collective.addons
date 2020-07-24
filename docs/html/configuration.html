@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuration &#8212; collective.addons  documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Add A New Add-on Center To Your Plone Site" href="addnewaddoncenter.html" />
+    <link rel="prev" title="Installation" href="installation.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="configuration">
+<h1>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h1>
+<p>The configuration of the add-on could be done from the Plone controlpanel ‘Site Setup’.
+You already used this panel during the installation of the add-on. There are entries
+for different configuration task.</p>
+<div class="section" id="navigation-configuration">
+<h2>Navigation configuration<a class="headerlink" href="#navigation-configuration" title="Permalink to this headline">¶</a></h2>
+<p>Next you need to go to the ‘Navigation’ configuration inside the ‘Site Setup’. Thus click on
+the corresponding button and you get to the configuration menu in the screenshot below.</p>
+<a class="reference internal image-reference" href="_images/navigation_add_addon_center.png"><img alt="_images/navigation_add_addon_center.png" src="_images/navigation_add_addon_center.png" style="width: 600px;" /></a>
+<p>Tick the checkbox in fron of the entry ‘Add-on_Center’ and save your changes. The necessary steps
+are done to go to the homepage of your Plone site (or a subdirectory of the site, where you want to
+create a new add-on center.</p>
+</div>
+<div class="section" id="collective-addons-settings">
+<h2>Collective Addons Settings<a class="headerlink" href="#collective-addons-settings" title="Permalink to this headline">¶</a></h2>
+<p>Once you finished the modification of navigation settings you could scroll down a bit
+on the Site Settings page to the section for ‘Add-on Configuration’. There you find a
+new entry for this add-on with the title ‘Collective Addons Settings’. Click on this
+entry and you get a form with fields to configure the add-on.</p>
+<a class="reference internal image-reference" href="_images/configuration_collective_addons.png"><img alt="_images/configuration_collective_addons.png" src="_images/configuration_collective_addons.png" style="width: 600px;" /></a>
+<p>The fields on the first register ‘Default’ collect the values for the categories, the licenses, the versions
+(the versions of the product, the add-on is compatible with) and the platforms. This fields comes already
+with some default value. You could replace this values with your own choice. Every single value needs
+a new line.</p>
+<p>The entries of this fields will be used to configure the available options for the contributors on the
+modules to create a add-on project and to add releases or linked releases to a project.</p>
+<p>The second register ‘’Allowed file extensions’ need your input about the allowed file extensions for the
+add-ons, the image file extensions (logo, screenshot) and the documentation files. If there are
+different file extensions allowed for this file categories you could enter this file extensions
+seperated by a pipe into the form fields, e.g.: ‘pdf|odt’ for documentation files.</p>
+<a class="reference internal image-reference" href="_images/configuration_collective_addons_form02.png"><img alt="_images/configuration_collective_addons_form02.png" src="_images/configuration_collective_addons_form02.png" style="width: 600px;" /></a>
+<p>The third register ‘Legal Disclaimer’ provides fields to configure the title and the text of the legal
+disclaimer for contributions and the ones for downloading add-ons.</p>
+<a class="reference internal image-reference" href="_images/configuration_collective_addons_form03.png"><img alt="_images/configuration_collective_addons_form03.png" src="_images/configuration_collective_addons_form03.png" style="width: 600px;" /></a>
+<p>Once you finished the configuration within the fields of all three register save your changes.
+This will write some new entries to the ‘Configuration Registry’ of the Plone site. This new Configuration
+Registry entries will be used for the dynamic content of the edit forms of the add-on projects and (linked)
+releases as well as the search feature of the add-on center.</p>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">collective.addons</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Configuration</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#navigation-configuration">Navigation configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#collective-addons-settings">Collective Addons Settings</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="addnewaddoncenter.html">Add A New Add-on Center To Your Plone Site</a></li>
+<li class="toctree-l1"><a class="reference internal" href="addnewaddonproject.html">Add A New Add-on Project To The Add-on Center</a></li>
+<li class="toctree-l1"><a class="reference internal" href="addnewaddonrelease.html">Add A New Release To An Add-On Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="addnewaddonlinkedrelease.html">Add A New Linked Release To An Add-On Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="publishaddonrelease.html">Release An Add-on Release Or A Linked Add-on Release</a></li>
+<li class="toctree-l1"><a class="reference internal" href="publishaddonproject.html">Publish An Add-on Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="messaging.html">Messaging</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="installation.html" title="previous chapter">Installation</a></li>
+      <li>Next: <a href="addnewaddoncenter.html" title="next chapter">Add A New Add-on Center To Your Plone Site</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, Andreas Mantke.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.1.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/configuration.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

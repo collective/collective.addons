@@ -1,0 +1,195 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add A New Linked Release To An Add-On Project &#8212; collective.addons  documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Release An Add-on Release Or A Linked Add-on Release" href="publishaddonrelease.html" />
+    <link rel="prev" title="Add A New Release To An Add-On Project" href="addnewaddonrelease.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="add-a-new-linked-release-to-an-add-on-project">
+<h1>Add A New Linked Release To An Add-On Project<a class="headerlink" href="#add-a-new-linked-release-to-an-add-on-project" title="Permalink to this headline">¶</a></h1>
+<p>Linked releases put the add-on project owner into the position to host release
+files on external ressources, e.g. his own webspace or another website. Whilst
+the owner is logged-in to the Plone site there is a link at the top of an
+add-on project page. Once he clicked on this link (see screenshot below)
+he got an edit form to enter the content of the new linked release.</p>
+<a class="reference internal image-reference" href="_images/create_addon_linked_release.png"><img alt="_images/create_addon_linked_release.png" src="_images/create_addon_linked_release.png" style="width: 650px;" /></a>
+<p>The owner could make alternatively a mouse click on the menu entry ‘Add new’ in
+the menu bar on the left side and choose from the opening sub menu the entry
+‘Add-On Linked Release’ (see the small red arrow in the screenshot above).</p>
+<p>The form dialog consists of several register. The form fields in the first
+register asks for more general information about the release. It’s possible
+to edit and change the content of the fields later, if there is something
+missing or there are e.g. typos, which should be fixed.</p>
+<div class="section" id="the-first-register-default">
+<h2>The First Register ‘Default’<a class="headerlink" href="#the-first-register-default" title="Permalink to this headline">¶</a></h2>
+<p>The new add-on linked release needs its own release number. This number
+(up to twelf chars) will be part of the linked release title and its URL. The
+title will be created from the add-on project title and the linked release
+number. This title has to be unique inside the Plone site. If the linked
+release number is already in use, the editor will get an error message about
+it.</p>
+<a class="reference internal image-reference" href="_images/addon_linked_release_form01.png"><img alt="_images/addon_linked_release_form01.png" src="_images/addon_linked_release_form01.png" style="width: 650px;" /></a>
+<p>A new linked release needs also a summary and could get a full release
+description with details about its features. The latter one is optional
+(only form fields with a red point behind the title are mandatory).</p>
+<p>There is also an optional field to add changelog information, especially if
+the add-on linked release adds some new features or fix some issues.</p>
+<p>The field for the email address will be initialized with the email address
+from the add-on project the linked release was added to.</p>
+</div>
+<div class="section" id="the-second-register-compatibility">
+<h2>The Second Register ‘Compatibility’<a class="headerlink" href="#the-second-register-compatibility" title="Permalink to this headline">¶</a></h2>
+<p>This register contains a form field to choose the versions of the program the
+linked release is compatible with. The list of program versions will be
+created by the site admin within the ‘Add-on Center’. It is possible to
+choose multiple program versions for the release compatibility.</p>
+<a class="reference internal image-reference" href="_images/addon_linked_release_form02.png"><img alt="_images/addon_linked_release_form02.png" src="_images/addon_linked_release_form02.png" style="width: 650px;" /></a>
+</div>
+<div class="section" id="the-third-register-legal">
+<h2>The Third Register ‘Legal’<a class="headerlink" href="#the-third-register-legal" title="Permalink to this headline">¶</a></h2>
+<p>The third register shows the necessary fields for the legal statements about
+the linked release. It starts with the license for the linked release. It is
+possible to check more than one license for a linked release. This declaration
+need to be in accordance with the license declaration inside the
+add-on linked release (if there is one).</p>
+<a class="reference internal image-reference" href="_images/addon_linked_release_form03.png"><img alt="_images/addon_linked_release_form03.png" src="_images/addon_linked_release_form03.png" style="width: 650px;" /></a>
+<p>There is also a read-only form field which contains the text of the legal
+disclaimer that has to be accepted by the add-on linked release owner. The
+text of the legal disclaimer will be set by the site admin inside the
+‘Add-on Center’.</p>
+<p>If the source code is not inside the add-on linked release (the drop down
+field is set to ‘No’), it is necessary to fill in the link to the source code
+in the form field at the bottom of the register. If such a link will not be
+submitted the linked release owner gets an error message.</p>
+</div>
+<div class="section" id="the-fourth-register-linked-file">
+<h2>The Fourth Register ‘Linked File’<a class="headerlink" href="#the-fourth-register-linked-file" title="Permalink to this headline">¶</a></h2>
+<p>This register is the place to link to the add-on linked release file and
+declare which platform it is compatible with.</p>
+<a class="reference internal image-reference" href="_images/addon_linked_release_form04.png"><img alt="_images/addon_linked_release_form04.png" src="_images/addon_linked_release_form04.png" style="width: 600px;" /></a>
+<p>If there are versions of the add-on linked release for different platforms
+(e.g. one for MS Windows and another one for Linux only) this further linked
+release files could be linked using the following register.</p>
+<p>The list of platforms in the listing below the the upload field will be created
+by the site admin inside the ‘Add-on Center’. She / he is able to expand this
+list at any time if desired.</p>
+<p>Because a linked release is not uploaded to the Plone website it is not
+possible for Plone to calculate the size of the add-on linked release file.
+Thus there is a form field to submit this size of the file. This information
+will be displayed in the website next to the download link for the linked
+release file.</p>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">collective.addons</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="addnewaddoncenter.html">Add A New Add-on Center To Your Plone Site</a></li>
+<li class="toctree-l1"><a class="reference internal" href="addnewaddonproject.html">Add A New Add-on Project To The Add-on Center</a></li>
+<li class="toctree-l1"><a class="reference internal" href="addnewaddonrelease.html">Add A New Release To An Add-On Project</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Add A New Linked Release To An Add-On Project</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#the-first-register-default">The First Register ‘Default’</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#the-second-register-compatibility">The Second Register ‘Compatibility’</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#the-third-register-legal">The Third Register ‘Legal’</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#the-fourth-register-linked-file">The Fourth Register ‘Linked File’</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="publishaddonrelease.html">Release An Add-on Release Or A Linked Add-on Release</a></li>
+<li class="toctree-l1"><a class="reference internal" href="publishaddonproject.html">Publish An Add-on Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="messaging.html">Messaging</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="addnewaddonrelease.html" title="previous chapter">Add A New Release To An Add-On Project</a></li>
+      <li>Next: <a href="publishaddonrelease.html" title="next chapter">Release An Add-on Release Or A Linked Add-on Release</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, Andreas Mantke.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.1.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/addnewaddonlinkedrelease.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

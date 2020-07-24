@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messaging &#8212; collective.addons  documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Publish An Add-on Project" href="publishaddonproject.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="messaging">
+<h1>Messaging<a class="headerlink" href="#messaging" title="Permalink to this headline">¶</a></h1>
+<p>The collective.addons Plone add-on use some of the Plone messaging
+implementations to create messages to the site admin, reviewers and the
+owner / creator of add-ons.</p>
+<div class="section" id="messages-to-the-site-admininstrator-administrator">
+<h2>Messages To The Site-Admininstrator / Administrator<a class="headerlink" href="#messages-to-the-site-admininstrator-administrator" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>The site-administrator / admiinstrator get an e-mail once a new add-on
+project have been added to the add-on center.</p></li>
+<li><p>If the project owner submit her / his project for publication, the
+site-administrator / administrator get an e-mail about this event.</p></li>
+<li><p>Once the text of a published project change the site-administrator /
+administrator will get an e-mail with the complete text of the project
+summary and its description. Thus he get an information, if the text
+of the project changes into a direction that has not been reviewed.</p></li>
+</ul>
+<p>If the form field ‘contactForCenter’ in the add-on center contains an
+e-mail address the above messages will be send to this address. Otherwise
+the e-mail goes to the e-mail address of the Plone site.</p>
+</div>
+<div class="section" id="messages-to-the-project-owner">
+<h2>Messages To The Project Owner<a class="headerlink" href="#messages-to-the-project-owner" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Once a workflow status of his project(s) change the project owner will get an
+message (e-mail) which inform her / him about this new status.</p></li>
+<li><p>The project owner will get an e-mail once an add-on release or a linked
+add-on release have been added to her / his project(s).</p></li>
+<li><p>Once the site-administrator / administrator of the Plone site adds a new
+product version to the form field ‘Available Versions’ the owner of a
+project will get an e-mail to inform her / him about this event. The message
+ask the owner to update the versions list of the (linked) releases of his
+project(s).</p></li>
+</ul>
+</div>
+<div class="section" id="messages-to-a-possible-information-hub-of-add-on-releases">
+<h2>Messages To A Possible Information Hub Of Add-on Releases<a class="headerlink" href="#messages-to-a-possible-information-hub-of-add-on-releases" title="Permalink to this headline">¶</a></h2>
+<p>It is possible to create a hub outside of the Plone site, that drives the
+add-ons center, which could get an e-mail for every new published add-on
+(linked) release. This e-mail could be parsed and used to inform the user
+of the product about new (linked) releases from inside the product.</p>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">collective.addons</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="addnewaddoncenter.html">Add A New Add-on Center To Your Plone Site</a></li>
+<li class="toctree-l1"><a class="reference internal" href="addnewaddonproject.html">Add A New Add-on Project To The Add-on Center</a></li>
+<li class="toctree-l1"><a class="reference internal" href="addnewaddonrelease.html">Add A New Release To An Add-On Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="addnewaddonlinkedrelease.html">Add A New Linked Release To An Add-On Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="publishaddonrelease.html">Release An Add-on Release Or A Linked Add-on Release</a></li>
+<li class="toctree-l1"><a class="reference internal" href="publishaddonproject.html">Publish An Add-on Project</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Messaging</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#messages-to-the-site-admininstrator-administrator">Messages To The Site-Admininstrator / Administrator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#messages-to-the-project-owner">Messages To The Project Owner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#messages-to-a-possible-information-hub-of-add-on-releases">Messages To A Possible Information Hub Of Add-on Releases</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="publishaddonproject.html" title="previous chapter">Publish An Add-on Project</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, Andreas Mantke.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.1.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/messaging.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
