@@ -3,7 +3,6 @@ from collective.addons import _
 from collective.addons.common import validateemail
 from plone import api
 from plone.app.layout.viewlets import ViewletBase
-from plone.app.multilingual.dx import directives
 from plone.app.textfield import RichText
 from plone.supermodel import model
 from plone.supermodel.directives import primary
