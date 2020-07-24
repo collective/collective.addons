@@ -75,14 +75,14 @@ class ICollectiveaddonsControlPanel(Interface):
     allowed_apimageextension = schema.TextLine(
         title=_(safe_unicode('Allowed image file extension')),
         description=_(safe_unicode('Fill in the allowed image file extensions, seperated '
-                      "by a pipe '|'.")),
+                                   "by a pipe '|'.")),
         default=safe_unicode('jpg|jpeg|png|gif'),
     )
 
     allowed_apdocfileextensions = schema.TextLine(
         title=_(safe_unicode('Allowed documentation file extension')),
         description=_(safe_unicode('Fill in the allowed documentation file extensions, '
-                      "seperated by a pipe '|'.")),
+                                   "seperated by a pipe '|'.")),
         default=safe_unicode('pdf|odt'),
     )
 
@@ -102,11 +102,11 @@ class ICollectiveaddonsControlPanel(Interface):
     legal_disclaimer = schema.Text(
         title=_(safe_unicode('Text of the Legal Disclaimer and Limitations')),
         description=_(safe_unicode('Enter the text of the legal disclaimer and '
-                      'limitations that should be displayed to the '
-                      'project creator and should be accepted by '
-                      'the owner of the project.')),
+                                   'limitations that should be displayed to the '
+                                   'project creator and should be accepted by '
+                                   'the owner of the project.')),
         default=_(safe_unicode('Fill in the legal disclaimer, that had to be '
-                  'accepted by the project owner.')),
+                               'accepted by the project owner.')),
         required=False,
     )
 
@@ -120,8 +120,8 @@ class ICollectiveaddonsControlPanel(Interface):
     legal_downloaddisclaimer = schema.Text(
         title=_(safe_unicode('Text of the Legal Disclaimer and Limitations for Downlaods')),
         description=_(safe_unicode('Enter any legal disclaimer and limitations for '
-                      'downloads that should appear on each page for '
-                      'dowloadable files.')),
+                                   'downloads that should appear on each page for '
+                                   'dowloadable files.')),
         default=_(safe_unicode('Fill in the text for the legal download disclaimer.')),
         required=False,
     )
