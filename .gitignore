@@ -44,6 +44,7 @@ reports/
 !src/collective
 .directory/
 docs/_build/*
+docs/build/*
 docs/Makefile
 docs/make.bat
 
