@@ -1,7 +1,7 @@
 Changelog
 =========
 
-2.0 (unreleased)
+2.0 (2020-07-24)
 ----------------
 
 - Add a controlpanel and move configuration entries from the addoncenter
