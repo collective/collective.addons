@@ -93,15 +93,15 @@ msgstr ""
 msgid "All categories"
 msgstr ""
 
-#: ./browser/controlpanel.py:67
+#: ./browser/controlpanel.py:69
 msgid "Allowed add-on file extensions"
 msgstr ""
 
-#: ./browser/controlpanel.py:81
+#: ./browser/controlpanel.py:83
 msgid "Allowed documentation file extension"
 msgstr ""
 
-#: ./browser/controlpanel.py:74
+#: ./browser/controlpanel.py:76
 msgid "Allowed image file extension"
 msgstr ""
 
@@ -126,7 +126,7 @@ msgstr ""
 msgid "Any version"
 msgstr ""
 
-#: ./browser/controlpanel.py:13
+#: ./browser/controlpanel.py:15
 msgid "Available Categories"
 msgstr ""
 
@@ -135,15 +135,15 @@ msgstr ""
 msgid "Available Downloads"
 msgstr ""
 
-#: ./browser/controlpanel.py:18
+#: ./browser/controlpanel.py:20
 msgid "Available Licenses"
 msgstr ""
 
-#: ./browser/controlpanel.py:48
+#: ./browser/controlpanel.py:50
 msgid "Available Platforms"
 msgstr ""
 
-#: ./browser/controlpanel.py:42
+#: ./browser/controlpanel.py:44
 msgid "Available Versions"
 msgstr ""
 
@@ -287,11 +287,11 @@ msgstr ""
 msgid "Enter an information about the search for older versions of the product, if they are not on the versions list (compatibility) anymore."
 msgstr ""
 
-#: ./browser/controlpanel.py:120
+#: ./browser/controlpanel.py:122
 msgid "Enter any legal disclaimer and limitations for downloads that should appear on each page for dowloadable files."
 msgstr ""
 
-#: ./browser/controlpanel.py:102
+#: ./browser/controlpanel.py:104
 msgid "Enter the text of the legal disclaimer and limitations that should be displayed to the project creator and should be accepted by the owner of the project."
 msgstr ""
 
@@ -325,23 +325,23 @@ msgstr ""
 msgid "File size:"
 msgstr ""
 
-#: ./browser/controlpanel.py:82
+#: ./browser/controlpanel.py:84
 msgid "Fill in the allowed documentation file extensions, seperated by a pipe '|'."
 msgstr ""
 
-#: ./browser/controlpanel.py:68
+#: ./browser/controlpanel.py:70
 msgid "Fill in the allowed file extensions for add-ons, seperated by a pipe '|'."
 msgstr ""
 
-#: ./browser/controlpanel.py:75
+#: ./browser/controlpanel.py:77
 msgid "Fill in the allowed image file extensions, seperated by a pipe '|'."
 msgstr ""
 
-#: ./browser/controlpanel.py:106
+#: ./browser/controlpanel.py:108
 msgid "Fill in the legal disclaimer, that had to be accepted by the project owner."
 msgstr ""
 
-#: ./browser/controlpanel.py:123
+#: ./browser/controlpanel.py:125
 msgid "Fill in the text for the legal download disclaimer."
 msgstr ""
 
@@ -509,11 +509,11 @@ msgstr ""
 msgid "Latest Not Stable Release"
 msgstr ""
 
-#: ./browser/controlpanel.py:96
+#: ./browser/controlpanel.py:98
 msgid "Legal Disclaimer and Limitations"
 msgstr ""
 
-#: ./browser/controlpanel.py:114
+#: ./browser/controlpanel.py:116
 msgid "Legal Disclaimer and Limitations for Downloads"
 msgstr ""
 
@@ -944,11 +944,11 @@ msgstr ""
 msgid "Submit your"
 msgstr ""
 
-#: ./browser/controlpanel.py:101
+#: ./browser/controlpanel.py:103
 msgid "Text of the Legal Disclaimer and Limitations"
 msgstr ""
 
-#: ./browser/controlpanel.py:119
+#: ./browser/controlpanel.py:121
 msgid "Text of the Legal Disclaimer and Limitations for Downlaods"
 msgstr ""
 
@@ -1107,11 +1107,11 @@ msgstr ""
 msgid "Title"
 msgstr ""
 
-#: ./browser/controlpanel.py:95
+#: ./browser/controlpanel.py:97
 msgid "Title for Legal Disclaimer and Limitations"
 msgstr ""
 
-#: ./browser/controlpanel.py:112
+#: ./browser/controlpanel.py:114
 msgid "Title of the Legal Disclaimer and Limitations for Downloads"
 msgstr ""
 
