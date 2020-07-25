@@ -12,6 +12,7 @@ from Products.Five import BrowserView
 from Products.ZCTextIndex.ParseTree import ParseError
 from zope import schema
 
+
 MULTISPACE = u'\u3000'.encode('utf-8')
 BAD_CHARS = ('?', '-', '+', '*', MULTISPACE)
 
