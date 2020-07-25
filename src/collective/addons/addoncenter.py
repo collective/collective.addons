@@ -7,10 +7,10 @@ from plone.app.textfield import RichText
 from plone.supermodel import model
 from plone.supermodel.directives import primary
 from Products.CMFPlone.browser.search import quote_chars
+from Products.CMFPlone.utils import safe_unicode
 from Products.Five import BrowserView
 from Products.ZCTextIndex.ParseTree import ParseError
 from zope import schema
-
 
 MULTISPACE = u'\u3000'.encode('utf-8')
 BAD_CHARS = ('?', '-', '+', '*', MULTISPACE)
@@ -21,47 +21,47 @@ class IAddonCenter(model.Schema):
     """
 
     title = schema.TextLine(
-        title=_(u'Name of the Add-on Center'),
+        title=_(safe_unicode('Name of the Add-on Center')),
     )
 
     description = schema.Text(
-        title=_(u'Description of the Add-on Center'),
+        title=_(safe_unicode('Description of the Add-on Center')),
     )
 
     product_description = schema.Text(
-        title=_(u'Description of the features of Add-ons'),
+        title=_(safe_unicode('Description of the features of Add-ons')),
     )
 
     product_title = schema.TextLine(
-        title=_(u'Add-on product name'),
-        description=_(
-            u'Name of the Add-on product, e.g. only Add-ons'),
+        title=_(safe_unicode('Add-on product name')),
+        description=_(safe_unicode(
+            'Name of the Add-on product, e.g. only Add-ons')),
     )
 
     model.fieldset('instructions',
-                   label=u'Instructions',
+                   label=safe_unicode('Instructions'),
                    fields=['install_instructions', 'reporting_bugs'],
                    )
 
     primary('install_instructions')
     install_instructions = RichText(
-        title=_(u'Add-on installation instructions'),
-        description=_(u'Please fill in the install instructions'),
+        title=_(safe_unicode('Add-on installation instructions')),
+        description=_(safe_unicode('Please fill in the install instructions')),
         required=False,
     )
 
     primary('reporting_bugs')
     reporting_bugs = RichText(
-        title=_(u'Instruction how to report Bugs'),
+        title=_(safe_unicode('Instruction how to report Bugs')),
         required=False,
     )
 
     primary('information_oldversions')
     information_oldversions = RichText(
-        title=_(u'Information about search for old product versions'),
-        description=_(u'Enter an information about the search for older '
-                      u'versions of the product, if they are not on the '
-                      u'versions list (compatibility) anymore.'),
+        title=_(safe_unicode('Information about search for old product versions')),
+        description=_(safe_unicode('Enter an information about the search for older '
+                                   'versions of the product, if they are not on the '
+                                   'versions list (compatibility) anymore.')),
         required=False,
     )
 
@@ -71,20 +71,20 @@ class IAddonCenter(model.Schema):
                    )
 
     releaseAllert = schema.ASCIILine(
-        title=_(u'EMail address for the messages about new releases'),
-        description=_(
-            u'Enter an email address to which information about a new '
-            u'release should be send.'),
+        title=_(safe_unicode('EMail address for the messages about new releases')),
+        description=_(safe_unicode(
+            'Enter an email address to which information about a new '
+            'release should be send.')),
         required=False,
     )
 
     contactForCenter = schema.ASCIILine(
-        title=_(
-            u'EMail address for communication with the add-on center '
-            u'manager and reviewer'),
-        description=_(
-            u'Enter an email address for the communication with add-on '
-            u'center manager and reviewer'),
+        title=_(safe_unicode(
+            'EMail address for communication with the add-on center '
+            'manager and reviewer')),
+        description=_(safe_unicode(
+            'Enter an email address for the communication with add-on '
+            'center manager and reviewer')),
         default='projects@foo.org',
         constraint=validateemail,
     )
