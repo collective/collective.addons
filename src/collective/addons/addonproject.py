@@ -15,6 +15,7 @@ from plone.namedfile.field import NamedBlobFile
 from plone.namedfile.field import NamedBlobImage
 from plone.supermodel import model
 from plone.supermodel.directives import primary
+from Products.CMFPlone.utils import safe_unicode
 from Products.Five import BrowserView
 from Products.validation import V_REQUIRED  # noqa
 from z3c.form import validator
@@ -26,60 +27,63 @@ from zope.interface import invariant
 
 def isNotEmptyCategory(value):
     if not value:
-        raise Invalid(u'You have to choose at least one category for your '
-                      u'project.')
+        raise Invalid(safe_unicode(
+            'You have to choose at least one category for your '
+            'project.'))
     return True
 
 
 class ProvideScreenshotLogo(Invalid):
-    __doc__ = _(u'Please add a screenshot or a logo to your project. You find '
-                u'the appropriate fields below on this page.')
+    __doc__ = _(safe_unicode(
+        'Please add a screenshot or a logo to your project. You find '
+        'the appropriate fields below on this page.'))
 
 
 class IAddonProject(model.Schema):
     directives.mode(information='display')
     information = schema.Text(
-        title=_(u'Information'),
-        description=_(u'The Dialog to create a new project consists of '
-                      u'different register. Please go through this register '
-                      u'and fill in the appropriate data for your project. '
-                      u"The register 'Documentation' and its fields are "
-                      u'optional.'),
+        title=_(safe_unicode('Information')),
+        description=_(safe_unicode(
+            'The Dialog to create a new project consists of '
+            'different register. Please go through this register '
+            'and fill in the appropriate data for your project. '
+            "The register 'Documentation' and its fields are "
+            'optional.')),
     )
 
     dexteritytextindexer.searchable('title')
     title = schema.TextLine(
-        title=_(u'Title'),
-        description=_(u'Project Title - minimum 5 and maximum 50 characters'),
+        title=_(safe_unicode('Title')),
+        description=_(safe_unicode('Project Title - minimum 5 and maximum 50 characters')),
         min_length=5,
         max_length=50,
     )
 
     dexteritytextindexer.searchable('description')
     description = schema.Text(
-        title=_(u'Project Summary'),
+        title=_(safe_unicode('Project Summary')),
     )
 
     dexteritytextindexer.searchable('details')
     primary('details')
     details = RichText(
-        title=_(u'Full Project Description'),
+        title=_(safe_unicode('Full Project Description')),
         required=False,
     )
 
     model.fieldset('Categories',
-                   label='Category / Categories',
+                   label=_(safe_unicode('Category / Categories')),
                    fields=['category_choice'],
                    )
 
     model.fieldset('logo_screenshot',
-                   label='Logo / Screenshot',
+                   label=_(safe_unicode('Logo / Screenshot')),
                    fields=['addonimageextension', 'project_logo',
                            'addonimageextension1', 'screenshot'],
                    )
 
     model.fieldset('documentation',
-                   label='Documentation',
+                   label=_(safe_unicode('Documentation')),
                    fields=['documentation_link', 'addondocextension',
                            'documentation_file'],
                    )
@@ -87,94 +91,105 @@ class IAddonProject(model.Schema):
     dexteritytextindexer.searchable('category_choice')
     directives.widget(category_choice=CheckBoxFieldWidget)
     category_choice = schema.List(
-        title=_(u'Choose your categories'),
-        description=_(u'Please select the appropriate categories (one or '
-                      u'more) for your project.'),
+        title=_(safe_unicode('Choose your categories')),
+        description=_(safe_unicode(
+            'Please select the appropriate categories (one or '
+            'more) for your project.')),
         value_type=schema.Choice(source='Categories'),
         constraint=isNotEmptyCategory,
         required=True,
     )
 
     addoncontactAddress = schema.TextLine(
-        title=_(u'Contact email-address'),
-        description=_(u'Contact email-address for the project.'),
+        title=_(safe_unicode('Contact email-address')),
+        description=_(safe_unicode('Contact email-address for the project.')),
         constraint=validateemail,
     )
 
     make_addon_contact_address_public = schema.Choice(
-        title=_(u'Email Public?'),
-        description=_(u'Please decide if your email address '
-                      u'should be displayed on the project website.'),
+        title=_(safe_unicode('Email Public?')),
+        description=_(safe_unicode(
+            'Please decide if your email address '
+            'should be displayed on the project website.')),
         vocabulary=yesnochoice,
         required=True,
     )
 
     display_addon_user_name = schema.Choice(
-        title=_(u'Project Author Public?'),
-        description=_(u'Please decide if your name '
-                      u'should be displayed on the project website.'),
+        title=_(safe_unicode('Project Author Public?')),
+        description=_(safe_unicode(
+            'Please decide if your name '
+            'should be displayed on the project website.')),
         vocabulary=yesnochoice,
         required=True,
     )
 
     homepage = schema.URI(
-        title=_(u'Homepage'),
-        description=_(u'If the project has an external home page, enter its '
-                      u"URL (example: 'http://www.mysite.org')."),
+        title=_(safe_unicode('Homepage')),
+        description=_(safe_unicode(
+            'If the project has an external home page, enter its '
+            "URL (example: 'http://www.mysite.org').")),
         required=False,
     )
 
     documentation_link = schema.URI(
-        title=_(u'URL of documentation repository '),
-        description=_(u'If the project has externally hosted '
-                      u'documentation, enter its URL '
-                      u"(example: 'http://www.mysite.org')."),
+        title=_(safe_unicode('URL of documentation repository ')),
+        description=_(safe_unicode(
+            'If the project has externally hosted '
+            'documentation, enter its URL '
+            "(example: 'http://www.mysite.org').")),
         required=False,
     )
 
     directives.mode(addondocextension='display')
     addondocextension = schema.TextLine(
-        title=_(u'The following file extensions are allowed for documentation '
-                u'files (upper case and lower case and mix of both):'),
+        title=_(safe_unicode(
+            'The following file extensions are allowed for documentation '
+            'files (upper case and lower case and mix of both):')),
         defaultFactory=alloweddocextensions,
     )
 
     documentation_file = NamedBlobFile(
-        title=_(u'Dokumentation File'),
-        description=_(u"If you have a Documentation in the file format 'PDF' "
-                      u"or 'ODT' you could add it here."),
+        title=_(safe_unicode('Dokumentation File')),
+        description=_(safe_unicode(
+            "If you have a Documentation in the file format 'PDF' "
+            "or 'ODT' you could add it here.")),
         required=False,
         constraint=validatedocextension,
     )
 
     directives.mode(addonimageextension='display')
     addonimageextension = schema.TextLine(
-        title=_(u'The following file extensions are allowed for project logo '
-                u'files (upper case and lower case and mix of both):'),
+        title=_(safe_unicode(
+            'The following file extensions are allowed for project logo '
+            'files (upper case and lower case and mix of both):')),
         defaultFactory=allowedimageextensions,
     )
 
     project_logo = NamedBlobImage(
-        title=_(u'Logo'),
-        description=_(u'Add a logo for the project (or organization/company) '
-                      u"by clicking the 'Browse' button. You could provide "
-                      u"an image of the file format 'png', 'gif' or 'jpg'."),
+        title=_(safe_unicode('Logo')),
+        description=_(safe_unicode(
+            'Add a logo for the project (or organization/company) '
+            "by clicking the 'Browse' button. You could provide "
+            "an image of the file format 'png', 'gif' or 'jpg'.")),
         required=False,
         constraint=validateimageextension,
     )
 
     directives.mode(addonimageextension1='display')
     addonimageextension1 = schema.TextLine(
-        title=_(u'The following file extensions are allowed for screenshot '
-                u'files (upper case and lower case and mix of both):'),
+        title=_(safe_unicode(
+            'The following file extensions are allowed for screenshot '
+            'files (upper case and lower case and mix of both):')),
         defaultFactory=allowedimageextensions,
     )
 
     screenshot = NamedBlobImage(
-        title=_(u'Screenshot of the Add-on'),
-        description=_(u"Add a screenshot by clicking the 'Browse' button. You "
-                      u"could provide an image of the file format 'png', "
-                      u"'gif' or 'jpg'."),
+        title=_(safe_unicode('Screenshot of the Add-on')),
+        description=_(safe_unicode(
+            "Add a screenshot by clicking the 'Browse' button. You "
+            "could provide an image of the file format 'png', "
+            "'gif' or 'jpg'.")),
         required=False,
         constraint=validateimageextension,
     )
@@ -182,10 +197,12 @@ class IAddonProject(model.Schema):
     @invariant
     def missingScreenshotOrLogo(data):
         if not data.screenshot and not data.project_logo:
-            raise ProvideScreenshotLogo(_(u'Please add a screenshot or a logo '
-                                          u'to your project page. You will '
-                                          u'find the appropriate fields below '
-                                          u'on this page.'))
+            raise ProvideScreenshotLogo(_(
+                safe_unicode(
+                    'Please add a screenshot or a logo '
+                    'to your project page. You will '
+                    'find the appropriate fields below '
+                    'on this page.')))
 
 
 def notifyProjectManager(self, event):
@@ -196,10 +213,11 @@ def notifyProjectManager(self, event):
         mailsender = api.portal.get_registry_record('plone.email_from_address')
     api.portal.send_email(
         recipient=('{0}').format(self.addoncontactAddress),
-        sender=(u'{0} <{1}>').format('Admin of the Website', mailsender),
-        subject=(u'Your Project {0}').format(self.title),
-        body=(u'The status of your changed. '
-              u'The new status is {0}').format(state),
+        sender=(safe_unicode('{0} <{1}>')).format('Admin of the Website', mailsender),
+        subject=(safe_unicode('Your Project {0}')).format(self.title),
+        body=(safe_unicode(
+            'The status of your changed. '
+            'The new status is {0}')).format(state),
     )
 
 
@@ -211,10 +229,11 @@ def notifyProjectManagerReleaseAdd(self, event):
             'plone.email_from_address')
     api.portal.send_email(
         recipient=('{0}').format(self.addoncontactAddress),
-        sender=(u'{0} <{1}>').format('Admin of the Website', mailrecipient),
-        subject=(u'Your Project [{0}: new Release added').format(self.title),
-        body=(u'A new release was added to your project: '
-              u"'{0}'").format(self.title),
+        sender=(safe_unicode('{0} <{1}>')).format('Admin of the Website', mailrecipient),
+        subject=(safe_unicode('Your Project [{0}: new Release added')).format(self.title),
+        body=(safe_unicode(
+            'A new release was added to your project: '
+            "'{0}'")).format(self.title),
     )
 
 
@@ -226,11 +245,13 @@ def notifyProjectManagerLinkedReleaseAdd(self, event):
             'plone.email_from_address')
     api.portal.send_email(
         recipient=('{0}').format(self.addoncontactAddress),
-        sender=(u'{0} <{1}>').format('Admin of the Website', mailrecipient),
-        subject=(u'Your Project {0}: new linked Release '
-                 u'added').format(self.title),
-        body=(u'A new linked release was added to your '
-              u"project: '{0}'").format(self.title),
+        sender=(safe_unicode('{0} <{1}>')).format('Admin of the Website', mailrecipient),
+        subject=(safe_unicode(
+            'Your Project {0}: new linked Release '
+            'added')).format(self.title),
+        body=(safe_unicode(
+            'A new linked release was added to your '
+            "project: '{0}'")).format(self.title),
     )
 
 
@@ -245,8 +266,9 @@ def notifyAboutNewReviewlistentry(self, event):
     if state == 'pending':
         api.portal.send_email(
             recipient=mailrecipient,
-            subject=(u'A Project with the title {0} was added to the review '
-                     u'list').format(self.title),
+            subject=(safe_unicode(
+                'A Project with the title {0} was added to the review '
+                'list')).format(self.title),
             body='Please have a look at the review list and check if the '
                  'project is ready for publication. \n'
                  '\n'
