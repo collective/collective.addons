@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from collective.addons import _
 from plone import api
+from Products.CMFPlone.utils import safe_unicode
 from zope.interface import Invalid
 from zope.schema.vocabulary import SimpleTerm
 from zope.schema.vocabulary import SimpleVocabulary
@@ -9,8 +10,8 @@ import re
 
 
 yesnochoice = SimpleVocabulary(
-    [SimpleTerm(value=0, title=_(u'No')),
-     SimpleTerm(value=1, title=_(u'Yes'))],
+    [SimpleTerm(value=0, title=_(safe_unicode('No'))),
+     SimpleTerm(value=1, title=_(safe_unicode('Yes')))],
 )
 
 checkemail = re.compile(
@@ -41,9 +42,10 @@ def validateimageextension(value):
     matches = re.compile(pattern, re.IGNORECASE).match
     if not matches(value.filename):
         raise Invalid(
-            u'You could only upload files with an allowed file extension. '
-            u'Please try again to upload a file with the correct file'
-            u'extension.')
+            safe_unicode(
+                'You could only upload files with an allowed file extension. '
+                'Please try again to upload a file with the correct file'
+                'extension.'))
     return True
 
 
@@ -53,9 +55,10 @@ def validatedocextension(value):
     matches = re.compile(pattern, re.IGNORECASE).match
     if not matches(value.filename):
         raise Invalid(
-            u'You could only upload files with an allowed file extension. '
-            u'Please try again to upload a file with the correct file'
-            u'extension.')
+            safe_unicode(
+                'You could only upload files with an allowed file extension. '
+                'Please try again to upload a file with the correct file'
+                'extension.'))
     return True
 
 
@@ -65,9 +68,10 @@ def validateaddonextension(value):
     matches = re.compile(pattern, re.IGNORECASE).match
     if not matches(value.filename):
         raise Invalid(
-            u'You could only upload files with an allowed file '
-            u'extension. Please try again to upload a file with the '
-            u'correct file extension.')
+            safe_unicode(
+                'You could only upload files with an allowed file '
+                'extension. Please try again to upload a file with the '
+                'correct file extension.'))
     return True
 
 
