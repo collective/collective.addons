@@ -4,7 +4,9 @@ Changelog
 2.1 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- Use safe_unicode for unicode strings, make more labels translatable [Andreas Mantke]
+- Update README.rst [Andreas Mantke]
+- Update localization files and German localization [Andreas Mantke]
 
 
 2.0 (2020-07-24)
