@@ -1,7 +1,7 @@
 Changelog
 =========
 
-2.1 (unreleased)
+2.1 (2020-07-27)
 ----------------
 
 - Use safe_unicode for unicode strings, make more labels translatable [Andreas Mantke]
