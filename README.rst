@@ -12,13 +12,16 @@ collective.addons
 Features
 --------
 
+- The add-on has a cofiguration settings entry in the site administration yet. It's form
+  contains fields to set a choice of categories, platforms, licenses and versions of the
+  product (for which the add-on is used). There are also fields to set the allowed file
+  extensions of the add-on files, the image files (e.g. screenshots, logos) and the
+  documentation.
 
 - A add-on center with listing and display of template projects respectively to their rating,
   a search form and a listing of the latest projects.
 - The add-on center edit form contains fields to set the title of the center and the name of
-  the add-ons, add a description of the center, set a choice of categories, platforms, lizenses
-  and versions of the product (for which the add-ons are used). There are also fields to set the
-  allowed file extensions of the add-on files and the image files (e.g. screenshots, logos).
+  the add-ons and add a description of the center.
 - Inside the add-on center contributors could create add-on projects. The edit form of the
   project contains fields to choose the categories.
 - The contributor could add releases and linked releases to the add-on project.
