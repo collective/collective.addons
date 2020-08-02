@@ -1,7 +1,7 @@
 Changelog
 =========
 
-2.2 (unreleased)
+2.2 (2020-08-02)
 ----------------
 
 - Add a file extension validator for linked add-on releases. [Andreas Mantke]
