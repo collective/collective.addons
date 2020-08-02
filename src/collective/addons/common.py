@@ -63,10 +63,23 @@ def validatedocextension(value):
 
 
 def validateaddonextension(value):
-    result = str(api.portal.get_registry_record('collectiveaddons.allowed_allowedaddonfileextensions'))
+    result = str(api.portal.get_registry_record('collectiveaddons.allowed_addonfileextension'))
     pattern = r'^.*\.({0})'.format(result[0])
     matches = re.compile(pattern, re.IGNORECASE).match
     if not matches(value.filename):
+        raise Invalid(
+            safe_unicode(
+                'You could only upload files with an allowed file '
+                'extension. Please try again to upload a file with the '
+                'correct file extension.'))
+    return True
+
+
+def validatelinkedaddonextension(value):
+    result = str(api.portal.get_registry_record('collectiveaddons.allowed_addonfileextension'))
+    pattern = r'^.*\.({0})'.format(result[0])
+    matches = re.compile(pattern, re.IGNORECASE).match
+    if not matches(value):
         raise Invalid(
             safe_unicode(
                 'You could only upload files with an allowed file '
