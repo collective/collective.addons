@@ -3,7 +3,7 @@ Configuration
 
 The configuration of the add-on could be done from the Plone controlpanel 'Site Setup'.
 You already used this panel during the installation of the add-on. There are entries
-for different configuration task.
+for different configuration tasks.
 
 
 Navigation configuration
@@ -16,7 +16,7 @@ the corresponding button and you get to the configuration menu in the screenshot
 .. image:: images/navigation_add_addon_center.png
    :width: 600
 
-Tick the checkbox in fron of the entry 'Add-on_Center' and save your changes. The necessary steps
+Tick the checkbox in front of the entry 'Add-on_Center' and save your changes. The necessary steps
 are done to go to the homepage of your Plone site (or a subdirectory of the site, where you want to
 create a new add-on center.
 
