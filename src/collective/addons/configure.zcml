@@ -61,7 +61,7 @@
       name="view"
       for="collective.addons.addonproject.IAddonProject"
       class="collective.addons.addonproject.AddonProjectView"
-      template="addonproject_templates/view.pt"
+      template="view_templates/addonproject_view.pt"
       permission="zope2.View"
       />
 
@@ -70,7 +70,7 @@
       name="view"
       for="collective.addons.addonrelease.IAddonRelease"
       class="collective.addons.addonrelease.AddonReleaseView"
-      template="addonrelease_templates/view.pt"
+      template="view_templates/addonrelease_view.pt"
       permission="zope2.View"
       />
 
@@ -79,7 +79,7 @@
       name="view"
       for="collective.addons.addonlinkedrelease.IAddonLinkedRelease"
       class="collective.addons.addonlinkedrelease.AddonLinkedReleaseView"
-      template="addonlinkedrelease_templates/view.pt"
+      template="view_templates/addonlinkedrelease_view.pt"
       permission="zope2.View"
       />
 
