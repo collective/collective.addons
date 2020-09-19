@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-07-27 11:06+0000\n"
+"POT-Creation-Date: 2020-09-19 16:18+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,7 +22,7 @@ msgstr ""
 msgid ""
 msgstr ""
 
-#: ./addoncenter_templates/view.pt:208
+#: ./view_templates/addoncenter_view.pt:208
 msgid "${product_title}"
 msgstr ""
 
@@ -44,7 +44,7 @@ msgstr ""
 msgid "A detailed log of what has changed since the previous release."
 msgstr ""
 
-#: ./addoncenter_templates/view.pt:277
+#: ./view_templates/addoncenter_view.pt:277
 msgid "About"
 msgstr ""
 
@@ -89,15 +89,15 @@ msgstr ""
 msgid "Add-on product name"
 msgstr ""
 
-#: ./addoncenter_templates/view.pt:210
+#: ./view_templates/addoncenter_view.pt:210
 msgid "Add-ons"
 msgstr ""
 
-#: ./addonproject_templates/view.pt:408
+#: ./view_templates/addonproject_view.pt:408
 msgid "All Releases"
 msgstr ""
 
-#: ./addoncenter_templates/view.pt:111
+#: ./view_templates/addoncenter_view.pt:111
 msgid "All categories"
 msgstr ""
 
@@ -130,7 +130,7 @@ msgstr ""
 msgid "An Add-on Release"
 msgstr ""
 
-#: ./addoncenter_templates/view.pt:121
+#: ./view_templates/addoncenter_view.pt:121
 msgid "Any version"
 msgstr ""
 
@@ -138,8 +138,8 @@ msgstr ""
 msgid "Available Categories"
 msgstr ""
 
-#: ./addonlinkedrelease_templates/view.pt:73
-#: ./addonrelease_templates/view.pt:73
+#: ./view_templates/addonlinkedrelease_view.pt:73
+#: ./view_templates/addonrelease_view.pt:73
 msgid "Available Downloads"
 msgstr ""
 
@@ -160,11 +160,11 @@ msgstr ""
 msgid "Beta Release"
 msgstr ""
 
-#: ./addoncenter_templates/view.pt:252
+#: ./view_templates/addoncenter_view.pt:252
 msgid "Browse"
 msgstr ""
 
-#: ./addoncenter_templates/view.pt:255
+#: ./view_templates/addoncenter_view.pt:255
 msgid "Browse Add-ons by Category"
 msgstr ""
 
@@ -177,7 +177,7 @@ msgstr ""
 msgid "Category / Categories"
 msgstr ""
 
-#: ./addonproject_templates/view.pt:97
+#: ./view_templates/addonproject_view.pt:97
 msgid "Category/Categories"
 msgstr ""
 
@@ -192,8 +192,8 @@ msgid "Change the release stage to 'Release beta'"
 msgstr ""
 
 #: ./addonlinkedrelease.py:89
-#: ./addonlinkedrelease_templates/view.pt:70
 #: ./addonrelease.py:91
+#: ./view_templates/addonlinkedrelease_view.pt:70
 msgid "Changelog"
 msgstr ""
 
@@ -202,8 +202,8 @@ msgid "Choose your categories"
 msgstr ""
 
 #: ./addonlinkedrelease.py:97
-#: ./addonlinkedrelease_templates/view.pt:63
-#: ./addonproject_templates/view.pt:416
+#: ./addonrelease.py:98
+#: ./view_templates/addonlinkedrelease_view.pt:63
 msgid "Compatibility"
 msgstr ""
 
@@ -215,7 +215,7 @@ msgstr ""
 msgid "Compatible with versions of the product"
 msgstr ""
 
-#: ./addoncenter_templates/view.pt:281
+#: ./view_templates/addoncenter_view.pt:281
 msgid "Contact a Project Author"
 msgstr ""
 
@@ -239,23 +239,23 @@ msgstr ""
 msgid "Contact the project owner and send your feedback"
 msgstr ""
 
-#: ./addonproject_templates/view.pt:119
+#: ./view_templates/addonproject_view.pt:119
 msgid "Current Release"
 msgstr ""
 
-#: ./addonproject_templates/view.pt:239
+#: ./view_templates/addonproject_view.pt:239
 msgid "Current release for the project"
 msgstr ""
 
-#: ./addonproject_templates/view.pt:127
+#: ./view_templates/addonproject_view.pt:127
 msgid "Current unstable release for the project"
 msgstr ""
 
-#: ./addoncenter_templates/view.pt:212
+#: ./view_templates/addoncenter_view.pt:212
 msgid "Currently there are"
 msgstr ""
 
-#: ./addonproject_templates/view.pt:417
+#: ./view_templates/addonproject_view.pt:417
 msgid "Description"
 msgstr ""
 
@@ -275,7 +275,7 @@ msgstr ""
 msgid "Dokumentation File"
 msgstr ""
 
-#: ./addonproject_templates/view.pt:495
+#: ./view_templates/addonproject_view.pt:495
 msgid "Dokumentation File:"
 msgstr ""
 
@@ -311,11 +311,11 @@ msgstr ""
 msgid "Enter the text of the legal disclaimer and limitations that should be displayed to the project creator and should be accepted by the owner of the project."
 msgstr ""
 
-#: ./addonproject_templates/view.pt:490
+#: ./view_templates/addonproject_view.pt:490
 msgid "External Documentation"
 msgstr ""
 
-#: ./addonproject_templates/view.pt:500
+#: ./view_templates/addonproject_view.pt:500
 msgid "External Project Page"
 msgstr ""
 
@@ -335,9 +335,9 @@ msgstr ""
 msgid "Fifth uploaded file is compatible with the Platform(s)"
 msgstr ""
 
-#: ./addonlinkedrelease_templates/view.pt:81
-#: ./addonproject_templates/view.pt:156
-#: ./addonrelease_templates/view.pt:83
+#: ./view_templates/addonlinkedrelease_view.pt:81
+#: ./view_templates/addonproject_view.pt:156
+#: ./view_templates/addonrelease_view.pt:83
 msgid "File size:"
 msgstr ""
 
@@ -452,7 +452,7 @@ msgstr ""
 msgid "Hide this release"
 msgstr ""
 
-#: ./addoncenter_templates/view.pt:127
+#: ./view_templates/addoncenter_view.pt:127
 msgid "Highest Rated"
 msgstr ""
 
@@ -468,7 +468,7 @@ msgstr ""
 msgid "If the project has externally hosted documentation, enter its URL (example: 'http://www.mysite.org')."
 msgstr ""
 
-#: ./addoncenter_templates/own_projects.pt:49
+#: ./view_templates/own_projects.pt:49
 msgid "If you already created a new"
 msgstr ""
 
@@ -488,8 +488,8 @@ msgstr ""
 msgid "If you want to upload more files for this release, e.g. because there are files for other operating systems, you'll find the upload fields on the register 'Further Uploads' and 'Further More Uploads'."
 msgstr ""
 
-#: ./addonlinkedrelease_templates/view.pt:35
-#: ./addonrelease_templates/view.pt:35
+#: ./view_templates/addonlinkedrelease_view.pt:35
+#: ./view_templates/addonrelease_view.pt:35
 msgid "Info"
 msgstr ""
 
@@ -503,9 +503,9 @@ msgstr ""
 msgid "Information about search for old product versions"
 msgstr ""
 
-#: ./addoncenter_templates/view.pt:269
-#: ./addonlinkedrelease_templates/view.pt:180
-#: ./addonproject_templates/view.pt:537
+#: ./view_templates/addoncenter_view.pt:269
+#: ./view_templates/addonlinkedrelease_view.pt:180
+#: ./view_templates/addonproject_view.pt:537
 msgid "Install Instructions"
 msgstr ""
 
@@ -533,7 +533,7 @@ msgstr ""
 msgid "It is necessary that you accept the Legal Declaration"
 msgstr ""
 
-#: ./addonproject_templates/view.pt:125
+#: ./view_templates/addonproject_view.pt:125
 msgid "Latest Not Stable Release"
 msgstr ""
 
@@ -555,14 +555,14 @@ msgstr ""
 msgid "License of the uploaded file"
 msgstr ""
 
-#: ./addonlinkedrelease_templates/view.pt:59
-#: ./addonproject_templates/view.pt:418
-#: ./addonrelease_templates/view.pt:59
+#: ./view_templates/addonlinkedrelease_view.pt:59
+#: ./view_templates/addonproject_view.pt:418
+#: ./view_templates/addonrelease_view.pt:59
 msgid "License(s)"
 msgstr ""
 
-#: ./addonlinkedrelease_templates/view.pt:176
-#: ./addonrelease_templates/view.pt:164
+#: ./view_templates/addonlinkedrelease_view.pt:176
+#: ./view_templates/addonrelease_view.pt:164
 msgid "Link to Source Code"
 msgstr ""
 
@@ -594,15 +594,15 @@ msgstr ""
 msgid "Member submits content for publication"
 msgstr ""
 
-#: ./addonproject_templates/view.pt:265
+#: ./view_templates/addonproject_view.pt:265
 msgid "More about this release."
 msgstr ""
 
-#: ./addoncenter_templates/view.pt:39
+#: ./view_templates/addoncenter_view.pt:39
 msgid "Most Popular ${product_title}"
 msgstr ""
 
-#: ./addoncenter_templates/view.pt:224
+#: ./view_templates/addoncenter_view.pt:224
 msgid "Most recent"
 msgstr ""
 
@@ -614,7 +614,7 @@ msgstr ""
 msgid "Name of the Add-on product, e.g. only Add-ons"
 msgstr ""
 
-#: ./addoncenter_templates/view.pt:128
+#: ./view_templates/addoncenter_view.pt:128
 msgid "Newest"
 msgstr ""
 
@@ -622,11 +622,11 @@ msgstr ""
 msgid "No"
 msgstr ""
 
-#: ./addoncenter_templates/view.pt:147
+#: ./view_templates/addoncenter_view.pt:147
 msgid "No results were found."
 msgstr ""
 
-#: ./addonproject_templates/view.pt:120
+#: ./view_templates/addonproject_view.pt:120
 msgid "No stable release available yet."
 msgstr ""
 
@@ -634,7 +634,7 @@ msgstr ""
 msgid "Not a valid project name. Please retry."
 msgstr ""
 
-#: ./addonrelease_templates/view.pt:40
+#: ./view_templates/addonrelease_view.pt:40
 msgid "Or"
 msgstr ""
 
@@ -642,7 +642,7 @@ msgstr ""
 msgid "Pending"
 msgstr ""
 
-#: ./addonproject_templates/view.pt:415
+#: ./view_templates/addonproject_view.pt:415
 msgid "Platform(s)"
 msgstr ""
 
@@ -724,7 +724,7 @@ msgstr ""
 msgid "Please insert a link to your add-on file."
 msgstr ""
 
-#: ./addonproject_templates/view.pt:45
+#: ./view_templates/addonproject_view.pt:45
 msgid "Please make sure the relevant project information has been entered and a release has been added to your project. Once you have finished that you could submit your project for approval (publication)."
 msgstr ""
 
@@ -764,7 +764,7 @@ msgstr ""
 msgid "Private"
 msgstr ""
 
-#: ./addonproject_templates/view.pt:79
+#: ./view_templates/addonproject_view.pt:79
 msgid "Project"
 msgstr ""
 
@@ -772,7 +772,7 @@ msgstr ""
 msgid "Project Author Public?"
 msgstr ""
 
-#: ./addonproject_templates/view.pt:523
+#: ./view_templates/addonproject_view.pt:523
 msgid "Project Contact"
 msgstr ""
 
@@ -781,17 +781,17 @@ msgstr ""
 msgid "Project Name"
 msgstr ""
 
-#: ./addonproject_templates/view.pt:520
+#: ./view_templates/addonproject_view.pt:520
 msgid "Project Owner"
 msgstr ""
 
-#: ./addonproject_templates/view.pt:517
+#: ./view_templates/addonproject_view.pt:517
 msgid "Project Owner And Contact"
 msgstr ""
 
-#: ./addonlinkedrelease_templates/view.pt:152
-#: ./addonproject_templates/view.pt:487
-#: ./addonrelease_templates/view.pt:140
+#: ./view_templates/addonlinkedrelease_view.pt:152
+#: ./view_templates/addonproject_view.pt:487
+#: ./view_templates/addonrelease_view.pt:140
 msgid "Project Resources"
 msgstr ""
 
@@ -835,8 +835,8 @@ msgstr ""
 msgid "Release Candidate"
 msgstr ""
 
-#: ./addonlinkedrelease_templates/view.pt:56
-#: ./addonrelease_templates/view.pt:56
+#: ./view_templates/addonlinkedrelease_view.pt:56
+#: ./view_templates/addonrelease_view.pt:56
 msgid "Release Details"
 msgstr ""
 
@@ -875,20 +875,20 @@ msgstr ""
 msgid "Release-Candidate"
 msgstr ""
 
-#: ./addonproject_templates/view.pt:414
+#: ./view_templates/addonproject_view.pt:414
 msgid "Released"
 msgstr ""
 
-#: ./addonproject_templates/view.pt:247
+#: ./view_templates/addonproject_view.pt:247
 msgid "Released ${latest_release_date}"
 msgstr ""
 
-#: ./addonlinkedrelease_templates/view.pt:37
-#: ./addonrelease_templates/view.pt:37
+#: ./view_templates/addonlinkedrelease_view.pt:37
+#: ./view_templates/addonrelease_view.pt:37
 msgid "Remember to publish your release once all files have been added. You can do that on the left side within the menubar. Click on the entry 'State: Unreleased'. <br />"
 msgstr ""
 
-#: ./addoncenter_templates/view.pt:273
+#: ./view_templates/addoncenter_view.pt:273
 msgid "Reporting Add-on Bugs"
 msgstr ""
 
@@ -911,9 +911,9 @@ msgstr ""
 msgid "Reviewer sends content back for re-drafting"
 msgstr ""
 
-#: ./addonlinkedrelease_templates/view.pt:166
-#: ./addonproject_templates/view.pt:506
-#: ./addonrelease_templates/view.pt:154
+#: ./view_templates/addonlinkedrelease_view.pt:166
+#: ./view_templates/addonproject_view.pt:506
+#: ./view_templates/addonrelease_view.pt:154
 msgid "Screenshot"
 msgstr ""
 
@@ -921,11 +921,11 @@ msgstr ""
 msgid "Screenshot of the Add-on"
 msgstr ""
 
-#: ./addoncenter_templates/view.pt:136
+#: ./view_templates/addoncenter_view.pt:136
 msgid "Search"
 msgstr ""
 
-#: ./addoncenter_templates/view.pt:102
+#: ./view_templates/addoncenter_view.pt:102
 msgid "Search ${product_title}"
 msgstr ""
 
@@ -959,7 +959,7 @@ msgid "Sending the item back will return the item to the original author instead
           You should preferably provide a reason to the author why it was not published."
 msgstr ""
 
-#: ./addoncenter_templates/view.pt:109
+#: ./view_templates/addoncenter_view.pt:109
 msgid "Show"
 msgstr ""
 
@@ -979,7 +979,7 @@ msgstr ""
 msgid "Sixth uploaded file is compatible with the Platform(s)"
 msgstr ""
 
-#: ./addoncenter_templates/view.pt:124
+#: ./view_templates/addoncenter_view.pt:124
 msgid "Sort On"
 msgstr ""
 
@@ -987,11 +987,11 @@ msgstr ""
 msgid "Submit for publication"
 msgstr ""
 
-#: ./addoncenter_templates/own_projects.pt:48
+#: ./view_templates/own_projects.pt:48
 msgid "Submit new"
 msgstr ""
 
-#: ./addoncenter_templates/view.pt:217
+#: ./view_templates/addoncenter_view.pt:217
 msgid "Submit your"
 msgstr ""
 
@@ -1064,7 +1064,7 @@ msgstr ""
 msgid "The fourth file you want to upload (this is optional)"
 msgstr ""
 
-#: ./addonlinkedrelease_templates/view.pt:77
+#: ./view_templates/addonlinkedrelease_view.pt:77
 msgid "The linked Add-on file"
 msgstr ""
 
@@ -1081,11 +1081,11 @@ msgstr ""
 msgid "The owner can edit the addon project"
 msgstr ""
 
-#: ./addonproject_templates/view.pt:532
+#: ./view_templates/addonproject_view.pt:532
 msgid "The project e-mail address is: <span>${DYNAMIC_CONTENT}</span>"
 msgstr ""
 
-#: ./addonproject_templates/view.pt:527
+#: ./view_templates/addonproject_view.pt:527
 msgid "The project owner is the user: <span>${DYNAMIC_CONTENT}</span>"
 msgstr ""
 
@@ -1126,7 +1126,7 @@ msgstr ""
 msgid "The third file you want to upload (this is optional)"
 msgstr ""
 
-#: ./addoncenter_templates/own_projects.pt:13
+#: ./view_templates/own_projects.pt:13
 msgid "These are your projects on this site:"
 msgstr ""
 
@@ -1194,7 +1194,7 @@ msgstr ""
 msgid "Unreleased"
 msgstr ""
 
-#: ./addonproject_templates/view.pt:413
+#: ./view_templates/addonproject_view.pt:413
 msgid "Version"
 msgstr ""
 
@@ -1226,11 +1226,11 @@ msgstr ""
 msgid "You answered the question, whether the source code is inside your add-on with no (default answer). If this is the correct answer, please fill in the Link (URL) to the Source Code."
 msgstr ""
 
-#: ./addoncenter_templates/view.pt:285
+#: ./view_templates/addoncenter_view.pt:285
 msgid "You can send a message to the author of the project and give him feedback by following the link and fill in your information into the form:<br /> <a class=\"pointer\" href=\"${DYNAMIC_CONTENT}\"> Get in contact with the project author </a>.<br /> You could instead go to the page of the project and use the mail form linked from that page."
 msgstr ""
 
-#: ./addoncenter_templates/own_projects.pt:20
+#: ./view_templates/own_projects.pt:20
 msgid "You currently have no projects on this site."
 msgstr ""
 
@@ -1254,23 +1254,23 @@ msgstr ""
 msgid "Your Message To The Author"
 msgstr ""
 
-#: ./addoncenter_templates/own_projects.pt:12
+#: ./view_templates/own_projects.pt:12
 msgid "Your Own Projects"
 msgstr ""
 
-#: ./addonproject_templates/view.pt:68
+#: ./view_templates/addonproject_view.pt:68
 msgid "Your project has been submitted for publication and will be reviewed now. You will get an email, once the status of your project changed again."
 msgstr ""
 
-#: ./addonproject_templates/view.pt:55
+#: ./view_templates/addonproject_view.pt:55
 msgid "a Release to your"
 msgstr ""
 
-#: ./addonproject_templates/view.pt:60
+#: ./view_templates/addonproject_view.pt:60
 msgid "a linked Release"
 msgstr ""
 
-#: ./addoncenter_templates/view.pt:253
+#: ./view_templates/addoncenter_view.pt:253
 msgid "by Category"
 msgstr ""
 
@@ -1282,23 +1282,23 @@ msgstr ""
 msgid "collective.addons (uninstall)"
 msgstr ""
 
-#: ./addoncenter_templates/view.pt:82
+#: ./view_templates/addoncenter_view.pt:82
 msgid "in"
 msgstr ""
 
-#: ./addonproject_templates/view.pt:79
+#: ./view_templates/addonproject_view.pt:79
 msgid "or:"
 msgstr ""
 
-#: ./addoncenter_templates/own_projects.pt:51
+#: ./view_templates/own_projects.pt:51
 msgid "please submit your new"
 msgstr ""
 
-#: ./addoncenter_templates/view.pt:213
+#: ./view_templates/addoncenter_view.pt:213
 msgid "project(s) available."
 msgstr ""
 
-#: ./addoncenter_templates/view.pt:150
+#: ./view_templates/addoncenter_view.pt:150
 msgid "projects matching your criteria."
 msgstr ""
 
@@ -1307,15 +1307,15 @@ msgstr ""
 msgid "re-release"
 msgstr ""
 
-#: ./addonproject_templates/view.pt:135
+#: ./view_templates/addonproject_view.pt:135
 msgid "tested with:"
 msgstr ""
 
-#: ./addonproject_templates/view.pt:60
+#: ./view_templates/addonproject_view.pt:60
 msgid "to your"
 msgstr ""
 
-#: ./addonlinkedrelease_templates/view.pt:42
-#: ./addonrelease_templates/view.pt:43
+#: ./view_templates/addonlinkedrelease_view.pt:42
+#: ./view_templates/addonrelease_view.pt:43
 msgid "you could do this following this link."
 msgstr ""

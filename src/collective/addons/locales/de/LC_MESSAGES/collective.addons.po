@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI +ZONE\n"
-"PO-Revision-Date: 2020-07-27 13:10+0200\n"
+"PO-Revision-Date: 2020-09-19 18:19+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Language: de\n"
 "X-Generator: Poedit 2.2.1\n"
 
-#: addoncenter_templates/view.pt:208
+#: view_templates/addoncenter_view.pt:208
 msgid "${product_title}"
 msgstr "${product_title}"
 
@@ -36,7 +36,7 @@ msgstr "Ein Center für Add-ons"
 msgid "A detailed log of what has changed since the previous release."
 msgstr "Eine detaillierte Aufstellung über das, was sich seit dem letzten Release verändert hat."
 
-#: addoncenter_templates/view.pt:277
+#: view_templates/addoncenter_view.pt:277
 msgid "About"
 msgstr "Über"
 
@@ -80,15 +80,15 @@ msgstr "Installationsanleitung für Add-on"
 msgid "Add-on product name"
 msgstr "Add-on-Produktname"
 
-#: addoncenter_templates/view.pt:210
+#: view_templates/addoncenter_view.pt:210
 msgid "Add-ons"
 msgstr "Add-ons"
 
-#: addonproject_templates/view.pt:408
+#: view_templates/addonproject_view.pt:408
 msgid "All Releases"
 msgstr "Alle Releases"
 
-#: addoncenter_templates/view.pt:111
+#: view_templates/addoncenter_view.pt:111
 msgid "All categories"
 msgstr "Alle Kategorien"
 
@@ -121,7 +121,7 @@ msgstr "Ein Add-on-Projekct"
 msgid "An Add-on Release"
 msgstr "Ein Add-on-Release"
 
-#: addoncenter_templates/view.pt:121
+#: view_templates/addoncenter_view.pt:121
 msgid "Any version"
 msgstr "Jede Version"
 
@@ -129,7 +129,8 @@ msgstr "Jede Version"
 msgid "Available Categories"
 msgstr "Verfügbare Kategorien"
 
-#: addonlinkedrelease_templates/view.pt:73 addonrelease_templates/view.pt:73
+#: view_templates/addonlinkedrelease_view.pt:73
+#: view_templates/addonrelease_view.pt:73
 msgid "Available Downloads"
 msgstr "Verfügbare Downloads"
 
@@ -150,11 +151,11 @@ msgstr "Verfügbare Versionen"
 msgid "Beta Release"
 msgstr "Beta Release"
 
-#: addoncenter_templates/view.pt:252
+#: view_templates/addoncenter_view.pt:252
 msgid "Browse"
 msgstr "Suchen"
 
-#: addoncenter_templates/view.pt:255
+#: view_templates/addoncenter_view.pt:255
 msgid "Browse Add-ons by Category"
 msgstr "Suchen Sie Add-ons  nach Kategorien"
 
@@ -166,7 +167,7 @@ msgstr "Abbrechen"
 msgid "Category / Categories"
 msgstr "Kategorie / Kategorien"
 
-#: addonproject_templates/view.pt:97
+#: view_templates/addonproject_view.pt:97
 msgid "Category/Categories"
 msgstr "Kategorie/Kategorien"
 
@@ -180,8 +181,8 @@ msgstr "Ändere den Release-Status zu \"Release alpha\""
 msgid "Change the release stage to 'Release beta'"
 msgstr "Ändere den Release-Status zu \"Release beta\""
 
-#: addonlinkedrelease.py:89 addonlinkedrelease_templates/view.pt:70
-#: addonrelease.py:91
+#: addonlinkedrelease.py:89 addonrelease.py:91
+#: view_templates/addonlinkedrelease_view.pt:70
 msgid "Changelog"
 msgstr "Änderungsprotokoll"
 
@@ -189,8 +190,8 @@ msgstr "Änderungsprotokoll"
 msgid "Choose your categories"
 msgstr "Wählen Sie Ihre Kategorien"
 
-#: addonlinkedrelease.py:97 addonlinkedrelease_templates/view.pt:63
-#: addonproject_templates/view.pt:416
+#: addonlinkedrelease.py:97 addonrelease.py:98
+#: view_templates/addonlinkedrelease_view.pt:63
 msgid "Compatibility"
 msgstr "Kompatibilität"
 
@@ -202,7 +203,7 @@ msgstr "Kompatibel mit den Produkt-Versionen"
 msgid "Compatible with versions of the product"
 msgstr "Kompatibel mit den Produkt-Versionen"
 
-#: addoncenter_templates/view.pt:281
+#: view_templates/addoncenter_view.pt:281
 msgid "Contact a Project Author"
 msgstr "Einen Projekt-Autor kontaktieren"
 
@@ -222,23 +223,23 @@ msgstr "Kontaktieren Sie den Projekt-Autoren und senden Sie Feedback"
 msgid "Contact the project owner and send your feedback"
 msgstr "Kontaktieren des Projekt-Eigentümers und übermitteln Sie Ihr Feedback"
 
-#: addonproject_templates/view.pt:119
+#: view_templates/addonproject_view.pt:119
 msgid "Current Release"
 msgstr "Aktuelles Release"
 
-#: addonproject_templates/view.pt:239
+#: view_templates/addonproject_view.pt:239
 msgid "Current release for the project"
 msgstr "Aktuelles Release dieses Projekts"
 
-#: addonproject_templates/view.pt:127
+#: view_templates/addonproject_view.pt:127
 msgid "Current unstable release for the project"
 msgstr "Aktuelles nicht stabiles Release für das Projekt"
 
-#: addoncenter_templates/view.pt:212
+#: view_templates/addoncenter_view.pt:212
 msgid "Currently there are"
 msgstr "Aktuell sind hier"
 
-#: addonproject_templates/view.pt:417
+#: view_templates/addonproject_view.pt:417
 msgid "Description"
 msgstr "Beschreibung"
 
@@ -258,7 +259,7 @@ msgstr "Dokumentation"
 msgid "Dokumentation File"
 msgstr "Dokumentationsdatei"
 
-#: addonproject_templates/view.pt:495
+#: view_templates/addonproject_view.pt:495
 msgid "Dokumentation File:"
 msgstr "Dokumentationsdatei:"
 
@@ -294,11 +295,11 @@ msgstr "Fügen Sie den Text der  rechtlichen Hinweise und Einschränkungen für 
 msgid "Enter the text of the legal disclaimer and limitations that should be displayed to the project creator and should be accepted by the owner of the project."
 msgstr "Fügen Sie den Text der rechtlichen Hinweise und Einschränkungen ein, der dem Ersteller eines Projektes angezeigt und von dem Projekt-Eigentümer zu akzeptieren ist."
 
-#: addonproject_templates/view.pt:490
+#: view_templates/addonproject_view.pt:490
 msgid "External Documentation"
 msgstr "Externe Dokumentation"
 
-#: addonproject_templates/view.pt:500
+#: view_templates/addonproject_view.pt:500
 msgid "External Project Page"
 msgstr "Externe Projektseite"
 
@@ -318,8 +319,9 @@ msgstr "Die fünfte verlinkte Datei ist kompatibel mit den Plattformen"
 msgid "Fifth uploaded file is compatible with the Platform(s)"
 msgstr "Die fünfte hochgeladene Datei ist kompatibel mit den Plattformen"
 
-#: addonlinkedrelease_templates/view.pt:81 addonproject_templates/view.pt:156
-#: addonrelease_templates/view.pt:83
+#: view_templates/addonlinkedrelease_view.pt:81
+#: view_templates/addonproject_view.pt:156
+#: view_templates/addonrelease_view.pt:83
 msgid "File size:"
 msgstr "Dateigröße:"
 
@@ -433,7 +435,7 @@ msgstr "Release verbergen"
 msgid "Hide this release"
 msgstr "Verstecken Sie dieses Release"
 
-#: addoncenter_templates/view.pt:127
+#: view_templates/addoncenter_view.pt:127
 msgid "Highest Rated"
 msgstr "Am höchsten bewertet"
 
@@ -449,7 +451,7 @@ msgstr "Falls das Projekt eine externe Homepage hat, füllen Sie hier die URL (B
 msgid "If the project has externally hosted documentation, enter its URL (example: 'http://www.mysite.org')."
 msgstr "Falls Ihr Projekt eine extern verfügbare Dokumentation besitzt, fügen Sie hier die entsprechende URL (Beispiel: \"http://www.mysite.org\") ein."
 
-#: addoncenter_templates/own_projects.pt:49
+#: view_templates/own_projects.pt:49
 msgid "If you already created a new"
 msgstr "Falls Sie bereits ein neues"
 
@@ -469,7 +471,8 @@ msgstr "Falls Sie weitere Dateien zu diesem Release verlinken wollen, z.B. weil 
 msgid "If you want to upload more files for this release, e.g. because there are files for other operating systems, you'll find the upload fields on the register 'Further Uploads' and 'Further More Uploads'."
 msgstr "Falls Sie weitere Dateien für Ihr Release hochladen wollen, z.B. Dateien für andere Betriebssysteme,  finden Felder für das Hochladen auf den Registern 'Further Uploads' und 'Further More Uploads'."
 
-#: addonlinkedrelease_templates/view.pt:35 addonrelease_templates/view.pt:35
+#: view_templates/addonlinkedrelease_view.pt:35
+#: view_templates/addonrelease_view.pt:35
 msgid "Info"
 msgstr "Info"
 
@@ -481,8 +484,9 @@ msgstr "Information"
 msgid "Information about search for old product versions"
 msgstr "Information zur Suche nach älteren Produkt-Versionen"
 
-#: addoncenter_templates/view.pt:269 addonlinkedrelease_templates/view.pt:180
-#: addonproject_templates/view.pt:537
+#: view_templates/addoncenter_view.pt:269
+#: view_templates/addonlinkedrelease_view.pt:180
+#: view_templates/addonproject_view.pt:537
 msgid "Install Instructions"
 msgstr "Installationsanleitung"
 
@@ -506,7 +510,7 @@ msgstr "Ist der Quellcode in dem Add-on enthalten?"
 msgid "It is necessary that you accept the Legal Declaration"
 msgstr "Es ist erforderlich, dass Sie den Haftungsausschluss akzeptieren"
 
-#: addonproject_templates/view.pt:125
+#: view_templates/addonproject_view.pt:125
 msgid "Latest Not Stable Release"
 msgstr "Letztes nicht stabiles Release"
 
@@ -526,12 +530,14 @@ msgstr "Rechtliche Hinweise und Einschränkungen für das Herunterladen"
 msgid "License of the uploaded file"
 msgstr "Lizenz der hochgeladenen Datei"
 
-#: addonlinkedrelease_templates/view.pt:59 addonproject_templates/view.pt:418
-#: addonrelease_templates/view.pt:59
+#: view_templates/addonlinkedrelease_view.pt:59
+#: view_templates/addonproject_view.pt:418
+#: view_templates/addonrelease_view.pt:59
 msgid "License(s)"
 msgstr "Lizenz(en)"
 
-#: addonlinkedrelease_templates/view.pt:176 addonrelease_templates/view.pt:164
+#: view_templates/addonlinkedrelease_view.pt:176
+#: view_templates/addonrelease_view.pt:164
 msgid "Link to Source Code"
 msgstr "Link zum Quellcode"
 
@@ -563,15 +569,15 @@ msgstr "Mitglied zieht Einreichung zurück"
 msgid "Member submits content for publication"
 msgstr "Mitglied reicht Inhalt zur Veröffentlichung ein"
 
-#: addonproject_templates/view.pt:265
+#: view_templates/addonproject_view.pt:265
 msgid "More about this release."
 msgstr "Mehr über dieses Release."
 
-#: addoncenter_templates/view.pt:39
+#: view_templates/addoncenter_view.pt:39
 msgid "Most Popular ${product_title}"
 msgstr "Beliebteste ${product_title}"
 
-#: addoncenter_templates/view.pt:224
+#: view_templates/addoncenter_view.pt:224
 msgid "Most recent"
 msgstr "Aktuellste"
 
@@ -583,7 +589,7 @@ msgstr "Name des Add-on-Center"
 msgid "Name of the Add-on product, e.g. only Add-ons"
 msgstr "Name des Add-on-Produkts, z.B. nur Add-ons"
 
-#: addoncenter_templates/view.pt:128
+#: view_templates/addoncenter_view.pt:128
 msgid "Newest"
 msgstr "Neueste"
 
@@ -591,11 +597,11 @@ msgstr "Neueste"
 msgid "No"
 msgstr "Keine"
 
-#: addoncenter_templates/view.pt:147
+#: view_templates/addoncenter_view.pt:147
 msgid "No results were found."
 msgstr "Keine Ergebnisse gefunden."
 
-#: addonproject_templates/view.pt:120
+#: view_templates/addonproject_view.pt:120
 msgid "No stable release available yet."
 msgstr "Aktuell kein stabiles Release verfügbar."
 
@@ -603,7 +609,7 @@ msgstr "Aktuell kein stabiles Release verfügbar."
 msgid "Not a valid project name. Please retry."
 msgstr "Kein gültiger Projektname. Bitte versuchen Sie es nochmals."
 
-#: addonrelease_templates/view.pt:40
+#: view_templates/addonrelease_view.pt:40
 msgid "Or"
 msgstr "Oder"
 
@@ -611,7 +617,7 @@ msgstr "Oder"
 msgid "Pending"
 msgstr "Schwebend"
 
-#: addonproject_templates/view.pt:415
+#: view_templates/addonproject_view.pt:415
 msgid "Platform(s)"
 msgstr "Plattform(en)"
 
@@ -687,7 +693,7 @@ msgstr "Bitte tragen Sie Ihre(n) Vornamen ein."
 msgid "Please insert a link to your add-on file."
 msgstr "Bitte fügen Sie einen Link zu Ihrer Add-on-Datei ein."
 
-#: addonproject_templates/view.pt:45
+#: view_templates/addonproject_view.pt:45
 msgid "Please make sure the relevant project information has been entered and a release has been added to your project. Once you have finished that you could submit your project for approval (publication)."
 msgstr "Bitte stellen Sie sicher, dass Sie alle relevanten Projekt-Informationen eingetragen und Ihrem Projekt ein Release hinzugefügt haben. Sobald Sie diese Arbeiten beendet haben, können Sie das Projekt zur Überprüfung (Veröffentlichung) übermitteln."
 
@@ -723,7 +729,7 @@ msgstr "Bitte validieren Sie das Recaptcha-Feld, bevor Sie das Formular absenden
 msgid "Private"
 msgstr "Privat"
 
-#: addonproject_templates/view.pt:79
+#: view_templates/addonproject_view.pt:79
 msgid "Project"
 msgstr "Projekt"
 
@@ -731,7 +737,7 @@ msgstr "Projekt"
 msgid "Project Author Public?"
 msgstr "Projekt-Autor veröffentlichen?"
 
-#: addonproject_templates/view.pt:523
+#: view_templates/addonproject_view.pt:523
 msgid "Project Contact"
 msgstr "Projekt-Kontakt"
 
@@ -739,16 +745,17 @@ msgstr "Projekt-Kontakt"
 msgid "Project Name"
 msgstr "Projekt-Name"
 
-#: addonproject_templates/view.pt:520
+#: view_templates/addonproject_view.pt:520
 msgid "Project Owner"
 msgstr "Projekt-Eigentümer"
 
-#: addonproject_templates/view.pt:517
+#: view_templates/addonproject_view.pt:517
 msgid "Project Owner And Contact"
 msgstr "Projekt-Eigentümer und Kontakt"
 
-#: addonlinkedrelease_templates/view.pt:152 addonproject_templates/view.pt:487
-#: addonrelease_templates/view.pt:140
+#: view_templates/addonlinkedrelease_view.pt:152
+#: view_templates/addonproject_view.pt:487
+#: view_templates/addonrelease_view.pt:140
 msgid "Project Resources"
 msgstr "Projekt Ressourcen"
 
@@ -787,7 +794,8 @@ msgstr "Erneut veröffentlichen"
 msgid "Release Candidate"
 msgstr "Release-Kandidat"
 
-#: addonlinkedrelease_templates/view.pt:56 addonrelease_templates/view.pt:56
+#: view_templates/addonlinkedrelease_view.pt:56
+#: view_templates/addonrelease_view.pt:56
 msgid "Release Details"
 msgstr "Release-Details"
 
@@ -823,19 +831,20 @@ msgstr "Release-Kandidat"
 msgid "Release-Candidate"
 msgstr "Release-Kandidat"
 
-#: addonproject_templates/view.pt:414
+#: view_templates/addonproject_view.pt:414
 msgid "Released"
 msgstr "Veröffentlicht"
 
-#: addonproject_templates/view.pt:247
+#: view_templates/addonproject_view.pt:247
 msgid "Released ${latest_release_date}"
 msgstr "Veröffentlicht ${latest_release_date}"
 
-#: addonlinkedrelease_templates/view.pt:37 addonrelease_templates/view.pt:37
+#: view_templates/addonlinkedrelease_view.pt:37
+#: view_templates/addonrelease_view.pt:37
 msgid "Remember to publish your release once all files have been added. You can do that on the left side within the menubar. Click on the entry 'State: Unreleased'. <br />"
 msgstr "Denken Sie daran, Ihr Release zu veröffentlichen, sobald Sie alle Dateien hinzugefügt haben. Sie können dies in dem Menü auf der linken Seite machen. Klicken Sie auf den Eintrag: \"State: Unreleased\".<br />"
 
-#: addoncenter_templates/view.pt:273
+#: view_templates/addoncenter_view.pt:273
 msgid "Reporting Add-on Bugs"
 msgstr "Add-on-Fehler melden"
 
@@ -858,8 +867,9 @@ msgstr "Reviewer veröffentlicht den Inhalt"
 msgid "Reviewer sends content back for re-drafting"
 msgstr "Reviewer sendet den Inhalt zurück zur Überarbeitung"
 
-#: addonlinkedrelease_templates/view.pt:166 addonproject_templates/view.pt:506
-#: addonrelease_templates/view.pt:154
+#: view_templates/addonlinkedrelease_view.pt:166
+#: view_templates/addonproject_view.pt:506
+#: view_templates/addonrelease_view.pt:154
 msgid "Screenshot"
 msgstr "Bildschirmfoto"
 
@@ -867,11 +877,11 @@ msgstr "Bildschirmfoto"
 msgid "Screenshot of the Add-on"
 msgstr "Bildschirmfoto des Add-ons"
 
-#: addoncenter_templates/view.pt:136
+#: view_templates/addoncenter_view.pt:136
 msgid "Search"
 msgstr "Suchen"
 
-#: addoncenter_templates/view.pt:102
+#: view_templates/addoncenter_view.pt:102
 msgid "Search ${product_title}"
 msgstr "Suche ${product_title}"
 
@@ -899,7 +909,7 @@ msgstr "E-Mail senden"
 msgid "Send back"
 msgstr "Zurück senden"
 
-#: addoncenter_templates/view.pt:109
+#: view_templates/addoncenter_view.pt:109
 msgid "Show"
 msgstr "Anzeigen"
 
@@ -919,7 +929,7 @@ msgstr "Die sechste verlinkte Datei ist kompatibel mit den Plattformen"
 msgid "Sixth uploaded file is compatible with the Platform(s)"
 msgstr "Die sechste hochgeladene Datei ist kompatibel mit den Plattformen"
 
-#: addoncenter_templates/view.pt:124
+#: view_templates/addoncenter_view.pt:124
 msgid "Sort On"
 msgstr "Sortieren nach"
 
@@ -927,11 +937,11 @@ msgstr "Sortieren nach"
 msgid "Submit for publication"
 msgstr "Zur Veröffentlichung einreichen"
 
-#: addoncenter_templates/own_projects.pt:48
+#: view_templates/own_projects.pt:48
 msgid "Submit new"
 msgstr "Übermittele neue"
 
-#: addoncenter_templates/view.pt:217
+#: view_templates/addoncenter_view.pt:217
 msgid "Submit your"
 msgstr "Übermitteln Sie Ihre"
 
@@ -1003,7 +1013,7 @@ msgstr "Die folgenden Dateierweiterungen sind für hochgeladene Dateien erlaubt 
 msgid "The fourth file you want to upload (this is optional)"
 msgstr "Die vierte Datei, die Sie hochladen wollen (dies ist optional)"
 
-#: addonlinkedrelease_templates/view.pt:77
+#: view_templates/addonlinkedrelease_view.pt:77
 msgid "The linked Add-on file"
 msgstr "Eine verlinkte Add-on-Datei"
 
@@ -1019,11 +1029,11 @@ msgstr "Der Name des Projekts, dessen Autor Sie Feedback senden wollen."
 msgid "The owner can edit the addon project"
 msgstr "Der Besitzer kann das Add-on-Projekt bearbeiten"
 
-#: addonproject_templates/view.pt:532
+#: view_templates/addonproject_view.pt:532
 msgid "The project e-mail address is: <span>${DYNAMIC_CONTENT}</span>"
 msgstr "Die Projekt-E-Mail-Adresse ist: <span>${DYNAMIC_CONTENT}</span>"
 
-#: addonproject_templates/view.pt:527
+#: view_templates/addonproject_view.pt:527
 msgid "The project owner is the user: <span>${DYNAMIC_CONTENT}</span>"
 msgstr "Der Projekt-Eigentümer ist der Benutzer: <span>${DYNAMIC_CONTENT}</span>"
 
@@ -1063,7 +1073,7 @@ msgstr "Die Größe der extern gehosteten Datei"
 msgid "The third file you want to upload (this is optional)"
 msgstr "Die dritte Datei, die Sie hochladen wollen (dies ist optional)"
 
-#: addoncenter_templates/own_projects.pt:13
+#: view_templates/own_projects.pt:13
 msgid "These are your projects on this site:"
 msgstr "Dies sind Ihre Projekte auf dieser Seite:"
 
@@ -1131,7 +1141,7 @@ msgstr "Deinstalliert das collective.addons Add-on."
 msgid "Unreleased"
 msgstr "Unveröffentlicht"
 
-#: addonproject_templates/view.pt:413
+#: view_templates/addonproject_view.pt:413
 msgid "Version"
 msgstr "Version"
 
@@ -1155,11 +1165,11 @@ msgstr "Ja"
 msgid "You answered the question, whether the source code is inside your add-on with no (default answer). If this is the correct answer, please fill in the Link (URL) to the Source Code."
 msgstr "Sie haben die Frage, ob der Quelltext in Ihrem Add-ons ist, mit nein (Standardantwort) beantwortet. Falls dies zutreffend ist, schreiben Sie bitte den Link (URL) zum Quelltext unten in das entsprechende Feld."
 
-#: addoncenter_templates/view.pt:285
+#: view_templates/addoncenter_view.pt:285
 msgid "You can send a message to the author of the project and give him feedback by following the link and fill in your information into the form:<br /> <a class=\"pointer\" href=\"${DYNAMIC_CONTENT}\"> Get in contact with the project author </a>.<br /> You could instead go to the page of the project and use the mail form linked from that page."
 msgstr "Sie können eine Nachricht an den Projekt-Autor senden und ihm Feedback geben, indem sie dem Link folgen und Ihre Informationen in das Formular eintragen::<br /> <a class=\"pointer\" href=\"${DYNAMIC_CONTENT}\"> Kommen Sie in Kontakt mit dem Projekt-Autor </a>.<br />Sie können stattdessen auch auf die Projekt-Seite gehen und das dort verlinkte E-Mail-Formular verwenden."
 
-#: addoncenter_templates/own_projects.pt:20
+#: view_templates/own_projects.pt:20
 msgid "You currently have no projects on this site."
 msgstr "Sie haben aktuell keine Projekte auf dieser Seite."
 
@@ -1179,23 +1189,23 @@ msgstr "Ihr Vorname"
 msgid "Your Message To The Author"
 msgstr "Ihre Nachricht an den Autor"
 
-#: addoncenter_templates/own_projects.pt:12
+#: view_templates/own_projects.pt:12
 msgid "Your Own Projects"
 msgstr "Ihre eigenen Projekte"
 
-#: addonproject_templates/view.pt:68
+#: view_templates/addonproject_view.pt:68
 msgid "Your project has been submitted for publication and will be reviewed now. You will get an email, once the status of your project changed again."
 msgstr "Ihr Projekt wurde zur Veröffentlichung übermittelt und wird nun geprüft. Sie bekommen eine Email, sobald sich der Status Ihres Projektes erneut ändert."
 
-#: addonproject_templates/view.pt:55
+#: view_templates/addonproject_view.pt:55
 msgid "a Release to your"
 msgstr "ein Release zu Ihrem"
 
-#: addonproject_templates/view.pt:60
+#: view_templates/addonproject_view.pt:60
 msgid "a linked Release"
 msgstr "ein verlinktes Release"
 
-#: addoncenter_templates/view.pt:253
+#: view_templates/addoncenter_view.pt:253
 msgid "by Category"
 msgstr "nach Kategorie"
 
@@ -1207,23 +1217,23 @@ msgstr "collective.addons"
 msgid "collective.addons (uninstall)"
 msgstr "collective.addons (deinstallierenl)"
 
-#: addoncenter_templates/view.pt:82
+#: view_templates/addoncenter_view.pt:82
 msgid "in"
 msgstr "in"
 
-#: addonproject_templates/view.pt:79
+#: view_templates/addonproject_view.pt:79
 msgid "or:"
 msgstr "oder:"
 
-#: addoncenter_templates/own_projects.pt:51
+#: view_templates/own_projects.pt:51
 msgid "please submit your new"
 msgstr "bitte übermitteln Sie Ihre neue"
 
-#: addoncenter_templates/view.pt:213
+#: view_templates/addoncenter_view.pt:213
 msgid "project(s) available."
 msgstr "Projekte verfügbar."
 
-#: addoncenter_templates/view.pt:150
+#: view_templates/addoncenter_view.pt:150
 msgid "projects matching your criteria."
 msgstr "Projekte entsprechen Ihren Kritierien."
 
@@ -1232,14 +1242,15 @@ msgstr "Projekte entsprechen Ihren Kritierien."
 msgid "re-release"
 msgstr "Erneut veröffentlichen"
 
-#: addonproject_templates/view.pt:135
+#: view_templates/addonproject_view.pt:135
 msgid "tested with:"
 msgstr "getestet mit:"
 
-#: addonproject_templates/view.pt:60
+#: view_templates/addonproject_view.pt:60
 msgid "to your"
 msgstr "zu Ihrem"
 
-#: addonlinkedrelease_templates/view.pt:42 addonrelease_templates/view.pt:43
+#: view_templates/addonlinkedrelease_view.pt:42
+#: view_templates/addonrelease_view.pt:43
 msgid "you could do this following this link."
 msgstr "Sie können dies über diesen Link tun."
