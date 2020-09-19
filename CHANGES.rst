@@ -1,7 +1,7 @@
 Changelog
 =========
 
-2.3 (unreleased)
+2.3 (2020-09-19)
 ----------------
 
 - Reordering view templates and move them to one new folder [Andreas Mantke]
