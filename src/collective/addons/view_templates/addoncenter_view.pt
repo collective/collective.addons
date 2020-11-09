@@ -258,7 +258,7 @@
                             <li><a href=""
                                     tal:attributes="href string:${context/absolute_url}?getCategories=${category}&getCompatibility=any"
                                     tal:content="category">
-                                <tal:comment replace="nothing">Template projects</tal:comment>
+                                <tal:comment replace="nothing">Add-on projects</tal:comment>
                             </a>
                             </li>
                         </tal:categories>
