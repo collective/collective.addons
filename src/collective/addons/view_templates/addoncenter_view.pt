@@ -56,7 +56,7 @@
 
                                           <h3 style="border-top: none">
                                               <a href="" tal:attributes="href projectURL;" 	tal:content="project/pretty_title_or_id">
-                                                  <tal:comment replace="nothing">Template One</tal:comment></a>
+                                                  <tal:comment replace="nothing">Add-on One</tal:comment></a>
                                           </h3>
                                           <div tal:content="structure project/@@rate-if-you-dare" />
                                            <div class="project-thumb thumbzoom"
@@ -128,7 +128,7 @@
                                      <option value="created" tal:attributes="selected    python:sort_on == 'created' and 'selected' or ''" i18n:translate="">Newest</option>
                                  </select>
                                  <input type="hidden" name="path" tal:attributes="value python:'/'.join(context.getPhysicalPath())" /> &nbsp;
-                                 <input type="hidden" name="portal_type" value="collective.templates.tlproject" />
+                                 <input type="hidden" name="portal_type" value="collective.addons.addonproject" />
                                  <div class="input-group">
                                     <input class="searchPage form-control" name="SearchableText" type="text" size="25" title="Search Site" value=""
                                            tal:attributes="value SearchableText" />
@@ -239,7 +239,7 @@
 							                                         screenshot   project/screenshot | nothing">
                                         <span style="border-top: none">
                                             <a href="" tal:attributes="href projectURL;" 	tal:content="project/pretty_title_or_id">
-                                                <tal:comment replace="nothing">Template One</tal:comment></a>
+                                                <tal:comment replace="nothing">Add-on One</tal:comment></a>
                                         </span>
                                     </tal:entry>
                                 </li>
@@ -255,11 +255,16 @@
                     <h2 tal:condition="not:context/product_title"><span i18n:translate="">Browse Add-ons by Category</span></h2>
                     <ol id="add-on-categories">
                         <tal:categories repeat="category view/category_names">
-                            <li><a href=""
-                                    tal:attributes="href string:${context/absolute_url}?getCategories=${category}&getCompatibility=any"
-                                    tal:content="category">
-                                <tal:comment replace="nothing">Add-on projects</tal:comment>
-                            </a>
+                            <li>
+                            <span tal:define="results python:view.get_products(category, currentVersion, sort_on, SearchableText);
+                                        Batch python:modules['Products.CMFPlone'].Batch;
+                                        b_size python:10;b_start python:0;b_start request/b_start | b_start;">
+                                        <a href=""
+                                        tal:attributes="href string:${context/absolute_url}?getCategories=${category}&getCompatibility=any"
+                                        tal:content="category">
+                                        <tal:comment replace="nothing">Add-on projects</tal:comment>
+                                        </a> (<span tal:replace="python:len(results)">234</span>)
+                                        </span>
                             </li>
                         </tal:categories>
                     </ol>
