@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI +ZONE\n"
-"PO-Revision-Date: 2020-09-19 18:19+0200\n"
+"PO-Revision-Date: 2020-11-10 14:11+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -36,7 +36,7 @@ msgstr "Ein Center für Add-ons"
 msgid "A detailed log of what has changed since the previous release."
 msgstr "Eine detaillierte Aufstellung über das, was sich seit dem letzten Release verändert hat."
 
-#: view_templates/addoncenter_view.pt:277
+#: view_templates/addoncenter_view.pt:282
 msgid "About"
 msgstr "Über"
 
@@ -203,7 +203,7 @@ msgstr "Kompatibel mit den Produkt-Versionen"
 msgid "Compatible with versions of the product"
 msgstr "Kompatibel mit den Produkt-Versionen"
 
-#: view_templates/addoncenter_view.pt:281
+#: view_templates/addoncenter_view.pt:286
 msgid "Contact a Project Author"
 msgstr "Einen Projekt-Autor kontaktieren"
 
@@ -484,7 +484,7 @@ msgstr "Information"
 msgid "Information about search for old product versions"
 msgstr "Information zur Suche nach älteren Produkt-Versionen"
 
-#: view_templates/addoncenter_view.pt:269
+#: view_templates/addoncenter_view.pt:274
 #: view_templates/addonlinkedrelease_view.pt:180
 #: view_templates/addonproject_view.pt:537
 msgid "Install Instructions"
@@ -844,7 +844,7 @@ msgstr "Veröffentlicht ${latest_release_date}"
 msgid "Remember to publish your release once all files have been added. You can do that on the left side within the menubar. Click on the entry 'State: Unreleased'. <br />"
 msgstr "Denken Sie daran, Ihr Release zu veröffentlichen, sobald Sie alle Dateien hinzugefügt haben. Sie können dies in dem Menü auf der linken Seite machen. Klicken Sie auf den Eintrag: \"State: Unreleased\".<br />"
 
-#: view_templates/addoncenter_view.pt:273
+#: view_templates/addoncenter_view.pt:278
 msgid "Reporting Add-on Bugs"
 msgstr "Add-on-Fehler melden"
 
@@ -1165,7 +1165,7 @@ msgstr "Ja"
 msgid "You answered the question, whether the source code is inside your add-on with no (default answer). If this is the correct answer, please fill in the Link (URL) to the Source Code."
 msgstr "Sie haben die Frage, ob der Quelltext in Ihrem Add-ons ist, mit nein (Standardantwort) beantwortet. Falls dies zutreffend ist, schreiben Sie bitte den Link (URL) zum Quelltext unten in das entsprechende Feld."
 
-#: view_templates/addoncenter_view.pt:285
+#: view_templates/addoncenter_view.pt:290
 msgid "You can send a message to the author of the project and give him feedback by following the link and fill in your information into the form:<br /> <a class=\"pointer\" href=\"${DYNAMIC_CONTENT}\"> Get in contact with the project author </a>.<br /> You could instead go to the page of the project and use the mail form linked from that page."
 msgstr "Sie können eine Nachricht an den Projekt-Autor senden und ihm Feedback geben, indem sie dem Link folgen und Ihre Informationen in das Formular eintragen::<br /> <a class=\"pointer\" href=\"${DYNAMIC_CONTENT}\"> Kommen Sie in Kontakt mit dem Projekt-Autor </a>.<br />Sie können stattdessen auch auf die Projekt-Seite gehen und das dort verlinkte E-Mail-Formular verwenden."
 

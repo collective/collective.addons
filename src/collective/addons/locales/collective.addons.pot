@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-09-19 16:18+0000\n"
+"POT-Creation-Date: 2020-11-10 13:09+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -44,7 +44,7 @@ msgstr ""
 msgid "A detailed log of what has changed since the previous release."
 msgstr ""
 
-#: ./view_templates/addoncenter_view.pt:277
+#: ./view_templates/addoncenter_view.pt:282
 msgid "About"
 msgstr ""
 
@@ -215,7 +215,7 @@ msgstr ""
 msgid "Compatible with versions of the product"
 msgstr ""
 
-#: ./view_templates/addoncenter_view.pt:281
+#: ./view_templates/addoncenter_view.pt:286
 msgid "Contact a Project Author"
 msgstr ""
 
@@ -503,7 +503,7 @@ msgstr ""
 msgid "Information about search for old product versions"
 msgstr ""
 
-#: ./view_templates/addoncenter_view.pt:269
+#: ./view_templates/addoncenter_view.pt:274
 #: ./view_templates/addonlinkedrelease_view.pt:180
 #: ./view_templates/addonproject_view.pt:537
 msgid "Install Instructions"
@@ -888,7 +888,7 @@ msgstr ""
 msgid "Remember to publish your release once all files have been added. You can do that on the left side within the menubar. Click on the entry 'State: Unreleased'. <br />"
 msgstr ""
 
-#: ./view_templates/addoncenter_view.pt:273
+#: ./view_templates/addoncenter_view.pt:278
 msgid "Reporting Add-on Bugs"
 msgstr ""
 
@@ -1226,7 +1226,7 @@ msgstr ""
 msgid "You answered the question, whether the source code is inside your add-on with no (default answer). If this is the correct answer, please fill in the Link (URL) to the Source Code."
 msgstr ""
 
-#: ./view_templates/addoncenter_view.pt:285
+#: ./view_templates/addoncenter_view.pt:290
 msgid "You can send a message to the author of the project and give him feedback by following the link and fill in your information into the form:<br /> <a class=\"pointer\" href=\"${DYNAMIC_CONTENT}\"> Get in contact with the project author </a>.<br /> You could instead go to the page of the project and use the mail form linked from that page."
 msgstr ""
 
