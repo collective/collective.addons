@@ -4,7 +4,10 @@ Changelog
 2.4 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- Text fixes in addoncenter view template [Andreas Mantke]
+- Add listing of the number of projects per category to the sidebar of the
+  addoncenter view template [Andreas Mantke]
+- Update localization files [Andreas Mantke]
 
 
 2.3 (2020-09-19)
