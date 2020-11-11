@@ -1,7 +1,7 @@
 Changelog
 =========
 
-2.4 (unreleased)
+2.4 (2020-11-11)
 ----------------
 
 - Text fixes in addoncenter view template [Andreas Mantke]
