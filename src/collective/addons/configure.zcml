@@ -130,9 +130,9 @@
         />
 
   <adapter
-      factory=".mailtoauthor.ReCaptcha"
+      factory=".mailtoauthor.HCaptcha"
       for="Products.CMFPlone.interfaces.siteroot.IPloneSiteRoot"
-      provides=".mailtoauthor.IReCaptchaForm"
+      provides=".mailtoauthor.IHCaptchaForm"
    />
 
  <adapter factory="collective.addons.mailtoprojectowner.MailToProjectOwnerAdapter"/>
