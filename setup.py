@@ -58,7 +58,6 @@ setup(
         'cioppino.twothumbs',
         'collective.dexteritytextindexer',
         'Products.validation',
-        'plone.formwidget.recaptcha',
         'plone.formwidget.hcaptcha',
     ],
     extras_require={
@@ -73,7 +72,7 @@ setup(
             'collective.dexteritytextindexer',
             'Products.validation',
             'cioppino.twothumbs',
-            'plone.formwidget.recaptcha',
+            'plone.formwidget.hcaptcha',
         ],
     },
     entry_points="""

@@ -3,7 +3,7 @@ from Acquisition import aq_inner
 from collective.addons import _
 from plone import api
 from plone.autoform.form import AutoExtensibleForm
-from plone.formwidget.recaptcha.widget import ReCaptchaFieldWidget
+from plone.formwidget.hcaptcha.widget import HCaptchaFieldWidget
 from plone.z3cform.layout import wrap_form
 from Products.CMFPlone.utils import safe_unicode
 from z3c.form import button
@@ -40,16 +40,16 @@ def getprojectname(context):
     return context.title
 
 
-class IReCaptchaForm(interface.Interface):
+class IHCaptchaForm(interface.Interface):
 
     captcha = schema.TextLine(
-        title=safe_unicode('ReCaptcha'),
+        title=safe_unicode('HCaptcha'),
         description=safe_unicode(''),
         required=False,
     )
 
 
-class ReCaptcha(object):
+class HCaptcha(object):
     captcha = safe_unicode('')
 
     def __init__(self, context):
@@ -110,8 +110,8 @@ class MailToProjectOwnerForm(AutoExtensibleForm, form.Form):
     description = _(safe_unicode('Contact the project owner and send '
                                  'your feedback'))
 
-    fields = field.Fields(MailToProjectOwnerSchema, IReCaptchaForm)
-    fields['captcha'].widgetFactory = ReCaptchaFieldWidget
+    fields = field.Fields(MailToProjectOwnerSchema, IHCaptchaForm)
+    fields['captcha'].widgetFactory = HCaptchaFieldWidget
 
     def update(self):
         # disable Plone's editable border
@@ -125,7 +125,7 @@ class MailToProjectOwnerForm(AutoExtensibleForm, form.Form):
         data, errors = self.extractData()
         captcha = getMultiAdapter(
             (aq_inner(self.context), self.request),
-            name='recaptcha',
+            name='hcaptcha',
         )
 
         if errors:
@@ -133,14 +133,14 @@ class MailToProjectOwnerForm(AutoExtensibleForm, form.Form):
             return
 
         elif captcha.verify():
-            logger.info('ReCaptcha validation passed.')
+            logger.info('HCaptcha validation passed.')
         else:
             logger.info(
-                'Please validate the recaptcha field before sending the form.',
+                'Please validate the hcaptcha field before sending the form.',
             )
             api.portal.show_message(
                 message=_(
-                    safe_unicode('Please validate the recaptcha field '
+                    safe_unicode('Please validate the hcaptcha field '
                                  'before sending the form.')),
                 request=self.request,
                 type='error')
@@ -198,4 +198,4 @@ class MailToProjectOwnerForm(AutoExtensibleForm, form.Form):
         self.request.response.redirect(contextURL)
 
 
-ReCaptchaForm = wrap_form(MailToProjectOwnerForm)
+HCaptchaForm = wrap_form(MailToProjectOwnerForm)

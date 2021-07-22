@@ -140,14 +140,14 @@
   <browser:page
         for="collective.addons.addonproject.IAddonProject"
         name="contact-extension-project-owner"
-        class="collective.addons.mailtoprojectowner.ReCaptchaForm"
+        class="collective.addons.mailtoprojectowner.HCaptchaForm"
         permission="zope2.View"
         />
 
   <adapter
-      factory=".mailtoprojectowner.ReCaptcha"
+      factory=".mailtoprojectowner.HCaptcha"
       for="collective.addons.addonproject.IAddonProject"
-      provides=".mailtoprojectowner.IReCaptchaForm"
+      provides=".mailtoprojectowner.IHCaptchaForm"
    />
 
   <subscriber
