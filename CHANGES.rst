@@ -4,7 +4,11 @@ Changelog
 2.5 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- Add PloneHotfix20210518 to the buildout [Andreas Mantke]
+- Migrate contact forms from recaptcha to hcaptcha [Andreas Mantke]
+- Update localization files and German localization [Andreas Mantke]
+- Remove plone.formwidget.recaptcha from the buildout and
+  replace it with plone.formwidget.hcaptcha [Andreas Mantke]
 
 
 2.4 (2020-11-11)
