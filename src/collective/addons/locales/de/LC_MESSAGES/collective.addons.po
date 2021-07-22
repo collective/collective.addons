@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI +ZONE\n"
-"PO-Revision-Date: 2020-11-10 14:11+0100\n"
+"PO-Revision-Date: 2021-07-22 20:59+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -722,8 +722,8 @@ msgid "Please upload your file."
 msgstr "Bitte laden Sie Ihre Datei hoch."
 
 #: mailtoauthor.py:147 mailtoprojectowner.py:142
-msgid "Please validate the recaptcha field before sending the form."
-msgstr "Bitte validieren Sie das Recaptcha-Feld, bevor Sie das Formular absenden."
+msgid "Please validate the hcaptcha field before sending the form."
+msgstr "Bitte validieren Sie das Hcaptcha-Feld, bevor Sie das Formular absenden."
 
 #: profiles/default/workflows/collective_addons_project_workflow/definition.xml
 msgid "Private"

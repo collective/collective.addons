@@ -749,7 +749,7 @@ msgstr ""
 
 #: ./mailtoauthor.py:147
 #: ./mailtoprojectowner.py:142
-msgid "Please validate the recaptcha field before sending the form."
+msgid "Please validate the hcaptcha field before sending the form."
 msgstr ""
 
 #: ./profiles/default/workflows/collective_addons_project_workflow/definition.xml
