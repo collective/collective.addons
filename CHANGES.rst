@@ -1,7 +1,7 @@
 Changelog
 =========
 
-2.5 (unreleased)
+2.5 (2021-07-23)
 ----------------
 
 - Add PloneHotfix20210518 to the buildout [Andreas Mantke]
