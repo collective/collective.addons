@@ -1,7 +1,7 @@
 Changelog
 =========
 
-2.6 (unreleased)
+2.6 (2021-08-06)
 ----------------
 
 - Add PrintingMailHost to the buildout script [Andreas Mantke]
