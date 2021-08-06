@@ -4,7 +4,9 @@ Changelog
 2.6 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- Add PrintingMailHost to the buildout script [Andreas Mantke]
+- Update readme and add information about using hcaptcha
+  instead of recaptcha [Andreas Mantke]
 
 
 2.5 (2021-07-23)
