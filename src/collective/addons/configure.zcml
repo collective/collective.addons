@@ -137,14 +137,24 @@
 
   <adapter factory=".contactauthor.ContactAuthorAdapter"/>
 
-  <adapter factory="collective.addons.mailtoprojectowner.MailToProjectOwnerAdapter"/>
-
   <browser:page
       for="Products.CMFCore.interfaces.ISiteRoot"
       name="contact-addon-author"
-      class=".contactauthor.ContactAuthorForm"
+      class=".contactauthor.HoneypotForm"
       permission="zope2.View"
       />
+
+  <adapter factory=".contactprojectowner.ContactProjectOwnerAdapter"/>
+
+  <browser:page
+      for="collective.addons.addonproject.IAddonProject"
+      name="contact-addon-project-owner"
+      class="collective.addons.contactprojectowner.HoneypotForm"
+      permission="zope2.View"
+      />
+
+  <adapter factory="collective.addons.mailtoprojectowner.MailToProjectOwnerAdapter"/>
+
 
   <browser:page
         for="collective.addons.addonproject.IAddonProject"
