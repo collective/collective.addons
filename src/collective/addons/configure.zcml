@@ -135,7 +135,16 @@
       provides=".mailtoauthor.IHCaptchaForm"
    />
 
- <adapter factory="collective.addons.mailtoprojectowner.MailToProjectOwnerAdapter"/>
+  <adapter factory=".contactauthor.ContactAuthorAdapter"/>
+
+  <adapter factory="collective.addons.mailtoprojectowner.MailToProjectOwnerAdapter"/>
+
+  <browser:page
+      for="Products.CMFCore.interfaces.ISiteRoot"
+      name="contact-addon-author"
+      class=".contactauthor.ContactAuthorForm"
+      permission="zope2.View"
+      />
 
   <browser:page
         for="collective.addons.addonproject.IAddonProject"
