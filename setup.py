@@ -73,6 +73,7 @@ setup(
             'Products.validation',
             'cioppino.twothumbs',
             'plone.formwidget.hcaptcha',
+            'collective.honeypot',
         ],
     },
     entry_points="""
