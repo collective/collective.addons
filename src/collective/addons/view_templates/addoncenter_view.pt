@@ -288,7 +288,7 @@
                     the project and give him feedback by following the
                     link and fill in your information into the form:<br />
                     <a class="pointer" tal:attributes="href
-                            string:${context/portal_url}/@@mail-to-addonauthor">
+                            string:${context/portal_url}/@@contact-addon-author">
                         Get in contact with the project author
                     </a>.<br />
                     You could instead go to the page of the project and use
