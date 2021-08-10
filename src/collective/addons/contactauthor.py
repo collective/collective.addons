@@ -18,6 +18,7 @@ from zope.interface import Invalid
 
 import logging
 
+
 def validateprojectname(value):
     catalog = api.portal.get_tool('portal_catalog')
     project = catalog(
@@ -162,5 +163,6 @@ class ContactAuthorForm(AutoExtensibleForm, form.Form):
             """
         contextURL = self.context.absolute_url()
         self.request.response.redirect(contextURL)
+
 
 HoneypotForm = wrap_form(ContactAuthorForm)

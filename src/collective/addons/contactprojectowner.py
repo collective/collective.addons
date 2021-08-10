@@ -97,7 +97,7 @@ class ContactProjectOwnerForm(AutoExtensibleForm, form.Form):
         self.request.set('disable_border', True)
 
         # call the base class version - this is very important!
-        super(MailToProjectOwnerForm, self).update()
+        super(ContactProjectOwnerForm, self).update()
 
     @button.buttonAndHandler(_(safe_unicode('Send Email')))
     def handleApply(self, action):
@@ -157,5 +157,6 @@ class ContactProjectOwnerForm(AutoExtensibleForm, form.Form):
             """
         contextURL = self.context.absolute_url()
         self.request.response.redirect(contextURL)
+
 
 HoneypotForm = wrap_form(ContactProjectOwnerForm)
