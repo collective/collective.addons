@@ -58,7 +58,7 @@ setup(
         'cioppino.twothumbs',
         'collective.dexteritytextindexer',
         'Products.validation',
-        'plone.formwidget.hcaptcha',
+        'collective.honeypot',
     ],
     extras_require={
         'test': [
@@ -73,6 +73,7 @@ setup(
             'Products.validation',
             'cioppino.twothumbs',
             'collective.honeypot',
+
         ],
     },
     entry_points="""
