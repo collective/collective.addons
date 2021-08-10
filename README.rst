@@ -35,7 +35,7 @@ Features
 - The add-on informs the contributor via email about new releases or linked releases,
   once they were added to his project(s).
 - The user could send a message to the author of an add-on via a mail. The mail form uses a
-  hcaptcha widget. The contact data of the author of the aa-on will not be made public.
+  hcaptcha widget. The contact data of the author of the add-on will not be made public.
 - The file extensions of the uploaded add-ons will be checked. It is possible to set the
   allowed file extensions distinct for the specific use case of the add-on center. They
   could be dynamically changed at any time.
