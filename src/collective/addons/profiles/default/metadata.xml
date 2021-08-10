@@ -4,6 +4,5 @@
   <dependencies>
     <dependency>profile-plone.app.dexterity:default</dependency>
     <dependency>profile-cioppino.twothumbs:default</dependency>
-    <dependency>profile-plone.formwidget.hcaptcha:default</dependency>
   </dependencies>
 </metadata>
