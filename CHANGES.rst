@@ -4,7 +4,8 @@ Changelog
 3.1 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- flake8 fixes [Andreas Mantke]
+- Update localization files [Andreas Mantke]
 
 
 3.0 (2021-08-10)
