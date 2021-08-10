@@ -160,7 +160,7 @@ msgstr ""
 msgid "Browse Add-ons by Category"
 msgstr ""
 
-#: ./contactauthor.py:159
+#: ./contactauthor.py:160
 #: ./contactprojectowner.py:154
 msgid "Cancel"
 msgstr ""
@@ -223,7 +223,7 @@ msgstr ""
 msgid "Contact email-address for the project."
 msgstr ""
 
-#: ./contactauthor.py:95
+#: ./contactauthor.py:96
 msgid "Contact the project author and send your feedback"
 msgstr ""
 
@@ -568,7 +568,7 @@ msgstr ""
 msgid "Logo / Screenshot"
 msgstr ""
 
-#: ./contactauthor.py:94
+#: ./contactauthor.py:95
 msgid "Mail To The Project Author"
 msgstr ""
 
@@ -620,7 +620,7 @@ msgstr ""
 msgid "No stable release available yet."
 msgstr ""
 
-#: ./contactauthor.py:30
+#: ./contactauthor.py:31
 msgid "Not a valid project name. Please retry."
 msgstr ""
 
@@ -695,17 +695,17 @@ msgstr ""
 msgid "Please fill in the size in kilobyte of the external hosted file (e.g. 633, if the size is 633 kb)"
 msgstr ""
 
-#: ./contactauthor.py:52
+#: ./contactauthor.py:53
 #: ./contactprojectowner.py:45
 msgid "Please fill in your email address."
 msgstr ""
 
-#: ./contactauthor.py:47
+#: ./contactauthor.py:48
 #: ./contactprojectowner.py:40
 msgid "Please fill in your familiy name"
 msgstr ""
 
-#: ./contactauthor.py:42
+#: ./contactauthor.py:43
 #: ./contactprojectowner.py:35
 msgid "Please fill in your first name(s)"
 msgstr ""
@@ -761,7 +761,7 @@ msgstr ""
 msgid "Project Contact"
 msgstr ""
 
-#: ./contactauthor.py:63
+#: ./contactauthor.py:64
 #: ./contactprojectowner.py:50
 msgid "Project Name"
 msgstr ""
@@ -925,7 +925,7 @@ msgstr ""
 msgid "Second uploaded file is compatible with the Platform(s)"
 msgstr ""
 
-#: ./contactauthor.py:109
+#: ./contactauthor.py:110
 #: ./contactprojectowner.py:102
 msgid "Send Email"
 msgstr ""
@@ -1047,7 +1047,7 @@ msgstr ""
 msgid "The linked release title will be computed from the parent project title"
 msgstr ""
 
-#: ./contactauthor.py:64
+#: ./contactauthor.py:65
 #: ./contactprojectowner.py:51
 msgid "The name of the project, to which author you want to send feedback."
 msgstr ""
@@ -1177,12 +1177,12 @@ msgstr ""
 msgid "Visible to everyone, editable by the owner."
 msgstr ""
 
-#: ./contactauthor.py:150
+#: ./contactauthor.py:151
 #: ./contactprojectowner.py:145
 msgid "We send your message to the author of the project. It's on her / his choice, if she'll / he'll get back to you."
 msgstr ""
 
-#: ./contactauthor.py:71
+#: ./contactauthor.py:72
 #: ./contactprojectowner.py:64
 msgid "What is your message to the author of the project? Your message is limited to 1000 characters."
 msgstr ""
@@ -1204,22 +1204,22 @@ msgstr ""
 msgid "You currently have no projects on this site."
 msgstr ""
 
-#: ./contactauthor.py:51
+#: ./contactauthor.py:52
 #: ./contactprojectowner.py:44
 msgid "Your Email Address"
 msgstr ""
 
-#: ./contactauthor.py:46
+#: ./contactauthor.py:47
 #: ./contactprojectowner.py:39
 msgid "Your Family Name"
 msgstr ""
 
-#: ./contactauthor.py:41
+#: ./contactauthor.py:42
 #: ./contactprojectowner.py:34
 msgid "Your First Name"
 msgstr ""
 
-#: ./contactauthor.py:70
+#: ./contactauthor.py:71
 #: ./contactprojectowner.py:63
 msgid "Your Message To The Author"
 msgstr ""
