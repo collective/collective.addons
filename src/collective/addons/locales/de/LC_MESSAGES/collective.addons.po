@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI +ZONE\n"
-"PO-Revision-Date: 2021-07-22 20:59+0200\n"
+"PO-Revision-Date: 2021-08-10 14:37+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -159,7 +159,7 @@ msgstr "Suchen"
 msgid "Browse Add-ons by Category"
 msgstr "Suchen Sie Add-ons  nach Kategorien"
 
-#: mailtoauthor.py:196 mailtoprojectowner.py:193
+#: contactauthor.py:159 contactprojectowner.py:154
 msgid "Cancel"
 msgstr "Abbrechen"
 
@@ -215,11 +215,11 @@ msgstr "Kontakt-Email-Adresse"
 msgid "Contact email-address for the project."
 msgstr "Kontakt-Email-Adresse für das Projekt.."
 
-#: mailtoauthor.py:116
+#: contactauthor.py:95
 msgid "Contact the project author and send your feedback"
 msgstr "Kontaktieren Sie den Projekt-Autoren und senden Sie Feedback"
 
-#: mailtoprojectowner.py:110
+#: contactprojectowner.py:88
 msgid "Contact the project owner and send your feedback"
 msgstr "Kontaktieren des Projekt-Eigentümers und übermitteln Sie Ihr Feedback"
 
@@ -498,7 +498,7 @@ msgstr "Installiert das collective.addons Add-on."
 msgid "Instruction how to report Bugs"
 msgstr "Anleitung, wie ein Fehler gemeldet wird"
 
-#: common.py:23 mailtoauthor.py:28 mailtoprojectowner.py:31
+#: common.py:23
 msgid "Invalid email address"
 msgstr "Ungültige Email-Adresse"
 
@@ -553,11 +553,11 @@ msgstr "Logo"
 msgid "Logo / Screenshot"
 msgstr "Logo / Bildschirmfoto"
 
-#: mailtoauthor.py:115
+#: contactauthor.py:94
 msgid "Mail To The Project Author"
 msgstr "E-Mail an den Projekt-Autor"
 
-#: mailtoprojectowner.py:109
+#: contactprojectowner.py:87
 msgid "Mail To The Project Owner"
 msgstr "E-Mail an den Projekt-Eigentümer"
 
@@ -605,7 +605,7 @@ msgstr "Keine Ergebnisse gefunden."
 msgid "No stable release available yet."
 msgstr "Aktuell kein stabiles Release verfügbar."
 
-#: mailtoauthor.py:41
+#: contactauthor.py:30
 msgid "Not a valid project name. Please retry."
 msgstr "Kein gültiger Projektname. Bitte versuchen Sie es nochmals."
 
@@ -677,15 +677,15 @@ msgstr "Bitte füllen Sie die Installationsanweisungen ein"
 msgid "Please fill in the size in kilobyte of the external hosted file (e.g. 633, if the size is 633 kb)"
 msgstr "Bitte füllen Sie die Größe der extern gehosteten Datei  in Kilobyte (z.B. 633, falls die Größe 633 KB ist) ein."
 
-#: mailtoauthor.py:79 mailtoprojectowner.py:73
+#: contactauthor.py:52 contactprojectowner.py:45
 msgid "Please fill in your email address."
 msgstr "Bitte tragen Sie Ihre E-Mail-Adresse ein."
 
-#: mailtoauthor.py:74 mailtoprojectowner.py:68
+#: contactauthor.py:47 contactprojectowner.py:40
 msgid "Please fill in your familiy name"
 msgstr "Bitte tragen Sie Ihren Familiennamen ein"
 
-#: mailtoauthor.py:69 mailtoprojectowner.py:63
+#: contactauthor.py:42 contactprojectowner.py:35
 msgid "Please fill in your first name(s)"
 msgstr "Bitte tragen Sie Ihre(n) Vornamen ein."
 
@@ -721,10 +721,6 @@ msgstr "Bitte wählen Sie eine passende Kategorie (eine oder mehrere) für ihre 
 msgid "Please upload your file."
 msgstr "Bitte laden Sie Ihre Datei hoch."
 
-#: mailtoauthor.py:147 mailtoprojectowner.py:142
-msgid "Please validate the hcaptcha field before sending the form."
-msgstr "Bitte validieren Sie das Hcaptcha-Feld, bevor Sie das Formular absenden."
-
 #: profiles/default/workflows/collective_addons_project_workflow/definition.xml
 msgid "Private"
 msgstr "Privat"
@@ -741,7 +737,7 @@ msgstr "Projekt-Autor veröffentlichen?"
 msgid "Project Contact"
 msgstr "Projekt-Kontakt"
 
-#: mailtoauthor.py:84 mailtoprojectowner.py:78
+#: contactauthor.py:63 contactprojectowner.py:50
 msgid "Project Name"
 msgstr "Projekt-Name"
 
@@ -901,7 +897,7 @@ msgstr "Die zweite verlinkte Datei ist kompatibel mit den Plattformen"
 msgid "Second uploaded file is compatible with the Platform(s)"
 msgstr "Die zweite hochgeladene Datei ist kompatibel mit den Plattformen"
 
-#: mailtoauthor.py:129 mailtoprojectowner.py:123
+#: contactauthor.py:109 contactprojectowner.py:102
 msgid "Send Email"
 msgstr "E-Mail senden"
 
@@ -1021,7 +1017,7 @@ msgstr "Eine verlinkte Add-on-Datei"
 msgid "The linked release title will be computed from the parent project title"
 msgstr "Der Release-Titel wird maschinell aus dem Projekt-Titel erstellt"
 
-#: mailtoauthor.py:85 mailtoprojectowner.py:79
+#: contactauthor.py:64 contactprojectowner.py:51
 msgid "The name of the project, to which author you want to send feedback."
 msgstr "Der Name des Projekts, dessen Autor Sie Feedback senden wollen."
 
@@ -1149,11 +1145,11 @@ msgstr "Version"
 msgid "Visible to everyone, editable by the owner."
 msgstr "Für Jedermann sichtbar, durch den Besitzer bearbeitbar."
 
-#: mailtoauthor.py:187 mailtoprojectowner.py:184
+#: contactauthor.py:150 contactprojectowner.py:145
 msgid "We send your message to the author of the project. It's on her / his choice, if she'll / he'll get back to you."
 msgstr "Wir senden Ihre Nachricht an den Projekt-Autor. Es ist ihre / seine Entscheidung, ob sie / er sich bei Ihnen meldet."
 
-#: mailtoauthor.py:92 mailtoprojectowner.py:86
+#: contactauthor.py:71 contactprojectowner.py:64
 msgid "What is your message to the author of the project? Your message is limited to 1000 characters."
 msgstr "Wie lautet Ihre Nachricht an den Projekt-Autor? Ihre Nachricht ist auf 1000 Zeichen begrenzt."
 
@@ -1173,19 +1169,19 @@ msgstr "Sie können eine Nachricht an den Projekt-Autor senden und ihm Feedback 
 msgid "You currently have no projects on this site."
 msgstr "Sie haben aktuell keine Projekte auf dieser Seite."
 
-#: mailtoauthor.py:78 mailtoprojectowner.py:72
+#: contactauthor.py:51 contactprojectowner.py:44
 msgid "Your Email Address"
 msgstr "Ihre E-Mail-Adresse"
 
-#: mailtoauthor.py:73 mailtoprojectowner.py:67
+#: contactauthor.py:46 contactprojectowner.py:39
 msgid "Your Family Name"
 msgstr "Ihr Familienname"
 
-#: mailtoauthor.py:68 mailtoprojectowner.py:62
+#: contactauthor.py:41 contactprojectowner.py:34
 msgid "Your First Name"
 msgstr "Ihr Vorname"
 
-#: mailtoauthor.py:91 mailtoprojectowner.py:85
+#: contactauthor.py:70 contactprojectowner.py:63
 msgid "Your Message To The Author"
 msgstr "Ihre Nachricht an den Autor"
 

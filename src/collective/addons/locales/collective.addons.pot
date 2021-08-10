@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-07-22 18:55+0000\n"
+"POT-Creation-Date: 2021-08-10 12:35+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,6 +19,7 @@ msgstr ""
 
 #: ./addonlinkedrelease.py:128
 #: ./addonrelease.py:129
+#: ./contactauthor.py:58
 msgid ""
 msgstr ""
 
@@ -168,8 +169,8 @@ msgstr ""
 msgid "Browse Add-ons by Category"
 msgstr ""
 
-#: ./mailtoauthor.py:196
-#: ./mailtoprojectowner.py:193
+#: ./contactauthor.py:159
+#: ./contactprojectowner.py:154
 msgid "Cancel"
 msgstr ""
 
@@ -231,11 +232,11 @@ msgstr ""
 msgid "Contact email-address for the project."
 msgstr ""
 
-#: ./mailtoauthor.py:116
+#: ./contactauthor.py:95
 msgid "Contact the project author and send your feedback"
 msgstr ""
 
-#: ./mailtoprojectowner.py:110
+#: ./contactprojectowner.py:88
 msgid "Contact the project owner and send your feedback"
 msgstr ""
 
@@ -518,8 +519,6 @@ msgid "Instruction how to report Bugs"
 msgstr ""
 
 #: ./common.py:23
-#: ./mailtoauthor.py:28
-#: ./mailtoprojectowner.py:31
 msgid "Invalid email address"
 msgstr ""
 
@@ -578,11 +577,11 @@ msgstr ""
 msgid "Logo / Screenshot"
 msgstr ""
 
-#: ./mailtoauthor.py:115
+#: ./contactauthor.py:94
 msgid "Mail To The Project Author"
 msgstr ""
 
-#: ./mailtoprojectowner.py:109
+#: ./contactprojectowner.py:87
 msgid "Mail To The Project Owner"
 msgstr ""
 
@@ -630,7 +629,7 @@ msgstr ""
 msgid "No stable release available yet."
 msgstr ""
 
-#: ./mailtoauthor.py:41
+#: ./contactauthor.py:30
 msgid "Not a valid project name. Please retry."
 msgstr ""
 
@@ -705,18 +704,18 @@ msgstr ""
 msgid "Please fill in the size in kilobyte of the external hosted file (e.g. 633, if the size is 633 kb)"
 msgstr ""
 
-#: ./mailtoauthor.py:79
-#: ./mailtoprojectowner.py:73
+#: ./contactauthor.py:52
+#: ./contactprojectowner.py:45
 msgid "Please fill in your email address."
 msgstr ""
 
-#: ./mailtoauthor.py:74
-#: ./mailtoprojectowner.py:68
+#: ./contactauthor.py:47
+#: ./contactprojectowner.py:40
 msgid "Please fill in your familiy name"
 msgstr ""
 
-#: ./mailtoauthor.py:69
-#: ./mailtoprojectowner.py:63
+#: ./contactauthor.py:42
+#: ./contactprojectowner.py:35
 msgid "Please fill in your first name(s)"
 msgstr ""
 
@@ -755,11 +754,6 @@ msgstr ""
 msgid "Please upload your file."
 msgstr ""
 
-#: ./mailtoauthor.py:147
-#: ./mailtoprojectowner.py:142
-msgid "Please validate the hcaptcha field before sending the form."
-msgstr ""
-
 #: ./profiles/default/workflows/collective_addons_project_workflow/definition.xml
 msgid "Private"
 msgstr ""
@@ -776,8 +770,8 @@ msgstr ""
 msgid "Project Contact"
 msgstr ""
 
-#: ./mailtoauthor.py:84
-#: ./mailtoprojectowner.py:78
+#: ./contactauthor.py:63
+#: ./contactprojectowner.py:50
 msgid "Project Name"
 msgstr ""
 
@@ -945,8 +939,8 @@ msgstr ""
 msgid "Second uploaded file is compatible with the Platform(s)"
 msgstr ""
 
-#: ./mailtoauthor.py:129
-#: ./mailtoprojectowner.py:123
+#: ./contactauthor.py:109
+#: ./contactprojectowner.py:102
 msgid "Send Email"
 msgstr ""
 
@@ -1072,8 +1066,8 @@ msgstr ""
 msgid "The linked release title will be computed from the parent project title"
 msgstr ""
 
-#: ./mailtoauthor.py:85
-#: ./mailtoprojectowner.py:79
+#: ./contactauthor.py:64
+#: ./contactprojectowner.py:51
 msgid "The name of the project, to which author you want to send feedback."
 msgstr ""
 
@@ -1207,13 +1201,13 @@ msgid "Waiting for the Review, further editable by
                                            the owner (contributor)."
 msgstr ""
 
-#: ./mailtoauthor.py:187
-#: ./mailtoprojectowner.py:184
+#: ./contactauthor.py:150
+#: ./contactprojectowner.py:145
 msgid "We send your message to the author of the project. It's on her / his choice, if she'll / he'll get back to you."
 msgstr ""
 
-#: ./mailtoauthor.py:92
-#: ./mailtoprojectowner.py:86
+#: ./contactauthor.py:71
+#: ./contactprojectowner.py:64
 msgid "What is your message to the author of the project? Your message is limited to 1000 characters."
 msgstr ""
 
@@ -1234,23 +1228,23 @@ msgstr ""
 msgid "You currently have no projects on this site."
 msgstr ""
 
-#: ./mailtoauthor.py:78
-#: ./mailtoprojectowner.py:72
+#: ./contactauthor.py:51
+#: ./contactprojectowner.py:44
 msgid "Your Email Address"
 msgstr ""
 
-#: ./mailtoauthor.py:73
-#: ./mailtoprojectowner.py:67
+#: ./contactauthor.py:46
+#: ./contactprojectowner.py:39
 msgid "Your Family Name"
 msgstr ""
 
-#: ./mailtoauthor.py:68
-#: ./mailtoprojectowner.py:62
+#: ./contactauthor.py:41
+#: ./contactprojectowner.py:34
 msgid "Your First Name"
 msgstr ""
 
-#: ./mailtoauthor.py:91
-#: ./mailtoprojectowner.py:85
+#: ./contactauthor.py:70
+#: ./contactprojectowner.py:63
 msgid "Your Message To The Author"
 msgstr ""
 
