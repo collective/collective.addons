@@ -120,21 +120,6 @@
 
   <adapter factory=".adapter.ReleasesCompatVersions" />
 
-  <adapter factory=".mailtoauthor.MailToAuthorAdapter"/>
-
-  <browser:page
-        for="Products.CMFCore.interfaces.ISiteRoot"
-        name="mail-to-addonauthor"
-        class=".mailtoauthor.MailToAuthorForm"
-        permission="zope2.View"
-        />
-
-  <adapter
-      factory=".mailtoauthor.HCaptcha"
-      for="Products.CMFPlone.interfaces.siteroot.IPloneSiteRoot"
-      provides=".mailtoauthor.IHCaptchaForm"
-   />
-
   <adapter factory=".contactauthor.ContactAuthorAdapter"/>
 
   <browser:page
@@ -152,22 +137,6 @@
       class="collective.addons.contactprojectowner.HoneypotForm"
       permission="zope2.View"
       />
-
-  <adapter factory="collective.addons.mailtoprojectowner.MailToProjectOwnerAdapter"/>
-
-
-  <browser:page
-        for="collective.addons.addonproject.IAddonProject"
-        name="contact-extension-project-owner"
-        class="collective.addons.mailtoprojectowner.HCaptchaForm"
-        permission="zope2.View"
-        />
-
-  <adapter
-      factory=".mailtoprojectowner.HCaptcha"
-      for="collective.addons.addonproject.IAddonProject"
-      provides=".mailtoprojectowner.IHCaptchaForm"
-   />
 
   <subscriber
     for="collective.addons.addonproject.IAddonProject
