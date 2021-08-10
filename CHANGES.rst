@@ -1,7 +1,7 @@
 Changelog
 =========
 
-3.0 (unreleased)
+3.0 (2021-08-10)
 ----------------
 
 - Change the main release number to 3.x because this version
