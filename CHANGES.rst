@@ -1,7 +1,7 @@
 Changelog
 =========
 
-3.1 (unreleased)
+3.1 (2021-08-10)
 ----------------
 
 - flake8 fixes [Andreas Mantke]
