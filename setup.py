@@ -72,7 +72,6 @@ setup(
             'collective.dexteritytextindexer',
             'Products.validation',
             'cioppino.twothumbs',
-            'plone.formwidget.hcaptcha',
             'collective.honeypot',
         ],
     },
