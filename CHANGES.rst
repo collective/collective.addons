@@ -4,7 +4,36 @@ Changelog
 2.7 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- Use Products.PrintingMailHost version 1.1.6 [Andreas Mantke]
+- Add classifiers for Python 3.8. and 3.9 [Andreas Mantke]
+- Update localization files [Andreas Mantke]
+
+
+3.1 (2021-08-10)
+----------------
+
+- flake8 fixes [Andreas Mantke]
+- Update localization files [Andreas Mantke]
+
+
+3.0 (2021-08-10)
+----------------
+
+- Change the main release number to 3.x because this version
+  breaks compatibility due to move to honeypot instead of
+  captcha technology to protect mail forms. [Andreas Mantke]
+- Update README with information about honeypot technology
+  [Andreas Mantke]
+- Add contactauthor and contactprojectowner module with
+  honeypot technology to protect against robots, add
+  collective.honeypot to the requirements. [Andreas Mantke]
+- Add configuration for collective.honeypot to the
+  buildout script. [Andreas Mantke]
+- Remove mailtoauthor and mailtoprojectowner modules with
+  hcaptcha technology and plone.formwidget.hcaptcha from
+  the requirements. [Andreas Mantke]
+- Add configuration for collective.honeypot to
+  base.cfg [Andreas Mantke]
 
 
 2.6 (2021-08-06)
