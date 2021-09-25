@@ -14,7 +14,7 @@ long_description = '\n\n'.join([
 
 setup(
     name='collective.addons',
-    version='2.7.dev0',
+    version='2.7',
     description="Plone add-on to host add-ons / extensions of a software",
     long_description=long_description,
     # Get more from https://pypi.python.org/pypi?%3Aaction=list_classifiers
