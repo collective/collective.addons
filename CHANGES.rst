@@ -1,7 +1,7 @@
 Changelog
 =========
 
-3.2 (unreleased)
+3.2 (2021-09-29)
 ----------------
 
 - Use Products.PrintingMailHost version 1.1.6 [Andreas Mantke]
