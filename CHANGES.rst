@@ -4,7 +4,17 @@ Changelog
 3.2 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- Use Products.PrintingMailHost version 1.1.6 [Andreas Mantke]
+- Add classifiers for Python 3.8. and 3.9 [Andreas Mantke]
+- Update localization files [Andreas Mantke]
+
+
+2.7 (2021-09-25)
+----------------
+
+- Use Products.PrintingMailHost version 1.1.6 [Andreas Mantke]
+- Add classifiers for Python 3.8. and 3.9 [Andreas Mantke]
+- Update localization files [Andreas Mantke]
 
 
 3.1 (2021-08-10)
