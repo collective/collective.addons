@@ -4,7 +4,9 @@ include *.yml
 include tox.ini
 
 graft src/collective
-graft docs/html docs/source docs/source/images
+graft docs/html
+graft docs/source 
+graft docs/source/images
 include *.rst
 global-exclude *.pyc
 recursive-exclude docs _build/* Makefile html/.directory make.bat
